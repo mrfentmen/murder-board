@@ -446,6 +446,8 @@ var MB = window.MB;
 var DOCS = window.CASE_DOCS || [];
 var book = MB.newBook();
 var chairEls = {};
+var quoteReturnFocus = null;
+var profileReturnFocus = null;
 
 function el(id) { return document.getElementById(id); }
 function esc(s) {
@@ -456,6 +458,278 @@ function esc(s) {
 function docTitle(id) {
   var d = MB.docById(id);
   return d ? d.title + " (" + d.date + ")" : id;
+}
+function docCitation(id) {
+  var d = MB.docById(id);
+  return d ? id + " · " + d.title + " · " + d.date + " · " + d.author : id;
+}
+function selectedCase() {
+  return MB.CASES.filter(function (c) { return c.case_id === MB.currentCase(); })[0];
+}
+function entityKey(value) {
+  return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+function phraseInText(text, phrase) {
+  return (" " + entityKey(text) + " ").indexOf(" " + entityKey(phrase) + " ") !== -1;
+}
+function identityNamedIn(text, person) {
+  if (phraseInText(text, person.name)) return true;
+  var parts = entityKey(person.name).split(" ").filter(function (part) { return part.length > 1; });
+  return parts.length > 1 && phraseInText(text, parts[0]) && phraseInText(text, parts[parts.length - 1]);
+}
+function verifiedAliases(person) {
+  var current = selectedCase();
+  var docs = current ? current.documents : [];
+  return (person.aliases || []).map(function (alias) {
+    if (entityKey(alias).length < 3) return null;
+    var match = null;
+    docs.some(function (item) {
+      if (!identityNamedIn(item.text, person) && !identityNamedIn(item.author, person)) return false;
+      var line = String(item.text || "").split(/\r?\n/).filter(function (text) { return phraseInText(text, alias); })[0];
+      if (line) { match = { name: alias, doc_id: item.id, quote: line }; return true; }
+      return false;
+    });
+    return match;
+  }).filter(Boolean);
+}
+function personForms(person) {
+  return [person.name].concat(verifiedAliases(person).map(function (alias) { return alias.name; }))
+    .filter(function (name) { return entityKey(name).length >= 3; });
+}
+function mentionsPerson(value, person) {
+  var haystack = " " + entityKey(value) + " ";
+  return personForms(person).some(function (form) { return haystack.indexOf(" " + entityKey(form) + " ") !== -1; });
+}
+function matchesPersonName(value, person) {
+  if (mentionsPerson(value, person)) return true;
+  var name = entityKey(person.name).split(" ").filter(function (part) { return part.length > 1; });
+  var candidate = entityKey(value).split(" ");
+  return name.length > 1 && candidate.indexOf(name[0]) !== -1 && candidate.indexOf(name[name.length - 1]) !== -1;
+}
+function personProfileData(person) {
+  var current = selectedCase();
+  var docs = current ? current.documents : [];
+  var claims = book.claims.filter(function (claim) {
+    return matchesPersonName(claim.person, person) || mentionsPerson(claim.claim, person) || mentionsPerson(claim.quote, person);
+  });
+  var events = book.intake_events.filter(function (event) {
+    var who = Array.isArray(event.who) ? event.who : [event.who];
+    return who.some(function (name) { return matchesPersonName(name, person); })
+      || mentionsPerson([event.what, event.where, event.quote].join(" "), person);
+  });
+  var alibis = book.alibis.filter(function (alibi) { return matchesPersonName(alibi.person, person); });
+  var histories = (book.histories || []).filter(function (history) { return matchesPersonName(history.person, person); });
+  var medicalFacts = /victim/i.test(person.role || "") && book.coroner ? (book.coroner.medical_facts || []) : [];
+  var relatedDocIds = [];
+  function addDoc(id) { if (id && relatedDocIds.indexOf(id) < 0) relatedDocIds.push(id); }
+  claims.forEach(function (claim) { addDoc(claim.doc_id); });
+  docs.filter(function (doc) { return matchesPersonName(doc.author, person); }).forEach(function (doc) { addDoc(doc.id); });
+  events.forEach(function (event) { addDoc(event.doc_id); });
+  verifiedAliases(person).forEach(function (alias) { addDoc(alias.doc_id); });
+  alibis.forEach(function (alibi) { (alibi.reasons || []).forEach(function (reason) { addDoc(reason.doc_id); }); });
+  histories.forEach(function (history) {
+    (history.changes || []).forEach(function (change) { addDoc(change.earlier_doc); addDoc(change.later_doc); });
+  });
+  medicalFacts.forEach(function (fact) { addDoc(fact.doc_id); });
+  var contradictions = book.contradictions.filter(function (item) {
+    return mentionsPerson(item.a_quote, person) || mentionsPerson(item.b_quote, person)
+      || relatedDocIds.indexOf(item.a_doc) !== -1 || relatedDocIds.indexOf(item.b_doc) !== -1;
+  });
+  contradictions.forEach(function (item) { addDoc(item.a_doc); addDoc(item.b_doc); });
+  return {
+    aliases: verifiedAliases(person), claims: claims, events: events, alibis: alibis, histories: histories,
+    medicalFacts: medicalFacts,
+    contradictions: contradictions,
+    documents: docs.filter(function (doc) { return relatedDocIds.indexOf(doc.id) !== -1; })
+  };
+}
+function sourceButton(docId) {
+  if (!docId) return "";
+  var doc = MB.docById(docId);
+  return '<details class="source-details"><summary>Open ' + esc(docId) + ' source</summary>' +
+    (doc ? '<pre class="detail-document">' + esc(doc.text) + '</pre>' : '<p>Source document is not in this case file.</p>') + '</details>';
+}
+function quoteCard(label, quote, docId) {
+  return '<article class="source-quote"><h5>' + esc(label) + '</h5><blockquote>&ldquo;' + esc(quote || "") + '&rdquo;</blockquote><cite>' + esc(docCitation(docId)) + '</cite>' + sourceButton(docId) + '</article>';
+}
+function supportedEventField(value, quote, docId) {
+  if (!value) return "";
+  var doc = MB.docById(docId);
+  return phraseInText(quote, value) || (doc && phraseInText(doc.text, value)) ? value : "";
+}
+function supportedWindow(alibi) {
+  return (alibi.reasons || []).some(function (reason) {
+    return supportedEventField(alibi.window, reason.quote, reason.doc_id);
+  }) ? alibi.window : "";
+}
+
+function setQuotePanel(title, quoteA, quoteB, alt, focusTarget) {
+  quoteReturnFocus = focusTarget || document.activeElement;
+  el("modalTitle").textContent = title;
+  el("quoteA").textContent = quoteA.text || "";
+  el("quoteACite").innerHTML = esc(quoteA.source || "") + (quoteA.docId ? '<br>' + sourceButton(quoteA.docId) : "");
+  el("quoteB").textContent = quoteB.text || "";
+  el("quoteBCite").innerHTML = esc(quoteB.source || "") + (quoteB.docId ? '<br>' + sourceButton(quoteB.docId) : "");
+  el("quotePair").hidden = false;
+  el("sourceBody").hidden = true;
+  el("sourceBody").innerHTML = "";
+  el("modalAlt").textContent = alt || "";
+  el("quoteModal").hidden = false;
+  el("quoteModal").classList.remove("hidden");
+  el("modalClose").focus();
+}
+
+function closeQuotePanel() {
+  el("quoteModal").hidden = true;
+  el("quoteModal").classList.add("hidden");
+  if (quoteReturnFocus && document.contains(quoteReturnFocus)) quoteReturnFocus.focus();
+}
+
+function showProfile(title, body, focusTarget) {
+  profileReturnFocus = focusTarget || document.activeElement;
+  el("profileContent").innerHTML = '<h2 id="profileName">' + esc(title) + '</h2>' + body;
+  el("profileBackdrop").hidden = false;
+  el("profileDrawer").hidden = false;
+  el("profileClose").focus();
+}
+
+function closeProfile() {
+  el("profileBackdrop").hidden = true;
+  el("profileDrawer").hidden = true;
+  if (profileReturnFocus && document.contains(profileReturnFocus)) profileReturnFocus.focus();
+}
+
+function openProfile(person, focusTarget) {
+  if (!person) return;
+  var data = personProfileData(person);
+  var body = '<div class="profile-portrait">' + photoHtml(person.name) + '</div><p class="detail-role"><strong>Role in the case file:</strong> ' + esc(person.role || "Not stated in the case file.") + '</p>';
+  body += '<section class="detail-section"><h3>Aliases</h3>';
+  body += data.aliases.length ? data.aliases.map(function (alias) {
+    return quoteCard("Recorded alias: " + alias.name, alias.quote, alias.doc_id);
+  }).join("") : '<p>No aliases are supported by a source in this file.</p>';
+  body += '</section><section class="detail-section"><h3>Sourced claims</h3>';
+  body += data.claims.length ? data.claims.map(function (claim) {
+    return '<article class="detail-item"><h4>' + esc(claim.kind || "Claim") + '</h4><p>' + esc(claim.claim) + '</p>' + quoteCard("Source quote", claim.quote, claim.doc_id) + '</article>';
+  }).join("") : '<p>No sourced claims for this person.</p>';
+  body += data.medicalFacts.length ? data.medicalFacts.map(function (fact) {
+    return '<article class="detail-item"><h4>Medical finding</h4><p>' + esc(fact.fact) + '</p>' + quoteCard("Examiner source", fact.quote, fact.doc_id) + '</article>';
+  }).join("") : "";
+  body += '</section><section class="detail-section"><h3>Events</h3>';
+  body += data.events.length ? data.events.map(function (event) {
+    var when = supportedEventField(event.when_text, event.quote, event.doc_id);
+    var where = supportedEventField(event.where, event.quote, event.doc_id);
+    return '<article class="detail-item"><h4>' + esc(event.what) + '</h4>' + (when || where ? '<p>' + esc(when || "") + (when && where ? ' · ' : "") + esc(where || "") + '</p>' : "") + quoteCard("Source quote", event.quote, event.doc_id) + '</article>';
+  }).join("") : '<p>No sourced events for this person.</p>';
+  body += '</section><section class="detail-section"><h3>Alibi assessment</h3>';
+  body += data.alibis.length ? data.alibis.map(function (alibi) {
+    return '<article class="detail-item"><p><strong>' + esc(alibi.rating) + '</strong>' + (supportedWindow(alibi) ? ' · ' + esc(supportedWindow(alibi)) : "") + '</p>' +
+      ((alibi.reasons || []).map(function (reason) { return quoteCard("Alibi source", reason.quote, reason.doc_id); }).join("") || '<p>No sourced reasons recorded.</p>') + '</article>';
+  }).join("") : '<p>No alibi assessment for this person.</p>';
+  body += '</section><section class="detail-section"><h3>Statement history</h3>';
+  body += data.histories.length ? data.histories.map(function (history) {
+    return (history.changes || []).map(function (change) {
+      return '<article class="detail-item"><h4>' + esc(change.topic) + '</h4>' + quoteCard("Earlier statement", change.earlier_quote, change.earlier_doc)
+        + quoteCard("Later statement", change.later_quote, change.later_doc) + '</article>';
+    }).join("");
+  }).join("") : '<p>No sourced statement changes for this person.</p>';
+  body += '</section><section class="detail-section"><h3>Contradictions</h3>';
+  body += data.contradictions.length ? data.contradictions.map(function (item) {
+    return '<article class="detail-item"><h4>' + esc(item.kind) + ' · ' + esc(item.severity) + '</h4>' +
+      quoteCard("Side A", item.a_quote, item.a_doc) + quoteCard("Side B", item.b_quote, item.b_doc) +
+      '<p class="innocent">The innocent reading: ' + esc(item.innocent_alternative) + '</p></article>';
+  }).join("") : '<p>No sourced contradictions for this person.</p>';
+  body += '</section><section class="detail-section"><h3>Related documents</h3>';
+  body += data.documents.length ? data.documents.map(function (doc) {
+    return '<p><span class="detail-source">' + esc(doc.id) + ' · ' + esc(doc.title) + '</span>' + sourceButton(doc.id) + '</p>';
+  }).join("") : '<p>No related source documents were identified.</p>';
+  body += '</section><p class="portrait-note">Portrait is illustrative, not evidence.</p>';
+  showProfile(person.name, body, focusTarget);
+}
+
+function openDocument(docId, focusTarget) {
+  var doc = MB.docById(docId);
+  if (!doc) return;
+  showProfile(doc.title, '<p class="detail-source">' + esc(doc.id + " · " + doc.date + " · " + doc.author) + '</p><pre class="detail-document">' + esc(doc.text) + '</pre>', focusTarget);
+}
+
+function openEvidence(item, focusTarget) {
+  if (!item) return;
+  var docId = item.doc_id || "";
+  if (!docId && item.quote) {
+    var current = selectedCase();
+    var source = current && current.documents.filter(function (doc) { return entityKey(doc.text).indexOf(entityKey(item.quote)) !== -1; })[0];
+    docId = source ? source.id : "";
+  }
+  var body = '<p><strong>Item:</strong> ' + esc(item.item_no || "Evidence") + '</p><p>' + esc(item.description || "No description recorded.") + '</p>';
+  if (item.status) body += '<p><strong>Status:</strong> ' + esc(item.status) + '</p>';
+  if (item.quote) body += quoteCard("Evidence ledger quote", item.quote, docId);
+  else body += '<p class="detail-source">No exact quote is attached to this item. The cited file document appears below.</p>';
+  var sourceDoc = docId && MB.docById(docId);
+  body += sourceDoc ? '<h3>Source document</h3><pre class="detail-document">' + esc(sourceDoc.text) + '</pre>' : '<p>No source document is recorded for this item.</p>';
+  showProfile("Evidence detail", body, focusTarget);
+}
+
+function documentedLinks() {
+  var links = [];
+  book.persons.forEach(function (person, personIndex) {
+    personProfileData(person).documents.forEach(function (doc) {
+      links.push({ person: person, personIndex: personIndex, doc_id: doc.id });
+    });
+  });
+  return links;
+}
+function documentedPeople() {
+  var links = documentedLinks();
+  return book.persons.map(function (person, idx) {
+    return { person: person, index: idx, count: links.filter(function (link) { return link.person === person; }).length };
+  }).filter(function (entry) { return entry.count > 0; });
+}
+
+function openDocumentLink(link, focusTarget) {
+  var doc = link && MB.docById(link.doc_id);
+  if (!doc) return;
+  var data = personProfileData(link.person), body = '<p class="detail-source">' + esc(doc.id + " · " + doc.title + " · " + doc.date) + '</p>';
+  data.claims.filter(function (claim) { return claim.doc_id === doc.id; }).forEach(function (claim) {
+    body += quoteCard("Claim: " + claim.claim, claim.quote, doc.id);
+  });
+  data.aliases.filter(function (alias) { return alias.doc_id === doc.id; }).forEach(function (alias) {
+    body += quoteCard("Recorded alias: " + alias.name, alias.quote, doc.id);
+  });
+  data.events.filter(function (event) { return event.doc_id === doc.id; }).forEach(function (event) {
+    body += quoteCard("Event: " + event.what, event.quote, doc.id);
+  });
+  data.alibis.forEach(function (alibi) {
+    (alibi.reasons || []).filter(function (reason) { return reason.doc_id === doc.id; }).forEach(function (reason) {
+      body += quoteCard("Alibi source: " + alibi.rating, reason.quote, doc.id);
+    });
+  });
+  data.histories.forEach(function (history) {
+    (history.changes || []).forEach(function (change) {
+      if (change.earlier_doc === doc.id) body += quoteCard("Earlier statement: " + change.topic, change.earlier_quote, doc.id);
+      if (change.later_doc === doc.id) body += quoteCard("Later statement: " + change.topic, change.later_quote, doc.id);
+    });
+  });
+  data.medicalFacts.filter(function (fact) { return fact.doc_id === doc.id; }).forEach(function (fact) {
+    body += quoteCard("Medical finding: " + fact.fact, fact.quote, doc.id);
+  });
+  data.contradictions.forEach(function (item) {
+    if (item.a_doc === doc.id) body += quoteCard("Contradiction: " + item.kind, item.a_quote, doc.id);
+    if (item.b_doc === doc.id) body += quoteCard("Contradiction: " + item.kind, item.b_quote, doc.id);
+  });
+  body += '<h3>Full document</h3><pre class="detail-document">' + esc(doc.text) + '</pre>';
+  setSourcePanel("Documented link: " + link.person.name, body, "", focusTarget);
+}
+
+function setSourcePanel(title, body, alt, focusTarget) {
+  quoteReturnFocus = focusTarget || document.activeElement;
+  el("modalTitle").textContent = title;
+  el("quotePair").hidden = true;
+  el("sourceBody").innerHTML = body;
+  el("sourceBody").hidden = false;
+  el("modalAlt").textContent = alt || "";
+  el("quoteModal").hidden = false;
+  el("quoteModal").classList.remove("hidden");
+  el("modalClose").focus();
 }
 
 function buildStrip() {
@@ -499,9 +773,9 @@ function tiltFor(seed) {
   for (var i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) % 997;
   return ((h % 5) - 2) * 1.1;
 }
-function pinCard(cls, pinKey, inner, seed) {
+function pinCard(cls, pinKey, inner, seed, kind, idx, label) {
   var t = tiltFor(seed || pinKey);
-  return '<div class="' + cls + '" data-pin="' + esc(pinKey) + '" data-tilt="' + t + '" style="transform: rotate(' + t + 'deg)">' + inner + '</div>';
+  return '<div role="button" tabindex="0" class="' + cls + '" data-pin="' + esc(pinKey) + '" data-tilt="' + t + '" data-open-kind="' + kind + '" data-open-idx="' + idx + '" aria-label="' + esc(label) + '" style="transform: rotate(' + t + 'deg)">' + inner + '</div>';
 }
 function photoHtml(name) {
   var map = (window.PERSON_PHOTOS || {})[MB.currentCase()] || {};
@@ -511,7 +785,7 @@ function photoHtml(name) {
     var sur = key.split(" ").pop();
     for (var k in map) { if (k.split(" ").pop() === sur) { src = map[k]; break; } }
   }
-  if (src) return '<img class="photo" src="' + src + '" alt="">';
+  if (src) return '<img class="photo" src="' + src + '" alt=""><span class="portrait-caption">Illustrative portrait · not evidence</span>';
   return '<div class="photo">' + esc(initialsOf(name)) + '</div>';
 }
 
@@ -521,46 +795,66 @@ function initialsOf(name) {
 function renderBoard() {
   var layer = el("pinLayer");
   if (!layer) return;
-  var current = MB.CASES.filter(function (c) { return c.case_id === MB.currentCase(); })[0];
+  var current = selectedCase();
   var docs = current ? current.documents : [];
   var html = '<div class="pin-title" data-pin="title" data-tilt="0" id="caseQuestion" title="The question before the board"><div class="qmark">?</div><div class="who">WHO DID IT</div><div class="case-name">' + esc(current ? current.case_title : "") + '</div></div>';
-  html += book.persons.map(function (p) {
-    var claims = book.claims.filter(function (c) { return c.person === p.name; });
+  html += book.persons.map(function (p, i) {
+    var claims = book.claims.filter(function (c) { return matchesPersonName(c.person, p); });
     var isVictim = /victim/i.test(p.role || "");
-    var alibi = book.alibis.filter(function (a) { return a.person === p.name; })[0];
+    var alibi = book.alibis.filter(function (a) { return matchesPersonName(a.person, p); })[0];
     return pinCard("pin-card person" + (isVictim ? " victim" : ""), "person:" + p.name,
       photoHtml(p.name) + '<h4>' + esc(p.name) + '</h4><p class="role">' + esc(p.role) + '</p>' +
       (alibi ? '<p class="alibi-chip rate-' + esc(String(alibi.rating).toLowerCase().replace(/\s+/g, "-")) + '">' + esc(alibi.rating) + '</p>' : "") +
       claims.slice(0, 2).map(function (c) { return '<p class="q">&ldquo;' + esc(c.quote) + '&rdquo;</p>'; }).join(""),
-      p.name);
+      p.name, "person", i, "Open profile: " + p.name);
   }).join("");
-  html += docs.map(function (d) {
+  html += docs.map(function (d, i) {
     return pinCard("pin-card docslip", "doc:" + d.id,
-      '<h5>' + esc(d.id) + ' &middot; ' + esc(d.type) + '</h5><p>' + esc(d.title) + '</p><p class="role">' + esc(d.date) + ' &middot; ' + esc(d.author) + '</p>', d.id);
+      '<h5>' + esc(d.id) + ' &middot; ' + esc(d.type) + '</h5><p>' + esc(d.title) + '</p><p class="role">' + esc(d.date) + ' &middot; ' + esc(d.author) + '</p>', d.id, "doc", i, "Open document " + d.id + ": " + d.title);
   }).join("");
   var items = book.ledger.length ? book.ledger : book.evidence_items;
   html += items.slice(0, 8).map(function (it, i) {
     return pinCard("pin-card evidence", "ev:" + i,
-      '<h5>' + esc(it.item_no ? "Item " + it.item_no : "Item") + '</h5><p>' + esc(it.description || "") + '</p>', "ev" + i);
+      '<h5>' + esc(it.item_no ? "Item " + it.item_no : "Evidence") + '</h5><p>' + esc(it.description || "") + '</p>', "ev" + i, "evidence", i, "Open evidence details: " + (it.description || "evidence item"));
   }).join("");
   var gaps = book.csi_gaps.concat(book.ce_gaps);
   html += gaps.slice(0, 6).map(function (g, i) {
-    return pinCard("pin-note", "gap:" + i,
-      '<p class="note-q">' + esc(g.item) + '</p><p>' + esc(g.problem) + '</p>', "gap" + i);
+    return '<article class="pin-note" data-pin="gap:' + i + '" data-tilt="' + tiltFor("gap" + i) + '" style="transform: rotate(' + tiltFor("gap" + i) + 'deg)"><p class="note-q">' + esc(g.item) + '</p><p>' + esc(g.problem) + '</p></article>';
   }).join("");
   html += legendHtml();
   layer.innerHTML = html;
   var qc = el("caseQuestion");
-  if (qc) qc.addEventListener("click", openCaseQuestion);
+  if (qc) {
+    qc.setAttribute("role", "button"); qc.setAttribute("tabindex", "0"); qc.setAttribute("aria-label", "Open case question and death window");
+    qc.addEventListener("click", function () { openCaseQuestion(qc); });
+    qc.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") { event.preventDefault(); openCaseQuestion(qc); }
+    });
+  }
+  Array.prototype.forEach.call(layer.querySelectorAll("[data-open-kind]"), function (card) {
+    card.addEventListener("click", function () {
+      var idx = +card.getAttribute("data-open-idx");
+      var kind = card.getAttribute("data-open-kind");
+      if (kind === "person") openProfile(book.persons[idx], card);
+      if (kind === "doc") openDocument(docs[idx].id, card);
+      if (kind === "evidence") openEvidence(items[idx], card);
+    });
+    card.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") { event.preventDefault(); card.click(); }
+    });
+  });
   var threads = book.contradictions.map(function (c, i) {
     return '<button class="thread red" data-kind="contra" data-idx="' + i + '"><span class="sev sev-' + esc(c.severity) + '">' + esc(c.severity) + '</span>' + esc(c.kind) + ": " + esc(c.a_doc) + " vs " + esc(c.b_doc) + "</button>";
   });
   threads = threads.concat(book.collisions.map(function (c, i) {
-    return '<button class="thread" data-kind="collision" data-idx="' + i + '">Collision: ' + esc(c.who_or_what) + "</button>";
+    return '<button class="thread collision" data-kind="collision" data-idx="' + i + '">Timeline collision: ' + esc(c.who_or_what) + "</button>";
   }));
+  threads = documentedPeople().map(function (entry, i) {
+    return '<button class="thread documented" data-kind="profile" data-idx="' + i + '">Documented links: ' + esc(entry.person.name) + ' · ' + entry.count + ' sources</button>';
+  }).concat(threads);
   el("threadList").innerHTML = threads.join("") || '<p class="hint">No threads yet.</p>';
   Array.prototype.forEach.call(document.querySelectorAll(".thread"), function (t) {
-    t.addEventListener("click", function () { openThread(t.getAttribute("data-kind"), +t.getAttribute("data-idx")); });
+    t.addEventListener("click", function () { openThread(t.getAttribute("data-kind"), +t.getAttribute("data-idx"), t); });
   });
   scheduleYarn();
 }
@@ -590,9 +884,11 @@ function drawYarn() {
     return line + '<path class="yarn-hit" data-kind="' + kind + '" data-idx="' + idx + '" d="' + d + '"><title>Open the thread</title></path>';
   }
   var out = "";
-  book.persons.forEach(function (p) { out += yarn(pts.title, pts["person:" + p.name], "yarn-gray", "", ""); });
+  documentedLinks().forEach(function (link, i) {
+    out += yarn(pts["person:" + link.person.name], pts["doc:" + link.doc_id], "yarn-related", "source", i);
+  });
   book.contradictions.forEach(function (c, i) {
-    out += yarn(pts["doc:" + c.a_doc], pts["doc:" + c.b_doc], "yarn-" + String(c.severity).toLowerCase(), "contra", i);
+    out += yarn(pts["doc:" + c.a_doc], pts["doc:" + c.b_doc], "yarn-contradiction yarn-" + String(c.severity).toLowerCase(), "contra", i);
   });
   book.collisions.forEach(function (c, i) {
     var ds = [];
@@ -601,7 +897,13 @@ function drawYarn() {
   });
   svg.innerHTML = out;
   Array.prototype.forEach.call(svg.querySelectorAll(".yarn-hit"), function (p) {
-    p.addEventListener("click", function () { openThread(p.getAttribute("data-kind"), +p.getAttribute("data-idx")); });
+    var kind = p.getAttribute("data-kind"), idx = +p.getAttribute("data-idx");
+    p.setAttribute("role", "button"); p.setAttribute("tabindex", "0");
+    p.setAttribute("aria-label", kind === "contra" ? "Open contradiction quotes" : kind === "source" ? "Open documented source quotes" : "Open timeline collision quotes");
+    p.addEventListener("click", function () { openThread(kind, idx, p); });
+    p.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") { event.preventDefault(); openThread(kind, idx, p); }
+    });
   });
 }
 
@@ -610,49 +912,44 @@ function legendHtml() {
     return '<div class="key-row"><svg class="key-line" viewBox="0 0 40 8" preserveAspectRatio="none"><path class="yarn-line ' + cls + '" d="M1 4 Q 20 9 39 4"/></svg><span>' + label + "</span></div>";
   }
   return '<div class="pin-legend"><div class="key-title">STRING KEY</div>' +
-    row("yarn-gray", "On the board: a person pinned to the question") +
-    row("yarn-high", "Contradiction, high: two documents that cannot both be true") +
-    row("yarn-medium", "Contradiction, medium") +
-    row("yarn-low", "Contradiction, low") +
-    row("yarn-collision", "Timeline collision: two events that clash") +
+    row("yarn-related", "Documented link") +
+    row("yarn-contradiction", "Contradiction") +
+    row("yarn-collision", "Timeline collision") +
     '<div class="key-note">Tap a colored string to read the two quotes it joins.</div></div>';
 }
 
-function openCaseQuestion() {
-  var current = MB.CASES.filter(function (c) { return c.case_id === MB.currentCase(); })[0];
+function openCaseQuestion(focusTarget) {
+  var current = selectedCase();
   var victim = book.persons.filter(function (p) { return /victim/i.test(p.role || ""); })[0];
   var question = victim ? "Who killed " + victim.name + "?" : "Who did it?";
-  el("modalTitle").textContent = "The question before the board";
-  el("quoteA").textContent = question;
-  el("quoteACite").textContent = current ? current.case_title : "";
   var win = "";
   if (book.coroner && book.coroner.death_window) win = "Death window: " + book.coroner.death_window.start + " to " + book.coroner.death_window.end + ".";
-  el("quoteB").textContent = win;
-  el("quoteBCite").textContent = win ? "The Coroner's window, from the file" : "";
-  el("modalAlt").textContent = "This board judges the file. The detective does the detecting.";
-  el("quoteModal").classList.remove("hidden");
+  setQuotePanel("The question before the board",
+    { text: question, source: current ? current.case_title : "" },
+    { text: win, source: win ? "The Coroner's window, from the file" : "" },
+    "This board judges the file. The detective does the detecting.", focusTarget);
 }
 
-function openThread(kind, idx) {
+function openThread(kind, idx, focusTarget) {
+  if (kind === "source") { openDocumentLink(documentedLinks()[idx], focusTarget); return; }
+  if (kind === "profile") { openProfile(documentedPeople()[idx].person, focusTarget); return; }
   var title, qa, qb, alt = "";
   if (kind === "contra") {
     var c = book.contradictions[idx];
     title = "Contradiction: " + c.kind + " (" + c.severity + ")";
-    qa = { q: c.a_quote, cite: docTitle(c.a_doc) };
-    qb = { q: c.b_quote, cite: docTitle(c.b_doc) };
+    qa = { q: c.a_quote, cite: docCitation(c.a_doc), doc: c.a_doc };
+    qb = { q: c.b_quote, cite: docCitation(c.b_doc), doc: c.b_doc };
     alt = "The innocent reading: " + c.innocent_alternative;
   } else {
     var col = book.collisions[idx];
     title = "Collision: " + col.who_or_what;
-    qa = { q: col.quotes[0] ? col.quotes[0].quote : "", cite: col.quotes[0] ? docTitle(col.quotes[0].doc_id) : "" };
-    qb = { q: col.quotes[1] ? col.quotes[1].quote : "", cite: col.quotes[1] ? docTitle(col.quotes[1].doc_id) : "" };
-    alt = col.explanation;
+    var collisionBody = (col.quotes || []).map(function (quote, i) {
+      return quoteCard("Supporting quote " + (i + 1), quote.quote, quote.doc_id);
+    }).join("");
+    setSourcePanel(title, collisionBody + '<p>' + esc(col.explanation || "") + '</p>', "", focusTarget);
+    return;
   }
-  el("modalTitle").textContent = title;
-  el("quoteA").textContent = qa.q; el("quoteACite").textContent = qa.cite;
-  el("quoteB").textContent = qb.q; el("quoteBCite").textContent = qb.cite;
-  el("modalAlt").textContent = alt;
-  el("quoteModal").classList.remove("hidden");
+  setQuotePanel(title, { text: qa.q, source: qa.cite, docId: qa.doc }, { text: qb.q, source: qb.cite, docId: qb.doc }, alt, focusTarget);
 }
 
 function renderClock() {
@@ -984,6 +1281,8 @@ document.addEventListener("DOMContentLoaded", function () {
     sel.appendChild(o);
   });
   sel.addEventListener("change", function () {
+    if (!el("quoteModal").hidden) closeQuotePanel();
+    if (!el("profileDrawer").hidden) closeProfile();
     MB.setCase(sel.value);
     book = MB.newBook();
     MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
@@ -1000,7 +1299,24 @@ document.addEventListener("DOMContentLoaded", function () {
     t.addEventListener("click", function () { showScreen(t.getAttribute("data-screen")); });
   });
   el("workBtn").addEventListener("click", work);
-  el("modalClose").addEventListener("click", function () { el("quoteModal").classList.add("hidden"); });
+  el("modalClose").addEventListener("click", closeQuotePanel);
+  el("profileClose").addEventListener("click", closeProfile);
+  el("profileBackdrop").addEventListener("click", closeProfile);
+  el("quoteModal").addEventListener("click", function (event) { if (event.target === el("quoteModal")) closeQuotePanel(); });
+  function keepDialogFocus(event, dialog, close) {
+    if (event.key === "Escape") { event.preventDefault(); close(); return; }
+    if (event.key !== "Tab") return;
+    var focusable = Array.prototype.slice.call(dialog.querySelectorAll("button:not([disabled]), a[href], summary, input:not([disabled]), [tabindex]:not([tabindex='-1'])"));
+    if (!focusable.length) { event.preventDefault(); dialog.focus(); return; }
+    var first = focusable[0], last = focusable[focusable.length - 1];
+    if (event.shiftKey && (document.activeElement === first || document.activeElement === dialog)) {
+      event.preventDefault(); last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault(); first.focus();
+    }
+  }
+  el("quoteModal").addEventListener("keydown", function (event) { keepDialogFocus(event, el("modal-card"), closeQuotePanel); });
+  el("profileDrawer").addEventListener("keydown", function (event) { keepDialogFocus(event, el("profileDrawer"), closeProfile); });
   el("printBtn").addEventListener("click", function () { window.print(); });
   el("vetoToggle").addEventListener("change", renderBrief);
   window.addEventListener("resize", function () { scheduleYarn(); });
