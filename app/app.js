@@ -518,6 +518,7 @@ function renderBoard() {
     return pinCard("pin-note", "gap:" + i,
       '<p class="note-q">' + esc(g.item) + '</p><p>' + esc(g.problem) + '</p>', "gap" + i);
   }).join("");
+  html += legendHtml();
   layer.innerHTML = html;
   var qc = el("caseQuestion");
   if (qc) qc.addEventListener("click", openCaseQuestion);
@@ -572,6 +573,19 @@ function drawYarn() {
   Array.prototype.forEach.call(svg.querySelectorAll(".yarn-hit"), function (p) {
     p.addEventListener("click", function () { openThread(p.getAttribute("data-kind"), +p.getAttribute("data-idx")); });
   });
+}
+
+function legendHtml() {
+  function row(cls, label) {
+    return '<div class="key-row"><svg class="key-line" viewBox="0 0 40 8" preserveAspectRatio="none"><path class="yarn-line ' + cls + '" d="M1 4 Q 20 9 39 4"/></svg><span>' + label + "</span></div>";
+  }
+  return '<div class="pin-legend"><div class="key-title">STRING KEY</div>' +
+    row("yarn-gray", "On the board: a person pinned to the question") +
+    row("yarn-high", "Contradiction, high: two documents that cannot both be true") +
+    row("yarn-medium", "Contradiction, medium") +
+    row("yarn-low", "Contradiction, low") +
+    row("yarn-collision", "Timeline collision: two events that clash") +
+    '<div class="key-note">Tap a colored string to read the two quotes it joins.</div></div>';
 }
 
 function openCaseQuestion() {
