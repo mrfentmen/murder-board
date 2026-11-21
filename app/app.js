@@ -832,7 +832,7 @@ function buildStrip() {
   strip.innerHTML = "";
   MB.CHAIRS.forEach(function (c) {
     var d = document.createElement("div");
-    d.className = "chair"; d.id = "chair-" + c.id;
+    d.className = "chair agent-" + c.id; d.id = "chair-" + c.id;
     var st = MB.STEPS.filter(function (x) { return x.chair === c.id; })[0];
     var mn = st ? String(MB.modelFor(st)).replace("gemini-4-", "").toUpperCase() : "";
     d.innerHTML = '<span class="agent">' + esc(agentOf(c.id).replace("Dr. ", "").split(" ").pop().toUpperCase()) + '</span>' + esc(c.name) + '<span class="model">' + esc(mn) + '</span><span class="count"></span>';
@@ -1275,7 +1275,7 @@ function chatBubble(chairId, text, kind, extra) {
     d.className = "chat-line you";
     d.innerHTML = '<div class="chat-head"><span class="chat-name">You</span><span class="ft">' + t + '</span></div><div class="chat-text">' + esc(text) + "</div>";
   } else {
-    d.className = "chat-line agent" + (kind === "fail" ? " fail" : "") + (kind === "note" ? " handoff" : "");
+    d.className = "chat-line agent" + (kind === "fail" ? " fail" : "") + (kind === "note" ? " handoff" : "") + (chairId ? " agent-" + chairId : "");
     d.innerHTML = '<div class="chat-head">' + (kind === "note" ? '<span class="handoff-tag">HANDOFF</span>' : "") + '<span class="chat-name">' + esc(agentOf(chairId)) + '</span><span class="chat-role">' + esc(chairNameOf(chairId)) + " \u00b7 " + esc(modelOfChair(chairId)) + '</span>' + route + '<span class="ft">' + t + "</span></div>" +
       '<div class="chat-text">' + esc(text) + "</div>" + sources;
   }
