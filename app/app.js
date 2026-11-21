@@ -901,7 +901,11 @@ function tiltFor(seed) {
 }
 function pinCard(cls, pinKey, inner, seed, kind, idx, label) {
   var t = tiltFor(seed || pinKey);
-  return '<div role="button" tabindex="0" class="' + cls + '" data-pin="' + esc(pinKey) + '" data-tilt="' + t + '" data-open-kind="' + kind + '" data-open-idx="' + idx + '" aria-label="' + esc(label) + '" style="transform: rotate(' + t + 'deg)">' + inner + '</div>';
+  var skey = MB.currentCase() + "|" + pinKey;
+  var boardActive = el("screen-board") && el("screen-board").classList.contains("active");
+  var isNew = !seenPins[skey];
+  if (isNew && boardActive) seenPins[skey] = 1;
+  return '<div role="button" tabindex="0" class="' + cls + (isNew ? " pin-new" : "") + '" data-pin="' + esc(pinKey) + '" data-tilt="' + t + '" data-open-kind="' + kind + '" data-open-idx="' + idx + '" aria-label="' + esc(label) + '" style="transform: rotate(' + t + 'deg)' + (isNew ? "; animation-delay:" + Math.min((idx || 0) * 90, 540) + "ms" : "") + '">' + inner + '</div>';
 }
 function photoHtml(name) {
   var map = (window.PERSON_PHOTOS || {})[MB.currentCase()] || {};
@@ -1304,7 +1308,7 @@ function showScreen(name) {
   Array.prototype.forEach.call(document.querySelectorAll(".screen"), function (s) {
     s.classList.toggle("active", s.id === "screen-" + name);
   });
-  if (name === "board") scheduleYarn();
+  if (name === "board") { renderBoard(); scheduleYarn(); }
 }
 
 var AGENT_NAMES = {
@@ -1369,6 +1373,7 @@ function updateProgress() {
 var feedTimer = null, feedBase = "", feedStart = 0, runStart = 0;
 var runTypingEl = null, lastTypingChair = null;
 var typingPhraseTimer = null, docTimer = null;
+var seenPins = {};
 function fmtClock(ms) { var s = Math.floor(ms / 1000); return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
 function setFeedActivity(text) {
   var status = el("feedActivity");
@@ -1509,6 +1514,7 @@ async function work() {
   MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
   activeStepId = null;
   book = MB.newBook();
+  seenPins = {};
   renderAll();
   setFeedActivity("Live run: waiting for the first agent result.");
   chatBubble(null, "Run opened: " + caseShortTitle(MB.currentCase()) + ". Ten chairs, four models.", "system");
