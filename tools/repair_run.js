@@ -16,17 +16,17 @@ const chosen = (global.CASES || []).filter((c) => c.case_id === CASE_ID)[0];
 if (!chosen) { console.error("unknown case", CASE_ID); process.exit(1); }
 global.CASES = [chosen];
 global.CASE_DOCS = chosen.documents;
-global.MB_CONFIG = { apiKey: "", reasoningModel: "gemini-4-argon", fastModel: "gemini-3.8-flash" };
+global.MB_CONFIG = { apiKey: "", reasoningModel: "gemini-4-argon", fastModel: "gemini-4-carbon" };
 
 const HELPER = path.join(process.env.HOME, "workspace/custom-connectors/custom.gemini-api/bin/gemini_api.py");
 global.__MB_TRANSPORT = function (model, systemText, userText) {
   const payload = JSON.stringify({
     systemInstruction: { parts: [{ text: systemText }] },
     contents: [{ parts: [{ text: userText }] }],
-    generationConfig: { responseMimeType: "application/json", temperature: 0.2 }
+    generationConfig: { responseMimeType: "application/json", temperature: 0.2, maxOutputTokens: 16384 }
   });
   const r = spawnSync("python3", [HELPER, "generate", model], { input: payload, maxBuffer: 16 * 1024 * 1024, timeout: 300000 });
-  if (r.status !== 0) throw new Error("helper failed for " + model + ": " + String(r.stdout).slice(0, 300));
+  if (r.status !== 0) throw new Error("helper failed for " + model + ": " + String(r.stderr || r.stdout).slice(0, 300));
   const data = JSON.parse(r.stdout);
   const parts = (data.candidates && data.candidates[0] && data.candidates[0].content.parts) || [];
   return parts.map((p) => p.text || "").join("");
