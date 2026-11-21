@@ -863,6 +863,12 @@ function setChair(id, state, count) {
 function renderRegistry() {
   var current = MB.CASES.filter(function (c) { return c.case_id === MB.currentCase(); })[0];
   el("caseTitle").textContent = current ? current.case_title : "";
+  var es = el("evidenceStatus");
+  if (es) {
+    var n = current ? current.documents.length : 0;
+    var claims = (typeof book !== "undefined" && book && book.claims) ? book.claims.length : 0;
+    es.textContent = n + " documents in evidence." + (claims ? " Intake has extracted " + claims + " quote-checked claims from them so far." : " Not yet worked — work the case and Intake extracts the claims.");
+  }
   var docs = current ? current.documents : [];
   el("registryBody").innerHTML = docs.map(function (d) {
     return "<tr data-doc='" + d.id + "'><td>" + d.id + "</td><td>" + esc(d.title) + "</td><td>" + esc(d.type) + "</td><td>" + esc(d.date) + "</td><td>" + esc(d.author) + "</td><td>view</td></tr>";
