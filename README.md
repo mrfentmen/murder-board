@@ -27,10 +27,21 @@ that does it reliably, and proof: `EVAL.md` scores the squad
 against a single-model-call baseline on all three cases, with
 the failure analysis left in.
 
-Two Gemini 4 models, two clear jobs. **Argon judges**: the
-Cross-Examiner and the Lead Detective, the two steps that weigh
-the file. **Carbon builds**: every other step, the extraction
-and sorting. The judging criteria also name a Decisions API;
+All four Gemini 4 models, four clear jobs. **Argon judges**
+(reasoning): the Cross-Examiner and the Lead Detective, the two
+steps that weigh the file. **Carbon builds** (visual coding):
+the First Officer, Records, the Coroner, CSI, Intake, the
+Interviewer, and the Prosecutor, the extraction and sorting
+that builds the murder book. **Hydrogen holds the world**
+(world models): the Analyst, one clock and one map of the
+case, every event placed in time and space, every collision
+surfaced. **Neon works the machines** (robotics): Digital,
+the field devices that watched the scene, cameras, keypads,
+plate readers, phones, and exactly what each record proves.
+If Hydrogen or Neon ever returns no usable output, Carbon
+covers the step and the substitution is written into the run
+log, never hidden. The chair strip in the app names the model
+holding each chair. The judging criteria also name a Decisions API;
 no decision model appears in the model list on this event's
 key (checked 2026-11-21), so the decision function here, which
 lead outranks which and by how much, is the rubric recompute in
