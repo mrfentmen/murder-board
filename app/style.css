@@ -495,3 +495,10 @@ th, td { border: 0; border-bottom: 1px solid var(--line); }
 .chair.running{animation:chairpulse 1.2s ease-in-out infinite}
 @keyframes chairpulse{0%,100%{box-shadow:0 0 6px rgba(224,164,88,.3)}50%{box-shadow:0 0 16px rgba(224,164,88,.75)}}
 .run-clock{font-weight:700;color:var(--amber);margin-left:10px;letter-spacing:1px}
+
+body{font-family:'Archivo',system-ui,'Segoe UI',Helvetica,Arial,sans-serif}
+h1,h2,h3,.tab,.feed-head,.folder-tab,.chip,.models-line,.run-status{font-family:'Archivo',system-ui,'Segoe UI',sans-serif}
+h1{font-weight:800}
+.tab{font-weight:600;letter-spacing:.4px}
+.folder-stamp,.chair .model,.run-clock,#feedActivity,.chat-route,.folder-fields b{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,monospace}
+.chat-source blockquote,blockquote{font-family:Georgia,'Times New Roman',serif}
