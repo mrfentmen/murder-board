@@ -885,6 +885,7 @@ function renderRegistry() {
       el("docViewer").textContent = d ? d.text : "";
     });
   });
+  renderReddit();
   Array.prototype.forEach.call(document.querySelectorAll("#registryBody tr.pulled"), function (tr) {
     tr.addEventListener("click", function () {
       var it = pulledItems[Number(tr.getAttribute("data-pull"))];
@@ -1196,7 +1197,7 @@ function renderReddit() {
   var feed = el("redditFeed");
   if (!feed) return;
   var current = MB.CASES.filter(function (c) { return c.case_id === MB.currentCase(); })[0];
-  var docs = current ? current.documents.filter(function (d) { return d.type === "post" || d.type === "thread"; }) : [];
+  var docs = current ? current.documents.filter(function (d) { return d.type === "post" || d.type === "thread" || d.type === "article"; }) : [];
   if (!docs.length) {
     feed.innerHTML = '<p class="reddit-empty">No public posts in this file. The Reddit fills when a case has a public trail — work the Screens case to see it full.</p>';
     return;
