@@ -1017,8 +1017,23 @@ function drawYarn() {
     return line + '<path class="yarn-hit" data-kind="' + kind + '" data-idx="' + idx + '" d="' + d + '"><title>Open the thread</title></path>';
   }
   var out = "";
-  documentedLinks().forEach(function (link, i) {
+  var dlinks = documentedLinks();
+  dlinks.forEach(function (link, i) {
     out += yarn(pts["person:" + link.person.name], pts["doc:" + link.doc_id], "yarn-related", "source", i);
+  });
+  var linkedNames = {};
+  dlinks.forEach(function (l) { linkedNames[l.person.name] = 1; });
+  var cur3 = selectedCase();
+  book.persons.forEach(function (p) {
+    if (linkedNames[p.name]) return;
+    var key = String(p.name || "").toLowerCase();
+    var sur = key.split(" ").pop();
+    var hits = 0;
+    (cur3 ? cur3.documents : []).forEach(function (d) {
+      if (hits >= 3) return;
+      var t = (d.text || "").toLowerCase();
+      if (t.indexOf(key) !== -1 || (sur.length > 3 && t.indexOf(sur) !== -1)) { out += yarn(pts["person:" + p.name], pts["doc:" + d.id], "yarn-index", null, 0); hits++; }
+    });
   });
   if (!book.persons.length) {
     var pmap2 = (window.PERSON_PHOTOS || {})[MB.currentCase()] || {};
@@ -1177,9 +1192,51 @@ function renderBriefHead() {
     "<br>Prepared by the Lead Detective chair (Argon). Every claim in this brief carries a quote from the file.</div>";
 }
 
+function liveBriefText() {
+  var id = MB.currentCase();
+  var m = CASE_META[id] || {};
+  var L = [];
+  L.push("BRIEF IN PROGRESS \u00b7 updated as the squad posts. The Lead Detective's signed brief replaces this page when the run completes.");
+  L.push("");
+  L.push("VICTIM: " + (m.victim || "not yet established") + ". WINDOW: " + (m.window || "not yet established") + ".");
+  var posted = [];
+  if (book.persons.length) posted.push(book.persons.length + " persons sorted");
+  if (book.claims.length) posted.push(book.claims.length + " quote-checked claims");
+  if (book.contradictions.length) posted.push(book.contradictions.length + " contradictions");
+  if (book.leads.length) posted.push(book.leads.length + " leads");
+  L.push("POSTED SO FAR: " + (posted.length ? posted.join(" \u00b7 ") : "nothing yet \u00b7 work the case and this page fills in step by step."));
+  if (book.persons.length) {
+    L.push("");
+    L.push("PERSONS:");
+    book.persons.forEach(function (p) {
+      var a = book.alibis.filter(function (x) { return matchesPersonName(x.person, p); })[0];
+      L.push("\u00b7 " + p.name + " \u00b7 " + (p.role || "") + (a ? " \u00b7 alibi: " + a.rating : ""));
+    });
+  }
+  if (book.contradictions.length) {
+    L.push("");
+    L.push("CONTRADICTIONS FOUND:");
+    book.contradictions.forEach(function (c) {
+      L.push("\u00b7 " + String(c.severity || "").toUpperCase() + " \u00b7 " + (c.a_doc || "") + " vs " + (c.b_doc || "") + (c.why ? " \u00b7 " + c.why : ""));
+    });
+  }
+  if (book.leads.length) {
+    L.push("");
+    L.push("TOP LEADS SO FAR:");
+    book.leads.slice().sort(function (x, y) { return (y.score || 0) - (x.score || 0); }).slice(0, 5).forEach(function (l) {
+      L.push("\u00b7 " + (l.score || 0) + " \u00b7 " + (l.action || l.question || l.text || ""));
+    });
+  }
+  var gaps = (book.csi_gaps || []).concat(book.ce_gaps || []);
+  if (gaps.length) {
+    L.push("");
+    L.push("GAPS STILL OPEN: " + gaps.length + ". First: " + (typeof gaps[0] === "string" ? gaps[0] : (gaps[0].text || gaps[0].gap || "")));
+  }
+  return L.join("\n");
+}
 function renderBrief() {
   renderBriefHead();
-  var text = book.brief || "Run the case to write the brief.";
+  var text = book.brief || liveBriefText();
   if (el("vetoToggle").checked && book.vetoes.length) {
     var needles = book.vetoes.map(function (v) { return v.phrase.toLowerCase(); });
     el("briefPage").innerHTML = text.split(/(?<=[.!?])\s+/).map(function (sentence) {
