@@ -380,3 +380,18 @@ th, td { border: 0; border-bottom: 1px solid var(--line); }
 .clock-event .when { display: inline-block; font-family: ui-monospace, Menlo, monospace; font-size: 12px; font-weight: bold; color: #e8d9ae; background: #35322a; border-radius: 3px; padding: 1px 7px; margin-right: 6px; }
 .clock-event.in-window { border-left-color: #c0392b; background: #2e1f1c; }
 .clock-event.in-window::before { background: #e74c3c; box-shadow: 0 0 0 2px #c0392b, 0 0 10px rgba(231,76,60,.7); }
+
+.run-clock { font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: #e8d9ae; min-width: 34px; }
+.drop-chip { background: #4a1710; color: #f0b429; border: 1px solid #c0392b; border-radius: 10px; padding: 2px 10px; font-size: 12.5px; font-weight: bold; }
+.drop-chip.hidden { display: none; }
+/* Chrono mode: on wide screens the Clock alternates around a center spine */
+@media (min-width: 1000px) {
+  .clock-strip { padding-left: 0; margin-left: 0; }
+  .clock-strip::before { left: 50%; margin-left: -1px; }
+  .clock-strip .death-band { margin-left: 0; text-align: center; position: relative; z-index: 2; }
+  .clock-event { width: calc(50% - 34px); }
+  .clock-event:nth-of-type(odd) { margin-right: auto; text-align: right; }
+  .clock-event:nth-of-type(odd)::before { left: auto; right: -41px; }
+  .clock-event:nth-of-type(even) { margin-left: auto; }
+  .clock-event:nth-of-type(even)::before { left: -41px; }
+}
