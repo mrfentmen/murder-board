@@ -159,15 +159,15 @@ th { background: var(--panel); }
 .yarn-low { stroke: #8f4a3a; cursor: pointer; }
 .yarn-collision { stroke: #5b7fa6; stroke-dasharray: 6 4; cursor: pointer; }
 .yarn-line[data-kind="contra"]:hover, .yarn-line[data-kind="collision"]:hover { stroke-width: 4.5; }
-.pin-layer { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 20px 18px; align-items: flex-start; }
+.pin-layer { position: relative; display: flex; flex-wrap: wrap; gap: 20px 18px; align-items: flex-start; }
 .pin-title {
-  position: relative; width: 100%; text-align: center; color: #7c1d12; cursor: pointer;
+  position: relative; z-index: 4; width: 100%; text-align: center; color: #7c1d12; cursor: pointer;
   font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
   padding: 2px 0 6px;
 }
-.pin-title .qmark { font-size: 64px; line-height: .9; font-weight: 700; color: #c62f22; display: inline-block; transform: rotate(-4deg); }
-.pin-title .who { display: inline-block; font-size: 30px; line-height: 1.05; margin-left: 12px; text-align: left; letter-spacing: 2px; color: #33302b; }
-.pin-title .case-name { margin-top: 6px; font-size: 15px; color: #4c4438; letter-spacing: .4px; }
+.pin-title .qmark { font-size: 64px; line-height: .9; font-weight: 700; color: #c62f22; display: inline-block; transform: rotate(-4deg); text-shadow: 0 0 7px rgba(216,183,132,.95), 0 0 3px rgba(216,183,132,.95); }
+.pin-title .who { display: inline-block; font-size: 30px; line-height: 1.05; margin-left: 12px; text-align: left; letter-spacing: 2px; color: #33302b; text-shadow: 0 0 7px rgba(216,183,132,.95), 0 0 3px rgba(216,183,132,.95); }
+.pin-title .case-name { margin-top: 6px; font-size: 15px; color: #4c4438; letter-spacing: .4px; text-shadow: 0 0 7px rgba(216,183,132,.95), 0 0 3px rgba(216,183,132,.95); }
 .pin-card {
   position: relative; background: #f6f1e5; color: #26241f; border-radius: 2px;
   box-shadow: 0 6px 14px rgba(43, 28, 8, .45); padding: 16px 14px 12px;
