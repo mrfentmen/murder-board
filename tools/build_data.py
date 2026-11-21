@@ -18,7 +18,7 @@ def load_case(folder):
         docs.append({**entry, "text": open(path).read()})
     return {"case_id": registry["case_id"], "case_title": registry["case_title"], "documents": docs}
 
-cases = [load_case("case"), load_case("case2")]
+cases = [load_case("case"), load_case("case2"), load_case("case3"), load_case("case4")]
 docs = cases[0]["documents"]
 
 agents = []
@@ -37,6 +37,16 @@ with open(os.path.join(ROOT, "app", "case-data.js"), "a") as f:
     f.write("window.CASES = ")
     json.dump(cases, f, indent=1)
     f.write(";\n")
+
+fixtures = []
+for name in sorted(os.listdir(os.path.join(ROOT, "records"))):
+    if name.endswith(".json"):
+        fixtures.append(json.load(open(os.path.join(ROOT, "records", name))))
+with open(os.path.join(ROOT, "app", "records-data.js"), "w") as f:
+    f.write("window.RECORDS_FIXTURES = ")
+    json.dump(fixtures, f, indent=1)
+    f.write(";\n")
+print(f"records-data.js: {len(fixtures)} fixtures")
 
 with open(os.path.join(ROOT, "app", "agents-data.js"), "w") as f:
     f.write("window.AGENT_PROMPTS = ")
