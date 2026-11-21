@@ -132,8 +132,53 @@ baseline ran once per case. The honest next test, already
 agreed with the team: rebuild a real, solved case from the
 public record, run the squad on it blind, and score it against
 what actually solved the case. Faster, better, or different
-are all acceptable answers. That run is the unprepared-input
-check this evaluation still owes.
+are all acceptable answers. That run has now been made; it is
+the section after this one.
+
+## The real case: the Duck File
+
+The owed test, run. Carlton "FBG Duck" Weekly was murdered on
+East Oak Street, Chicago, on August 4, 2020; six men were
+convicted in federal court in January 2024. We rebuilt the
+case from the public record (the government's Santiago
+proffer in U.S. v. Liggins, Department of Justice releases,
+and press reporting) as twelve documents, `CASE4_BIBLE.md`,
+and ran the squad on it blind. The honesty caveat stands:
+this case is famous, the models may know it, and the quote
+check is what keeps recall from scoring. A finding counts
+only with a verbatim quote from our twelve documents.
+
+Run one, 2026-11-21, on the two-model map (Argon and
+Carbon): 987 seconds, no failed steps, one finding dropped
+by the quote check.
+
+What it got right. The star catch: the file carries the
+defense lawyer's on-record claim that "some unknown person
+may have driven downtown" in Tacarlos Offerd's Ford Fusion.
+The squad set it against the prosecution's line in the same
+document, that Offerd drove the Fusion in the shooting with
+gunmen riding in it, rated the contradiction HIGH, and rated
+Offerd's alibi CONTRADICTED. That claim, and the Fusion's
+paper trail, are what the real case turned on. The trap
+held: the scene surveillance identifies nobody, the gunmen
+were masked, and the squad never claimed an identification
+from it. The brief rebuilt the half hour that solved the
+case (the 3:59 PM boutique call, the crew moving by about
+4:02, the shooting at about 4:26) and closed on the standing
+line. Its top leads were the Fusion's dealership paper, the
+POD camera and plate reader trail for both cars, and the Oak
+Street video with its missing ledger entry: the same records
+the real investigation was built from.
+
+What it missed. Ezell Rawls, who died before trial and made
+no claim in the file, was rated UNCORROBORATED; the book
+says NOT APPLICABLE. The bible's top gap, the unnamed friend
+who entered the boutique with Turpin and was never
+identified, appears in neither gap list. The gap lists
+filled instead with this file's missing evidence ledger,
+which is true of the file but generic, twelve variations on
+one absence where the book wanted the one person nobody
+named.
 
 ## The Decisions API
 
@@ -143,7 +188,7 @@ appears in the model list on this event's key (checked
 Neon, and the fast tier). The decision function in this system,
 which lead outranks which and by how much, is performed by the
 rubric recompute in the runner: deterministic, inspectable,
-and shown on screen with its arithmetic. We used the two
-Gemini 4 models the key actually serves, each with a clear
-job, and we say plainly that the third named piece was not
+and shown on screen with its arithmetic. We used all
+four Gemini 4 models the key serves, each with a clear job,
+and we say plainly that the third named piece was not
 available to use.
