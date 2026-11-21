@@ -1,0 +1,9 @@
+PARKING LOT GATE RECORD - Starlite Lanes lot, license plate reader summary, November 2017 pull.
+
+The lot gate camera reads plates on entry and exit. Records for the night of November 4-5, 2017 include:
+
+Plate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.
+Plate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.
+Plate ending 7750, white hatchback, registered to M. Bell: entered 11:18 PM, exited 11:29 PM.
+
+The reader log is complete for the weekend. Reads are generated automatically at the gate.
