@@ -473,6 +473,18 @@ function pinCard(cls, pinKey, inner, seed) {
   var t = tiltFor(seed || pinKey);
   return '<div class="' + cls + '" data-pin="' + esc(pinKey) + '" data-tilt="' + t + '" style="transform: rotate(' + t + 'deg)">' + inner + '</div>';
 }
+function photoHtml(name) {
+  var map = (window.PERSON_PHOTOS || {})[MB.currentCase()] || {};
+  var key = String(name || "").toLowerCase().replace(/[^a-z ]/g, "").replace(/\s+/g, " ").trim();
+  var src = map[key];
+  if (!src) { // surname fallback when the file uses a fuller or shorter name
+    var sur = key.split(" ").pop();
+    for (var k in map) { if (k.split(" ").pop() === sur) { src = map[k]; break; } }
+  }
+  if (src) return '<img class="photo" src="' + src + '" alt="">';
+  return '<div class="photo">' + esc(initialsOf(name)) + '</div>';
+}
+
 function initialsOf(name) {
   return String(name).replace(/["']/g, "").split(/\s+/).map(function (w) { return w.charAt(0); }).join("").slice(0, 2).toUpperCase();
 }
@@ -487,7 +499,7 @@ function renderBoard() {
     var isVictim = /victim/i.test(p.role || "");
     var alibi = book.alibis.filter(function (a) { return a.person === p.name; })[0];
     return pinCard("pin-card person" + (isVictim ? " victim" : ""), "person:" + p.name,
-      '<div class="photo">' + esc(initialsOf(p.name)) + '</div><h4>' + esc(p.name) + '</h4><p class="role">' + esc(p.role) + '</p>' +
+      photoHtml(p.name) + '<h4>' + esc(p.name) + '</h4><p class="role">' + esc(p.role) + '</p>' +
       (alibi ? '<p class="alibi-chip rate-' + esc(String(alibi.rating).toLowerCase().replace(/\s+/g, "-")) + '">' + esc(alibi.rating) + '</p>' : "") +
       claims.slice(0, 2).map(function (c) { return '<p class="q">&ldquo;' + esc(c.quote) + '&rdquo;</p>'; }).join(""),
       p.name);
