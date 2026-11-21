@@ -1,0 +1,2053 @@
+{
+ "created_at": "2026-11-21T18:36:35.838Z",
+ "outputs": {
+  "custody": {
+   "documents": [
+    {
+     "doc_id": "doc01",
+     "type": "article",
+     "legible": true,
+     "custody_note": "News article authored by News reports, August 2020, dated 2020-08-05 (\"News report, August 5, 2020. Summarized from Chicago Tribune and Chicago Sun-Times reporting of August 4 and 5, 2020.\")."
+    },
+    {
+     "doc_id": "doc02",
+     "type": "report",
+     "legible": true,
+     "custody_note": "Police briefing statement summary authored by Chicago Police Department (via news reporting), dated 2020-08-04 (\"Chicago Police Department statement at the scene, August 4, 2020. Deputy Chief Daniel O'Shea, summarized from news reporting of the police briefing.\")."
+    },
+    {
+     "doc_id": "doc03",
+     "type": "article",
+     "legible": true,
+     "custody_note": "Explainer article authored by News reports, August 2020 (updated with later reporting), dated 2020-08-07 (\"Explainer, August 2020, updated with later reporting. The feud behind the shooting, as described by police, prosecutors, and Chicago news reporting.\")."
+    },
+    {
+     "doc_id": "doc04",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Federal court filing summary authored by Federal court filing summary, dated 2023-08-04 (\"Summary of the government's Santiago proffer, a federal court filing in United States v. Liggins, filed August 4, 2023.\")."
+    },
+    {
+     "doc_id": "doc05",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Surveillance video summary record authored by Chicago Police Department release (and trial evidence description), dated 2020-08-13 (\"Surveillance video summary. From the video Chicago police released in August 2020 and the camera evidence described at trial.\")."
+    },
+    {
+     "doc_id": "doc06",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Federal detention hearing summary record authored by Federal detention hearing summary (reported by Chicago Sun-Times), dated 2021-10-15 (\"Federal detention hearing summary, October 15, 2021. Assistant U.S. Attorney Jason Julien, as reported by the Chicago Sun-Times.\")."
+    },
+    {
+     "doc_id": "doc07",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Federal court filing summary record authored by Federal court filing summary, dated 2023-08-04 (\"Summary of the government's Santiago proffer, federal court filing in United States v. Liggins, filed August 4, 2023.\")."
+    },
+    {
+     "doc_id": "doc08",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Summary of witness statements in a federal court filing authored by Federal court filing summary, dated 2023-08-04 (\"Summary of the government's Santiago proffer, federal court filing in United States v. Liggins, filed August 4, 2023. The filing describes statements Kenneth Roberson made to people who later cooperated with the government.\")."
+    },
+    {
+     "doc_id": "doc09",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Trial evidence summary record authored by Trial evidence summary, dated 2023-12-01 (\"Trial evidence summary: the social media and music evidence. From the federal trial, October 2023 to January 2024, and the U.S. Attorney's statements.\")."
+    },
+    {
+     "doc_id": "doc10",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Phone record summary from a federal court filing authored by Federal court filing summary, dated 2023-08-04 (\"Phone record summary. From the government's Santiago proffer, federal court filing in United States v. Liggins, filed August 4, 2023.\")."
+    },
+    {
+     "doc_id": "doc11",
+     "type": "report",
+     "legible": true,
+     "custody_note": "Indictment summary report authored by U.S. Department of Justice, dated 2023-04-10 (\"U.S. Department of Justice summary of the indictments. Original indictment October 2021; superseding indictment unsealed April 10, 2023.\")."
+    },
+    {
+     "doc_id": "doc12",
+     "type": "report",
+     "legible": true,
+     "custody_note": "Verdict report authored by U.S. Department of Justice, dated 2024-01-17 (\"U.S. Department of Justice, January 2024. Verdicts in United States v. Liggins, returned January 17, 2024.\")."
+    }
+   ]
+  },
+  "records": {
+   "subject": "FBG Duck (doc01: \"News article: rapper FBG Duck killed on Oak Street\")",
+   "starter_items": [
+    {
+     "item": "Death record search for individual identified as \"rapper FBG Duck killed on Oak Street\" (doc01) around 2020-08-04 (doc02: \"Police statement at the scene: two cars, four gunmen\", date \"2020-08-04\") to establish legal name, date of birth, and date of death",
+     "source_class": "death index",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Obituary and funeral notice search for \"FBG Duck\" following 2020-08-04/2020-08-05 (doc01: \"News article: rapper FBG Duck killed on Oak Street\") to identify legal name and surviving kin",
+     "source_class": "obituary and funeral notices",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Archival news search around August 2020 for \"rapper FBG Duck killed on Oak Street\" (doc01) and \"Tookaville, O Block, and Dead Bitches\" (doc03)",
+     "source_class": "newspaper archives",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "State and federal court portal search referencing 2021 and 2023 indictments and 2024 verdict (doc11: \"Indictments: five charged in 2021, Turpin in 2023\"; doc12: \"Verdict: all six convicted, January 17, 2024\") and victim's legal name once verified",
+     "source_class": "court portals",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Historical household and enumeration records once victim's legal name, date of birth, and parentage are verified from vital records (pending verification of \"FBG Duck\" in doc01)",
+     "source_class": "census schedules",
+     "label": "UNVERIFIED"
+    }
+   ],
+   "request_next": [
+    "Full text of doc01 (\"News article: rapper FBG Duck killed on Oak Street\") and doc02 (\"Police statement at the scene: two cars, four gunmen\") to verify the victim's legal name without merging identities",
+    "Full text of federal court filings and U.S. Department of Justice reports in the registry (doc04, doc06, doc07, doc08, doc09, doc10, doc11, doc12) for verified party names and docket numbers",
+    "Official death certificate and medical examiner report corresponding to the Oak Street homicide referenced in doc01 and Chicago Police Department report in doc02",
+    "Complete Chicago Police Department incident and surveillance records referenced in doc02 and doc05 (\"Surveillance summary: Parkway Gardens, the camera trail\")"
+   ]
+  },
+  "coroner": {
+   "cause": "Unconfirmed by medical examiner (no autopsy or medical examiner report in file; news report states \"Weekly was shot multiple times\" and was \"shot and killed\", doc01)",
+   "manner": "Unconfirmed by medical examiner (no medical examiner determination in file; news and police reports describe a shooting in which four gunmen opened fire in a \"targeted attack\", doc01, doc02)",
+   "death_window": {
+    "start": "2020-08-04 ~16:26 (approximate time of shooting)",
+    "end": "2020-08-04 ~16:56 (pronounced dead \"about half an hour later\" at hospital)",
+    "quote": "At approximately 4:26 p.m., two vehicles pulled up near the 100 block of East Oak Street. Four gunmen got out, two from each vehicle, and opened fire. Weekly was shot multiple times. Two other people were wounded, a woman who was with Weekly and a man nearby. Weekly was taken to Northwestern Memorial Hospital, where he was pronounced dead about half an hour later.",
+    "doc_id": "doc01"
+   },
+   "medical_facts": [
+    {
+     "fact": "Decedent is identified in news reporting as Carlton Weekly (known as FBG Duck), age 26.",
+     "quote": "The rapper, whose real name was Carlton Weekly, was 26.",
+     "doc_id": "doc01"
+    },
+    {
+     "fact": "Weekly sustained multiple gunshot wounds; no wound locations, trajectories, calibers, or autopsy findings are present in the file.",
+     "quote": "Weekly was shot multiple times.",
+     "doc_id": "doc01"
+    },
+    {
+     "fact": "Weekly was transported to Northwestern Memorial Hospital and pronounced dead approximately half an hour after the ~4:26 p.m. shooting on Tuesday, August 4, 2020.",
+     "quote": "Weekly was taken to Northwestern Memorial Hospital, where he was pronounced dead about half an hour later.",
+     "doc_id": "doc01"
+    },
+    {
+     "fact": "Two additional individuals—a woman with Weekly and a nearby man—were reported wounded in the same shooting, with no injury details provided.",
+     "quote": "Two other people were wounded, a woman who was with Weekly and a man nearby.",
+     "doc_id": "doc01"
+    }
+   ],
+   "medical_flags": []
+  },
+  "csi": {
+   "ledger": [],
+   "gaps": [
+    {
+     "item": "Weapon recovered at the scene (count: 1)",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "No evidence ledger is present in the case file; 1 weapon was reported recovered by police at the scene, with no ledger entry recording its make, model, or custody.",
+     "quote": "One weapon was recovered by police at the scene.",
+     "doc_id": "doc02"
+    },
+    {
+     "item": "Firearms used in the shooting (count discrepancy: 4 gunmen opened fire vs. 1 weapon recovered at scene, 0 in ledger)",
+     "mentioned_in": [
+      "doc01",
+      "doc02",
+      "doc05",
+      "doc12"
+     ],
+     "problem": "Documents state four gunmen stepped out of two vehicles and opened fire (and five defendants were later convicted of using a firearm in the murder), while police reported recovering only 1 weapon at the scene and the file contains no evidence ledger accounting for any firearms, casings, or projectiles.",
+     "quote": "Four gunmen got out, two from each vehicle, and opened fire.",
+     "doc_id": "doc01"
+    },
+    {
+     "item": "Chrysler 300 (count: 1)",
+     "mentioned_in": [
+      "doc01",
+      "doc02",
+      "doc05",
+      "doc07",
+      "doc12"
+     ],
+     "problem": "Seized by CPD the day after the shooting, but absent from any evidence ledger because no ledger is included in the file.",
+     "quote": "CPD seized Roberson's Chrysler 300 the day after the murder.",
+     "doc_id": "doc07"
+    },
+    {
+     "item": "Ford Fusion (count: 1)",
+     "mentioned_in": [
+      "doc01",
+      "doc02",
+      "doc05",
+      "doc06",
+      "doc07",
+      "doc12"
+     ],
+     "problem": "Described as one of two vehicles used in the shooting and returned to a suburban dealership approximately one hour afterward; absent from any evidence ledger (no ledger in file, and documents do not state whether police later seized the vehicle).",
+     "quote": "Julien said the Fusion was returned to the dealership in the Chicago suburbs approximately one hour after the shooting.",
+     "doc_id": "doc06"
+    },
+    {
+     "item": "East Oak Street surveillance video / security footage",
+     "mentioned_in": [
+      "doc01",
+      "doc02",
+      "doc05",
+      "doc11"
+     ],
+     "problem": "Reviewed by detectives and described as showing the shooting, but absent from any evidence ledger (no ledger in file).",
+     "quote": "Video from Oak Street shows the Ford Fusion and the Chrysler 300 pull up. Four gunmen got out of the two cars and shot Weekly and the two people with him.",
+     "doc_id": "doc05"
+    },
+    {
+     "item": "Parkway Gardens surveillance video",
+     "mentioned_in": [
+      "doc05",
+      "doc11"
+     ],
+     "problem": "Released by Chicago police and described at trial, but absent from any evidence ledger (no ledger in file).",
+     "quote": "Surveillance video from the Parkway Gardens apartments, the South Side complex known as O Block, shows four men sprinting down the steps of a building and getting into two waiting cars: a Ford Fusion and a Chrysler 300.",
+     "doc_id": "doc05"
+    },
+    {
+     "item": "Police POD camera footage and license plate reader records",
+     "mentioned_in": [
+      "doc05",
+      "doc06"
+     ],
+     "problem": "Used to track the Ford Fusion and Chrysler 300 to and from the Gold Coast, but absent from any evidence ledger (no ledger in file).",
+     "quote": "Police POD cameras and license plate readers then tracked the two cars as they drove from the South Side to the Gold Coast.",
+     "doc_id": "doc05"
+    },
+    {
+     "item": "Masks worn by the four gunmen at Oak Street",
+     "mentioned_in": [
+      "doc05"
+     ],
+     "problem": "Four gunmen at Oak Street are described on video as masked; no masks are logged in an evidence ledger (no ledger in file, and no recovery is reported).",
+     "quote": "The gunmen at Oak Street were masked.",
+     "doc_id": "doc05"
+    },
+    {
+     "item": "Phone records for call(s) placed by Ralph Turpin from Milani Boutique",
+     "mentioned_in": [
+      "doc04",
+      "doc10",
+      "doc12"
+     ],
+     "problem": "Summarized from a court filing as showing at least one phone call from inside Milani Boutique, but neither the phone records nor any phone device appear in an evidence ledger (no ledger in file).",
+     "quote": "Ralph Turpin placed at least one phone call from inside Milani Boutique on the afternoon of August 4, 2020.",
+     "doc_id": "doc10"
+    },
+    {
+     "item": "Carlton Weekly's August 4, 2020 social media broadcast",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "Noted by police at the scene, but no preserved digital copy or record appears in an evidence ledger (no ledger in file).",
+     "quote": "Officers noted that Weekly had been broadcasting his travels on social media that day, and that he was found.",
+     "doc_id": "doc02"
+    },
+    {
+     "item": "Audio/music recording \"Dead Bitches\"",
+     "mentioned_in": [
+      "doc03"
+     ],
+     "problem": "Referenced in the feud explainer as a July 10, 2020 song release, with no exhibit or ledger entry in the file.",
+     "quote": "On July 10, 2020, Weekly released a song called \"Dead Bitches.\"",
+     "doc_id": "doc03"
+    },
+    {
+     "item": "Defendants' social media posts, photos, videos, and songs (depicting gang signs and firearms)",
+     "mentioned_in": [
+      "doc03",
+      "doc09"
+     ],
+     "problem": "Presented as trial evidence by prosecutors, but not itemized in an evidence ledger (no ledger in file); firearms seen in the posts/videos are also unlogged.",
+     "quote": "Prosecutors built the racketeering case in part from the defendants' own posts, photos, and videos: gang signs, firearms, and the feud with Tookaville carried on in public, in songs and online, over years.",
+     "doc_id": "doc09"
+    },
+    {
+     "item": "Post-shooting video showing distribution of diamond O Block pendants and stacks of cash (and the physical pendants and cash depicted)",
+     "mentioned_in": [
+      "doc09"
+     ],
+     "problem": "Video was shown to jurors at trial, and depicts physical diamond O Block pendants and stacks of cash; neither the video recording nor any physical pendants or cash appear in an evidence ledger (no ledger in file).",
+     "quote": "Jurors saw video recorded after the murder in which King Von, the O Block rapper prosecutors said put a price on Weekly's head, gave the defendants diamond O Block pendants and stacks of cash.",
+     "doc_id": "doc09"
+    }
+   ]
+  },
+  "intake": {
+   "persons": [
+    {
+     "name": "Carlton Weekly",
+     "aliases": [
+      "FBG Duck",
+      "Duck"
+     ],
+     "role": "Victim; Chicago rapper associated with Tookaville"
+    },
+    {
+     "name": "Unnamed woman",
+     "aliases": [],
+     "role": "Wounded victim who was with Carlton Weekly during the shooting"
+    },
+    {
+     "name": "Unnamed man",
+     "aliases": [],
+     "role": "Wounded victim who was nearby during the shooting"
+    },
+    {
+     "name": "Daniel O'Shea",
+     "aliases": [],
+     "role": "Deputy Chief, Chicago Police Department"
+    },
+    {
+     "name": "Shondale Gregory",
+     "aliases": [
+      "Tooka"
+     ],
+     "role": "Teenager killed in 2011; namesake of Tookaville"
+    },
+    {
+     "name": "Odee Perry",
+     "aliases": [],
+     "role": "Person killed in 2011; namesake of O Block"
+    },
+    {
+     "name": "T-Roy",
+     "aliases": [],
+     "role": "Deceased O Block member"
+    },
+    {
+     "name": "King Von",
+     "aliases": [],
+     "role": "O Block rapper; killed in November 2020"
+    },
+    {
+     "name": "Unnamed informant",
+     "aliases": [],
+     "role": "Informant to Chicago police and FBI agents"
+    },
+    {
+     "name": "Ralph Turpin",
+     "aliases": [
+      "Tall",
+      "Teezy"
+     ],
+     "role": "Defendant convicted of murder in aid of racketeering; O Block associate"
+    },
+    {
+     "name": "Unnamed friend of Ralph Turpin",
+     "aliases": [],
+     "role": "Companion who entered Milani Boutique with Ralph Turpin"
+    },
+    {
+     "name": "Jason Julien",
+     "aliases": [],
+     "role": "Assistant U.S. Attorney"
+    },
+    {
+     "name": "Tacarlos Offerd",
+     "aliases": [
+      "Los"
+     ],
+     "role": "Defendant convicted of murder in aid of racketeering; alleged driver of the Ford Fusion"
+    },
+    {
+     "name": "John Somerville",
+     "aliases": [],
+     "role": "Defense attorney for Tacarlos Offerd"
+    },
+    {
+     "name": "Kenneth Roberson",
+     "aliases": [
+      "Kenny Mac"
+     ],
+     "role": "Defendant convicted of murder in aid of racketeering; alleged driver of the Chrysler 300"
+    },
+    {
+     "name": "Cooperating witness 1",
+     "aliases": [],
+     "role": "Unnamed cooperating government witness"
+    },
+    {
+     "name": "Second witness",
+     "aliases": [],
+     "role": "Unnamed witness mentioned in federal court filing"
+    },
+    {
+     "name": "Charles Liggins",
+     "aliases": [
+      "C Murda"
+     ],
+     "role": "Defendant convicted of murder in aid of racketeering; identified by prosecutors as a gunman"
+    },
+    {
+     "name": "Christopher Thomas",
+     "aliases": [
+      "C Thang"
+     ],
+     "role": "Defendant convicted of murder in aid of racketeering; identified by prosecutors as a gunman"
+    },
+    {
+     "name": "Marcus Smart",
+     "aliases": [
+      "Muwop"
+     ],
+     "role": "Defendant convicted of murder in aid of racketeering; identified by prosecutors as a gunman"
+    },
+    {
+     "name": "Ezell Rawls",
+     "aliases": [],
+     "role": "Deceased individual identified in news reporting as a fourth gunman"
+    },
+    {
+     "name": "Morris Pasqual",
+     "aliases": [],
+     "role": "Acting U.S. Attorney"
+    }
+   ],
+   "claims": [
+    {
+     "person": "Chicago Police Department",
+     "claim": "FBG Duck was shot and killed Tuesday afternoon on East Oak Street in the Gold Coast.",
+     "quote": "Chicago rapper FBG Duck was shot and killed Tuesday afternoon on East Oak Street in the Gold Coast, one of the city's most upscale shopping districts, police said.",
+     "doc_id": "doc01",
+     "kind": "action"
+    },
+    {
+     "person": "Chicago Police Department",
+     "claim": "The shooting of Carlton Weekly was targeted.",
+     "quote": "Police said the shooting was targeted.",
+     "doc_id": "doc01",
+     "kind": "action"
+    },
+    {
+     "person": "Chicago Police Department detectives",
+     "claim": "Detectives were reviewing surveillance video from the block.",
+     "quote": "Detectives said they were reviewing surveillance video from the block, which is lined with luxury stores and cameras.",
+     "doc_id": "doc01",
+     "kind": "observation"
+    },
+    {
+     "person": "Chicago Police Department",
+     "claim": "Carlton Weekly was involved in an ongoing gang conflict.",
+     "quote": "Police said he was involved in an ongoing gang conflict.",
+     "doc_id": "doc01",
+     "kind": "relationship"
+    },
+    {
+     "person": "Daniel O'Shea",
+     "claim": "Shoppers were standing on the sidewalk when two vehicles pulled up and two gunmen stepped out of each to open fire.",
+     "quote": "Deputy Chief O'Shea said the shoppers were standing on the sidewalk when a pair of vehicles pulled up, with two gunmen stepping out of each to open fire.",
+     "doc_id": "doc02",
+     "kind": "action"
+    },
+    {
+     "person": "Daniel O'Shea",
+     "claim": "The shooting was a targeted attack rather than random.",
+     "quote": "He said the shooting was a targeted attack, not a random one.",
+     "doc_id": "doc02",
+     "kind": "action"
+    },
+    {
+     "person": "Daniel O'Shea",
+     "claim": "Carlton Weekly had been involved in an ongoing conflict with another gang.",
+     "quote": "O'Shea said Weekly had been involved in an ongoing conflict with another gang.",
+     "doc_id": "doc02",
+     "kind": "relationship"
+    },
+    {
+     "person": "Chicago Police Department officers",
+     "claim": "Carlton Weekly had been broadcasting his travels on social media that day and was found.",
+     "quote": "Officers noted that Weekly had been broadcasting his travels on social media that day, and that he was found.",
+     "doc_id": "doc02",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Federal investigators",
+     "claim": "Diss tracks between FBG Duck and O Block artists fueled street violence.",
+     "quote": "Federal investigators later said the diss tracks between Duck and O Block artists fueled violence on the streets.",
+     "doc_id": "doc03",
+     "kind": "action"
+    },
+    {
+     "person": "Unnamed informant",
+     "claim": "A bounty of $50,000, later raised to $100,000, had been offered for killing Carlton Weekly.",
+     "quote": "After the murder, an informant told Chicago police and FBI agents that a bounty had been offered for killing Weekly: $50,000 at first, later raised to $100,000.",
+     "doc_id": "doc03",
+     "kind": "action"
+    },
+    {
+     "person": "Prosecutors",
+     "claim": "The bounty for killing Carlton Weekly came from O Block rapper King Von.",
+     "quote": "Prosecutors later alleged the bounty came from O Block rapper King Von.",
+     "doc_id": "doc03",
+     "kind": "action"
+    },
+    {
+     "person": "Prosecutors (Santiago proffer)",
+     "claim": "Ralph Turpin and a friend entered Milani Boutique at approximately 3:59 p.m. and noticed Carlton Weekly.",
+     "quote": "At approximately 3:59 p.m., Ralph Turpin and a friend of Turpin's entered Milani Boutique and noticed Weekly.",
+     "doc_id": "doc04",
+     "kind": "observation"
+    },
+    {
+     "person": "Prosecutors (Santiago proffer)",
+     "claim": "Ralph Turpin made at least one phone call inside Milani Boutique to Carlton Weekly's rival gang members to come downtown to kill Weekly.",
+     "quote": "Turpin made at least one phone call inside Milani Boutique to Weekly's rival gang members to come downtown to kill Weekly.",
+     "doc_id": "doc04",
+     "kind": "action"
+    },
+    {
+     "person": "Prosecutors",
+     "claim": "Tacarlos Offerd purchased a Ford Fusion used as a lead car in the shooting one week before the August 4, 2020 murder.",
+     "quote": "Prosecutors said defendant Tacarlos Offerd purchased a vehicle used as a \"lead car\" in the shooting one week before the August 4, 2020 murder. The vehicle was a Ford Fusion.",
+     "doc_id": "doc06",
+     "kind": "object"
+    },
+    {
+     "person": "Jason Julien",
+     "claim": "The Ford Fusion was returned to a suburban dealership approximately one hour after the shooting.",
+     "quote": "Julien said the Fusion was returned to the dealership in the Chicago suburbs approximately one hour after the shooting.",
+     "doc_id": "doc06",
+     "kind": "action"
+    },
+    {
+     "person": "Jason Julien",
+     "claim": "The Ford Fusion purchased by Tacarlos Offerd was seen on police POD cameras and license plate readers.",
+     "quote": "He said the vehicle Offerd purchased was seen on police POD cameras and license plate readers.",
+     "doc_id": "doc06",
+     "kind": "observation"
+    },
+    {
+     "person": "John Somerville",
+     "claim": "Tacarlos Offerd bought a car, but some unknown person was in it and may have driven downtown, with no evidence linking anyone specific to driving it that day.",
+     "quote": "Offerd's defense attorney, John Somerville, argued there was no evidence linking anyone specific to driving the car that day. \"Mr. Offerd bought a car,\" Somerville said. \"Some unknown person was in his car. Some unknown person may have driven downtown.\"",
+     "doc_id": "doc06",
+     "kind": "action"
+    },
+    {
+     "person": "Prosecutors",
+     "claim": "Tacarlos Offerd drove the Ford Fusion in the shooting with gunmen riding in it.",
+     "quote": "Prosecutors said Offerd drove the Fusion in the shooting, with gunmen riding in it.",
+     "doc_id": "doc06",
+     "kind": "action"
+    },
+    {
+     "person": "Prosecutors (Santiago proffer)",
+     "claim": "Kenneth Roberson drove the Chrysler 300 in the shooting with gunmen riding in it.",
+     "quote": "Prosecutors said Kenneth Roberson drove the Chrysler 300, with gunmen riding in it.",
+     "doc_id": "doc07",
+     "kind": "action"
+    },
+    {
+     "person": "Prosecutors (Santiago proffer)",
+     "claim": "Kenneth Roberson called CPD to get his Chrysler 300 back after it was seized.",
+     "quote": "After the seizure, Roberson called CPD to get it back.",
+     "doc_id": "doc07",
+     "kind": "action"
+    },
+    {
+     "person": "Kenneth Roberson",
+     "claim": "Roberson acknowledged to a cooperating witness as the crew drove toward East Oak Street that he was on his way to murder Carlton Weekly.",
+     "quote": "As the crew drove toward East Oak Street on August 4, 2020, Roberson made statements to a cooperating witness acknowledging that Roberson was on his way to murder Weekly.",
+     "doc_id": "doc08",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Prosecutors (Santiago proffer)",
+     "claim": "Kenneth Roberson made statements about the murder to a second witness for purposes of concealment.",
+     "quote": "Roberson later made statements about the murder to a second witness. The filing says those statements were made for purposes of concealment.",
+     "doc_id": "doc08",
+     "kind": "action"
+    },
+    {
+     "person": "U.S. Attorney's Office",
+     "claim": "The O Block gang publicly claimed responsibility for their violence and used social media and music to increase their criminal enterprise.",
+     "quote": "The U.S. Attorney's Office said the O Block gang \"publicly claimed responsibility for their violence and used social media and music to increase their criminal enterprise.\"",
+     "doc_id": "doc09",
+     "kind": "action"
+    },
+    {
+     "person": "Prosecutors",
+     "claim": "The defendants believed killing FBG Duck would bring glory to O Block and was about power, status, and retribution.",
+     "quote": "Prosecutors told the jury the defendants believed killing FBG Duck would bring glory to O Block: it was about power, status, and retribution.",
+     "doc_id": "doc09",
+     "kind": "relationship"
+    },
+    {
+     "person": "Prosecutors (Santiago proffer)",
+     "claim": "Ralph Turpin placed at least one phone call from inside Milani Boutique reporting Carlton Weekly's location to his rivals.",
+     "quote": "Ralph Turpin placed at least one phone call from inside Milani Boutique on the afternoon of August 4, 2020. The filing says the call reported Weekly's location to his rivals.",
+     "doc_id": "doc10",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Federal indictment",
+     "claim": "Charles Liggins, Kenneth Roberson, Tacarlos Offerd, Christopher Thomas, Marcus Smart, and Ralph Turpin were members or associates of O Block and murdered Carlton Weekly to maintain and increase their positions in the gang.",
+     "quote": "The indictment alleged the six were members or associates of the O Block street gang, and that they murdered Carlton Weekly to maintain and increase their positions in the gang.",
+     "doc_id": "doc11",
+     "kind": "relationship"
+    },
+    {
+     "person": "News reporting",
+     "claim": "Ezell Rawls was identified as a fourth gunman in the surveillance video.",
+     "quote": "News reporting identified a fourth gunman, Ezell Rawls, in the surveillance video.",
+     "doc_id": "doc11",
+     "kind": "observation"
+    },
+    {
+     "person": "Prosecutors",
+     "claim": "At trial, Liggins, Thomas, and Smart were gunmen; Roberson drove the Chrysler 300; Offerd drove the Ford Fusion; and Turpin spotted Weekly in the boutique and called it in.",
+     "quote": "Prosecutors identified the roles at trial: Liggins, Thomas, and Smart were gunmen; Roberson drove the Chrysler 300; Offerd drove the Ford Fusion; Turpin spotted Weekly in the boutique and called it in.",
+     "doc_id": "doc12",
+     "kind": "action"
+    },
+    {
+     "person": "Morris Pasqual",
+     "claim": "The jury's verdicts hold the six defendants accountable for a murder that took Carlton Weekly's life.",
+     "quote": "\"The jury's verdicts today hold the six defendants accountable for a brutal murder that took the life of Carlton Weekly,\" Acting U.S. Attorney Morris Pasqual said.",
+     "doc_id": "doc12",
+     "kind": "action"
+    }
+   ],
+   "events": [
+    {
+     "what": "Shondale Gregory killed",
+     "when_text": "in 2011",
+     "when_window": "2011",
+     "where": "",
+     "who": [
+      "Shondale Gregory"
+     ],
+     "quote": "Tookaville is named for Shondale \"Tooka\" Gregory, a teenager killed in 2011.",
+     "doc_id": "doc03"
+    },
+    {
+     "what": "Odee Perry killed",
+     "when_text": "in 2011",
+     "when_window": "2011",
+     "where": "",
+     "who": [
+      "Odee Perry"
+     ],
+     "quote": "O Block is named for Odee Perry, killed in 2011.",
+     "doc_id": "doc03"
+    },
+    {
+     "what": "Carlton Weekly releases song \"Dead Bitches\"",
+     "when_text": "On July 10, 2020",
+     "when_window": "2020-07-10",
+     "where": "",
+     "who": [
+      "Carlton Weekly"
+     ],
+     "quote": "On July 10, 2020, Weekly released a song called \"Dead Bitches.\"",
+     "doc_id": "doc03"
+    },
+    {
+     "what": "Tacarlos Offerd allegedly purchases a Ford Fusion",
+     "when_text": "one week before the August 4, 2020 murder",
+     "when_window": "2020-07-28",
+     "where": "",
+     "who": [
+      "Tacarlos Offerd"
+     ],
+     "quote": "Prosecutors said defendant Tacarlos Offerd purchased a vehicle used as a \"lead car\" in the shooting one week before the August 4, 2020 murder. The vehicle was a Ford Fusion.",
+     "doc_id": "doc06"
+    },
+    {
+     "what": "Carlton Weekly broadcasts his travels on social media",
+     "when_text": "that day",
+     "when_window": "2020-08-04",
+     "where": "",
+     "who": [
+      "Carlton Weekly"
+     ],
+     "quote": "Officers noted that Weekly had been broadcasting his travels on social media that day, and that he was found.",
+     "doc_id": "doc02"
+    },
+    {
+     "what": "Carlton Weekly shops for clothes for his son's birthday",
+     "when_text": "On the afternoon of August 4, 2020",
+     "when_window": "2020-08-04T12:00/2020-08-04T16:26",
+     "where": "Milani Boutique on East Oak Street in the Gold Coast",
+     "who": [
+      "Carlton Weekly"
+     ],
+     "quote": "On the afternoon of August 4, 2020, Carlton Weekly was shopping for clothes for his son's birthday in Milani Boutique on East Oak Street in the Gold Coast.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Ralph Turpin and a friend enter Milani Boutique and notice Carlton Weekly",
+     "when_text": "At approximately 3:59 p.m.",
+     "when_window": "2020-08-04T15:59",
+     "where": "Milani Boutique on East Oak Street in the Gold Coast",
+     "who": [
+      "Ralph Turpin",
+      "Unnamed friend of Ralph Turpin",
+      "Carlton Weekly"
+     ],
+     "quote": "At approximately 3:59 p.m., Ralph Turpin and a friend of Turpin's entered Milani Boutique and noticed Weekly.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Ralph Turpin places at least one phone call reporting Carlton Weekly's location to rivals",
+     "when_text": "on the afternoon of August 4, 2020... after Turpin entered the boutique at approximately 3:59 p.m.",
+     "when_window": "2020-08-04T15:59/2020-08-04T16:02",
+     "where": "Milani Boutique",
+     "who": [
+      "Ralph Turpin"
+     ],
+     "quote": "Ralph Turpin placed at least one phone call from inside Milani Boutique on the afternoon of August 4, 2020. The filing says the call reported Weekly's location to his rivals. The call came after Turpin entered the boutique at approximately 3:59 p.m. and saw Weekly inside.",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Four men sprint down building steps and get into a Ford Fusion and a Chrysler 300",
+     "when_text": "",
+     "when_window": "",
+     "where": "Parkway Gardens apartments on the South Side",
+     "who": [],
+     "quote": "Surveillance video from the Parkway Gardens apartments, the South Side complex known as O Block, shows four men sprinting down the steps of a building and getting into two waiting cars: a Ford Fusion and a Chrysler 300.",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "O Block men begin making their way toward East Oak Street",
+     "when_text": "Approximately three minutes after Turpin entered the boutique, at about 4:02 p.m.",
+     "when_window": "2020-08-04T16:02",
+     "where": "Toward East Oak Street",
+     "who": [],
+     "quote": "Approximately three minutes after Turpin entered the boutique, at about 4:02 p.m., the O Block men began making their way to East Oak Street.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Kenneth Roberson makes statements to a cooperating witness acknowledging he is on his way to murder Carlton Weekly",
+     "when_text": "As the crew drove toward East Oak Street on August 4, 2020",
+     "when_window": "2020-08-04T16:02/2020-08-04T16:26",
+     "where": "En route to East Oak Street",
+     "who": [
+      "Kenneth Roberson",
+      "Cooperating witness 1"
+     ],
+     "quote": "As the crew drove toward East Oak Street on August 4, 2020, Roberson made statements to a cooperating witness acknowledging that Roberson was on his way to murder Weekly.",
+     "doc_id": "doc08"
+    },
+    {
+     "what": "Two vehicles pull up, four masked gunmen get out and shoot Carlton Weekly and two others, then flee in the two vehicles",
+     "when_text": "At approximately 4:26 p.m.",
+     "when_window": "2020-08-04T16:26",
+     "where": "Near the 100 block of East Oak Street in the Gold Coast",
+     "who": [
+      "Carlton Weekly",
+      "Unnamed woman",
+      "Unnamed man"
+     ],
+     "quote": "At approximately 4:26 p.m., two vehicles pulled up near the 100 block of East Oak Street. Four gunmen got out, two from each vehicle, and opened fire. Weekly was shot multiple times. Two other people were wounded, a woman who was with Weekly and a man nearby.",
+     "doc_id": "doc01"
+    },
+    {
+     "what": "Police POD cameras track the Ford Fusion and Chrysler 300 back toward Parkway Gardens before the two cars split up",
+     "when_text": "after the shooting",
+     "when_window": "2020-08-04T16:26/",
+     "where": "Toward Parkway Gardens",
+     "who": [],
+     "quote": "Police POD cameras tracked the two vehicles as they drove back toward Parkway Gardens after the shooting. The two cars then split up in different directions.",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Carlton Weekly pronounced dead",
+     "when_text": "about half an hour later",
+     "when_window": "2020-08-04T16:56",
+     "where": "Northwestern Memorial Hospital",
+     "who": [
+      "Carlton Weekly"
+     ],
+     "quote": "Weekly was taken to Northwestern Memorial Hospital, where he was pronounced dead about half an hour later.",
+     "doc_id": "doc01"
+    },
+    {
+     "what": "Ford Fusion returned to suburban dealership",
+     "when_text": "approximately one hour after the shooting",
+     "when_window": "2020-08-04T17:26",
+     "where": "Dealership in the Chicago suburbs",
+     "who": [],
+     "quote": "Julien said the Fusion was returned to the dealership in the Chicago suburbs approximately one hour after the shooting.",
+     "doc_id": "doc06"
+    },
+    {
+     "what": "Police recover one weapon at the scene",
+     "when_text": "August 4, 2020",
+     "when_window": "2020-08-04",
+     "where": "East Oak Street shooting scene",
+     "who": [
+      "Chicago Police Department"
+     ],
+     "quote": "One weapon was recovered by police at the scene.",
+     "doc_id": "doc02"
+    },
+    {
+     "what": "CPD seizes Kenneth Roberson's Chrysler 300",
+     "when_text": "the day after the murder",
+     "when_window": "2020-08-05",
+     "where": "",
+     "who": [
+      "Kenneth Roberson"
+     ],
+     "quote": "CPD seized Roberson's Chrysler 300 the day after the murder.",
+     "doc_id": "doc07"
+    },
+    {
+     "what": "Kenneth Roberson calls CPD seeking the return of his Chrysler 300",
+     "when_text": "After the seizure",
+     "when_window": "2020-08-05/",
+     "where": "",
+     "who": [
+      "Kenneth Roberson"
+     ],
+     "quote": "After the seizure, Roberson called CPD to get it back.",
+     "doc_id": "doc07"
+    },
+    {
+     "what": "Chicago police release Parkway Gardens surveillance video",
+     "when_text": "in August 2020",
+     "when_window": "2020-08",
+     "where": "",
+     "who": [],
+     "quote": "From the video Chicago police released in August 2020 and the camera evidence described at trial.",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Video recorded showing King Von giving defendants diamond O Block pendants and stacks of cash",
+     "when_text": "after the murder",
+     "when_window": "2020-08-04/2020-11-30",
+     "where": "",
+     "who": [
+      "King Von"
+     ],
+     "quote": "Jurors saw video recorded after the murder in which King Von, the O Block rapper prosecutors said put a price on Weekly's head, gave the defendants diamond O Block pendants and stacks of cash.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "King Von killed",
+     "when_text": "in November 2020",
+     "when_window": "2020-11",
+     "where": "",
+     "who": [
+      "King Von"
+     ],
+     "quote": "King Von was never charged in this case, and he was himself killed in November 2020.",
+     "doc_id": "doc03"
+    },
+    {
+     "what": "Original federal indictment charges Liggins, Roberson, Offerd, Thomas, and Smart",
+     "when_text": "in October 2021",
+     "when_window": "2021-10",
+     "where": "Chicago",
+     "who": [
+      "Charles Liggins",
+      "Kenneth Roberson",
+      "Tacarlos Offerd",
+      "Christopher Thomas",
+      "Marcus Smart"
+     ],
+     "quote": "Five Chicago men were charged in October 2021 with committing murder in aid of racketeering and conspiracy to commit murder in aid of racketeering: Charles Liggins, also known as \"C Murda\"; Kenneth Roberson, also known as \"Kenny Mac\"; Tacarlos Offerd, also known as \"Los\"; Christopher Thomas, also known as \"C Thang\"; and Marcus Smart, also known as \"Muwop.\"",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Federal detention hearing for Tacarlos Offerd",
+     "when_text": "October 15, 2021",
+     "when_window": "2021-10-15",
+     "where": "",
+     "who": [
+      "Tacarlos Offerd",
+      "Jason Julien",
+      "John Somerville"
+     ],
+     "quote": "Federal detention hearing summary, October 15, 2021.",
+     "doc_id": "doc06"
+    },
+    {
+     "what": "Superseding indictment adds Ralph Turpin as sixth defendant",
+     "when_text": "In April 2023... unsealed April 10, 2023",
+     "when_window": "2023-04-10",
+     "where": "",
+     "who": [
+      "Ralph Turpin"
+     ],
+     "quote": "In April 2023 a superseding indictment added a sixth defendant: Ralph Turpin, also known as \"Tall\" and \"Teezy,\" charged with murder in aid of racketeering and conspiracy to commit murder in aid of racketeering.",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Ezell Rawls dies during the investigation",
+     "when_text": "during the investigation",
+     "when_window": "",
+     "where": "",
+     "who": [
+      "Ezell Rawls"
+     ],
+     "quote": "Rawls died during the investigation and was never tried.",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Government files Santiago proffer in United States v. Liggins",
+     "when_text": "filed August 4, 2023",
+     "when_window": "2023-08-04",
+     "where": "",
+     "who": [],
+     "quote": "Summary of the government's Santiago proffer, a federal court filing in United States v. Liggins, filed August 4, 2023.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Federal jury convicts all six defendants in United States v. Liggins",
+     "when_text": "returned January 17, 2024",
+     "when_window": "2024-01-17",
+     "where": "U.S. District Court in Chicago",
+     "who": [
+      "Charles Liggins",
+      "Kenneth Roberson",
+      "Tacarlos Offerd",
+      "Christopher Thomas",
+      "Marcus Smart",
+      "Ralph Turpin"
+     ],
+     "quote": "Verdicts in United States v. Liggins, returned January 17, 2024.",
+     "doc_id": "doc12"
+    }
+   ],
+   "evidence_items": [
+    {
+     "description": "Two vehicles used by the gunmen (\"two vehicles pulled up near the 100 block of East Oak Street\")",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Surveillance video from the 100 block of East Oak Street (\"surveillance video from the block\")",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "One weapon recovered at the Oak Street shooting scene (\"One weapon was recovered by police at the scene.\")",
+     "doc_id": "doc02",
+     "status": "mentioned"
+    },
+    {
+     "description": "Social media broadcasts by Carlton Weekly (\"Weekly had been broadcasting his travels on social media that day\")",
+     "doc_id": "doc02",
+     "status": "mentioned"
+    },
+    {
+     "description": "Security footage from the Oak Street area (\"security footage from the area\")",
+     "doc_id": "doc02",
+     "status": "mentioned"
+    },
+    {
+     "description": "Song \"Dead Bitches\" released by Carlton Weekly on July 10, 2020 (\"a song called 'Dead Bitches.'\")",
+     "doc_id": "doc03",
+     "status": "mentioned"
+    },
+    {
+     "description": "Surveillance video from the Parkway Gardens apartments (\"Surveillance video from the Parkway Gardens apartments\")",
+     "doc_id": "doc05",
+     "status": "mentioned"
+    },
+    {
+     "description": "Ford Fusion driven from Parkway Gardens to Oak Street (\"a Ford Fusion\")",
+     "doc_id": "doc05",
+     "status": "mentioned"
+    },
+    {
+     "description": "Chrysler 300 driven from Parkway Gardens to Oak Street (\"a Chrysler 300\")",
+     "doc_id": "doc05",
+     "status": "mentioned"
+    },
+    {
+     "description": "Police POD camera recordings and license plate reader data tracking the Ford Fusion and Chrysler 300 (\"Police POD cameras and license plate readers\")",
+     "doc_id": "doc05",
+     "status": "mentioned"
+    },
+    {
+     "description": "Video from Oak Street showing the shooting (\"Video from Oak Street shows the Ford Fusion and the Chrysler 300 pull up.\")",
+     "doc_id": "doc05",
+     "status": "mentioned"
+    },
+    {
+     "description": "Masks worn by the gunmen at Oak Street (\"The gunmen at Oak Street were masked.\")",
+     "doc_id": "doc05",
+     "status": "mentioned"
+    },
+    {
+     "description": "Ford Fusion allegedly purchased by Tacarlos Offerd and returned to suburban dealership (\"The vehicle was a Ford Fusion.\")",
+     "doc_id": "doc06",
+     "status": "mentioned"
+    },
+    {
+     "description": "Police POD camera and license plate reader records showing Offerd's Ford Fusion (\"seen on police POD cameras and license plate readers\")",
+     "doc_id": "doc06",
+     "status": "mentioned"
+    },
+    {
+     "description": "Kenneth Roberson's Chrysler 300 seized by CPD the day after the murder (\"CPD seized Roberson's Chrysler 300 the day after the murder.\")",
+     "doc_id": "doc07",
+     "status": "mentioned"
+    },
+    {
+     "description": "Defendants' social media posts, photos, and videos showing gang signs and firearms (\"the defendants' own posts, photos, and videos: gang signs, firearms\")",
+     "doc_id": "doc09",
+     "status": "mentioned"
+    },
+    {
+     "description": "Video recorded after the murder showing King Von giving defendants pendants and cash (\"video recorded after the murder in which King Von... gave the defendants diamond O Block pendants and stacks of cash\")",
+     "doc_id": "doc09",
+     "status": "mentioned"
+    },
+    {
+     "description": "Diamond O Block pendants and stacks of cash shown in post-murder video (\"diamond O Block pendants and stacks of cash\")",
+     "doc_id": "doc09",
+     "status": "mentioned"
+    },
+    {
+     "description": "Phone record of call placed by Ralph Turpin from inside Milani Boutique (\"Phone record summary... Ralph Turpin placed at least one phone call from inside Milani Boutique\")",
+     "doc_id": "doc10",
+     "status": "mentioned"
+    },
+    {
+     "description": "Surveillance video in which news reporting identified Ezell Rawls (\"in the surveillance video\")",
+     "doc_id": "doc11",
+     "status": "mentioned"
+    },
+    {
+     "description": "Firearm(s) used in the murder (\"Five of the six were also convicted of using a firearm in the murder.\")",
+     "doc_id": "doc12",
+     "status": "mentioned"
+    }
+   ]
+  },
+  "analyst": {
+   "events": [
+    {
+     "id": "ev01",
+     "what": "Shondale Gregory killed",
+     "window": "2011",
+     "where": "",
+     "who": [
+      "Shondale Gregory"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc03",
+       "quote": "Tookaville is named for Shondale \"Tooka\" Gregory, a teenager killed in 2011."
+      }
+     ]
+    },
+    {
+     "id": "ev02",
+     "what": "Odee Perry killed",
+     "window": "2011",
+     "where": "",
+     "who": [
+      "Odee Perry"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc03",
+       "quote": "O Block is named for Odee Perry, killed in 2011."
+      }
+     ]
+    },
+    {
+     "id": "ev03",
+     "what": "Carlton Weekly releases song \"Dead Bitches\"",
+     "window": "2020-07-10",
+     "where": "",
+     "who": [
+      "Carlton Weekly"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc03",
+       "quote": "On July 10, 2020, Weekly released a song called \"Dead Bitches.\""
+      }
+     ]
+    },
+    {
+     "id": "ev04",
+     "what": "Tacarlos Offerd purchases a Ford Fusion (one week before the August 4, 2020 murder, per prosecutors)",
+     "window": "2020-07-28",
+     "where": "",
+     "who": [
+      "Tacarlos Offerd"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc06",
+       "quote": "Prosecutors said defendant Tacarlos Offerd purchased a vehicle used as a \"lead car\" in the shooting one week before the August 4, 2020 murder. The vehicle was a Ford Fusion."
+      }
+     ]
+    },
+    {
+     "id": "ev05",
+     "what": "Carlton Weekly broadcasts his travels on social media",
+     "window": "2020-08-04",
+     "where": "",
+     "who": [
+      "Carlton Weekly"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc02",
+       "quote": "Officers noted that Weekly had been broadcasting his travels on social media that day, and that he was found."
+      }
+     ]
+    },
+    {
+     "id": "ev06",
+     "what": "Carlton Weekly shops for clothes for his son's birthday",
+     "window": "2020-08-04 afternoon",
+     "where": "Milani Boutique on East Oak Street in the Gold Coast",
+     "who": [
+      "Carlton Weekly"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc04",
+       "quote": "On the afternoon of August 4, 2020, Carlton Weekly was shopping for clothes for his son's birthday in Milani Boutique on East Oak Street in the Gold Coast."
+      }
+     ]
+    },
+    {
+     "id": "ev07",
+     "what": "Ralph Turpin and a friend enter Milani Boutique and notice Carlton Weekly",
+     "window": "2020-08-04 ~15:59",
+     "where": "Milani Boutique on East Oak Street in the Gold Coast",
+     "who": [
+      "Ralph Turpin",
+      "Unnamed friend of Ralph Turpin",
+      "Carlton Weekly"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc04",
+       "quote": "At approximately 3:59 p.m., Ralph Turpin and a friend of Turpin's entered Milani Boutique and noticed Weekly."
+      }
+     ]
+    },
+    {
+     "id": "ev08",
+     "what": "Ralph Turpin places at least one phone call from inside Milani Boutique reporting Carlton Weekly's location to rivals",
+     "window": "2020-08-04 afternoon (after ~15:59)",
+     "where": "Milani Boutique",
+     "who": [
+      "Ralph Turpin"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc04",
+       "quote": "Turpin made at least one phone call inside Milani Boutique to Weekly's rival gang members to come downtown to kill Weekly."
+      },
+      {
+       "doc_id": "doc10",
+       "quote": "Ralph Turpin placed at least one phone call from inside Milani Boutique on the afternoon of August 4, 2020. The filing says the call reported Weekly's location to his rivals. The call came after Turpin entered the boutique at approximately 3:59 p.m. and saw Weekly inside."
+      }
+     ]
+    },
+    {
+     "id": "ev09",
+     "what": "Four men sprint down building steps and get into a Ford Fusion and a Chrysler 300",
+     "window": "",
+     "where": "Parkway Gardens apartments on the South Side",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc05",
+       "quote": "Surveillance video from the Parkway Gardens apartments, the South Side complex known as O Block, shows four men sprinting down the steps of a building and getting into two waiting cars: a Ford Fusion and a Chrysler 300."
+      }
+     ]
+    },
+    {
+     "id": "ev10",
+     "what": "O Block men begin making their way toward East Oak Street",
+     "window": "2020-08-04 ~16:02",
+     "where": "Toward East Oak Street",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc04",
+       "quote": "Approximately three minutes after Turpin entered the boutique, at about 4:02 p.m., the O Block men began making their way to East Oak Street."
+      }
+     ]
+    },
+    {
+     "id": "ev11",
+     "what": "Kenneth Roberson makes statements to a cooperating witness acknowledging he is on his way to murder Carlton Weekly",
+     "window": "2020-08-04 ~16:02/~16:26",
+     "where": "En route to East Oak Street",
+     "who": [
+      "Kenneth Roberson",
+      "Cooperating witness 1"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc08",
+       "quote": "As the crew drove toward East Oak Street on August 4, 2020, Roberson made statements to a cooperating witness acknowledging that Roberson was on his way to murder Weekly."
+      }
+     ]
+    },
+    {
+     "id": "ev12",
+     "what": "Two vehicles pull up near the 100 block of East Oak Street; four gunmen get out and open fire, shooting Carlton Weekly multiple times and wounding two others",
+     "window": "2020-08-04 ~16:26",
+     "where": "Near the 100 block of East Oak Street in the Gold Coast",
+     "who": [
+      "Carlton Weekly",
+      "Unnamed woman",
+      "Unnamed man"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "doc_id": "doc01",
+       "quote": "At approximately 4:26 p.m., two vehicles pulled up near the 100 block of East Oak Street. Four gunmen got out, two from each vehicle, and opened fire. Weekly was shot multiple times. Two other people were wounded, a woman who was with Weekly and a man nearby."
+      },
+      {
+       "doc_id": "doc02",
+       "quote": "Deputy Chief O'Shea said the shoppers were standing on the sidewalk when a pair of vehicles pulled up, with two gunmen stepping out of each to open fire."
+      },
+      {
+       "doc_id": "doc11",
+       "quote": "News reporting identified a fourth gunman, Ezell Rawls, in the surveillance video."
+      },
+      {
+       "doc_id": "doc12",
+       "quote": "Prosecutors identified the roles at trial: Liggins, Thomas, and Smart were gunmen; Roberson drove the Chrysler 300; Offerd drove the Ford Fusion; and Turpin spotted Weekly in the boutique and called it in."
+      }
+     ]
+    },
+    {
+     "id": "ev13",
+     "what": "Police POD cameras track the Ford Fusion and Chrysler 300 driving back toward Parkway Gardens before the two cars split up",
+     "window": "2020-08-04 after ~16:26",
+     "where": "Toward Parkway Gardens",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc05",
+       "quote": "Police POD cameras tracked the two vehicles as they drove back toward Parkway Gardens after the shooting. The two cars then split up in different directions."
+      },
+      {
+       "doc_id": "doc06",
+       "quote": "He said the vehicle Offerd purchased was seen on police POD cameras and license plate readers."
+      }
+     ]
+    },
+    {
+     "id": "ev14",
+     "what": "Carlton Weekly taken to Northwestern Memorial Hospital and pronounced dead",
+     "window": "2020-08-04 ~16:56",
+     "where": "Northwestern Memorial Hospital",
+     "who": [
+      "Carlton Weekly"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "doc_id": "doc01",
+       "quote": "Weekly was taken to Northwestern Memorial Hospital, where he was pronounced dead about half an hour later."
+      }
+     ]
+    },
+    {
+     "id": "ev15",
+     "what": "Ford Fusion returned to a dealership in the Chicago suburbs",
+     "window": "2020-08-04 ~17:26",
+     "where": "Dealership in the Chicago suburbs",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc06",
+       "quote": "Julien said the Fusion was returned to the dealership in the Chicago suburbs approximately one hour after the shooting."
+      }
+     ]
+    },
+    {
+     "id": "ev16",
+     "what": "Police recover one weapon at the scene",
+     "window": "2020-08-04",
+     "where": "East Oak Street shooting scene",
+     "who": [
+      "Chicago Police Department"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc02",
+       "quote": "One weapon was recovered by police at the scene."
+      }
+     ]
+    },
+    {
+     "id": "ev17",
+     "what": "CPD seizes Kenneth Roberson's Chrysler 300",
+     "window": "2020-08-05",
+     "where": "",
+     "who": [
+      "Kenneth Roberson",
+      "Chicago Police Department"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc07",
+       "quote": "CPD seized Roberson's Chrysler 300 the day after the murder."
+      }
+     ]
+    },
+    {
+     "id": "ev18",
+     "what": "Kenneth Roberson calls CPD seeking the return of his Chrysler 300",
+     "window": "after 2020-08-05",
+     "where": "",
+     "who": [
+      "Kenneth Roberson",
+      "Chicago Police Department"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc07",
+       "quote": "After the seizure, Roberson called CPD to get it back."
+      }
+     ]
+    },
+    {
+     "id": "ev19",
+     "what": "Chicago police release Parkway Gardens surveillance video",
+     "window": "2020-08",
+     "where": "",
+     "who": [
+      "Chicago Police Department"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc05",
+       "quote": "From the video Chicago police released in August 2020 and the camera evidence described at trial."
+      }
+     ]
+    },
+    {
+     "id": "ev20",
+     "what": "Video recorded showing King Von giving defendants diamond O Block pendants and stacks of cash",
+     "window": "after 2020-08-04 (prior to 2020-11)",
+     "where": "",
+     "who": [
+      "King Von"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc09",
+       "quote": "Jurors saw video recorded after the murder in which King Von, the O Block rapper prosecutors said put a price on Weekly's head, gave the defendants diamond O Block pendants and stacks of cash."
+      }
+     ]
+    },
+    {
+     "id": "ev21",
+     "what": "Informant tells Chicago police and FBI agents about a $50,000 bounty later raised to $100,000 for killing Carlton Weekly",
+     "window": "after 2020-08-04",
+     "where": "",
+     "who": [
+      "Unnamed informant",
+      "Chicago Police Department",
+      "FBI"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc03",
+       "quote": "After the murder, an informant told Chicago police and FBI agents that a bounty had been offered for killing Weekly: $50,000 at first, later raised to $100,000."
+      }
+     ]
+    },
+    {
+     "id": "ev22",
+     "what": "Kenneth Roberson makes statements about the murder to a second witness (allegedly for purposes of concealment)",
+     "window": "after 2020-08-04",
+     "where": "",
+     "who": [
+      "Kenneth Roberson",
+      "Second witness"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc08",
+       "quote": "Roberson later made statements about the murder to a second witness. The filing says those statements were made for purposes of concealment."
+      }
+     ]
+    },
+    {
+     "id": "ev23",
+     "what": "King Von killed",
+     "window": "2020-11",
+     "where": "",
+     "who": [
+      "King Von"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc03",
+       "quote": "King Von was never charged in this case, and he was himself killed in November 2020."
+      }
+     ]
+    },
+    {
+     "id": "ev24",
+     "what": "Original federal indictment charges Liggins, Roberson, Offerd, Thomas, and Smart",
+     "window": "2021-10",
+     "where": "Chicago",
+     "who": [
+      "Charles Liggins",
+      "Kenneth Roberson",
+      "Tacarlos Offerd",
+      "Christopher Thomas",
+      "Marcus Smart"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc11",
+       "quote": "Five Chicago men were charged in October 2021 with committing murder in aid of racketeering and conspiracy to commit murder in aid of racketeering: Charles Liggins, also known as \"C Murda\"; Kenneth Roberson, also known as \"Kenny Mac\"; Tacarlos Offerd, also known as \"Los\"; Christopher Thomas, also known as \"C Thang\"; and Marcus Smart, also known as \"Muwop.\""
+      }
+     ]
+    },
+    {
+     "id": "ev25",
+     "what": "Federal detention hearing for Tacarlos Offerd",
+     "window": "2021-10-15",
+     "where": "",
+     "who": [
+      "Tacarlos Offerd",
+      "Jason Julien",
+      "John Somerville"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc06",
+       "quote": "Federal detention hearing summary, October 15, 2021."
+      }
+     ]
+    },
+    {
+     "id": "ev26",
+     "what": "Superseding indictment adds Ralph Turpin as sixth defendant",
+     "window": "2023-04",
+     "where": "",
+     "who": [
+      "Ralph Turpin"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc11",
+       "quote": "In April 2023 a superseding indictment added a sixth defendant: Ralph Turpin, also known as \"Tall\" and \"Teezy,\" charged with murder in aid of racketeering and conspiracy to commit murder in aid of racketeering."
+      }
+     ]
+    },
+    {
+     "id": "ev27",
+     "what": "Ezell Rawls dies during the investigation",
+     "window": "",
+     "where": "",
+     "who": [
+      "Ezell Rawls"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc11",
+       "quote": "Rawls died during the investigation and was never tried."
+      }
+     ]
+    },
+    {
+     "id": "ev28",
+     "what": "Government files Santiago proffer in United States v. Liggins",
+     "window": "2023-08-04",
+     "where": "",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc04",
+       "quote": "Summary of the government's Santiago proffer, a federal court filing in United States v. Liggins, filed August 4, 2023."
+      }
+     ]
+    },
+    {
+     "id": "ev29",
+     "what": "Verdicts returned in United States v. Liggins",
+     "window": "2024-01-17",
+     "where": "",
+     "who": [
+      "Charles Liggins",
+      "Kenneth Roberson",
+      "Tacarlos Offerd",
+      "Christopher Thomas",
+      "Marcus Smart",
+      "Ralph Turpin"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc12",
+       "quote": "Verdicts in United States v. Liggins, returned January 17, 2024."
+      }
+     ]
+    }
+   ],
+   "collisions": []
+  },
+  "digital": {
+   "machine_events": [
+    {
+     "what": "Social media broadcasts by Carlton Weekly of his travels",
+     "when_text": "August 4, 2020 (that day; no exact timestamps in file)",
+     "proves": "Proves only that police officers at the scene noted Weekly had been broadcasting his travels on social media that day. Does not prove what platform or locations were shown, when posts occurred, or that the attackers used those broadcasts to locate him.",
+     "quote": "Officers noted that Weekly had been broadcasting his travels on social media that day, and that he was found.",
+     "doc_id": "doc02"
+    },
+    {
+     "what": "Phone call(s) placed by Ralph Turpin from inside Milani Boutique",
+     "when_text": "Afternoon of August 4, 2020, after approximately 3:59 p.m.",
+     "proves": "Per the federal court filing summary, indicates at least one phone call was placed by Turpin from inside Milani Boutique after ~3:59 p.m. A call record alone can prove a call occurred and its timing, not the spoken contents of the conversation; raw call-detail records and cell-site logs are not in the file.",
+     "quote": "Ralph Turpin placed at least one phone call from inside Milani Boutique on the afternoon of August 4, 2020. The filing says the call reported Weekly's location to his rivals.",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Parkway Gardens apartment complex surveillance video showing four men sprinting down steps into a Ford Fusion and a Chrysler 300",
+     "when_text": "August 4, 2020, before the shooting (doc04 and doc10 place the crew's departure toward East Oak Street at about 4:02 p.m.; no video timestamp is stated in doc05)",
+     "proves": "Proves four men ran down building steps at Parkway Gardens and got into a waiting Ford Fusion and Chrysler 300. Does not by itself prove the identities of the four men (police released the video asking the public for help identifying them) or who drove either vehicle.",
+     "quote": "Surveillance video from the Parkway Gardens apartments, the South Side complex known as O Block, shows four men sprinting down the steps of a building and getting into two waiting cars: a Ford Fusion and a Chrysler 300.",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Police POD cameras and license plate readers tracking the Ford Fusion and Chrysler 300 from the South Side to the Gold Coast",
+     "when_text": "August 4, 2020, between departure from Parkway Gardens and the ~4:26 p.m. shooting (no exact camera timestamps in file)",
+     "proves": "Proves the Ford Fusion and Chrysler 300 traveled from the South Side to the Gold Coast. Suggests coordinated movement of both cars, but cannot by itself prove who was driving or riding inside either vehicle.",
+     "quote": "Police POD cameras and license plate readers then tracked the two cars as they drove from the South Side to the Gold Coast.",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Oak Street surveillance video showing the Ford Fusion and Chrysler 300 pulling up and four masked gunmen firing",
+     "when_text": "August 4, 2020, at the shooting (approximately 4:26 p.m. per doc01, doc04, and doc10; no exact video timestamp stated in doc05)",
+     "proves": "Proves the Ford Fusion and Chrysler 300 arrived on Oak Street and four masked gunmen exited the two vehicles and shot Weekly and two people with him. Because the gunmen were masked, this video alone cannot identify the shooters' faces or the drivers.",
+     "quote": "Video from Oak Street shows the Ford Fusion and the Chrysler 300 pull up. Four gunmen got out of the two cars and shot Weekly and the two people with him. The gunmen at Oak Street were masked.",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Police POD cameras tracking the Ford Fusion and Chrysler 300 back toward Parkway Gardens until they split up",
+     "when_text": "August 4, 2020, after the ~4:26 p.m. shooting (no exact camera timestamps in file)",
+     "proves": "Proves both vehicles drove back toward Parkway Gardens after the shooting and then separated in different directions. Cannot by itself identify the occupants or document where either car went after splitting up.",
+     "quote": "Police POD cameras tracked the two vehicles as they drove back toward Parkway Gardens after the shooting. The two cars then split up in different directions.",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Purchase of a Ford Fusion by Tacarlos Offerd",
+     "when_text": "One week before the August 4, 2020 murder",
+     "proves": "Based on a prosecutor's detention-hearing statement (and acknowledged as a car purchase by defense counsel in doc06; no underlying bill of sale or receipt is in the file), shows Offerd purchased the Ford Fusion one week before the shooting. Does not by itself prove he drove it on August 4, 2020.",
+     "quote": "Prosecutors said defendant Tacarlos Offerd purchased a vehicle used as a \"lead car\" in the shooting one week before the August 4, 2020 murder. The vehicle was a Ford Fusion.",
+     "doc_id": "doc06"
+    },
+    {
+     "what": "Police POD cameras and license plate readers sighting the Ford Fusion purchased by Tacarlos Offerd",
+     "when_text": "August 4, 2020 (no exact camera timestamps in file)",
+     "proves": "Proves the Ford Fusion Offerd purchased was captured on police POD cameras and license plate readers. Suggests the vehicle's movement in connection with the shooting, but cannot by itself prove Offerd was driving or inside it.",
+     "quote": "He said the vehicle Offerd purchased was seen on police POD cameras and license plate readers.",
+     "doc_id": "doc06"
+    },
+    {
+     "what": "Return of the Ford Fusion to a dealership in the Chicago suburbs",
+     "when_text": "Approximately one hour after the August 4, 2020 shooting",
+     "proves": "Based on a prosecutor's detention-hearing statement (no dealership receipt or timestamped return log is included in the file), indicates the Fusion was returned about an hour after the shooting. Does not by itself prove who returned the car or who drove it downtown.",
+     "quote": "Julien said the Fusion was returned to the dealership in the Chicago suburbs approximately one hour after the shooting.",
+     "doc_id": "doc06"
+    },
+    {
+     "what": "Phone call from Kenneth Roberson to CPD following seizure of his Chrysler 300",
+     "when_text": "After CPD seized the Chrysler 300 the day after the murder (August 5, 2020 or later; no exact call timestamp in file)",
+     "proves": "Proves Roberson contacted CPD seeking return of the seized Chrysler 300, linking him to an ownership or possession claim over the car. Cannot by itself prove he drove the vehicle during the August 4, 2020 shooting.",
+     "quote": "After the seizure, Roberson called CPD to get it back.",
+     "doc_id": "doc07"
+    },
+    {
+     "what": "Defendants' online posts, photos, and videos depicting gang signs, firearms, and the Tookaville feud",
+     "when_text": "Over years (no individual post dates or timestamps in file)",
+     "proves": "Proves defendants created or appeared in public online posts, photos, and videos involving gang signs, firearms, and the Tookaville feud over years. Suggests gang affiliation and rivalry, but does not by itself prove involvement in the August 4, 2020 shooting.",
+     "quote": "Prosecutors built the racketeering case in part from the defendants' own posts, photos, and videos: gang signs, firearms, and the feud with Tookaville carried on in public, in songs and online, over years.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Video recorded after the murder showing King Von giving defendants diamond O Block pendants and stacks of cash",
+     "when_text": "After the August 4, 2020 murder (no exact recording date or timestamp in file)",
+     "proves": "Proves King Von handed diamond O Block pendants and stacks of cash to defendants on video after the murder. Suggests a post-shooting transfer of valuables and money, but cannot by itself prove the items were payment for a murder bounty.",
+     "quote": "Jurors saw video recorded after the murder in which King Von, the O Block rapper prosecutors said put a price on Weekly's head, gave the defendants diamond O Block pendants and stacks of cash.",
+     "doc_id": "doc09"
+    }
+   ],
+   "record_checks": [
+    {
+     "claim": "Prosecutors said Tacarlos Offerd drove the Ford Fusion in the shooting with gunmen riding in it (doc06, doc12).",
+     "record_says": "The machine records cited in doc06 (police POD cameras and license plate readers) and the purchase/return timing establish only the vehicle's purchase, camera sightings, and return. As defense counsel John Somerville argued in doc06, those vehicle records do not by themselves identify who was driving the Ford Fusion that day.",
+     "quote": "Offerd's defense attorney, John Somerville, argued there was no evidence linking anyone specific to driving the car that day. \"Mr. Offerd bought a car,\" Somerville said. \"Some unknown person was in his car. Some unknown person may have driven downtown.\"",
+     "doc_id": "doc06"
+    },
+    {
+     "claim": "At the scene on August 4, 2020, police officers noted Weekly had been broadcasting his travels on social media that day and that he was found (doc02).",
+     "record_says": "Later federal court filings summarizing phone and timeline records (doc04, doc10) attribute Weekly's spotting to Ralph Turpin entering Milani Boutique at approximately 3:59 p.m., seeing Weekly inside, and placing at least one phone call from inside the boutique, with the O Block crew moving toward East Oak Street about three minutes later at ~4:02 p.m. The file contains no social media records confirming the attackers located Weekly through his broadcasts.",
+     "quote": "The call came after Turpin entered the boutique at approximately 3:59 p.m. and saw Weekly inside.",
+     "doc_id": "doc10"
+    },
+    {
+     "claim": "Federal filings state Ralph Turpin's phone call from inside Milani Boutique reported Weekly's location to his rivals to come downtown to kill him (doc04, doc10).",
+     "record_says": "The summarized timeline shows a call after ~3:59 p.m. followed roughly three minutes later by the O Block crew beginning to move toward East Oak Street at ~4:02 p.m., which aligns with the alleged sequence. However, a phone call record proves only that a call was made and its timing, not the words spoken on the call, and no raw call-detail records or call content appear in the file.",
+     "quote": "At about 4:02 p.m., roughly three minutes after Turpin entered the boutique, the O Block crew began moving toward East Oak Street.",
+     "doc_id": "doc10"
+    },
+    {
+     "claim": "Prosecutors said Kenneth Roberson drove the Chrysler 300 in the shooting with gunmen riding in it (doc07, doc12).",
+     "record_says": "The surveillance trail (Parkway Gardens video, Oak Street video, and POD cameras) tracks the Chrysler 300 itself, and Roberson's post-seizure call to CPD links him to wanting the car back (doc07), but the machine records described in the file do not by themselves identify the driver; prosecutors also cited cooperating witness statements in doc08.",
+     "quote": "The Chrysler appears with the Ford Fusion in the surveillance trail: out of Parkway Gardens before the shooting, on Oak Street at the shooting, and tracked back toward the South Side after it.",
+     "doc_id": "doc07"
+    },
+    {
+     "claim": "Prosecutors identified Liggins, Thomas, and Smart as gunmen (doc12), and news reporting identified Ezell Rawls as a fourth gunman in the surveillance video (doc11).",
+     "record_says": "Doc05 states the gunmen captured on Oak Street surveillance video were masked, so the Oak Street footage alone cannot identify their faces; police also released the Parkway Gardens video seeking public help to identify the four men entering the cars (doc05), and doc11 does not specify which surveillance video was used to identify Rawls.",
+     "quote": "The gunmen at Oak Street were masked.",
+     "doc_id": "doc05"
+    },
+    {
+     "claim": "An informant reported a $50,000 bounty (later raised to $100,000) for killing Weekly, which prosecutors alleged came from King Von (doc03).",
+     "record_says": "Post-murder video shown at trial depicts King Von giving defendants diamond O Block pendants and stacks of cash (doc09). While consistent with a post-shooting distribution of cash and jewelry, the video alone does not prove a prior $50,000-$100,000 bounty agreement, and doc03 notes the bounty was an allegation and King Von was never charged.",
+     "quote": "Jurors saw video recorded after the murder in which King Von, the O Block rapper prosecutors said put a price on Weekly's head, gave the defendants diamond O Block pendants and stacks of cash.",
+     "doc_id": "doc09"
+    }
+   ],
+   "camera_gaps": [
+    {
+     "camera": "Surveillance cameras at the luxury stores lining the 100 block of East Oak Street",
+     "mentioned_in": "doc01 reports detectives were reviewing surveillance video from the block, described as lined with luxury stores and cameras; later summaries (doc05) confirm only generic 'Video from Oak Street' of the shooting without documenting which individual luxury store cameras along the block were pulled or reviewed.",
+     "quote": "Detectives said they were reviewing surveillance video from the block, which is lined with luxury stores and cameras.",
+     "doc_id": "doc01"
+    },
+    {
+     "camera": "Public, private, or bystander video from the East Oak Street block solicited by CPD",
+     "mentioned_in": "doc02 reports police asked anyone with video from the block to come forward; the file never documents whether any third-party or civilian video from the block was submitted, pulled, or reviewed.",
+     "quote": "Police asked anyone with video from the block to come forward.",
+     "doc_id": "doc02"
+    }
+   ]
+  },
+  "cross_examiner": {
+   "contradictions": [
+    {
+     "a_quote": "Offerd's defense attorney, John Somerville, argued there was no evidence linking anyone specific to driving the car that day. \"Mr. Offerd bought a car,\" Somerville said. \"Some unknown person was in his car. Some unknown person may have driven downtown.\"",
+     "a_doc": "doc06",
+     "b_quote": "Prosecutors said Offerd drove the Fusion in the shooting, with gunmen riding in it.",
+     "b_doc": "doc06",
+     "kind": "contradiction",
+     "severity": "high",
+     "innocent_alternative": "Adversarial legal arguments at a detention hearing where the defense contests the sufficiency of identification evidence while the prosecution presents its theory of the case."
+    }
+   ],
+   "alibis": [
+    {
+     "person": "Tacarlos Offerd",
+     "window": "2020-08-04 ~16:26 to ~16:56",
+     "rating": "contradicted",
+     "reasons": [
+      {
+       "quote": "Offerd's defense attorney, John Somerville, argued there was no evidence linking anyone specific to driving the car that day. \"Mr. Offerd bought a car,\" Somerville said. \"Some unknown person was in his car. Some unknown person may have driven downtown.\"",
+       "doc_id": "doc06"
+      },
+      {
+       "quote": "Prosecutors said Offerd drove the Fusion in the shooting, with gunmen riding in it.",
+       "doc_id": "doc06"
+      }
+     ]
+    }
+   ],
+   "evidence_gaps": [
+    {
+     "item": "Evidence ledger (entire record)",
+     "mentioned_in": [
+      "doc01",
+      "doc02",
+      "doc05",
+      "doc06",
+      "doc07",
+      "doc09",
+      "doc10"
+     ],
+     "problem": "No evidence ledger is present in the case file; therefore, all physical, digital, and documentary evidence items relied upon in the reports (including one weapon recovered at the scene in doc02; Parkway Gardens, Oak Street, POD camera, and license plate reader footage in doc01/doc05/doc06; the Ford Fusion in doc06; the seized Chrysler 300 in doc07; social media posts and video of diamond pendants and cash in doc09; and Ralph Turpin's phone records in doc10) are absent from an evidence ledger."
+    }
+   ]
+  },
+  "interviewer": {
+   "histories": [
+    {
+     "person": "Kenneth Roberson",
+     "changes": [
+      {
+       "topic": "Reported statements about the August 4, 2020 shooting (weaker reading: summarized in a government proffer without verbatim quotes, shifting from reported acknowledgment of intent to a first witness to unspecified statements described as made for concealment to a second witness)",
+       "earlier_quote": "As the crew drove toward East Oak Street on August 4, 2020, Roberson made statements to a cooperating witness acknowledging that Roberson was on his way to murder Weekly.",
+       "earlier_doc": "doc08",
+       "later_quote": "Roberson later made statements about the murder to a second witness. The filing says those statements were made for purposes of concealment.",
+       "later_doc": "doc08"
+      }
+     ]
+    }
+   ],
+   "next_questions": [
+    {
+     "person": "Kenneth Roberson",
+     "question": "The file does not record a follow-up police interview after you contacted CPD; when you called CPD to retrieve your Chrysler 300, what did you state regarding who had possession of the vehicle between 4:02 p.m. and 4:26 p.m. on August 4, 2020?",
+     "anchored_quote": "After the seizure, Roberson called CPD to get it back.",
+     "doc_id": "doc07"
+    },
+    {
+     "person": "Kenneth Roberson",
+     "question": "What specific statements did you make to the second witness regarding the events of August 4, 2020, and how did those statements differ from what you communicated on the day of the shooting?",
+     "anchored_quote": "Roberson later made statements about the murder to a second witness. The filing says those statements were made for purposes of concealment.",
+     "doc_id": "doc08"
+    },
+    {
+     "person": "First Cooperating Witness (unnamed in proffer)",
+     "question": "What exact words did Kenneth Roberson use during the drive toward East Oak Street and after the shooting, and by what method (in person, phone call, or text message) did those communications occur?",
+     "anchored_quote": "As the crew drove toward East Oak Street on August 4, 2020, Roberson made statements to a cooperating witness acknowledging that Roberson was on his way to murder Weekly.",
+     "doc_id": "doc08"
+    },
+    {
+     "person": "Second Witness (unnamed in proffer)",
+     "question": "When and where did Kenneth Roberson speak with you after August 4, 2020, and what exact words or requests did he convey that the court filing characterizes as made for purposes of concealment?",
+     "anchored_quote": "Roberson later made statements about the murder to a second witness. The filing says those statements were made for purposes of concealment.",
+     "doc_id": "doc08"
+    },
+    {
+     "person": "Tacarlos Offerd",
+     "question": "The file contains your attorney's detention-hearing argument rather than a direct statement from you; who had the keys and physical possession of the Ford Fusion you purchased one week earlier on the afternoon of August 4, 2020?",
+     "anchored_quote": "\"Mr. Offerd bought a car,\" Somerville said. \"Some unknown person was in his car. Some unknown person may have driven downtown.\"",
+     "doc_id": "doc06"
+    },
+    {
+     "person": "Suburban Car Dealership Personnel",
+     "question": "Who physically returned the Ford Fusion approximately one hour after the 4:26 p.m. shooting, what reason was given for the return, and what documentation or dealership surveillance captured that person?",
+     "anchored_quote": "Julien said the Fusion was returned to the dealership in the Chicago suburbs approximately one hour after the shooting.",
+     "doc_id": "doc06"
+    },
+    {
+     "person": "Ralph Turpin",
+     "question": "After entering Milani Boutique at approximately 3:59 p.m. on August 4, 2020, how many phone calls did you place, to which phone numbers and individuals, and what did you say during each call?",
+     "anchored_quote": "Ralph Turpin placed at least one phone call from inside Milani Boutique on the afternoon of August 4, 2020. The filing says the call reported Weekly's location to his rivals.",
+     "doc_id": "doc10"
+    },
+    {
+     "person": "Friend of Ralph Turpin (present at Milani Boutique)",
+     "question": "The file does not show an interview with you; what did you observe and hear inside Milani Boutique after entering with Ralph Turpin at approximately 3:59 p.m., and did you overhear his phone call or communicate with anyone yourself?",
+     "anchored_quote": "At approximately 3:59 p.m., Ralph Turpin and a friend of Turpin's entered Milani Boutique and noticed Weekly.",
+     "doc_id": "doc04"
+    },
+    {
+     "person": "Confidential Informant (bounty source)",
+     "question": "How did you learn of the alleged $50,000 offer and its subsequent increase to $100,000, on what dates were those offers made, and which specific individuals were present or received the offer?",
+     "anchored_quote": "After the murder, an informant told Chicago police and FBI agents that a bounty had been offered for killing Weekly: $50,000 at first, later raised to $100,000.",
+     "doc_id": "doc03"
+    },
+    {
+     "person": "Two Surviving Shooting Victims (with Carlton Weekly on Oak Street)",
+     "question": "The file includes no witness statements from the two people shot alongside Carlton Weekly; what did you see or hear when the Ford Fusion and Chrysler 300 pulled up, including any observations of the drivers remaining in the vehicles or distinguishing features of the four masked individuals?",
+     "anchored_quote": "Video from Oak Street shows the Ford Fusion and the Chrysler 300 pull up. Four gunmen got out of the two cars and shot Weekly and the two people with him. The gunmen at Oak Street were masked.",
+     "doc_id": "doc05"
+    }
+   ]
+  },
+  "prosecutor": {
+   "sufficiency": [
+    {
+     "subject": "Identification of Tacarlos Offerd as driver of the Ford Fusion (doc06: \"Prosecutors said Offerd drove the Fusion in the shooting, with gunmen riding in it.\" vs. doc06: \"Offerd's defense attorney, John Somerville, argued there was no evidence linking anyone specific to driving the car that day. \\\"Mr. Offerd bought a car,\\\" Somerville said. \\\"Some unknown person was in his car. Some unknown person may have driven downtown.\\\"\")",
+     "rating": "weak",
+     "missing": "Direct identification of the Ford Fusion driver via clear camera footage, eyewitness testimony, cell-site location records, fingerprints, or DNA, plus dealership paperwork and custody logs absent from an evidence ledger."
+    },
+    {
+     "subject": "Post-shooting return of the Ford Fusion to a suburban dealership (doc06: \"Julien said the Fusion was returned to the dealership in the Chicago suburbs approximately one hour after the shooting.\")",
+     "rating": "weak",
+     "missing": "Dealership return receipts, dealership surveillance video showing who returned the car, police seizure/inspection records for the Ford Fusion, and an evidence ledger entry."
+    },
+    {
+     "subject": "Seizure and evidentiary link of the Chrysler 300 (doc07: \"CPD seized Roberson's Chrysler 300 the day after the murder.\")",
+     "rating": "workable",
+     "missing": "An official evidence ledger entry, vehicle impound and chain-of-custody logs, registration records tying the car to Roberson, and forensic processing results (prints, DNA, or gunshot residue) from inside the vehicle."
+    },
+    {
+     "subject": "Firearms evidence and recovery of one scene weapon versus four shooters (doc02: \"One weapon was recovered by police at the scene.\" and doc01: \"Four gunmen got out, two from each vehicle, and opened fire.\")",
+     "rating": "weak",
+     "missing": "An evidence ledger entry identifying the make, model, serial number, and recovery location of the scene weapon, ballistic comparisons linking or excluding it from scene casings/projectiles, and recovery or accounting for the remaining firearms used by the four gunmen."
+    },
+    {
+     "subject": "Video and LPR tracking of the Ford Fusion and Chrysler 300 from Parkway Gardens to East Oak Street (doc05: \"Surveillance video from the Parkway Gardens apartments, the South Side complex known as O Block, shows four men sprinting down the steps of a building and getting into two waiting cars: a Ford Fusion and a Chrysler 300.\"; doc05: \"Police POD cameras and license plate readers then tracked the two cars as they drove from the South Side to the Gold Coast.\"; doc05: \"Video from Oak Street shows the Ford Fusion and the Chrysler 300 pull up. Four gunmen got out of the two cars and shot Weekly and the two people with him.\")",
+     "rating": "workable",
+     "missing": "Authenticated original video files, synchronized timestamp logs, license plate reader hit sheets, and chain-of-custody entries in an evidence ledger confirming continuous tracking without gaps."
+    },
+    {
+     "subject": "Identification of the four masked gunmen on East Oak Street (doc05: \"The gunmen at Oak Street were masked.\")",
+     "rating": "weak",
+     "missing": "Unmasked pre-departure video comparisons from Parkway Gardens, clothing/gait forensic matching, recovered masks with DNA, or cooperator/witness testimony linking specific individuals to the masked figures."
+    },
+    {
+     "subject": "Lead regarding Ralph Turpin's phone call from Milani Boutique (doc10: \"Ralph Turpin placed at least one phone call from inside Milani Boutique on the afternoon of August 4, 2020.\")",
+     "rating": "weak",
+     "missing": "Certified call detail records in an evidence ledger showing the exact timestamp, duration, recipient phone number, subscriber identity of the recipient, cell-tower data, and evidence of what was communicated."
+    },
+    {
+     "subject": "Lead regarding Carlton Weekly's social media broadcast prior to the shooting (doc02: \"Officers noted that Weekly had been broadcasting his travels on social media that day, and that he was found.\")",
+     "rating": "weak",
+     "missing": "Preserved digital copies and platform metadata of Weekly's August 4, 2020 broadcast in an evidence ledger, plus digital access logs showing any suspect actually viewed the broadcast before the shooting."
+    },
+    {
+     "subject": "Motive and racketeering evidence from songs and social media (doc03: \"On July 10, 2020, Weekly released a song called \\\"Dead Bitches.\\\"\" and doc09: \"Prosecutors built the racketeering case in part from the defendants' own posts, photos, and videos: gang signs, firearms, and the feud with Tookaville carried on in public, in songs and online, over years.\")",
+     "rating": "weak",
+     "missing": "Itemized, authenticated digital exhibits in an evidence ledger with account attribution, creation dates, and forensic verification of any firearms depicted."
+    },
+    {
+     "subject": "Post-shooting video of diamond O Block pendants and cash distribution (doc09: \"Jurors saw video recorded after the murder in which King Von, the O Block rapper prosecutors said put a price on Weekly's head, gave the defendants diamond O Block pendants and stacks of cash.\")",
+     "rating": "weak",
+     "missing": "The underlying video exhibit and recording metadata in an evidence ledger, jeweler purchase or financial records, physical recovery of the pendants or cash, and direct witness or digital communications corroborating that the items were payment for the shooting."
+    }
+   ],
+   "vetoes": [
+    {
+     "phrase": "Offerd drove the Fusion",
+     "reason": "States a contested prosecution claim as settled fact despite the contradiction in doc06 (\"Prosecutors said Offerd drove the Fusion in the shooting, with gunmen riding in it.\" vs. \"Some unknown person was in his car. Some unknown person may have driven downtown.\")."
+    },
+    {
+     "phrase": "Offerd was the driver",
+     "reason": "Upgrades an uncorroborated prosecution allegation in doc06 (\"Prosecutors said Offerd drove the Fusion in the shooting, with gunmen riding in it.\") into proven fact."
+    },
+    {
+     "phrase": "Turpin tipped off",
+     "reason": "Overclaims beyond doc10 (\"Ralph Turpin placed at least one phone call from inside Milani Boutique on the afternoon of August 4, 2020.\"), which provides no recipient or call content."
+    },
+    {
+     "phrase": "Turpin gave Weekly's location",
+     "reason": "Treats a bare phone-call lead in doc10 (\"Ralph Turpin placed at least one phone call from inside Milani Boutique on the afternoon of August 4, 2020.\") as proof of a setup."
+    },
+    {
+     "phrase": "murder weapon was recovered",
+     "reason": "Overstates doc02 (\"One weapon was recovered by police at the scene.\"), which includes no ballistics linking that weapon to the shooting."
+    },
+    {
+     "phrase": "video identifies the gunmen",
+     "reason": "Conflicts with doc05 (\"The gunmen at Oak Street were masked.\"), which shows the Oak Street video alone cannot facially identify the shooters."
+    },
+    {
+     "phrase": "paid a murder bounty",
+     "reason": "Converts a secondary summary of prosecution theory in doc09 (\"King Von, the O Block rapper prosecutors said put a price on Weekly's head, gave the defendants diamond O Block pendants and stacks of cash.\") into established proof."
+    },
+    {
+     "phrase": "King Von ordered",
+     "reason": "Presents an uncorroborated prosecution allegation summarized in doc09 (\"prosecutors said put a price on Weekly's head\") as proven fact."
+    },
+    {
+     "phrase": "found through social media",
+     "reason": "Upgrades an unverified scene note in doc02 (\"Officers noted that Weekly had been broadcasting his travels on social media that day, and that he was found.\") into proof of how Weekly was located."
+    },
+    {
+     "phrase": "guilty of the murder",
+     "reason": "Judges persons rather than the evidentiary file, violating pipeline neutrality on disputed trial and pre-trial summaries across doc01, doc06, and doc09."
+    }
+   ],
+   "corroboration_needed": [
+    "Complete CPD/federal evidence ledger and chain-of-custody logs covering all physical, vehicular, ballistic, and digital items referenced across doc01, doc02, doc05, doc06, doc07, doc09, and doc10.",
+    "Forensic firearms and ballistics report for the single scene firearm noted in doc02 (\"One weapon was recovered by police at the scene.\") and casing/projectile analysis accounting for the four shooters in doc01 (\"Four gunmen got out, two from each vehicle, and opened fire.\").",
+    "Dealership surveillance footage, return paperwork, and interior forensic processing (DNA, latent prints, cell-site telemetry) for the Ford Fusion in doc06 (\"Julien said the Fusion was returned to the dealership in the Chicago suburbs approximately one hour after the shooting.\") and the seized Chrysler 300 in doc07 (\"CPD seized Roberson's Chrysler 300 the day after the murder.\").",
+    "Authenticated video files, timestamp synchronization logs, and LPR data packets connecting Parkway Gardens, transit routes, and East Oak Street in doc05 (\"Police POD cameras and license plate readers then tracked the two cars as they drove from the South Side to the Gold Coast.\"), plus non-facial identification evidence for the shooters in doc05 (\"The gunmen at Oak Street were masked.\").",
+    "Certified carrier call detail records, subscriber attribution, and cell-site records for the boutique call in doc10 (\"Ralph Turpin placed at least one phone call from inside Milani Boutique on the afternoon of August 4, 2020.\").",
+    "Preserved social media archives, viewing logs, and recording metadata for Weekly's broadcast in doc02 (\"Officers noted that Weekly had been broadcasting his travels on social media that day, and that he was found.\"), the song in doc03 (\"On July 10, 2020, Weekly released a song called \\\"Dead Bitches.\\\"\"), and the defendants' posts and pendant/cash video in doc09 (\"Jurors saw video recorded after the murder in which King Von, the O Block rapper prosecutors said put a price on Weekly's head, gave the defendants diamond O Block pendants and stacks of cash.\")."
+   ]
+  },
+  "lead_detective": {
+   "leads": [
+    {
+     "action": "Pull the authenticated East Oak Street surveillance footage, Police POD camera footage, and LPR hit sheets from ~16:26 on August 4, 2020 (doc05, doc06) to determine whether the driver of the Ford Fusion is visible or identifiable during the shooting.",
+     "score": 100,
+     "arithmetic": "40 + 25 + 20 + 15 = 100",
+     "reason": "This single action earns all four components: (1) cites_high_contradiction (40) because it directly tests the doc06 high-severity contradiction between prosecutors ('Offerd drove the Fusion in the shooting') and defense attorney John Somerville ('Some unknown person was in his car. Some unknown person may have driven downtown'); (2) in_window (25) because the Oak Street shooting footage and Gold Coast POD/LPR captures sit directly inside the 16:26 to 16:56 death window (doc01, doc05); (3) closes_gap (20) because its product is the missing East Oak Street and POD/LPR video record itself (doc05, doc06); and (4) still_reachable (15) because the video and LPR records were presented at the federal trial in United States v. Liggins (doc05, doc12) and remain reachable in the trial exhibit record.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Have the detective interview Tacarlos Offerd (or review his cell-site location records if subpoenaed) and ask the exact question: who had possession of the Ford Fusion between 15:59 and 17:26 on August 4, 2020, and who returned it to the suburban dealership (doc06)?",
+     "score": 80,
+     "arithmetic": "40 + 25 + 15 = 80",
+     "reason": "Directly works the high-severity contradiction in doc06 regarding Offerd's alibi and whether he drove the Ford Fusion (40), covers his whereabouts inside the 16:26-16:56 death window (25), and targets a living, convicted defendant in federal custody who is still reachable (15). An interview does not itself produce a missing document from the gap list.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the suburban dealership return records, surveillance footage, and any CPD or FBI forensic inspection logs for the Ford Fusion returned approximately one hour after the shooting (~17:26, doc06) to prove or disprove who possessed and returned the vehicle.",
+     "score": 75,
+     "arithmetic": "40 + 20 + 15 = 75",
+     "reason": "Directly works the high-severity contradiction in doc06 over whether Tacarlos Offerd or an 'unknown person' drove the Ford Fusion (40), closes the gap of the missing Ford Fusion dealership and inspection records (20), and targets records from the federal prosecution that remain reachable (15). Occurs ~17:26, outside the 16:26-16:56 death window.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the CPD evidence ledger, firearm recovery log, and ballistics comparison report for the 'One weapon was recovered by police at the scene' on East Oak Street (doc02) and any scene casings/projectiles from the 16:26 shooting (doc01).",
+     "score": 60,
+     "arithmetic": "25 + 20 + 15 = 60",
+     "reason": "Acquires the missing evidence record for the scene weapon and ballistics from the 16:26 shooting inside the death window (25), directly closes the CSI gap for the unlogged firearm recovered at the scene (20), and targets official CPD property and lab records that are still reachable (15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the Cook County Medical Examiner autopsy report and Northwestern Memorial Hospital pronouncement records for Carlton Weekly from August 4, 2020 (~16:26 to ~16:56, doc01) to confirm official cause and manner of death and recovered projectiles.",
+     "score": 60,
+     "arithmetic": "25 + 20 + 15 = 60",
+     "reason": "Sits directly inside the 16:26-16:56 death window when Weekly was shot and pronounced dead at Northwestern Memorial Hospital (25), closes the coroner gap of an unconfirmed cause and manner of death lacking an autopsy report (20), and targets official hospital and medical examiner records that are still reachable (15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the certified call detail records and subscriber attribution for the phone call(s) placed by Ralph Turpin from inside Milani Boutique after ~15:59 on August 4, 2020 (doc04, doc10) to establish the exact timestamp, duration, and recipient phone numbers.",
+     "score": 35,
+     "arithmetic": "20 + 15 = 35",
+     "reason": "Closes the gap of the missing phone records referenced in the government's Santiago proffer (20) and targets federal trial exhibits/subpoenaed carrier records that are still reachable (15). The call occurred between ~15:59 and ~16:02, prior to the 16:26 death window.",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the CPD impound ledger, chain-of-custody logs, and forensic processing reports (fingerprints, DNA, gunshot residue) for Kenneth Roberson's Chrysler 300 seized on August 5, 2020 (doc07).",
+     "score": 35,
+     "arithmetic": "20 + 15 = 35",
+     "reason": "Closes the gap of the missing seizure and forensic records for the Chrysler 300 (20) and targets official CPD evidence records that are still reachable (15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the Parkway Gardens surveillance video exhibit from August 4, 2020 showing four men sprinting down the steps into the waiting Ford Fusion and Chrysler 300 (doc05) to compare unmasked pre-departure appearances and clothing with the masked gunmen at Oak Street.",
+     "score": 35,
+     "arithmetic": "20 + 15 = 35",
+     "reason": "Closes the gap of the missing Parkway Gardens video exhibit (20) and targets video released by CPD and used at the federal trial, which is still reachable (15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    }
+   ],
+   "gaps": [
+    {
+     "gap": "Master evidence ledger accounting for all physical, digital, and documentary exhibits in the case file.",
+     "proven_by": "doc01, doc02, doc05, doc06, doc07, doc09, doc10"
+    },
+    {
+     "gap": "Autopsy report and official medical examiner determination of cause and manner of death for Carlton Weekly.",
+     "proven_by": "doc01 (states Weekly 'was shot multiple times' and 'pronounced dead about half an hour later' at Northwestern Memorial Hospital, with no medical examiner report in the file)"
+    },
+    {
+     "gap": "Property log, make, model, serial number, and ballistics report for the one weapon recovered at the East Oak Street scene, plus accounting for the remaining firearms used by the four gunmen.",
+     "proven_by": "doc02 ('One weapon was recovered by police at the scene') and doc01 ('Four gunmen got out, two from each vehicle, and opened fire')"
+    },
+    {
+     "gap": "Seizure records, forensic processing logs, and chain-of-custody ledger entry for Kenneth Roberson's Chrysler 300.",
+     "proven_by": "doc07 ('CPD seized Roberson's Chrysler 300 the day after the murder')"
+    },
+    {
+     "gap": "Purchase paperwork, suburban dealership return receipts, dealership surveillance video, and police inspection records for the Ford Fusion.",
+     "proven_by": "doc06 ('Prosecutors said defendant Tacarlos Offerd purchased a vehicle used as a \"lead car\" in the shooting one week before the August 4, 2020 murder. The vehicle was a Ford Fusion' and 'Julien said the Fusion was returned to the dealership in the Chicago suburbs approximately one hour after the shooting')"
+    },
+    {
+     "gap": "Authenticated video files and timestamped logs for the Parkway Gardens surveillance footage, East Oak Street shooting footage, Police POD cameras, and license plate readers.",
+     "proven_by": "doc05 ('Surveillance video from the Parkway Gardens apartments... Police POD cameras and license plate readers... Video from Oak Street shows the Ford Fusion and the Chrysler 300 pull up') and doc06"
+    },
+    {
+     "gap": "Certified call detail records and subscriber attribution for Ralph Turpin's phone call(s) placed from inside Milani Boutique.",
+     "proven_by": "doc04 and doc10 ('Ralph Turpin placed at least one phone call from inside Milani Boutique on the afternoon of August 4, 2020')"
+    },
+    {
+     "gap": "Preserved digital copy and access metadata for Carlton Weekly's August 4, 2020 social media broadcast.",
+     "proven_by": "doc02 ('Officers noted that Weekly had been broadcasting his travels on social media that day, and that he was found')"
+    },
+    {
+     "gap": "Authenticated trial exhibit and metadata for the post-shooting video showing King Von distributing diamond O Block pendants and stacks of cash, as well as recovery/financial records for the pendants and cash.",
+     "proven_by": "doc09 ('Jurors saw video recorded after the murder in which King Von, the O Block rapper prosecutors said put a price on Weekly's head, gave the defendants diamond O Block pendants and stacks of cash')"
+    },
+    {
+     "gap": "Itemized digital exhibits for Weekly's July 10, 2020 song 'Dead Bitches' and the defendants' social media posts, photos, videos, and songs.",
+     "proven_by": "doc03 ('On July 10, 2020, Weekly released a song called \"Dead Bitches.\"') and doc09 ('Prosecutors built the racketeering case in part from the defendants' own posts, photos, and videos')"
+    }
+   ],
+   "brief": "THE CASE IN FIVE LINES\nOn August 4, 2020, at approximately 3:59 p.m., Ralph Turpin entered Milani Boutique on East Oak Street, saw rapper Carlton Weekly shopping, and placed at least one phone call reporting Weekly's location (doc04, doc10). By ~4:02 p.m., men from Parkway Gardens (O Block) departed in two cars—a Ford Fusion and a Chrysler 300—tracked by surveillance, Police POD cameras, and license plate readers to the Gold Coast (doc04, doc05). At ~4:26 p.m. near the 100 block of East Oak Street, four masked gunmen exited the two vehicles and shot Weekly multiple times while wounding two others; Weekly was pronounced dead at Northwestern Memorial Hospital about half an hour later (~4:56 p.m.) (doc01, doc05). Police recovered one weapon at the scene (doc02), the Ford Fusion was returned to a suburban dealership about an hour after the shooting (doc06), and CPD seized Kenneth Roberson's Chrysler 300 the next day (doc07). Six men (Liggins, Roberson, Offerd, Thomas, Smart, and Turpin) were federally indicted and convicted on January 17, 2024, though the case file here consists of news and court summaries without an evidence ledger or medical examiner report (doc11, doc12).\n\nTHE STRONGEST CONTRADICTION\nSeverity: High (doc06 vs. doc06 — Identity of the Ford Fusion driver during the shooting)\n- Quote A (doc06): \"Offerd's defense attorney, John Somerville, argued there was no evidence linking anyone specific to driving the car that day. 'Mr. Offerd bought a car,' Somerville said. 'Some unknown person was in his car. Some unknown person may have driven downtown.'\"\n- Quote B (doc06): \"Prosecutors said Offerd drove the Fusion in the shooting, with gunmen riding in it.\"\n- File Note: These conflicting statements arise from adversarial arguments at Offerd's October 15, 2021 federal detention hearing; the file lacks the underlying camera images, dealership return records, or forensic logs identifying who drove or returned the Fusion.\n\nTHE ALIBI TABLE\n- Tacarlos Offerd | Window: 2020-08-04 ~16:26 to ~16:56 | Rating: Contradicted | Basis: Defense counsel stated at the detention hearing that \"Some unknown person was in his car. Some unknown person may have driven downtown\" (doc06), whereas prosecutors stated \"Offerd drove the Fusion in the shooting, with gunmen riding in it\" (doc06).\n\nTHE TOP THREE LEADS\n1. [Score: 100 | 40+25+20+15] Pull the authenticated East Oak Street surveillance footage, Police POD camera footage, and LPR hit sheets from ~16:26 on August 4, 2020 (doc05, doc06) to determine whether the driver of the Ford Fusion is visible or identifiable during the shooting.\n2. [Score: 80 | 40+25+15] Have the detective interview Tacarlos Offerd (or review his subpoenaed cell-site records) and ask the exact question: who had possession of the Ford Fusion between 15:59 and 17:26 on August 4, 2020, and who returned it to the suburban dealership (doc06)?\n3. [Score: 75 | 40+20+15] Pull the suburban dealership return records, dealership surveillance footage, and any CPD/FBI forensic inspection logs for the Ford Fusion returned ~17:26 on August 4, 2020 (doc06) to prove or disprove who returned the vehicle.\n\nTHE GAP LIST\n- Master evidence ledger: Missing entirely from the file (proven by doc01, doc02, doc05, doc06, doc07, doc09, doc10).\n- Autopsy & medical examiner report: No official cause/manner of death report for Carlton Weekly (proven by doc01).\n- Scene weapon & ballistics ledger: No property entry or ballistics report for the 1 weapon recovered at the scene vs. 4 shooters (proven by doc01, doc02).\n- Chrysler 300 seizure & forensic logs: Seized by CPD on 2020-08-05 but no impound or forensic reports in file (proven by doc07).\n- Ford Fusion dealership & inspection records: Purchased 1 week prior and returned ~1 hour after shooting, but no records in file (proven by doc06).\n- Surveillance & LPR exhibits: No video files or logs for Parkway Gardens, East Oak Street, POD cameras, or LPRs (proven by doc05, doc06).\n- Ralph Turpin phone records: Call from Milani Boutique summarized in filing, but no CDRs in file (proven by doc04, doc10).\n- Weekly's August 4, 2020 social media broadcast: Noted by officers at scene, no preserved record in file (proven by doc02).\n- Post-shooting pendant/cash video & financial records: Shown to jurors at trial, absent from file ledger (proven by doc09).\n- Songs & social media exhibits: \"Dead Bitches\" release and defendants' posts referenced, absent from file ledger (proven by doc03, doc09).\n\nThis board judges the file. The detective does the detecting."
+  }
+ },
+ "dropped": 2,
+ "run_log": [
+  "cross_examiner: 2 finding(s) dropped by the quote check"
+ ]
+}

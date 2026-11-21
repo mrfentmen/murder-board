@@ -170,11 +170,21 @@ POD camera and plate reader trail for both cars, and the Oak
 Street video with its missing ledger entry: the same records
 the real investigation was built from.
 
+Run two, the same day, on the four-model map (Hydrogen on
+the Analyst, Neon on Digital): all eleven steps, two
+findings dropped by the quote check. The star catch landed
+again, HIGH, the same two quotes in doc06, and Offerd was
+again CONTRADICTED; this time no other defendant was rated
+at all, which is the cleaner read. Hydrogen's Analyst placed
+29 events on the clock and Neon's Digital pulled 12 machine
+records. The brief rebuilt the half hour and closed on the
+standing line. The shipped replay cache is this run.
+
 What it missed. Ezell Rawls, who died before trial and made
 no claim in the file, was rated UNCORROBORATED; the book
 says NOT APPLICABLE. The bible's top gap, the unnamed friend
 who entered the boutique with Turpin and was never
-identified, appears in neither gap list. The gap lists
+identified, appears in neither gap list, in either run. The gap lists
 filled instead with this file's missing evidence ledger,
 which is true of the file but generic, twelve variations on
 one absence where the book wanted the one person nobody

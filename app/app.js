@@ -423,7 +423,7 @@ async function runAll(hooks, cachedOutputs, opts) {
     await runStep(STEPS[i], book, hooks, cachedOutputs);
     hooks.step(book);
   }
-  hooks.status(book.failed_steps.length ? "Done, with failed steps: " + book.failed_steps.join("; ") : "Done");
+  hooks.status(book.failed_steps.length ? "Done, with failed steps: " + book.failed_steps.join("; ") : "Done" + (book.dropped ? " — quote check dropped " + book.dropped + " finding(s)" : ""));
   return book;
 }
 
@@ -1059,7 +1059,15 @@ function renderRecords() {
   box.innerHTML = h;
 }
 
-function renderAll() { renderBoard(); renderClock(); renderJudgments(); renderBrief(); renderRecords(); }
+function renderEval() {
+  var rows = window.EVAL_LIVE || [];
+  if (!rows.length) return;
+  el("evalLiveBody").innerHTML = rows.slice().reverse().map(function (r) {
+    var t = r.created_at ? String(r.created_at).replace("T", " ").slice(0, 19) : "";
+    return "<tr><td>" + esc(t) + "</td><td>" + esc(r.case) + "</td><td>" + r.steps + "/11</td><td>" + r.dropped + "</td><td>" + r.checks_passed + "/" + r.checks_total + "</td><td>" + esc((r.failed_checks || []).join(", ") || "none") + "</td></tr>";
+  }).join("");
+}
+function renderAll() { renderBoard(); renderClock(); renderJudgments(); renderBrief(); renderRecords(); renderEval(); }
 
 function showScreen(name) {
   Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (t) {
@@ -1203,11 +1211,19 @@ async function work() {
   MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
   feedLogSeen = 0;
   chatBubble(null, "Run opened: " + caseShortTitle(MB.currentCase()) + ". Ten chairs, four models.", "system");
+  var runT0 = Date.now();
+  var runTimer = setInterval(function () {
+    var sec = Math.floor((Date.now() - runT0) / 1000);
+    el("runClock").textContent = Math.floor(sec / 60) + ":" + ("0" + (sec % 60)).slice(-2);
+  }, 250);
+  el("dropChip").classList.add("hidden");
   var hooks = {
     chair: setChair,
     status: function (s) { el("runStatus").textContent = s; },
     event: feedLine,
-    step: function (b) { book = b; renderAll(); flushLog(b); if (pendingReport) { composeReport(pendingReport.stepId, b, pendingReport.count); pendingReport = null; } },
+    step: function (b) { book = b; renderAll(); flushLog(b);
+      if (b.dropped > 0) { var dc = el("dropChip"); dc.textContent = "Quote check dropped: " + b.dropped; dc.classList.remove("hidden"); }
+      if (pendingReport) { composeReport(pendingReport.stepId, b, pendingReport.count); pendingReport = null; } },
     delay: function () { return new Promise(function (r) { setTimeout(r, 650); }); }
   };
   var door2 = null;
@@ -1216,11 +1232,15 @@ async function work() {
     door2 = { name: d2name.value.trim(), dob: el("door2Dob").value.trim(), state: el("door2State").value.trim() };
   }
   if (useCache) {
-    var when = cached.created_at ? new Date(cached.created_at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "this morning";
-    el("cacheLabel").textContent = "cached run from " + when;
+    var cd = cached.created_at ? new Date(cached.created_at) : null;
+    var when = cd ? (cd.toDateString() === new Date().toDateString() ? "today, " + cd.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : cd.toLocaleDateString() + ", " + cd.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })) : "this morning";
+    el("cacheLabel").textContent = "Ran " + when + " (saved run)";
     book = await MB.runAll(hooks, cached.outputs, { door2: door2 });
-    if (cached.dropped) book.dropped = cached.dropped;
-    if (book.dropped) feedLine("Runner", "this replay carries the original run's quote check: " + book.dropped + " finding(s) were dropped for having no quote in the file");
+    if (cached.dropped) { book.dropped = cached.dropped; var dc2 = el("dropChip"); dc2.textContent = "Quote check dropped: " + book.dropped; dc2.classList.remove("hidden"); }
+    if (book.dropped) {
+      feedLine("Runner", "this replay carries the original run's quote check: " + book.dropped + " finding(s) were dropped for having no quote in the file");
+      if (!book.failed_steps.length) el("runStatus").textContent = "Done — quote check dropped " + book.dropped + " finding(s)";
+    }
   } else {
     el("cacheLabel").textContent = "";
     if (!(window.MB_CONFIG && window.MB_CONFIG.apiKey)) {
@@ -1229,7 +1249,9 @@ async function work() {
       return;
     }
     book = await MB.runAll(hooks, null, { door2: door2 });
+    el("cacheLabel").textContent = "Ran today, " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + " (live)";
   }
+  clearInterval(runTimer);
   renderAll();
   el("workBtn").disabled = false;
 }
@@ -1256,7 +1278,7 @@ function sendChat() {
     return;
   }
   if (/work|run|start|go\b/.test(low)) { work(); return; }
-  var screens = { board: "board", clock: "clock", judgment: "judgments", brief: "brief", intake: "intake", file: "intake" };
+  var screens = { board: "board", clock: "clock", judgment: "judgments", brief: "brief", intake: "intake", file: "intake", eval: "eval" };
   var hit = Object.keys(screens).filter(function (k) { return low.indexOf(k) !== -1; })[0];
   if (hit) {
     showScreen(screens[hit]);
@@ -1268,6 +1290,20 @@ function sendChat() {
 
 document.addEventListener("DOMContentLoaded", function () {
   buildStrip();
+  var lk = el("liveKey");
+  lk.addEventListener("input", function () {
+    var v = lk.value.trim();
+    if (v) {
+      window.MB_CONFIG = { reasoningModel: "gemini-4-argon", fastModel: "gemini-4-carbon", worldModel: "gemini-4-hydrogen", fieldModel: "gemini-4-neon", apiKey: v };
+      el("cacheToggle").checked = false;
+      el("liveDot").classList.remove("hidden");
+      el("cacheLabel").textContent = "live mode: the next run makes real calls";
+    } else {
+      window.MB_CONFIG = undefined;
+      el("liveDot").classList.add("hidden");
+      el("cacheLabel").textContent = "";
+    }
+  });
   el("chatSend").addEventListener("click", sendChat);
   el("chatText").addEventListener("keydown", function (e) { if (e.key === "Enter") sendChat(); });
   Array.prototype.forEach.call(document.querySelectorAll(".chip"), function (ch) {

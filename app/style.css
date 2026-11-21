@@ -147,7 +147,7 @@ th { background: var(--panel); }
 .profile-drawer :focus-visible, .modal-card :focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
 
 @media print {
-  header, .squad-strip, .tabs, .brief-actions, .screen:not(#screen-brief) { display: none !important; }
+  header, .models-line, .squad-strip, .case-folder, .tabs, .brief-actions, .screen:not(#screen-brief) { display: none !important; }
   #screen-brief { display: block !important; border: 0; background: #fff; }
   .brief-page { box-shadow: none; margin: 0; }
 }
@@ -413,3 +413,45 @@ th, td { border: 0; border-bottom: 1px solid var(--line); }
 @media (prefers-reduced-motion: reduce) {
   .pin-card, .pin-note { transition: none; }
 }
+.live-dot { color: var(--red); font-weight: bold; letter-spacing: 1px; font-size: 13px; }
+.live-dot.hidden { display: none; }
+#liveKey { max-width: 190px; }
+
+.proof-links { margin: 2px 0 0; font-size: 12.5px; color: #6d5b3f; }
+.proof-links a { color: #8a1f1f; text-decoration: none; border-bottom: 1px dotted #8a1f1f; }
+.models-line { text-align: center; font-size: 12.5px; letter-spacing: 1.5px; color: #5c4a2e; background: #e9dfc9; border-bottom: 1px solid #c9b98f; padding: 6px 10px; }
+.models-line b { color: #8a1f1f; }
+
+/* ---- The Clock as a real timeline (spine, nodes, cards) ---- */
+.clock-strip { position: relative; margin: 10px 0 6px 6px; padding-left: 34px; }
+.clock-strip::before { content: ""; position: absolute; left: 10px; top: 6px; bottom: 6px; width: 3px; background: linear-gradient(#8a6d3b, #5c4a2e); border-radius: 2px; }
+.clock-strip .death-band { margin-left: -34px; background: #8a1f1f; color: #f5efe0; font-weight: bold; letter-spacing: 1.5px; padding: 8px 14px; border-radius: 3px; box-shadow: 2px 3px 8px rgba(0,0,0,.45); }
+.clock-event { position: relative; background: #23211c; border: 1px solid #3a372e; border-left: 3px solid #8a6d3b; border-radius: 4px; padding: 9px 13px; margin: 0 0 10px; box-shadow: 1px 2px 6px rgba(0,0,0,.35); line-height: 1.45; }
+.clock-event::before { content: ""; position: absolute; left: -31px; top: 13px; width: 13px; height: 13px; border-radius: 50%; background: #c9b98f; border: 3px solid #2b2925; box-shadow: 0 0 0 2px #8a6d3b; }
+.clock-event .when { display: inline-block; font-family: ui-monospace, Menlo, monospace; font-size: 12px; font-weight: bold; color: #e8d9ae; background: #35322a; border-radius: 3px; padding: 1px 7px; margin-right: 6px; }
+.clock-event.in-window { border-left-color: #c0392b; background: #2e1f1c; }
+.clock-event.in-window::before { background: #e74c3c; box-shadow: 0 0 0 2px #c0392b, 0 0 10px rgba(231,76,60,.7); }
+
+.run-clock { font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: #e8d9ae; min-width: 34px; }
+.drop-chip { background: #4a1710; color: #f0b429; border: 1px solid #c0392b; border-radius: 10px; padding: 2px 10px; font-size: 12.5px; font-weight: bold; }
+.drop-chip.hidden { display: none; }
+/* Chrono mode: on wide screens the Clock alternates around a center spine */
+@media (min-width: 1000px) {
+  .clock-strip { padding-left: 0; margin-left: 0; }
+  .clock-strip::before { left: 50%; margin-left: -1px; }
+  .clock-strip .death-band { margin-left: 0; text-align: center; position: relative; z-index: 2; }
+  .clock-event { width: calc(50% - 34px); }
+  .clock-event:nth-of-type(odd) { margin-right: auto; text-align: right; }
+  .clock-event:nth-of-type(odd)::before { left: auto; right: -41px; }
+  .clock-event:nth-of-type(even) { margin-left: auto; }
+  .clock-event:nth-of-type(even)::before { left: -41px; }
+}
+
+.eval-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin: 10px 0 16px; }
+.eval-card { background: #f5efe0; color: #26221a; border-radius: 4px; padding: 12px 15px; box-shadow: 2px 3px 8px rgba(0,0,0,.4); }
+.eval-card h4 { margin: 0 0 6px; color: #8a1f1f; }
+.eval-card p { margin: 0 0 6px; line-height: 1.5; font-size: 14px; }
+.eval-miss { color: #7a4a12; font-style: italic; }
+.eval-table { border-collapse: collapse; width: 100%; margin: 8px 0 16px; font-size: 13.5px; }
+.eval-table th, .eval-table td { border: 1px solid #3a372e; padding: 6px 9px; text-align: left; }
+.eval-table th { background: #35322a; color: #e8d9ae; }

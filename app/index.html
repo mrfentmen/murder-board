@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Murder Board</title>
+<title>Murder Board: a Gemini 4 squad works a homicide file</title>
+<meta name="description" content="Ten named Gemini agents sort a homicide file into a murder book and judge it. Every finding carries a verbatim quote or it does not exist. Argon judges, Carbon builds, Hydrogen holds the world, Neon works the machines.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%238a1f1f'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23f5efe0' text-anchor='middle'%3EMB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,15 +13,21 @@
   <div class="brand">
     <h1>MURDER BOARD</h1>
     <p class="tagline">It sorts the file. It judges the file. The detective does the detecting.</p>
+    <p class="proof-links"><a href="https://github.com/mrfentmen/murder-board" target="_blank" rel="noopener">Public repo</a> · <a href="https://github.com/mrfentmen/murder-board/blob/main/EVAL.md" target="_blank" rel="noopener">The evaluation</a> · <a href="https://github.com/mrfentmen/murder-board/blob/main/DEMO_SCRIPT.md" target="_blank" rel="noopener">Demo script</a> · Built today at Gemini 4 NYC</p>
   </div>
   <div class="runbox">
+    <input id="liveKey" type="password" placeholder="Live key: paste to run live" size="18" autocomplete="off" title="Runs the squad live against the Gemini API. The key stays in this tab only. It is never saved and never sent anywhere but Google.">
+    <span id="liveDot" class="live-dot hidden">● LIVE</span>
     <label class="cache-toggle"><input type="checkbox" id="cacheToggle"> Replay cached run</label>
     <span id="cacheLabel" class="cache-label"></span>
     <button id="workBtn">Work the Case</button>
     <span id="runStatus" class="run-status"></span>
+    <span id="runClock" class="run-clock"></span>
+    <span id="dropChip" class="drop-chip hidden">Quote check dropped: 0</span>
   </div>
 </header>
 
+<div class="models-line"><b>ARGON</b> judges &nbsp;·&nbsp; <b>CARBON</b> builds &nbsp;·&nbsp; <b>HYDROGEN</b> holds the world &nbsp;·&nbsp; <b>NEON</b> works the machines</div>
 <section id="squadStrip" class="squad-strip" aria-label="Squad room"></section>
 
 <section class="case-folder" aria-label="Case file">
@@ -52,6 +60,7 @@
   <button data-screen="clock" class="tab">3 The Clock</button>
   <button data-screen="judgments" class="tab">4 Judgments</button>
   <button data-screen="brief" class="tab">5 The Brief</button>
+  <button data-screen="eval" class="tab">6 The Eval</button>
 </nav>
 
 <main>
@@ -95,7 +104,7 @@
 
   <section id="screen-clock" class="screen">
     <h2>The Clock</h2>
-    <p class="hint">October 11 to October 14, 2019. The shaded band is the medical examiner's death window.</p>
+    <p class="hint">One clock for the whole case, built by the Analyst. Events inside the medical examiner's death window burn red.</p>
     <div id="clockStrip" class="clock-strip"></div>
     <div id="collisionList"></div>
   </section>
@@ -129,6 +138,25 @@
   </section>
 </main>
 
+<section id="screen-eval" class="screen">
+  <h2>The evaluation</h2>
+  <p class="hint">Problem Statement One asks for proof, not a pitch. Every run below was scored against a written bible for its case: the catches that were planted, the alibi calls that were expected, the gaps that had to surface. Misses are printed next to the hits. The full scoring is in EVAL.md in the repo.</p>
+  <h3>Scored runs, this morning, hand checked</h3>
+  <div class="eval-grid">
+    <div class="eval-card"><h4>The Delgado File</h4><p>Star catch at HIGH: the partner's car story against the tow record. Webb CONTRADICTED, Whitfield UNCORROBORATED, top lead 80, the missing second casing is the top gap. Quote check dropped 4 findings.</p><p class="eval-miss">Miss: the bookkeeper's late detail rated HIGH, the bible says MEDIUM.</p></div>
+    <div class="eval-card"><h4>The Screens File</h4><p>Both planted catches at HIGH: the studio claim against the plate camera, the podcast line against his own comment. Reed CONTRADICTED. The deleted 1 AM story is gap two. The lyric was never promoted to evidence. Nothing dropped.</p><p class="eval-miss">Miss: none recorded.</p></div>
+    <div class="eval-card"><h4>The Harborlight File</h4><p>Solved on a four record chain: the victim's 11:47 PM text, her own keypad code at 23:58, the office meter drawing power to 00:20, the watchman's master code at 00:07 against his sworn never entered. Herrera CONTRADICTED, top leads 80 and 80.</p><p class="eval-miss">Miss: the cook called CORROBORATED on a 2024 confirmation; the bible says UNCORROBORATED.</p></div>
+    <div class="eval-card"><h4>The Duck File, a real case</h4><p>Run blind, twice. The defense lawyer's unknown person claim caught at HIGH against his own filing, Offerd CONTRADICTED, and the board never claimed the masked men on camera were anybody. The brief rebuilt the half hour: 3:59, about 4:02, 4:26.</p><p class="eval-miss">Miss, both runs: Turpin's unnamed friend is in neither gap list. Famous case: it lives in the models' training data, and recall alone cannot score here, every finding still needed a quote.</p></div>
+  </div>
+  <h3>The baseline it had to beat</h3>
+  <p>One single Argon call per case, the whole file, one plain instruction. It found the seams too, credit where due. Then the discipline failed: Whitfield overcalled CONTRADICTED, seven HIGHs on one file including a motive dressed as a contradiction, lead scores of 98, 92, 88 with no arithmetic, and a top lead that read re-interview and arrest, language this board is built never to use. The squad's edge is not finding. It is the quote check with its drop count in the open, severity that discriminates, scores the runner recomputes, and no person ever judged.</p>
+  <h3>Live runs, today, scored by machine</h3>
+  <p class="hint">The sim runs constantly against the event key. Each finished run is scored against its bible by the runner and lands here. The site you are reading keeps the verified morning runs; these are fresh, warts kept.</p>
+  <table class="eval-table"><thead><tr><th>Run (UTC)</th><th>Case</th><th>Steps</th><th>Dropped</th><th>Bible checks</th><th>Failed checks</th></tr></thead><tbody id="evalLiveBody"><tr><td colspan="6">First live run in progress.</td></tr></tbody></table>
+  <h3>Limits, stated</h3>
+  <p>Three of the four cases were written by this team, which is why this project declares Problem Statement One and not Two. The baseline is one run per case, not a distribution. The Decisions API does not exist in the event key's model list, checked live; the decision function here is the rubric recompute in the runner, deterministic, its arithmetic shown on every lead.</p>
+</section>
+
 <div id="quoteModal" class="modal hidden" hidden>
   <div id="modal-card" class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
     <button id="modalClose" class="modal-close" type="button">Close</button>
@@ -153,6 +181,7 @@
 <script src="agents-data.js"></script>
 <script src="records-data.js"></script>
 <script src="cache-data.js"></script>
+<script src="eval-data.js"></script>
 <script src="photos-data.js"></script>
 <script src="app.js"></script>
 </body>

@@ -1,0 +1,1664 @@
+{
+ "created_at": "2026-11-21T16:14:25.045Z",
+ "outputs": {
+  "custody": {
+   "documents": [
+    {
+     "doc_id": "doc01",
+     "type": "report",
+     "legible": true,
+     "custody_note": "Scene report authored by Officer T. Brennan, dated October 14, 2019."
+    },
+    {
+     "doc_id": "doc02",
+     "type": "report",
+     "legible": true,
+     "custody_note": "Medical examiner summary authored by Office of the Medical Examiner, dated October 15, 2019."
+    },
+    {
+     "doc_id": "doc03",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Witness statement authored by Marcus Webb, dated October 15, 2019."
+    },
+    {
+     "doc_id": "doc04",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Follow-up witness statement authored by Marcus Webb, dated February 12, 2020."
+    },
+    {
+     "doc_id": "doc05",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Witness statement authored by Dana Whitfield, dated October 14, 2019."
+    },
+    {
+     "doc_id": "doc06",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Witness statement authored by Dana Whitfield, dated June 9, 2020."
+    },
+    {
+     "doc_id": "doc07",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Witness statement authored by Dana Whitfield, dated March 3, 2021."
+    },
+    {
+     "doc_id": "doc08",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Witness statement authored by Edward 'Eddie' Kowalski, dated October 16, 2019."
+    },
+    {
+     "doc_id": "doc09",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Witness statement authored by Rosa Delgado, dated October 17, 2019."
+    },
+    {
+     "doc_id": "doc10",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Witness statement authored by Ellen Vasquez, dated March 18, 2021."
+    },
+    {
+     "doc_id": "doc11",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Tow yard record authored by Kowalski Towing & Recovery, dated October 11, 2019."
+    },
+    {
+     "doc_id": "doc12",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Guest check diner receipt authored by Fifth Avenue Diner, dated October 13, 2019."
+    },
+    {
+     "doc_id": "doc13",
+     "type": "ledger",
+     "legible": true,
+     "custody_note": "Evidence ledger authored by Property clerk, dated October 14, 2019."
+    },
+    {
+     "doc_id": "doc14",
+     "type": "photo",
+     "legible": true,
+     "custody_note": "Photograph transcription of final page of paper ledger authored by Ray Delgado, dated October 12, 2019."
+    }
+   ]
+  },
+  "records": {
+   "subject": "Ray Delgado",
+   "starter_items": [
+    {
+     "item": "State Death Index record",
+     "source_class": "death index",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Local obituary and funeral home notice",
+     "source_class": "obituary and funeral notices",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Regional and local newspaper archive search",
+     "source_class": "newspaper archives",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Municipal and county court portal filings (civil and criminal)",
+     "source_class": "court portals",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Decennial federal and state census schedules",
+     "source_class": "census schedules",
+     "label": "UNVERIFIED"
+    }
+   ],
+   "request_next": [
+    "Certified copy of death certificate",
+    "Social Security Death Index (SSDI) / NUMIDENT search",
+    "County property tax and deed records for residence",
+    "Marriage vital statistics records regarding Rosa Delgado",
+    "Secretary of State commercial / business registration records"
+   ]
+  },
+  "coroner": {
+   "cause": "two gunshot wounds to the chest",
+   "manner": "homicide",
+   "death_window": {
+    "start": "2019-10-13 21:00",
+    "end": "2019-10-14 00:00",
+    "quote": "Based on body temperature, livor, and rigor at the time of the scene examination, death occurred between 9:00 PM and midnight on Sunday, October 13, 2019.",
+    "doc_id": "doc02"
+   },
+   "medical_facts": [
+    {
+     "fact": "Cause of death determined to be two gunshot wounds to the chest.",
+     "quote": "Cause of death: two gunshot wounds to the chest.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "Manner of death classified as homicide.",
+     "quote": "Manner of death: homicide.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "No defensive wounds were found on the decedent.",
+     "quote": "No defensive wounds were observed.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "Toxicological analysis showed no presence of alcohol or common sedatives.",
+     "quote": "Toxicology was negative for alcohol and common sedatives.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "The decedent was pronounced dead at the scene.",
+     "quote": "Mr. Delgado was pronounced at the scene.",
+     "doc_id": "doc01"
+    }
+   ],
+   "medical_flags": []
+  },
+  "csi": {
+   "ledger": [
+    {
+     "item_no": 1,
+     "description": "Photographs of the office and shop interior (24 exposures).",
+     "quote": "1. Photographs of the office and shop interior (24 exposures).",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 2,
+     "description": "Victim's desk calendar, 2019.",
+     "quote": "2. Victim's desk calendar, 2019.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 3,
+     "description": "Victim's mobile telephone, recovered from desk.",
+     "quote": "3. Victim's mobile telephone, recovered from desk.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 4,
+     "description": "Shop paper ledger book, 2019.",
+     "quote": "4. Shop paper ledger book, 2019.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 5,
+     "description": "Office desk drawer contents (pens, invoices, keys, misc.).",
+     "quote": "5. Office desk drawer contents (pens, invoices, keys, misc.).",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 6,
+     "description": "Two projectile fragments, recovered from office wall.",
+     "quote": "6. Two projectile fragments, recovered from office wall.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 7,
+     "description": "One (1) spent shell casing, brass, recovered office floor.",
+     "quote": "7. One (1) spent shell casing, brass, recovered office floor.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 8,
+     "description": "Victim's wallet and contents.",
+     "quote": "8. Victim's wallet and contents.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 9,
+     "description": "Victim's keys, ring of six.",
+     "quote": "9. Victim's keys, ring of six.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 10,
+     "description": "Office telephone, with call log printout.",
+     "quote": "10. Office telephone, with call log printout.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 11,
+     "description": "Shop security DVR unit (no drives installed).",
+     "quote": "11. Shop security DVR unit (no drives installed).",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 12,
+     "description": "Front door lock cylinder.",
+     "quote": "12. Front door lock cylinder.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 13,
+     "description": "Bay door padlock and chain.",
+     "quote": "13. Bay door padlock and chain.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 14,
+     "description": "Victim's jacket, recovered from office chair.",
+     "quote": "14. Victim's jacket, recovered from office chair.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 15,
+     "description": "Coffee cup, office desk.",
+     "quote": "15. Coffee cup, office desk.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 16,
+     "description": "Diner receipt, October 13, 2019 (copy).",
+     "quote": "16. Diner receipt, October 13, 2019 (copy).",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 17,
+     "description": "Tow yard record, October 11, 2019 (copy).",
+     "quote": "17. Tow yard record, October 11, 2019 (copy).",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 18,
+     "description": "Supplier invoices, bundle, office desk.",
+     "quote": "18. Supplier invoices, bundle, office desk.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 19,
+     "description": "Partnership agreement, Delgado and Webb (copy).",
+     "quote": "19. Partnership agreement, Delgado and Webb (copy).",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 20,
+     "description": "Victim's vehicle, shop lot (processed and released).",
+     "quote": "20. Victim's vehicle, shop lot (processed and released).",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 21,
+     "description": "Swabs, office door handle.",
+     "quote": "21. Swabs, office door handle.",
+     "doc_id": "doc13"
+    },
+    {
+     "item_no": 22,
+     "description": "Swabs, desk surface.",
+     "quote": "22. Swabs, desk surface.",
+     "doc_id": "doc13"
+    }
+   ],
+   "gaps": [
+    {
+     "item": "Spent shell casings",
+     "mentioned_in": [
+      "doc01",
+      "doc13"
+     ],
+     "problem": "Scene report doc01 counts two shell casings observed on the office floor near the desk, but evidence ledger doc13 lists only one spent shell casing (Item 7).",
+     "quote": "Two shell casings were observed on the office floor near the desk.",
+     "doc_id": "doc01"
+    },
+    {
+     "item": "Diner surveillance camera footage",
+     "mentioned_in": [
+      "doc01"
+     ],
+     "problem": "Scene report notes a camera facing the shop front with footage not yet requested; absent from evidence ledger.",
+     "quote": "The diner across Fifth Avenue has a camera facing the shop front. Footage not yet requested.",
+     "doc_id": "doc01"
+    },
+    {
+     "item": "Decedent's clothing",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "Medical examiner summary indicates decedent's clothing was released to the investigating unit, but decedent's clothing is absent from the evidence ledger (Item 14 lists only a jacket recovered from an office chair).",
+     "quote": "The decedent's clothing and effects were released to the investigating unit.",
+     "doc_id": "doc02"
+    },
+    {
+     "item": "Photographs of the office and shop interior (24 exposures)",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 1 is listed on the evidence ledger but is never mentioned in any investigative report or statement.",
+     "quote": "1. Photographs of the office and shop interior (24 exposures).",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Victim's desk calendar, 2019",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 2 is listed on the evidence ledger but is never mentioned in any investigative report or statement.",
+     "quote": "2. Victim's desk calendar, 2019.",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Victim's mobile telephone, recovered from desk",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 3 is listed on the evidence ledger but is never mentioned as a recovered item in any scene report or other document.",
+     "quote": "3. Victim's mobile telephone, recovered from desk.",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Office desk drawer contents (pens, invoices, keys, misc.)",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 5 lists specific drawer contents, but the contents themselves are not documented in the scene report (doc01 notes only that one drawer stood open).",
+     "quote": "5. Office desk drawer contents (pens, invoices, keys, misc.).",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Two projectile fragments, recovered from office wall",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 6 is listed on the evidence ledger but is never mentioned in the scene report or medical examiner summary.",
+     "quote": "6. Two projectile fragments, recovered from office wall.",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Victim's wallet and contents",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 8 is listed on the evidence ledger but is not specifically mentioned in any scene report or statement.",
+     "quote": "8. Victim's wallet and contents.",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Victim's keys, ring of six",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 9 is listed on the evidence ledger but is never described or documented in any scene report or statement.",
+     "quote": "9. Victim's keys, ring of six.",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Office telephone, with call log printout",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 10 is listed on the evidence ledger but is never mentioned in any investigative report or statement.",
+     "quote": "10. Office telephone, with call log printout.",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Shop security DVR unit (no drives installed)",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 11 is listed on the evidence ledger but is never mentioned in the scene report or any other document.",
+     "quote": "11. Shop security DVR unit (no drives installed).",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Front door lock cylinder",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 12 is listed on the evidence ledger but is never mentioned in any scene report or statement.",
+     "quote": "12. Front door lock cylinder.",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Bay door padlock and chain",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 13 is listed on the evidence ledger but is never mentioned in any scene report or statement.",
+     "quote": "13. Bay door padlock and chain.",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Victim's jacket, recovered from office chair",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 14 is listed on the evidence ledger but is never mentioned in the scene report or any other document.",
+     "quote": "14. Victim's jacket, recovered from office chair.",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Coffee cup, office desk",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 15 is listed on the evidence ledger but is never mentioned in the scene report or any other document.",
+     "quote": "15. Coffee cup, office desk.",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Victim's vehicle, shop lot (processed and released)",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 20 is listed on the evidence ledger but is never mentioned in any scene report or statement.",
+     "quote": "20. Victim's vehicle, shop lot (processed and released).",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Swabs, office door handle",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 21 is listed on the evidence ledger but is never mentioned in the scene report or any other document.",
+     "quote": "21. Swabs, office door handle.",
+     "doc_id": "doc13"
+    },
+    {
+     "item": "Swabs, desk surface",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Ledger Item 22 is listed on the evidence ledger but is never mentioned in the scene report or any other document.",
+     "quote": "22. Swabs, desk surface.",
+     "doc_id": "doc13"
+    }
+   ]
+  },
+  "intake": {
+   "persons": [
+    {
+     "name": "Raymond Delgado",
+     "aliases": [
+      "Ray",
+      "R. Delgado"
+     ],
+     "role": "Co-owner of Delgado Auto Body; homicide victim"
+    },
+    {
+     "name": "Dana Whitfield",
+     "aliases": [],
+     "role": "Bookkeeper at Delgado Auto Body; 911 caller"
+    },
+    {
+     "name": "Marcus Webb",
+     "aliases": [
+      "M.W.",
+      "M"
+     ],
+     "role": "Co-owner of Delgado Auto Body"
+    },
+    {
+     "name": "T. Brennan",
+     "aliases": [],
+     "role": "Patrol officer, reporting officer"
+    },
+    {
+     "name": "R. Osei",
+     "aliases": [],
+     "role": "Detective, investigating officer"
+    },
+    {
+     "name": "S. Park",
+     "aliases": [],
+     "role": "Detective, cold case review"
+    },
+    {
+     "name": "Edward Kowalski",
+     "aliases": [
+      "Eddie Kowalski",
+      "E. Kowalski"
+     ],
+     "role": "Tow operator, Kowalski Towing"
+    },
+    {
+     "name": "Rosa Delgado",
+     "aliases": [],
+     "role": "Sister of Raymond Delgado"
+    },
+    {
+     "name": "Ellen Vasquez",
+     "aliases": [],
+     "role": "Witness, resident across Fifth Avenue from Delgado Auto Body"
+    }
+   ],
+   "claims": [
+    {
+     "person": "Dana Whitfield",
+     "claim": "Arrived at work at approximately 0705 hours and discovered Raymond Delgado on the office floor, calling 911 around 0710 hours",
+     "quote": "The caller, Dana Whitfield, the shop's bookkeeper, stated she arrived for work at approximately 0705 hours and found the owner, Raymond Delgado, on the floor of the shop office. She called 911 at approximately 0710 hours.",
+     "doc_id": "doc01",
+     "kind": "observation"
+    },
+    {
+     "person": "Marcus Webb",
+     "claim": "He and Raymond Delgado were equal business partners for nine years",
+     "quote": "Partners. Nine years. We own Delgado Auto Body together, fifty fifty. Ray ran the floor, I ran the money side with Dana.",
+     "doc_id": "doc03",
+     "kind": "relationship"
+    },
+    {
+     "person": "Marcus Webb",
+     "claim": "Last saw Delgado Friday afternoon at the shop discussing a transmission job",
+     "quote": "Friday afternoon at the shop. He was fine. We talked about a transmission job coming in Monday.",
+     "doc_id": "doc03",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Marcus Webb",
+     "claim": "Was home alone watching television and went to bed early on Sunday night, October 13",
+     "quote": "Home. I was home alone Sunday night. I never left the house. I watched television and went to bed early.",
+     "doc_id": "doc03",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Marcus Webb",
+     "claim": "His car was on the lift at the shop from Monday on with a shot transmission, preventing him from driving",
+     "quote": "I couldn't. My car was in the shop all that week. Transmission was shot. It sat on the lift at the shop from Monday on.",
+     "doc_id": "doc03",
+     "kind": "object"
+    },
+    {
+     "person": "Marcus Webb",
+     "claim": "Does not own and has never owned a firearm",
+     "quote": "No. I never have.",
+     "doc_id": "doc03",
+     "kind": "object"
+    },
+    {
+     "person": "Marcus Webb",
+     "claim": "Delgado owed money to suppliers",
+     "quote": "Ray owed money around. Suppliers, mostly. It wasn't my side of the business.",
+     "doc_id": "doc03",
+     "kind": "observation"
+    },
+    {
+     "person": "Marcus Webb",
+     "claim": "Reiterated he was home alone the entire night of Sunday, October 13",
+     "quote": "I was home that Sunday night, alone, the whole night. Nothing has changed.",
+     "doc_id": "doc04",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Marcus Webb",
+     "claim": "Reiterated his car was at the shop on the lift with the transmission out all weekend",
+     "quote": "Like I said in October, the car was at the shop. It was up on the lift with the transmission out. I didn't have wheels that weekend, which is part of why I stayed in.",
+     "doc_id": "doc04",
+     "kind": "object"
+    },
+    {
+     "person": "Marcus Webb",
+     "claim": "Under the partnership agreement, surviving partner inherits full ownership of the shop",
+     "quote": "The survivor takes full ownership. That's standard. It was Ray's idea as much as mine, years ago.",
+     "doc_id": "doc04",
+     "kind": "relationship"
+    },
+    {
+     "person": "Marcus Webb",
+     "claim": "The shop owed suppliers, but he and Delgado were square personally",
+     "quote": "The shop owed suppliers. Ray and I were square.",
+     "doc_id": "doc04",
+     "kind": "relationship"
+    },
+    {
+     "person": "Dana Whitfield",
+     "claim": "Arrived at 7:05 AM to find the front door unlocked, found Delgado on the office floor, and called 911 at about 7:10 AM",
+     "quote": "I got to the shop at five past seven, like always. The front door was unlocked, which was wrong. I found Ray in the office, on the floor behind his desk. I called 911 right away, about ten past seven.",
+     "doc_id": "doc05",
+     "kind": "observation"
+    },
+    {
+     "person": "Dana Whitfield",
+     "claim": "Ray Delgado, Marcus Webb, and Dana Whitfield each had keys to the shop",
+     "quote": "Yes. I do the books, I open up most mornings. Ray had one, Marcus had one, and I had one.",
+     "doc_id": "doc05",
+     "kind": "object"
+    },
+    {
+     "person": "Dana Whitfield",
+     "claim": "Left the shop Friday at 5:00 PM and was home all weekend until Monday morning",
+     "quote": "I left the shop Friday at five o'clock and I did not come back until Monday morning. I was home all weekend.",
+     "doc_id": "doc05",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Dana Whitfield",
+     "claim": "Delgado was behind with two suppliers and said he would settle that month",
+     "quote": "He was behind with two suppliers. He said he'd settle it this month. That's all I know.",
+     "doc_id": "doc05",
+     "kind": "observation"
+    },
+    {
+     "person": "Dana Whitfield",
+     "claim": "The shop owed parts suppliers money, while a few fleet accounts were late paying the shop",
+     "quote": "A few fleet accounts were late. The big one was internal, the shop owed the parts suppliers, not the other way around.",
+     "doc_id": "doc06",
+     "kind": "observation"
+    },
+    {
+     "person": "Dana Whitfield",
+     "claim": "Was not at the shop at all over the weekend of October 12-13, 2019",
+     "quote": "No. I wasn't at the shop that weekend at all. Like I said last year, I left Friday and came back Monday and found him.",
+     "doc_id": "doc06",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Dana Whitfield",
+     "claim": "Only Ray, Marcus, and Dana had keys; Eddie Kowalski had only the bay code",
+     "quote": "Ray, Marcus, and me. Eddie Kowalski had the bay code for after-hours drop-offs, not a key.",
+     "doc_id": "doc06",
+     "kind": "object"
+    },
+    {
+     "person": "Dana Whitfield",
+     "claim": "Never saw Marcus Webb take money out of the shop in the books",
+     "quote": "Not that I ever saw in the books.",
+     "doc_id": "doc06",
+     "kind": "observation"
+    },
+    {
+     "person": "Dana Whitfield",
+     "claim": "Visited the shop front office for twenty minutes on Sunday afternoon to drop off invoices",
+     "quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office. I didn't see anyone and nothing looked wrong.",
+     "doc_id": "doc07",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Dana Whitfield",
+     "claim": "The Sunday afternoon visit occurred around 3:00 or 4:00 PM",
+     "quote": "Mid afternoon. Three, maybe four o'clock.",
+     "doc_id": "doc07",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Eddie Kowalski",
+     "claim": "Has handled towing for Delgado Auto Body for six years",
+     "quote": "Kowalski Towing. I've done their tows maybe six years. Pickups, drop-offs, after-hours cars.",
+     "doc_id": "doc08",
+     "kind": "relationship"
+    },
+    {
+     "person": "Eddie Kowalski",
+     "claim": "Towed Marcus Webb's blue sedan from the shop to Webb's home on Friday, October 11, per Webb's request",
+     "quote": "One job. I towed Mr. Webb's blue sedan out of the shop on Friday, October 11, and took it to his house. He said he needed it for the weekend.",
+     "doc_id": "doc08",
+     "kind": "action"
+    },
+    {
+     "person": "Eddie Kowalski",
+     "claim": "Webb's car was not driveable and was pushed onto the flatbed",
+     "quote": "Transmission was out of it, or going in, I don't do the mechanical side. We pushed it onto the flatbed. It wasn't driveable, but he wanted it home.",
+     "doc_id": "doc08",
+     "kind": "object"
+    },
+    {
+     "person": "Eddie Kowalski",
+     "claim": "Was not at the shop on Sunday and had no calls that day",
+     "quote": "No. No calls that Sunday at all.",
+     "doc_id": "doc08",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Rosa Delgado",
+     "claim": "Spoke with Raymond Delgado by phone at 6:40 PM Sunday for ten minutes; he stated he was finishing paperwork and going home",
+     "quote": "Sunday evening. He called me at 6:40, we talked maybe ten minutes. He sounded like himself. He said he was finishing paperwork at the shop and going home after.",
+     "doc_id": "doc09",
+     "kind": "action"
+    },
+    {
+     "person": "Rosa Delgado",
+     "claim": "Raymond Delgado stated the shop was quiet and he was going to lock up and get dinner",
+     "quote": "No. He said the shop was quiet. He was going to lock up and get dinner.",
+     "doc_id": "doc09",
+     "kind": "observation"
+    },
+    {
+     "person": "Rosa Delgado",
+     "claim": "Delgado owed parts suppliers and argued with Marcus Webb about money sometimes",
+     "quote": "He owed the parts people, like always. He wasn't afraid of anyone. He and Marcus argued about money sometimes, but they argued for nine years.",
+     "doc_id": "doc09",
+     "kind": "relationship"
+    },
+    {
+     "person": "Ellen Vasquez",
+     "claim": "Heard two sounds like car backfires around 11:30 PM on Sunday, October 13",
+     "quote": "I heard what sounded like a car backfiring, twice, around eleven thirty that night. I remember because it woke the dog and I looked out the window.",
+     "doc_id": "doc10",
+     "kind": "observation"
+    },
+    {
+     "person": "Ellen Vasquez",
+     "claim": "Observed a dark shop and a blue sedan resembling Webb's parked in front of the shop",
+     "quote": "The shop was dark. There was a blue sedan parked on the street in front of the shop that night. It looked like the one Mr. Webb drives. I can't swear it was his, but it was the same kind of car.",
+     "doc_id": "doc10",
+     "kind": "observation"
+    }
+   ],
+   "events": [
+    {
+     "what": "Marcus Webb's 2014 Ford Taurus blue sedan towed from shop to Webb residence",
+     "when_text": "Friday, October 11, 2019 Pickup time: 4:52 PM",
+     "when_window": "2019-10-11T16:52",
+     "where": "Delgado Auto Body, 1140 Fifth Avenue to 412 78th Street",
+     "who": [
+      "Edward Kowalski",
+      "Marcus Webb"
+     ],
+     "quote": "Date: Friday, October 11, 2019 Pickup time: 4:52 PM Pickup location: Delgado Auto Body, 1140 Fifth Avenue Vehicle: 2014 Ford Taurus, blue sedan Registered owner: Marcus Webb Drop-off location: Webb residence, 412 78th Street",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Dana Whitfield visits shop front office to drop off invoices",
+     "when_text": "Mid afternoon. Three, maybe four o'clock.",
+     "when_window": "2019-10-13T15:00/2019-10-13T16:00",
+     "where": "Front office, Delgado Auto Body",
+     "who": [
+      "Dana Whitfield"
+     ],
+     "quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office.",
+     "doc_id": "doc07"
+    },
+    {
+     "what": "Raymond Delgado speaks with sister Rosa Delgado by phone",
+     "when_text": "Sunday evening. He called me at 6:40, we talked maybe ten minutes.",
+     "when_window": "2019-10-13T18:40/2019-10-13T18:50",
+     "where": "Delgado Auto Body (phone)",
+     "who": [
+      "Raymond Delgado",
+      "Rosa Delgado"
+     ],
+     "quote": "Sunday evening. He called me at 6:40, we talked maybe ten minutes. He sounded like himself. He said he was finishing paperwork at the shop and going home after.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Raymond Delgado purchases dinner at Fifth Avenue Diner",
+     "when_text": "Sunday, October 13, 2019 Time: 8:15 PM",
+     "when_window": "2019-10-13T20:15",
+     "where": "Fifth Avenue Diner",
+     "who": [
+      "Raymond Delgado"
+     ],
+     "quote": "Date: Sunday, October 13, 2019 Time: 8:15 PM Server: M. Guest: R. Delgado 1 meatloaf plate ......... 11.50 1 coffee ................. 2.25",
+     "doc_id": "doc12"
+    },
+    {
+     "what": "Homicide of Raymond Delgado by two gunshot wounds to the chest",
+     "when_text": "between 9:00 PM and midnight on Sunday, October 13, 2019",
+     "when_window": "2019-10-13T21:00/2019-10-14T00:00",
+     "where": "Shop office, Delgado Auto Body",
+     "who": [
+      "Raymond Delgado"
+     ],
+     "quote": "Based on body temperature, livor, and rigor at the time of the scene examination, death occurred between 9:00 PM and midnight on Sunday, October 13, 2019.",
+     "doc_id": "doc02"
+    },
+    {
+     "what": "Dana Whitfield arrives at shop and discovers Raymond Delgado's body",
+     "when_text": "approximately 0705 hours",
+     "when_window": "2019-10-14T07:05",
+     "where": "Shop office, Delgado Auto Body, 1140 Fifth Avenue",
+     "who": [
+      "Dana Whitfield",
+      "Raymond Delgado"
+     ],
+     "quote": "stated she arrived for work at approximately 0705 hours and found the owner, Raymond Delgado, on the floor of the shop office.",
+     "doc_id": "doc01"
+    },
+    {
+     "what": "Dana Whitfield places 911 call",
+     "when_text": "approximately 0710 hours",
+     "when_window": "2019-10-14T07:10",
+     "where": "Delgado Auto Body, 1140 Fifth Avenue",
+     "who": [
+      "Dana Whitfield"
+     ],
+     "quote": "She called 911 at approximately 0710 hours.",
+     "doc_id": "doc01"
+    }
+   ],
+   "evidence_items": [
+    {
+     "description": "Two shell casings on the office floor near the desk",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Office desk with one drawer open",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Diner security camera across Fifth Avenue facing shop front",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Decedent's clothing and effects",
+     "doc_id": "doc02",
+     "status": "mentioned"
+    },
+    {
+     "description": "Invoices dropped off on desk in front office",
+     "doc_id": "doc07",
+     "status": "mentioned"
+    },
+    {
+     "description": "Kowalski Towing yard log",
+     "doc_id": "doc08",
+     "status": "mentioned"
+    },
+    {
+     "description": "Blue sedan parked on the street in front of the shop",
+     "doc_id": "doc10",
+     "status": "mentioned"
+    },
+    {
+     "description": "Kowalski Towing & Recovery yard record Job number 19-1047",
+     "doc_id": "doc11",
+     "status": "mentioned"
+    },
+    {
+     "description": "Fifth Avenue Diner guest check / receipt for R. Delgado",
+     "doc_id": "doc12",
+     "status": "mentioned"
+    },
+    {
+     "description": "Photographs of the office and shop interior (24 exposures)",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Victim's desk calendar, 2019",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Victim's mobile telephone, recovered from desk",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Shop paper ledger book, 2019",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Office desk drawer contents (pens, invoices, keys, misc.)",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Two projectile fragments, recovered from office wall",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "One (1) spent shell casing, brass, recovered office floor",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Victim's wallet and contents",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Victim's keys, ring of six",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Office telephone, with call log printout",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Shop security DVR unit (no drives installed)",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Front door lock cylinder",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Bay door padlock and chain",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Victim's jacket, recovered from office chair",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Coffee cup, office desk",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Diner receipt, October 13, 2019 (copy)",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Tow yard record, October 11, 2019 (copy)",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Supplier invoices, bundle, office desk",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Partnership agreement, Delgado and Webb (copy)",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Victim's vehicle, shop lot (processed and released)",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Swabs, office door handle",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Swabs, desk surface",
+     "doc_id": "doc13",
+     "status": "logged"
+    },
+    {
+     "description": "Ray's paper ledger, final page",
+     "doc_id": "doc14",
+     "status": "mentioned"
+    }
+   ]
+  },
+  "analyst": {
+   "events": [
+    {
+     "id": "evt-01",
+     "what": "Marcus Webb's 2014 Ford Taurus blue sedan towed from shop to Webb residence",
+     "window": "2019-10-11T16:52",
+     "where": "Delgado Auto Body, 1140 Fifth Avenue to Webb residence, 412 78th Street",
+     "who": [
+      "Edward Kowalski",
+      "Marcus Webb"
+     ],
+     "in_window": false,
+     "sources": [
+      "doc11",
+      "doc08"
+     ]
+    },
+    {
+     "id": "evt-02",
+     "what": "Dana Whitfield visits shop front office to drop off invoices",
+     "window": "2019-10-13T15:00/2019-10-13T16:00",
+     "where": "Front office, Delgado Auto Body",
+     "who": [
+      "Dana Whitfield"
+     ],
+     "in_window": false,
+     "sources": [
+      "doc07"
+     ]
+    },
+    {
+     "id": "evt-03",
+     "what": "Raymond Delgado speaks with sister Rosa Delgado by phone",
+     "window": "2019-10-13T18:40/2019-10-13T18:50",
+     "where": "Delgado Auto Body (phone)",
+     "who": [
+      "Raymond Delgado",
+      "Rosa Delgado"
+     ],
+     "in_window": false,
+     "sources": [
+      "doc09"
+     ]
+    },
+    {
+     "id": "evt-04",
+     "what": "Raymond Delgado purchases dinner at Fifth Avenue Diner",
+     "window": "2019-10-13T20:15",
+     "where": "Fifth Avenue Diner",
+     "who": [
+      "Raymond Delgado"
+     ],
+     "in_window": false,
+     "sources": [
+      "doc12"
+     ]
+    },
+    {
+     "id": "evt-05",
+     "what": "Homicide of Raymond Delgado by two gunshot wounds to the chest",
+     "window": "2019-10-13T21:00/2019-10-14T00:00",
+     "where": "Shop office, Delgado Auto Body",
+     "who": [
+      "Raymond Delgado"
+     ],
+     "in_window": true,
+     "sources": [
+      "doc02"
+     ]
+    },
+    {
+     "id": "evt-06",
+     "what": "Ellen Vasquez hears sounds like car backfires and observes blue sedan parked on street outside shop",
+     "window": "2019-10-13T23:30",
+     "where": "Outside Delgado Auto Body, 1140 Fifth Avenue",
+     "who": [
+      "Ellen Vasquez"
+     ],
+     "in_window": true,
+     "sources": [
+      "doc10"
+     ]
+    },
+    {
+     "id": "evt-07",
+     "what": "Dana Whitfield arrives at shop and discovers Raymond Delgado's body",
+     "window": "2019-10-14T07:05",
+     "where": "Shop office, Delgado Auto Body, 1140 Fifth Avenue",
+     "who": [
+      "Dana Whitfield",
+      "Raymond Delgado"
+     ],
+     "in_window": false,
+     "sources": [
+      "doc01",
+      "doc05"
+     ]
+    },
+    {
+     "id": "evt-08",
+     "what": "Dana Whitfield places 911 call",
+     "window": "2019-10-14T07:10",
+     "where": "Delgado Auto Body, 1140 Fifth Avenue",
+     "who": [
+      "Dana Whitfield"
+     ],
+     "in_window": false,
+     "sources": [
+      "doc01",
+      "doc05"
+     ]
+    }
+   ],
+   "collisions": [
+    {
+     "event_ids": [
+      "evt-01",
+      "evt-06"
+     ],
+     "who_or_what": "Marcus Webb's 2014 Ford Taurus blue sedan",
+     "explanation": "Marcus Webb stated that his car sat on the lift inside the shop all week and through the weekend with the transmission out. However, Kowalski Towing records and Eddie Kowalski's statement show the car was towed from the shop to Webb's home address on Friday, October 11, 2019, at 4:52 PM, and Ellen Vasquez reported seeing a blue sedan matching Webb's parked outside the shop on Sunday night at approximately 11:30 PM.",
+     "quotes": [
+      {
+       "quote": "I couldn't. My car was in the shop all that week. Transmission was shot. It sat on the lift at the shop from Monday on.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "Like I said in October, the car was at the shop. It was up on the lift with the transmission out. I didn't have wheels that weekend, which is part of why I stayed in.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "Date: Friday, October 11, 2019 Pickup time: 4:52 PM Pickup location: Delgado Auto Body, 1140 Fifth Avenue Vehicle: 2014 Ford Taurus, blue sedan Registered owner: Marcus Webb Drop-off location: Webb residence, 412 78th Street",
+       "doc_id": "doc11"
+      },
+      {
+       "quote": "One job. I towed Mr. Webb's blue sedan out of the shop on Friday, October 11, and took it to his house. He said he needed it for the weekend.",
+       "doc_id": "doc08"
+      },
+      {
+       "quote": "There was a blue sedan parked on the street in front of the shop that night. It looked like the one Mr. Webb drives. I can't swear it was his, but it was the same kind of car.",
+       "doc_id": "doc10"
+      }
+     ]
+    },
+    {
+     "event_ids": [
+      "evt-02"
+     ],
+     "who_or_what": "Dana Whitfield",
+     "explanation": "Dana Whitfield initially claimed that after leaving the shop at 5:00 PM on Friday, she was home all weekend and was not at the shop at all until Monday morning. She later stated that she stopped by the front office of the shop on Sunday afternoon for about twenty minutes around 3:00 or 4:00 PM to drop off invoices.",
+     "quotes": [
+      {
+       "quote": "I left the shop Friday at five o'clock and I did not come back until Monday morning. I was home all weekend.",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "No. I wasn't at the shop that weekend at all. Like I said last year, I left Friday and came back Monday and found him.",
+       "doc_id": "doc06"
+      },
+      {
+       "quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office.",
+       "doc_id": "doc07"
+      },
+      {
+       "quote": "Mid afternoon. Three, maybe four o'clock.",
+       "doc_id": "doc07"
+      }
+     ]
+    }
+   ]
+  },
+  "digital": {
+   "machine_events": [
+    {
+     "what": "Tow yard record generated for tow of Marcus Webb's vehicle",
+     "when_text": "Friday, October 11, 2019, 4:52 PM",
+     "proves": "Proves a business record was logged by Kowalski Towing & Recovery to tow a non-running 2014 Ford Taurus registered to Marcus Webb from Delgado Auto Body to 412 78th Street on October 11, 2019, at 4:52 PM. It cannot prove the vehicle remained at that drop-off address over the weekend.",
+     "quote": "Date: Friday, October 11, 2019\nPickup time: 4:52 PM\nPickup location: Delgado Auto Body, 1140 Fifth Avenue\nVehicle: 2014 Ford Taurus, blue sedan\nRegistered owner: Marcus Webb\nDrop-off location: Webb residence, 412 78th Street\nReason for tow: customer requested vehicle returned home\nVehicle condition: not running, pushed to flatbed",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Diner guest check issued to R. Delgado",
+     "when_text": "Sunday, October 13, 2019, 8:15 PM",
+     "proves": "Proves a register guest check totaling $14.60 was printed at Fifth Avenue Diner listing guest 'R. Delgado' and paid in cash at 8:15 PM on October 13, 2019. It does not prove who ate the meal, who paid the cash, or what time the person departed the diner.",
+     "quote": "Date: Sunday, October 13, 2019\nTime: 8:15 PM\nServer: M.\nGuest: R. Delgado\n\n1 meatloaf plate ......... 11.50\n1 coffee ................. 2.25\nTax ...................... 0.85\nTotal .................... 14.60\n\nPaid cash. Thank you.",
+     "doc_id": "doc12"
+    }
+   ],
+   "record_checks": [
+    {
+     "claim": "Marcus Webb claimed his car sat on the lift at Delgado Auto Body all week and through the weekend because the transmission was out.",
+     "record_says": "Tow yard record 19-1047 documents that Kowalski Towing picked up Marcus Webb's blue 2014 Ford Taurus from the shop and dropped it off at Webb's home residence on Friday afternoon, October 11, 2019.",
+     "quote": "Pickup time: 4:52 PM\nPickup location: Delgado Auto Body, 1140 Fifth Avenue\nVehicle: 2014 Ford Taurus, blue sedan\nRegistered owner: Marcus Webb\nDrop-off location: Webb residence, 412 78th Street",
+     "doc_id": "doc11"
+    },
+    {
+     "claim": "Marcus Webb stated that he and Raymond Delgado were 'square,' and Dana Whitfield stated she never saw Webb take money out of the shop in the books.",
+     "record_says": "The handwritten paper ledger kept by Raymond Delgado records entries stating 'M.W. took 1,900 from register' on October 5 without a receipt and 'M.W. owes shop 14,200 all in' on October 10.",
+     "quote": "Oct 5 \u2014 M.W. took 1,900 from register for \"supplier run.\" No receipt yet.\nOct 8 \u2014 Harbor Parts again. Told them the 15th.\nOct 10 \u2014 M.W. owes shop 14,200 all in. Settle by Nov or it comes out of his share.",
+     "doc_id": "doc14"
+    }
+   ],
+   "camera_gaps": [
+    {
+     "camera": "Fifth Avenue Diner exterior camera facing Delgado Auto Body shop front",
+     "mentioned_in": "Scene report, 2019-10-14 (doc01)",
+     "quote": "The diner across Fifth Avenue has a camera facing the shop front. Footage not yet requested.",
+     "doc_id": "doc01"
+    }
+   ]
+  },
+  "cross_examiner": {
+   "contradictions": [
+    {
+     "a_quote": "Like I said in October, the car was at the shop. It was up on the lift with the transmission out. I didn't have wheels that weekend, which is part of why I stayed in.",
+     "a_doc": "doc04",
+     "b_quote": "Date: Friday, October 11, 2019\nPickup time: 4:52 PM\nPickup location: Delgado Auto Body, 1140 Fifth Avenue\nVehicle: 2014 Ford Taurus, blue sedan\nRegistered owner: Marcus Webb\nDrop-off location: Webb residence, 412 78th Street\nReason for tow: customer requested vehicle returned home",
+     "b_doc": "doc11",
+     "kind": "vehicle location",
+     "severity": "high",
+     "innocent_alternative": "Webb may have confused the weekend of October 12-13 with an earlier or later week when his vehicle remained on the shop lift."
+    },
+    {
+     "a_quote": "I couldn't. My car was in the shop all that week. Transmission was shot. It sat on the lift at the shop from Monday on.",
+     "a_doc": "doc03",
+     "b_quote": "One job. I towed Mr. Webb's blue sedan out of the shop on Friday, October 11, and took it to his house. He said he needed it for the weekend.",
+     "b_doc": "doc08",
+     "kind": "vehicle location",
+     "severity": "high",
+     "innocent_alternative": "Either Webb or Kowalski may be misremembering the exact date the vehicle was towed from the shop."
+    },
+    {
+     "a_quote": "Home. I was home alone Sunday night. I never left the house. I watched television and went to bed early.",
+     "a_doc": "doc03",
+     "b_quote": "The shop was dark. There was a blue sedan parked on the street in front of the shop that night. It looked like the one Mr. Webb drives. I can't swear it was his, but it was the same kind of car.",
+     "b_doc": "doc10",
+     "kind": "whereabouts / vehicle sighting",
+     "severity": "medium",
+     "innocent_alternative": "The blue sedan seen by the neighbor could have belonged to someone else, as the witness explicitly noted she could not swear it was Webb's car."
+    },
+    {
+     "a_quote": "No. I wasn't at the shop that weekend at all. Like I said last year, I left Friday and came back Monday and found him.",
+     "a_doc": "doc06",
+     "b_quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office.",
+     "b_doc": "doc07",
+     "kind": "whereabouts",
+     "severity": "high",
+     "innocent_alternative": "Whitfield may have initially forgotten a routine twenty-minute errand or considered it irrelevant to questions about the homicide until pressed during the cold case review."
+    },
+    {
+     "a_quote": "Two shell casings were observed on the office floor near the desk.",
+     "a_doc": "doc01",
+     "b_quote": "7. One (1) spent shell casing, brass, recovered office floor.",
+     "b_doc": "doc13",
+     "kind": "physical evidence count",
+     "severity": "high",
+     "innocent_alternative": "The patrol officer may have miscounted or mistaken a piece of debris for a second casing at the scene, or a clerical error occurred when logging the recovered items."
+    }
+   ],
+   "alibis": [
+    {
+     "person": "Marcus Webb",
+     "window": "2019-10-13 21:00 to 2019-10-14 00:00",
+     "rating": "contradicted",
+     "reasons": [
+      {
+       "quote": "Home. I was home alone Sunday night. I never left the house. I watched television and went to bed early.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "Like I said in October, the car was at the shop. It was up on the lift with the transmission out. I didn't have wheels that weekend, which is part of why I stayed in.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "One job. I towed Mr. Webb's blue sedan out of the shop on Friday, October 11, and took it to his house. He said he needed it for the weekend.",
+       "doc_id": "doc08"
+      },
+      {
+       "quote": "Date: Friday, October 11, 2019\nPickup time: 4:52 PM\nPickup location: Delgado Auto Body, 1140 Fifth Avenue\nVehicle: 2014 Ford Taurus, blue sedan\nRegistered owner: Marcus Webb\nDrop-off location: Webb residence, 412 78th Street",
+       "doc_id": "doc11"
+      },
+      {
+       "quote": "I heard what sounded like a car backfiring, twice, around eleven thirty that night. I remember because it woke the dog and I looked out the window.",
+       "doc_id": "doc10"
+      },
+      {
+       "quote": "The shop was dark. There was a blue sedan parked on the street in front of the shop that night. It looked like the one Mr. Webb drives. I can't swear it was his, but it was the same kind of car.",
+       "doc_id": "doc10"
+      }
+     ]
+    },
+    {
+     "person": "Dana Whitfield",
+     "window": "2019-10-13 21:00 to 2019-10-14 00:00",
+     "rating": "uncorroborated",
+     "reasons": [
+      {
+       "quote": "I left the shop Friday at five o'clock and I did not come back until Monday morning. I was home all weekend.",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office.",
+       "doc_id": "doc07"
+      },
+      {
+       "quote": "Mid afternoon. Three, maybe four o'clock.",
+       "doc_id": "doc07"
+      }
+     ]
+    },
+    {
+     "person": "Eddie Kowalski",
+     "window": "2019-10-13 21:00 to 2019-10-14 00:00",
+     "rating": "uncorroborated",
+     "reasons": [
+      {
+       "quote": "Q: Were you at the shop Sunday?\nA: No. No calls that Sunday at all.",
+       "doc_id": "doc08"
+      }
+     ]
+    }
+   ],
+   "evidence_gaps": [
+    {
+     "item": "Second spent shell casing (Scene report notes 'Two shell casings were observed on the office floor', but Evidence ledger Item 7 lists only 'One (1) spent shell casing, brass, recovered office floor')",
+     "mentioned_in": [
+      "doc01",
+      "doc13"
+     ],
+     "problem": "Count discrepancy between scene observation (two casings) and property clerk ledger (one casing)."
+    },
+    {
+     "item": "Diner across Fifth Avenue security camera footage",
+     "mentioned_in": [
+      "doc01"
+     ],
+     "problem": "Mentioned in scene report as facing the shop front ('Footage not yet requested'), absent from the evidence ledger."
+    },
+    {
+     "item": "Decedent's clothing and effects",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "ME summary states clothing and effects were released to the investigating unit, but only the jacket, wallet, and keys appear in the ledger; worn clothing is absent."
+    },
+    {
+     "item": "Full autopsy report",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "ME summary notes 'Full autopsy report follows under separate cover', absent from the file and ledger."
+    },
+    {
+     "item": "Invoices on Dana Whitfield's front office desk",
+     "mentioned_in": [
+      "doc07"
+     ],
+     "problem": "Whitfield claims she dropped off invoices on her desk in the front office on Sunday afternoon; ledger only lists invoices from the victim's office desk (Items 5 and 18)."
+    },
+    {
+     "item": "Routine ledger-only items (Items 1-3, 6, 8-15, 20-22: scene photos, desk calendar, victim's mobile phone, two projectile fragments from wall, wallet, keys, office telephone with call log printout, DVR unit with no drives, lock cylinder, padlock and chain, victim's jacket, coffee cup, victim's vehicle, door and desk swabs)",
+     "mentioned_in": [
+      "doc13"
+     ],
+     "problem": "Logged in the evidence ledger but never analyzed or referenced in any investigative report or statement."
+    }
+   ]
+  },
+  "interviewer": {
+   "histories": [
+    {
+     "person": "Dana Whitfield",
+     "changes": [
+      {
+       "topic": "Presence at Delgado Auto Body over the weekend of October 12\u201313, 2019",
+       "earlier_quote": "I left the shop Friday at five o'clock and I did not come back until Monday morning. I was home all weekend.",
+       "earlier_doc": "doc05",
+       "later_quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office. I didn't see anyone and nothing looked wrong.",
+       "later_doc": "doc07"
+      },
+      {
+       "topic": "Presence at Delgado Auto Body over the weekend of October 12\u201313, 2019",
+       "earlier_quote": "No. I wasn't at the shop that weekend at all. Like I said last year, I left Friday and came back Monday and found him.",
+       "earlier_doc": "doc06",
+       "later_quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office. I didn't see anyone and nothing looked wrong.",
+       "later_doc": "doc07"
+      }
+     ]
+    },
+    {
+     "person": "Marcus Webb",
+     "changes": []
+    }
+   ],
+   "next_questions": [
+    {
+     "person": "Dana Whitfield",
+     "question": "When you entered the shop between three and four o'clock on Sunday afternoon, was the front door locked or unlocked, and did you lock it when leaving?",
+     "anchored_quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office. I didn't see anyone and nothing looked wrong.",
+     "doc_id": "doc07"
+    },
+    {
+     "person": "Dana Whitfield",
+     "question": "During the twenty minutes you spent in the front office on Sunday afternoon, did you notice Raymond Delgado's car, Marcus Webb's car, or any other vehicles parked outside or inside the shop bays?",
+     "anchored_quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office. I didn't see anyone and nothing looked wrong.",
+     "doc_id": "doc07"
+    },
+    {
+     "person": "Dana Whitfield",
+     "question": "Which specific invoices did you drop off on your desk that Sunday afternoon, and were those same invoices present when you arrived on Monday morning?",
+     "anchored_quote": "The invoices were on my desk.",
+     "doc_id": "doc07"
+    },
+    {
+     "person": "Marcus Webb",
+     "question": "Eddie Kowalski stated that he towed your blue sedan to your home on Friday afternoon, October 11, because you requested it for the weekend; how do you account for that in light of your statement that the vehicle remained on the lift at the shop?",
+     "anchored_quote": "One job. I towed Mr. Webb's blue sedan out of the shop on Friday, October 11, and took it to his house. He said he needed it for the weekend.",
+     "doc_id": "doc08"
+    },
+    {
+     "person": "Marcus Webb",
+     "question": "A resident across Fifth Avenue reported seeing a blue sedan matching the kind you drive parked in front of Delgado Auto Body around 11:30 PM on Sunday, October 13; where was your car parked that night?",
+     "anchored_quote": "There was a blue sedan parked on the street in front of the shop that night. It looked like the one Mr. Webb drives. I can't swear it was his, but it was the same kind of car.",
+     "doc_id": "doc10"
+    },
+    {
+     "person": "Marcus Webb",
+     "question": "Where is the written partnership agreement containing the survivorship terms kept, and when was it executed?",
+     "anchored_quote": "The survivor takes full ownership. That's standard. It was Ray's idea as much as mine, years ago.",
+     "doc_id": "doc04"
+    },
+    {
+     "person": "Eddie Kowalski",
+     "question": "Who at Delgado Auto Body assisted you with pushing Marcus Webb's blue sedan onto your flatbed on Friday, October 11?",
+     "anchored_quote": "Transmission was out of it, or going in, I don't do the mechanical side. We pushed it onto the flatbed. It wasn't driveable, but he wanted it home.",
+     "doc_id": "doc08"
+    },
+    {
+     "person": "Ellen Vasquez",
+     "question": "When you looked out your window after hearing the sounds at 11:30 PM, did you see anyone near the blue sedan or entering or exiting the shop property?",
+     "anchored_quote": "I heard what sounded like a car backfiring, twice, around eleven thirty that night. I remember because it woke the dog and I looked out the window.",
+     "doc_id": "doc10"
+    },
+    {
+     "person": "Rosa Delgado",
+     "question": "Did your brother mention what specific paperwork he was working on Sunday evening, or whether he was expecting to meet anyone before leaving?",
+     "anchored_quote": "He called me at 6:40, we talked maybe ten minutes. He sounded like himself. He said he was finishing paperwork at the shop and going home after.",
+     "doc_id": "doc09"
+    }
+   ]
+  },
+  "prosecutor": {
+   "sufficiency": [
+    {
+     "subject": "Marcus Webb vehicle location contradiction: Webb claims 'It sat on the lift at the shop from Monday on' (doc03), whereas Kowalski stated 'I towed Mr. Webb's blue sedan out of the shop on Friday, October 11, and took it to his house' (doc08) and invoice doc11 records delivery to 'Webb residence, 412 78th Street'",
+     "rating": "workable",
+     "missing": "Proof of operability of Webb's vehicle, verification that Webb was driving it, and physical or digital evidence placing the vehicle at the crime scene."
+    },
+    {
+     "subject": "Identification of blue sedan outside shop based on Ellen Vasquez statement: 'It looked like the one Mr. Webb drives. I can't swear it was his, but it was the same kind of car' (doc10)",
+     "rating": "weak",
+     "missing": "License plate number, diner surveillance footage referenced in doc01 ('The diner across Fifth Avenue has a camera facing the shop front. Footage not yet requested'), or definitive vehicle identification."
+    },
+    {
+     "subject": "Dana Whitfield shop visit admission: Whitfield stated 'I did stop by the shop that Sunday afternoon, briefly, to drop off invoices' (doc07) after initially claiming 'I was home all weekend' (doc05)",
+     "rating": "workable",
+     "missing": "Physical recovery and logging of the invoices dropped off in the front office, electronic key/alarm logs, or diner video footage confirming time of arrival and departure."
+    },
+    {
+     "subject": "Physical evidence of gunfire: Scene report notes 'Two shell casings were observed on the office floor near the desk' (doc01), but ledger lists only 'One (1) spent shell casing, brass, recovered office floor' (doc13, Item 7)",
+     "rating": "weak",
+     "missing": "Chain-of-custody explanation or supplemental report resolving the missing second casing, ballistics comparison between Item 7 and projectile fragments (doc13, Item 6), and full autopsy report referenced in doc02."
+    },
+    {
+     "subject": "Marcus Webb alibi of being home alone watching television: 'Home. I was home alone Sunday night. I never left the house' (doc03)",
+     "rating": "weak",
+     "missing": "Cell site location data, television provider connection logs, or independent witness corroboration confirming Webb remained at 412 78th Street."
+    },
+    {
+     "subject": "Eddie Kowalski alibi of having no calls Sunday: 'No. No calls that Sunday at all' (doc08)",
+     "rating": "weak",
+     "missing": "Towing service call sheets, phone records, and independent corroboration of Kowalski's location Sunday night."
+    }
+   ],
+   "vetoes": [
+    {
+     "phrase": "Webb killed Delgado",
+     "reason": "The file contains circumstantial contradictions regarding vehicle location, but no direct evidence or charges establishing homicide."
+    },
+    {
+     "phrase": "Webb's car was outside",
+     "reason": "Witness Ellen Vasquez specifically stated in doc10: 'I can't swear it was his, but it was the same kind of car.'"
+    },
+    {
+     "phrase": "Webb drove to the shop",
+     "reason": "No document or witness identifies Marcus Webb operating a vehicle on Sunday night or arriving at 1140 Fifth Avenue."
+    },
+    {
+     "phrase": "Whitfield committed the murder",
+     "reason": "Dana Whitfield's presence Sunday afternoon (doc07) is hours before the estimated time of death and does not establish guilt."
+    },
+    {
+     "phrase": "two shell casings recovered",
+     "reason": "Evidence ledger doc13 Item 7 accounts for only one spent brass casing; asserting two were recovered contradicts the property ledger."
+    },
+    {
+     "phrase": "proves Webb was present",
+     "reason": "Inconsistent statements about vehicle repairs do not meet the legal threshold of proving physical presence at the scene."
+    },
+    {
+     "phrase": "the murder weapon",
+     "reason": "No firearm has been recovered or entered into evidence in doc13."
+    },
+    {
+     "phrase": "Webb is the shooter",
+     "reason": "File contains no eyewitness identification, ballistics match, or forensic link naming Webb as the shooter."
+    }
+   ],
+   "corroboration_needed": [
+    "Subpoena and review of footage from the camera noted in doc01: 'The diner across Fifth Avenue has a camera facing the shop front. Footage not yet requested.'",
+    "Supplemental report from reporting officer explaining discrepancy between doc01 ('Two shell casings were observed on the office floor near the desk') and doc13 Item 7 ('One (1) spent shell casing, brass, recovered office floor').",
+    "Obtain full medical examiner report noted as missing in doc02 ('Full autopsy report follows under separate cover') to confirm exact cause of death and bullet wound trajectory.",
+    "Ballistics laboratory analysis comparing Item 7 ('One (1) spent shell casing, brass') to Item 6 ('Two projectile fragments, recovered from office wall') from doc13.",
+    "Cellular tower location data and call detail records for Marcus Webb's phone (doc03, doc04) covering Sunday, October 13, 2019, 21:00 to 24:00.",
+    "Processing and forensic report for victim's mobile telephone recovered from desk (doc13, Item 3) and office telephone call log printout (doc13, Item 10).",
+    "Physical inspection or documentation of the front office desk for invoices described by Dana Whitfield in doc07 ('drop off invoices... in the front office, not Ray's office')."
+   ]
+  },
+  "lead_detective": {
+   "leads": [
+    {
+     "action": "Pull the crime scene photographs of the office and shop interior (24 exposures) from the property clerk under Ledger Item 1 (doc13) to examine the office floor near the desk and resolve whether two shell casings (doc01) or one shell casing (doc13, Item 7) were present during the Sunday night shooting window.",
+     "score": 80,
+     "arithmetic": "40 + 25 + 15 = 80",
+     "reason": "Directly works the high-severity contradiction between doc01 ('Two shell casings were observed on the office floor near the desk') and doc13 ('7. One (1) spent shell casing, brass, recovered office floor'), examines physical scene evidence generated during the death window (9:00 PM to midnight on October 13, 2019), and targets photographs currently logged and reachable in property under doc13.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the shop floor and front office photographs from the 24 exposures in Ledger Item 1 (doc13) to verify whether the vehicle lift was empty or occupied and whether invoices were present on the front office desk, testing Marcus Webb's claim that his car sat on the lift (doc04) and Dana Whitfield's statement that she dropped off invoices in the front office Sunday afternoon (doc07).",
+     "score": 55,
+     "arithmetic": "40 + 15 = 55",
+     "reason": "Works the high-severity contradictions regarding Webb's vehicle location (doc04 vs doc11/doc08) and Whitfield's Sunday presence at the shop (doc06 vs doc07), and targets existing photographs logged and reachable in property (doc13, Item 1).",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": false,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Have the detective interview Marcus Webb in person and ask: 'Kowalski Towing invoice doc11 and Edward Kowalski's statement doc08 record that your 2014 Ford Taurus was towed from Delgado Auto Body to your home at 412 78th Street on Friday, October 11, 2019, at 4:52 PM\u2014how do you reconcile that record with your statements in doc03 and doc04 that the car sat on the shop lift all weekend with the transmission out?'",
+     "score": 55,
+     "arithmetic": "40 + 15 = 55",
+     "reason": "Directly works the high-severity vehicle location contradiction between Webb's statements (doc03, doc04) and the towing records/statement (doc11, doc08), and targets a witness reachable for detective follow-up.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": false,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Have the detective interview the evidence intake clerk and the reporting patrol officer in person to ask why doc01 records 'Two shell casings were observed on the office floor near the desk' while evidence ledger doc13 Item 7 logs only 'One (1) spent shell casing, brass, recovered office floor.'",
+     "score": 55,
+     "arithmetic": "40 + 15 = 55",
+     "reason": "Works the high-severity physical evidence count contradiction between doc01 and doc13, and targets department personnel reachable today.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": false,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Request the surveillance camera footage from the Fifth Avenue Diner facing the shop front as noted in doc01 ('The diner across Fifth Avenue has a camera facing the shop front. Footage not yet requested') covering Sunday, October 13, 2019, from 9:00 PM to midnight.",
+     "score": 45,
+     "arithmetic": "25 + 20 = 45",
+     "reason": "Directly closes the unrequested video gap noted in doc01 and covers the 9:00 PM to midnight death window (including the 11:30 PM blue sedan sighting and backfire sounds in doc10). Because the file includes interviews conducted the following year ('Like I said last year', doc06), reachability of unrequested diner video today is not claimed.",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": false
+     }
+    },
+    {
+     "action": "Pull the victim's mobile telephone (Ledger Item 3, doc13) and the office telephone with call log printout (Ledger Item 10, doc13) from property to check for incoming or outgoing calls and messages between 9:00 PM and midnight on Sunday, October 13, 2019.",
+     "score": 40,
+     "arithmetic": "25 + 15 = 40",
+     "reason": "Examines communication records covering the coroner's 9:00 PM to midnight death window (doc02) and targets physical items currently logged and reachable in the evidence ledger (doc13, Items 3 and 10).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Request the full autopsy report from the Medical Examiner's office referenced in doc02 ('Full autopsy report follows under separate cover') to establish wound tracks and projectile recovery details.",
+     "score": 35,
+     "arithmetic": "20 + 15 = 35",
+     "reason": "Closes the documented file gap proven by doc02 and targets an official institutional record that remains reachable.",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the property release and intake receipts between the Medical Examiner's office and the investigating unit to locate the decedent's worn clothing and effects referenced as released in doc02 ('The decedent's clothing and effects were released to the investigating unit') but omitted from doc13.",
+     "score": 35,
+     "arithmetic": "20 + 15 = 35",
+     "reason": "Closes the evidence gap between doc02 and doc13 regarding the decedent's worn clothing and targets agency property records that are still reachable.",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Submit Ledger Item 6 ('Two projectile fragments, recovered from office wall', doc13), Ledger Item 7 ('One (1) spent shell casing, brass, recovered office floor', doc13), Ledger Item 21 ('Swabs, office door handle', doc13), and Ledger Item 22 ('Swabs, desk surface', doc13) for laboratory ballistics and DNA/latent examination.",
+     "score": 15,
+     "arithmetic": "15 = 15",
+     "reason": "Targets physical evidence items currently logged in the property clerk ledger (doc13) that are still reachable for forensic analysis.",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": false,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    }
+   ],
+   "gaps": [
+    {
+     "gap": "Missing second spent shell casing: two shell casings were observed on the office floor near the desk at the scene, but only one spent brass shell casing is logged in the property ledger.",
+     "proven_by": "doc01 ('Two shell casings were observed on the office floor near the desk.') and doc13 ('7. One (1) spent shell casing, brass, recovered office floor.')"
+    },
+    {
+     "gap": "Unrequested surveillance footage from the diner across Fifth Avenue facing the shop front.",
+     "proven_by": "doc01 ('The diner across Fifth Avenue has a camera facing the shop front. Footage not yet requested.')"
+    },
+    {
+     "gap": "Missing full autopsy report.",
+     "proven_by": "doc02 ('Full autopsy report follows under separate cover.')"
+    },
+    {
+     "gap": "Missing worn clothing of the decedent: released by the Medical Examiner to the investigating unit, but absent from the property clerk evidence ledger (which logs only a jacket from an office chair under Item 14).",
+     "proven_by": "doc02 ('The decedent's clothing and effects were released to the investigating unit.') and doc13 ('14. Victim's jacket, recovered from office chair.')"
+    },
+    {
+     "gap": "Unlogged front office invoices: Dana Whitfield stated she dropped off invoices in the front office on Sunday afternoon, but the evidence ledger lists only invoices from the victim's office desk drawer.",
+     "proven_by": "doc07 ('I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office.') and doc13 ('5. Office desk drawer contents (pens, invoices, keys, misc.).')"
+    },
+    {
+     "gap": "Unexamined items in the evidence ledger with no corresponding investigative or laboratory reports in the file (Items 1-3, 6, 8-15, 20-22: 24 scene photographs, 2019 desk calendar, victim's mobile telephone, two projectile fragments from the office wall, wallet, ring of six keys, office telephone with call log printout, DVR unit with no drives installed, front door lock cylinder, bay door padlock and chain, jacket, coffee cup, victim's vehicle, and swabs from the office door handle and desk surface).",
+     "proven_by": "doc13 ('1. Photographs of the office and shop interior (24 exposures)... 3. Victim's mobile telephone, recovered from desk... 6. Two projectile fragments, recovered from office wall... 10. Office telephone, with call log printout... 11. Shop security DVR unit (no drives installed)... 21. Swabs, office door handle. 22. Swabs, desk surface.')"
+    }
+   ],
+   "brief": "THE CASE IN FIVE LINES\nRaymond Delgado was found dead in the office of Delgado Auto Body, 1140 Fifth Avenue, on Monday, October 14, 2019, at 7:05 AM by employee Dana Whitfield (doc01, doc05). The Medical Examiner determined the cause of death was two gunshot wounds to the chest, manner homicide, occurring between 9:00 PM and midnight on Sunday, October 13, 2019 (doc02). Neighbor Ellen Vasquez heard two sounds like a car backfiring around 11:30 PM Sunday night and saw a blue sedan resembling Marcus Webb's car parked outside the darkened shop (doc10). Marcus Webb claimed he was home all weekend without a car because his sedan was on the shop lift with the transmission out, but towing records and the tow driver's statement report the vehicle was towed to Webb's residence on Friday, October 11, at 4:52 PM (doc03, doc04, doc08, doc11). Dana Whitfield initially stated she did not visit the shop all weekend before admitting in a later interview that she entered the front office with her key on Sunday afternoon between 3:00 and 4:00 PM (doc05, doc06, doc07).\n\nTHE STRONGEST CONTRADICTION\nMarcus Webb repeatedly stated that he had no vehicle on the weekend of the homicide because his car remained on the lift inside Delgado Auto Body:\n- doc04: \"Like I said in October, the car was at the shop. It was up on the lift with the transmission out. I didn't have wheels that weekend, which is part of why I stayed in.\"\n- doc03: \"I couldn't. My car was in the shop all that week. Transmission was shot. It sat on the lift at the shop from Monday on.\"\nThis directly conflicts with the Kowalski Towing invoice and Edward Kowalski's witness statement placing the car at Webb's home prior to the weekend:\n- doc11: \"Date: Friday, October 11, 2019 / Pickup time: 4:52 PM / Pickup location: Delgado Auto Body, 1140 Fifth Avenue / Vehicle: 2014 Ford Taurus, blue sedan / Registered owner: Marcus Webb / Drop-off location: Webb residence, 412 78th Street / Reason for tow: customer requested vehicle returned home\"\n- doc08: \"One job. I towed Mr. Webb's blue sedan out of the shop on Friday, October 11, and took it to his house. He said he needed it for the weekend.\"\n\nALIBI TABLE (Death Window: Sunday, Oct 13, 2019, 21:00 to Oct 14, 2019, 00:00)\n1. Marcus Webb | Claim: Home alone watching television all Sunday night; car was on the shop lift (doc03, doc04) | Rating: CONTRADICTED | Basis: Towing invoice doc11 and driver statement doc08 show his blue sedan was delivered to his home Friday at 4:52 PM; neighbor Ellen Vasquez observed a blue sedan resembling Webb's outside the shop around 11:30 PM Sunday when two backfire-like sounds occurred (doc10).\n2. Dana Whitfield | Claim: Home all weekend except for a 20-minute visit to the front office Sunday around 3:00-4:00 PM to drop off invoices (doc05, doc07) | Rating: UNCORROBORATED | Basis: Sunday afternoon admission contradicts earlier denials of visiting the shop that weekend (doc05, doc06); no independent verification of her Sunday night whereabouts.\n3. Eddie Kowalski | Claim: Not at the shop Sunday; had no tow calls all day (doc08) | Rating: UNCORROBORATED | Basis: Rests solely on his own statement without call logs or independent confirmation.\n\nTOP THREE LEADS\n1. Pull the 24 scene photographs of the office and shop interior (doc13, Item 1) [Score: 80]: Inspect the office floor images taken of the murder scene to resolve the high-severity contradiction between doc01 ('Two shell casings were observed on the office floor near the desk') and doc13 ('7. One (1) spent shell casing, brass, recovered office floor').\n2. Pull the shop bay and front office photographs from the 24 scene exposures (doc13, Item 1) [Score: 55]: Verify whether the shop lift was empty or occupied by a vehicle transmission job (testing Webb's claim in doc03/doc04 against doc11/doc08) and whether invoices were sitting on the front office desk (testing Whitfield's statement in doc07 against doc06).\n3. Detective in-person interview of Marcus Webb [Score: 55]: Present Kowalski Towing invoice doc11 and statement doc08 and ask Webb to account for the recorded delivery of his 2014 Ford Taurus to 412 78th Street on Friday, October 11, 2019, at 4:52 PM.\n\nTHE GAP LIST\n- Second spent shell casing: Observed on the office floor in doc01 ('Two shell casings were observed on the office floor near the desk'), but missing from property ledger doc13 ('7. One (1) spent shell casing, brass, recovered office floor').\n- Fifth Avenue Diner surveillance footage: Camera facing the shop front noted in doc01 ('Footage not yet requested'); absent from the ledger.\n- Full autopsy report: Promised in doc02 ('Full autopsy report follows under separate cover'); absent from the file.\n- Decedent's worn clothing: Released to the investigating unit per doc02 ('The decedent's clothing and effects were released to the investigating unit'); absent from doc13.\n- Front office invoices: Claimed left by Whitfield on Sunday afternoon in doc07; not logged from the front office in doc13.\n- Unanalyzed evidence ledger items: Items 1-3, 6, 8-15, and 20-22 in doc13 (including victim's mobile phone, office phone call log printout, two wall projectile fragments, lock cylinder, DVR unit without drives, and door/desk swabs) have no examination reports in the file.\n\nThis board judges the file. The detective does the detecting."
+  }
+ },
+ "dropped": 4,
+ "run_log": [
+  "intake: 2 finding(s) dropped by the quote check",
+  "cross_examiner: 2 finding(s) dropped by the quote check"
+ ]
+}
