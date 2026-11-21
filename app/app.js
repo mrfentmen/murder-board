@@ -1340,11 +1340,16 @@ async function work() {
   renderAll();
   setFeedActivity("Live run: waiting for the first agent result.");
   chatBubble(null, "Run opened: " + caseShortTitle(MB.currentCase()) + ". Ten chairs, four models.", "system");
-  var runT0 = Date.now();
-  var runTimer = setInterval(function () {
-    var sec = Math.floor((Date.now() - runT0) / 1000);
-    el("runClock").textContent = Math.floor(sec / 60) + ":" + ("0" + (sec % 60)).slice(-2);
-  }, 250);
+  var runT0 = performance.now();
+  var runTimer = null;
+  (function tickClock() {
+    var ms = performance.now() - runT0;
+    var m = Math.floor(ms / 60000), s2 = Math.floor(ms / 1000) % 60;
+    var us = ("000000" + Math.floor((ms % 1000) * 1000)).slice(-6);
+    var rc = el("runClock");
+    if (rc) rc.textContent = m + ":" + ("0" + s2).slice(-2) + "." + us;
+    runTimer = requestAnimationFrame(tickClock);
+  })();
   el("dropChip").classList.add("hidden");
   var hooks = {
     chair: setChair,
@@ -1376,7 +1381,7 @@ async function work() {
     el("runStatus").textContent = "Run stopped: " + (error && error.message ? error.message : String(error));
     chatBubble("lead_detective", "The runner stopped before the case was complete: " + (error && error.message ? error.message : String(error)), "fail");
   } finally {
-    clearInterval(runTimer);
+    cancelAnimationFrame(runTimer);
     runInProgress = false;
     activeStepId = null;
     renderAll();
