@@ -550,3 +550,5 @@ h1{font-weight:800}
 .pin-card.unsorted{opacity:.88}
 
 .yarn-line.yarn-index{stroke:#8a919c;stroke-width:1;stroke-dasharray:4 3;opacity:.55}
+
+.chat-reading{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;color:#9aa3ad;margin-top:3px;letter-spacing:.3px}
