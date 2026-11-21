@@ -1288,6 +1288,7 @@ function updateProgress() {
   if (rcEl) rcEl.textContent = "working " + fmtClock(Date.now() - feedStart);
 }
 var feedTimer = null, feedBase = "", feedStart = 0, runStart = 0;
+var runTypingEl = null, lastTypingChair = null;
 function fmtClock(ms) { var s = Math.floor(ms / 1000); return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
 function setFeedActivity(text) {
   var status = el("feedActivity");
@@ -1302,9 +1303,18 @@ function setFeedActivity(text) {
       var st = el("feedActivity");
       if (st) st.textContent = feedBase + " \u00b7 " + fmtClock(Date.now() - feedStart);
       updateProgress();
+      var runChair = document.querySelector("#squadStrip .chair.running");
+      var runChairId = runChair ? runChair.id.replace("chair-", "") : null;
+      if (runChairId !== lastTypingChair) {
+        if (runTypingEl) { runTypingEl.remove(); runTypingEl = null; }
+        if (runChairId) runTypingEl = chatTyping(runChairId, STEP_ACTIVITY[activeStepId] || "reviewing the file");
+        lastTypingChair = runChairId;
+      }
     }, 1000);
   } else {
     updateProgress();
+    if (runTypingEl) { runTypingEl.remove(); runTypingEl = null; }
+    lastTypingChair = null;
     feedStart = 0;
     runStart = 0;
     if (feedTimer) { clearInterval(feedTimer); feedTimer = null; }
