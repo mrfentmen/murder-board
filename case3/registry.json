@@ -1,0 +1,24 @@
+{
+  "case_id": "harborlight-2016",
+  "case_title": "The Harborlight File: a cold case built to be investigated, not skimmed. Fictional, written for Gemini 4 NYC.",
+  "documents": [
+    {"id": "doc01", "file": "doc01_scene_report.txt", "title": "Scene report: the office, the latch, the blinds", "type": "report", "date": "2016-10-10", "author": "Officer D. Whitaker"},
+    {"id": "doc02", "file": "doc02_me_summary.txt", "title": "ME summary: window 10:30 p.m. to 12:30 a.m.", "type": "report", "date": "2016-10-12", "author": "Dr. L. Chen"},
+    {"id": "doc03", "file": "doc03_herrera_statement.txt", "title": "Herrera statement, 2016: never entered the office", "type": "statement", "date": "2016-10-10", "author": "Tomas Herrera"},
+    {"id": "doc04", "file": "doc04_herrera_logbook.txt", "title": "Herrera log book page, October 9, 2016", "type": "record", "date": "2016-10-09", "author": "Tomas Herrera"},
+    {"id": "doc05", "file": "doc05_keypad_log.txt", "title": "Keypad entry log, office door", "type": "record", "date": "2016-10-09", "author": "Keypad system export"},
+    {"id": "doc06", "file": "doc06_raman_statement.txt", "title": "Raman statement: I went back for my bag", "type": "statement", "date": "2016-10-11", "author": "Priya Raman"},
+    {"id": "doc07", "file": "doc07_delaney_statement1.txt", "title": "Delaney statement 1: poker all night", "type": "statement", "date": "2016-10-12", "author": "Marcus Delaney"},
+    {"id": "doc08", "file": "doc08_delaney_statement2.txt", "title": "Delaney statement 2: I drove there, the light was off", "type": "statement", "date": "2017-03-03", "author": "Marcus Delaney"},
+    {"id": "doc09", "file": "doc09_toll_record.txt", "title": "Toll record: Delaney truck, 11:02 and 11:21 p.m.", "type": "record", "date": "2016-10-09", "author": "Harbor Bridge authority"},
+    {"id": "doc10", "file": "doc10_phone_record.txt", "title": "Victim's phone record: the 11:47 p.m. text", "type": "record", "date": "2016-10-09", "author": "Carrier summary"},
+    {"id": "doc11", "file": "doc11_meter_record.txt", "title": "Smart meter record: office circuit until 00:20", "type": "record", "date": "2016-10-09", "author": "Electric utility"},
+    {"id": "doc12", "file": "doc12_okafor_statement1.txt", "title": "Okafor statement 1, 2016: left at 10:15", "type": "statement", "date": "2016-10-10", "author": "Daniel Okafor"},
+    {"id": "doc13", "file": "doc13_okafor_statement3.txt", "title": "Okafor statement 3, 2024: the supply closet", "type": "statement", "date": "2024-06-17", "author": "Daniel Okafor"},
+    {"id": "doc14", "file": "doc14_wife_statement.txt", "title": "Grace Okafor statement, 2024: home before 11", "type": "statement", "date": "2024-06-17", "author": "Grace Okafor"},
+    {"id": "doc15", "file": "doc15_inspection_report.txt", "title": "Inspection report, 2015: the latch, in public", "type": "report", "date": "2015-03-01", "author": "County inspector"},
+    {"id": "doc16", "file": "doc16_news_article.txt", "title": "News article: the latch, the ex-husband", "type": "article", "date": "2016-10-13", "author": "Harbor Gazette"},
+    {"id": "doc17", "file": "doc17_guest_photo_memo.txt", "title": "Evidence memo: the guest's 11:40 p.m. photo", "type": "report", "date": "2016-10-20", "author": "Detective R. Alvarez"},
+    {"id": "doc18", "file": "doc18_staff_roster.txt", "title": "Staff roster and door codes", "type": "record", "date": "2016-10-01", "author": "Restaurant owner"}
+  ]
+}
