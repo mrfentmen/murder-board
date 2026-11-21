@@ -762,7 +762,15 @@ function renderRecords() {
   box.innerHTML = h;
 }
 
-function renderAll() { renderBoard(); renderClock(); renderJudgments(); renderBrief(); renderRecords(); }
+function renderEval() {
+  var rows = window.EVAL_LIVE || [];
+  if (!rows.length) return;
+  el("evalLiveBody").innerHTML = rows.slice().reverse().map(function (r) {
+    var t = r.created_at ? String(r.created_at).replace("T", " ").slice(0, 19) : "";
+    return "<tr><td>" + esc(t) + "</td><td>" + esc(r.case) + "</td><td>" + r.steps + "/11</td><td>" + r.dropped + "</td><td>" + r.checks_passed + "/" + r.checks_total + "</td><td>" + esc((r.failed_checks || []).join(", ") || "none") + "</td></tr>";
+  }).join("");
+}
+function renderAll() { renderBoard(); renderClock(); renderJudgments(); renderBrief(); renderRecords(); renderEval(); }
 
 function showScreen(name) {
   Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (t) {
