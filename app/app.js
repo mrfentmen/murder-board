@@ -1406,8 +1406,7 @@ function sendChat() {
     sel.value = caseHit;
     sel.dispatchEvent(new Event("change"));
     if (!/^(work|run|start|go)\b/.test(low)) {
-      if (asksStatus) answerQuestion(text);
-      else chatBubble("lead_detective", "Switched to " + caseShortTitle(caseHit) + ". Ask for a status update or tell me to work the case.");
+      answerQuestion(text);
       return;
     }
     work();
@@ -1417,7 +1416,8 @@ function sendChat() {
   if (asksStatus) { answerQuestion(text); return; }
   var screens = { board: "board", clock: "clock", judgment: "judgments", brief: "brief", intake: "intake", file: "intake", eval: "eval" };
   var hit = Object.keys(screens).filter(function (k) { return low.indexOf(k) !== -1; })[0];
-  if (hit) {
+  var wantsScreen = /^(show|open|take me|go to|pull up|bring up|see)\b/.test(low) || low.split(/\s+/).length <= 3;
+  if (hit && wantsScreen) {
     showScreen(screens[hit]);
     chatBubble("lead_detective", screens[hit] === "board" ? "Board's up." : screens[hit] === "brief" ? "Brief's on the screen." : "On the screen.");
     return;
