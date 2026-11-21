@@ -971,6 +971,20 @@ function sendChat() {
 
 document.addEventListener("DOMContentLoaded", function () {
   buildStrip();
+  var lk = el("liveKey");
+  lk.addEventListener("input", function () {
+    var v = lk.value.trim();
+    if (v) {
+      window.MB_CONFIG = { reasoningModel: "gemini-4-argon", fastModel: "gemini-4-carbon", worldModel: "gemini-4-hydrogen", fieldModel: "gemini-4-neon", apiKey: v };
+      el("cacheToggle").checked = false;
+      el("liveDot").classList.remove("hidden");
+      el("cacheLabel").textContent = "live mode: the next run makes real calls";
+    } else {
+      window.MB_CONFIG = undefined;
+      el("liveDot").classList.add("hidden");
+      el("cacheLabel").textContent = "";
+    }
+  });
   el("chatSend").addEventListener("click", sendChat);
   el("chatText").addEventListener("keydown", function (e) { if (e.key === "Enter") sendChat(); });
   Array.prototype.forEach.call(document.querySelectorAll(".chip"), function (ch) {
