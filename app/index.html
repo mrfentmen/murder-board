@@ -47,24 +47,25 @@
       obituaries, newspaper archives, court portals) and builds a labeled
       starter file: every item SOURCED or UNVERIFIED, name collisions shown,
       never merged. Police-only systems are out of scope and never claimed.</p>
+      <p>
+        <label>Name <input id="door2Name" type="text" placeholder="Ray Delgado"></label>
+        <label>Date of birth <input id="door2Dob" type="text" placeholder="1961-03-03"></label>
+        <label>State <input id="door2State" type="text" placeholder="NY"></label>
+      </p>
+      <p class="hint">Simulation build: the census answers from bundled fixtures for the two fictional cases (Ray Delgado, Treyvon Ellis). Live lookups are off. Type the name, then press Work the Case.</p>
+      <div id="door2Results"></div>
     </div>
   </section>
 
   <section id="screen-board" class="screen">
     <h2>The Board</h2>
-    <div class="board-cols">
-      <div>
-        <h3>People</h3>
-        <div id="personCards" class="cards"></div>
-        <h3>Evidence</h3>
-        <div id="evidenceCards" class="cards"></div>
-      </div>
-      <div>
-        <h3>Threads</h3>
-        <p class="hint">Red threads are contradictions. Click one to see the two quotes side by side.</p>
-        <div id="threadList"></div>
-      </div>
+    <div id="corkboard" class="corkboard">
+      <svg id="yarnSvg" class="yarn"></svg>
+      <div id="pinLayer" class="pin-layer"></div>
     </div>
+    <h3>Threads</h3>
+    <p class="hint">Red yarn is a contradiction. Click the yarn, or a thread below, to see the two quotes side by side.</p>
+    <div id="threadList"></div>
   </section>
 
   <section id="screen-clock" class="screen">
@@ -117,6 +118,7 @@
 <script src="config.js"></script>
 <script src="case-data.js"></script>
 <script src="agents-data.js"></script>
+<script src="records-data.js"></script>
 <script src="cache-data.js"></script>
 <script src="app.js"></script>
 </body>
