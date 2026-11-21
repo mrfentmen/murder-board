@@ -116,7 +116,7 @@ th { background: var(--panel); }
 .brief-actions { display: flex; gap: 16px; align-items: center; }
 .brief-actions button { padding: 7px 14px; font-family: inherit; cursor: pointer; }
 
-.modal { position: fixed; inset: 0; background: rgba(0,0,0,.7); display: flex; align-items: center; justify-content: center; }
+.modal { position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,.7); display: flex; align-items: center; justify-content: center; }
 .modal.hidden { display: none; }
 .modal-card { background: var(--panel2); border: 1px solid var(--amber); max-width: 860px; width: 92%; padding: 20px 24px; }
 .quote-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
@@ -151,7 +151,8 @@ th { background: var(--panel); }
   overflow: hidden;
 }
 .yarn { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
-.yarn-line { fill: none; stroke-width: 2.4; pointer-events: stroke; }
+.yarn-line { fill: none; stroke-width: 2.4; pointer-events: none; }
+.yarn-hit { fill: none; stroke: rgba(0,0,0,0); stroke-width: 18; pointer-events: stroke; cursor: pointer; }
 .yarn-gray { stroke: rgba(238, 234, 226, .75); stroke-width: 1.6; pointer-events: none; }
 .yarn-high { stroke: #c62f22; cursor: pointer; }
 .yarn-medium { stroke: #d97a26; cursor: pointer; }
@@ -160,7 +161,7 @@ th { background: var(--panel); }
 .yarn-line[data-kind="contra"]:hover, .yarn-line[data-kind="collision"]:hover { stroke-width: 4.5; }
 .pin-layer { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 20px 18px; align-items: flex-start; }
 .pin-title {
-  position: relative; width: 100%; text-align: center; color: #7c1d12;
+  position: relative; width: 100%; text-align: center; color: #7c1d12; cursor: pointer;
   font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
   padding: 2px 0 6px;
 }
