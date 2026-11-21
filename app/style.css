@@ -491,3 +491,7 @@ th, td { border: 0; border-bottom: 1px solid var(--line); }
 .chat-feed .ft{display:none}
 #feedActivity[data-active="true"]{animation:feedpulse 1.6s ease-in-out infinite}
 @keyframes feedpulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+.chair.running{animation:chairpulse 1.2s ease-in-out infinite}
+@keyframes chairpulse{0%,100%{box-shadow:0 0 6px rgba(224,164,88,.3)}50%{box-shadow:0 0 16px rgba(224,164,88,.75)}}
+.run-clock{font-weight:700;color:var(--amber);margin-left:10px;letter-spacing:1px}
