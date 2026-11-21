@@ -13,6 +13,11 @@ const ROOT = path.dirname(__dirname);
 global.window = global;
 require(path.join(ROOT, "app", "case-data.js"));
 require(path.join(ROOT, "app", "agents-data.js"));
+const CASE_ID = process.env.MB_CASE_ID || "delgado-2019";
+const chosen = (global.CASES || []).filter((c) => c.case_id === CASE_ID)[0];
+if (!chosen) { console.error("unknown case", CASE_ID); process.exit(1); }
+global.CASES = [chosen];
+global.CASE_DOCS = chosen.documents;
 global.MB_CONFIG = { apiKey: "", reasoningModel: "gemini-4-argon", fastModel: "gemini-3.8-flash" };
 
 const HELPER = path.join(process.env.HOME, "workspace/custom-connectors/custom.gemini-api/bin/gemini_api.py");
@@ -47,9 +52,8 @@ const MB = require(path.join(ROOT, "app", "app.js"));
   console.log("csi gaps:", book.csi_gaps.length, "| ce gaps:", book.ce_gaps.length);
   console.log("leads:", book.leads.map((l) => l.score + " " + l.action).join(" | "));
   console.log("log:", book.log.join(" ; "));
-  const cache = { created_at: new Date().toISOString(), outputs: book.outputs };
+  const cache = { created_at: new Date().toISOString(), outputs: book.outputs, dropped: book.dropped, run_log: book.log };
   fs.mkdirSync(path.join(ROOT, "cache"), { recursive: true });
-  fs.writeFileSync(path.join(ROOT, "cache", "delgado-2019.json"), JSON.stringify(cache, null, 1));
-  fs.writeFileSync(path.join(ROOT, "app", "cache-data.js"), "window.CACHE_DATA = " + JSON.stringify(cache) + ";\n");
-  console.log("cache written: cache/delgado-2019.json + app/cache-data.js");
+  fs.writeFileSync(path.join(ROOT, "cache", CASE_ID + ".json"), JSON.stringify(cache, null, 1));
+  console.log("cache written: cache/" + CASE_ID + ".json (run tools/merge_cache.py next)");
 })().catch((e) => { console.error("HARNESS ERROR", e); process.exit(1); });

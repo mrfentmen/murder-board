@@ -13,6 +13,23 @@ var PROMPTS = {};
 var DOC_BY_ID = {};
 DOCS.forEach(function (d) { DOC_BY_ID[d.id] = d; });
 
+// Cases: the file can be a police file or a feed of public posts.
+// setCase swaps the document set the whole squad works from.
+var CASES = G.CASES || [{ case_id: "delgado-2019", case_title: "", documents: DOCS }];
+var CURRENT_CASE = CASES[0].case_id;
+function setCase(caseId) {
+  for (var i = 0; i < CASES.length; i++) {
+    if (CASES[i].case_id === caseId) {
+      CURRENT_CASE = caseId;
+      DOCS = CASES[i].documents;
+      DOC_BY_ID = {};
+      DOCS.forEach(function (d) { DOC_BY_ID[d.id] = d; });
+      return true;
+    }
+  }
+  return false;
+}
+
 function cfg() { return G.MB_CONFIG || { reasoningModel: "gemini-4-argon", fastModel: "gemini-3.8-flash", apiKey: "" }; }
 
 // ---------- transport ----------
@@ -338,7 +355,9 @@ async function runAll(hooks, cachedOutputs) {
 G.MB = {
   runAll: runAll, newBook: newBook, recomputeScore: recomputeScore,
   quoteOk: quoteOk, VALIDATORS: VALIDATORS, STEPS: STEPS, CHAIRS: CHAIRS,
-  DOC_BY_ID: DOC_BY_ID
+  DOC_BY_ID: DOC_BY_ID, CASES: CASES, setCase: setCase,
+  currentCase: function () { return CURRENT_CASE; },
+  docById: function (id) { return DOC_BY_ID[id]; }
 };
 if (typeof module !== "undefined" && module.exports) module.exports = G.MB;
 })();
@@ -359,7 +378,7 @@ function esc(s) {
   });
 }
 function docTitle(id) {
-  var d = MB.DOC_BY_ID[id];
+  var d = MB.docById(id);
   return d ? d.title + " (" + d.date + ")" : id;
 }
 
@@ -383,13 +402,15 @@ function setChair(id, state, count) {
 }
 
 function renderRegistry() {
-  el("caseTitle").textContent = "The Delgado file. Fourteen documents. Cold since 2019. Fictional case, written for this event.";
-  el("registryBody").innerHTML = DOCS.map(function (d) {
+  var current = MB.CASES.filter(function (c) { return c.case_id === MB.currentCase(); })[0];
+  el("caseTitle").textContent = current ? current.case_title : "";
+  var docs = current ? current.documents : [];
+  el("registryBody").innerHTML = docs.map(function (d) {
     return "<tr data-doc='" + d.id + "'><td>" + d.id + "</td><td>" + esc(d.title) + "</td><td>" + esc(d.type) + "</td><td>" + esc(d.date) + "</td><td>" + esc(d.author) + "</td><td>view</td></tr>";
   }).join("");
   Array.prototype.forEach.call(document.querySelectorAll("#registryBody tr"), function (tr) {
     tr.addEventListener("click", function () {
-      var d = MB.DOC_BY_ID[tr.getAttribute("data-doc")];
+      var d = MB.docById(tr.getAttribute("data-doc"));
       el("docViewer").textContent = d ? d.text : "";
     });
   });
@@ -510,8 +531,18 @@ function showScreen(name) {
   });
 }
 
+function cacheForCurrentCase() {
+  return (window.CACHE_BY_CASE || {})[MB.currentCase()] || null;
+}
+function updateCacheAvailability() {
+  var c = cacheForCurrentCase();
+  el("cacheToggle").disabled = !c;
+  el("cacheLabel").textContent = c ? "" : "no cached run saved for this case yet";
+}
+
 async function work() {
-  var useCache = el("cacheToggle").checked && window.CACHE_DATA;
+  var cached = cacheForCurrentCase();
+  var useCache = el("cacheToggle").checked && cached;
   el("workBtn").disabled = true;
   MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
   var hooks = {
@@ -520,10 +551,10 @@ async function work() {
     delay: function () { return new Promise(function (r) { setTimeout(r, 650); }); }
   };
   if (useCache) {
-    var when = window.CACHE_DATA.created_at ? new Date(window.CACHE_DATA.created_at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "this morning";
+    var when = cached.created_at ? new Date(cached.created_at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "this morning";
     el("cacheLabel").textContent = "cached run from " + when;
-    book = await MB.runAll(hooks, window.CACHE_DATA.outputs);
-    if (window.CACHE_DATA.dropped) book.dropped = window.CACHE_DATA.dropped;
+    book = await MB.runAll(hooks, cached.outputs);
+    if (cached.dropped) book.dropped = cached.dropped;
   } else {
     el("cacheLabel").textContent = "";
     if (!(window.MB_CONFIG && window.MB_CONFIG.apiKey)) {
@@ -539,6 +570,21 @@ async function work() {
 
 document.addEventListener("DOMContentLoaded", function () {
   buildStrip();
+  var sel = el("caseSelect");
+  MB.CASES.forEach(function (c) {
+    var o = document.createElement("option");
+    o.value = c.case_id; o.textContent = c.case_id === "screens-2025" ? "The Screens File (internet case)" : "The Delgado File (police file)";
+    sel.appendChild(o);
+  });
+  sel.addEventListener("change", function () {
+    MB.setCase(sel.value);
+    book = MB.newBook();
+    MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
+    el("docViewer").textContent = "";
+    renderRegistry();
+    renderAll();
+    updateCacheAvailability();
+  });
   renderRegistry();
   Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (t) {
     t.addEventListener("click", function () { showScreen(t.getAttribute("data-screen")); });
@@ -547,9 +593,6 @@ document.addEventListener("DOMContentLoaded", function () {
   el("modalClose").addEventListener("click", function () { el("quoteModal").classList.add("hidden"); });
   el("printBtn").addEventListener("click", function () { window.print(); });
   el("vetoToggle").addEventListener("change", renderBrief);
-  if (!window.CACHE_DATA) {
-    el("cacheToggle").disabled = true;
-    el("cacheLabel").textContent = "no cached run saved yet";
-  }
+  updateCacheAvailability();
 });
 })();

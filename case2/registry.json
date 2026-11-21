@@ -1,0 +1,18 @@
+{
+  "case_id": "screens-2025",
+  "case_title": "The Screens File: a Brooklyn drill case built from public posts. Fictional, written for Gemini 4 NYC.",
+  "documents": [
+    {"id": "doc01", "file": "doc01_news_article.txt", "title": "News article: shooting outside Nostrand studio", "type": "article", "date": "2025-10-13", "author": "Kings County News"},
+    {"id": "doc02", "file": "doc02_police_post.txt", "title": "Precinct public post: property recovered", "type": "post", "date": "2025-10-14", "author": "NYPD 77th Precinct"},
+    {"id": "doc03", "file": "doc03_mdot_post_sunday.txt", "title": "M-Dot post, Sunday 11:42 p.m.", "type": "post", "date": "2025-10-12", "author": "Marcus Reed (@mdot)"},
+    {"id": "doc04", "file": "doc04_mdot_post_money.txt", "title": "M-Dot post: the 14,200 owed", "type": "post", "date": "2025-10-10", "author": "Marcus Reed (@mdot)"},
+    {"id": "doc05", "file": "doc05_reddit_collation.txt", "title": "Reddit collation: Sunday night from public posts", "type": "thread", "date": "2025-10-14", "author": "u/SouthsideScanner"},
+    {"id": "doc06", "file": "doc06_reddit_thread.txt", "title": "Reddit thread: the mural, the deleted story", "type": "thread", "date": "2025-10-14", "author": "r/BrooklynDrillWatch"},
+    {"id": "doc07", "file": "doc07_kayla_podcast.txt", "title": "Kayla Brooks podcast transcript", "type": "transcript", "date": "2025-11-06", "author": "Off the Record BK"},
+    {"id": "doc08", "file": "doc08_kayla_comment.txt", "title": "Kayla Brooks comment, Sunday 4:05 p.m.", "type": "post", "date": "2025-10-12", "author": "Kayla Brooks"},
+    {"id": "doc09", "file": "doc09_plate_cam.txt", "title": "Plate cam post: BQE at Atlantic Ave, 11:05 p.m.", "type": "record", "date": "2025-10-13", "author": "@BQE_Traffic_Watch"},
+    {"id": "doc10", "file": "doc10_dee_post.txt", "title": "Dee post: dropped Dot at 9", "type": "post", "date": "2025-10-13", "author": "Darnell Carter (@dee2real)"},
+    {"id": "doc11", "file": "doc11_trey_last_post.txt", "title": "Trey's last post, Sunday 8:15 p.m.", "type": "post", "date": "2025-10-12", "author": "Treyvon Ellis (@liltrey)"},
+    {"id": "doc12", "file": "doc12_lyric_transcript.txt", "title": "Lyric transcript: Midnight Tape freestyle", "type": "transcript", "date": "2025-10-05", "author": "Marcus Reed (@mdot)"}
+  ]
+}

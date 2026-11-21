@@ -11,6 +11,11 @@ const ROOT = path.dirname(__dirname);
 global.window = global;
 require(path.join(ROOT, "app", "case-data.js"));
 require(path.join(ROOT, "app", "agents-data.js"));
+const CASE_ID = process.env.MB_CASE_ID || "delgado-2019";
+const chosen = (global.CASES || []).filter((c) => c.case_id === CASE_ID)[0];
+if (!chosen) { console.error("unknown case", CASE_ID); process.exit(1); }
+global.CASES = [chosen];
+global.CASE_DOCS = chosen.documents;
 global.MB_CONFIG = { apiKey: "", reasoningModel: "gemini-4-argon", fastModel: "gemini-3.8-flash" };
 
 const HELPER = path.join(process.env.HOME, "workspace/custom-connectors/custom.gemini-api/bin/gemini_api.py");
@@ -30,7 +35,7 @@ global.__MB_TRANSPORT = function (model, systemText, userText) {
 const MB = require(path.join(ROOT, "app", "app.js"));
 
 (async () => {
-  const cache = JSON.parse(fs.readFileSync(path.join(ROOT, "cache", "delgado-2019.json"), "utf8"));
+  const cache = JSON.parse(fs.readFileSync(path.join(ROOT, "cache", CASE_ID + ".json"), "utf8"));
   console.log("cached steps:", Object.keys(cache.outputs).join(", "));
   const book = await MB.runAll({ chair: () => {}, status: (s) => console.log("status", s) }, cache.outputs);
   console.log("failed steps:", JSON.stringify(book.failed_steps));
@@ -38,8 +43,7 @@ const MB = require(path.join(ROOT, "app", "app.js"));
   console.log("gaps order (csi):", book.csi_gaps.slice(0, 3).map((g) => g.item).join(" | "));
   console.log("brief chars:", book.brief.length);
   console.log("log:", book.log.join(" ; "));
-  const out = { created_at: new Date().toISOString(), outputs: book.outputs };
-  fs.writeFileSync(path.join(ROOT, "cache", "delgado-2019.json"), JSON.stringify(out, null, 1));
-  fs.writeFileSync(path.join(ROOT, "app", "cache-data.js"), "window.CACHE_DATA = " + JSON.stringify(out) + ";\n");
+  const out = { created_at: new Date().toISOString(), outputs: book.outputs, dropped: cache.dropped || book.dropped, run_log: cache.run_log || book.log };
+  fs.writeFileSync(path.join(ROOT, "cache", CASE_ID + ".json"), JSON.stringify(out, null, 1));
   console.log("cache rewritten with", Object.keys(book.outputs).length, "steps");
 })().catch((e) => { console.error("REPAIR ERROR", e); process.exit(1); });
