@@ -1180,7 +1180,31 @@ function renderEval() {
     return "<tr><td>" + esc(t) + "</td><td>" + esc(r.case) + "</td><td>" + r.steps + "/11</td><td>" + r.dropped + "</td><td>" + r.checks_passed + "/" + r.checks_total + "</td><td>" + esc((r.failed_checks || []).join(", ") || "none") + "</td></tr>";
   }).join("");
 }
-function renderAll() { renderBoard(); renderClock(); renderJudgments(); renderBrief(); renderRecords(); renderEval(); }
+function renderReddit() {
+  var feed = el("redditFeed");
+  if (!feed) return;
+  var current = MB.CASES.filter(function (c) { return c.case_id === MB.currentCase(); })[0];
+  var docs = current ? current.documents.filter(function (d) { return d.type === "post" || d.type === "thread"; }) : [];
+  if (!docs.length) {
+    feed.innerHTML = '<p class="reddit-empty">No public posts in this file. The Reddit fills when a case has a public trail — work the Screens case to see it full.</p>';
+    return;
+  }
+  feed.innerHTML = docs.map(function (d) {
+    var h = 0; for (var i = 0; i < d.id.length; i++) h = (h * 31 + d.id.charCodeAt(i)) % 997;
+    var votes = 40 + (h * 7) % 2200;
+    var comments = 3 + h % 180;
+    var sub = d.author.indexOf("r/") === 0 ? d.author : "r/SquadRoomSim";
+    var user = d.author.indexOf("r/") === 0 ? "u/sim_desk" : d.author;
+    return '<article class="reddit-card"><div class="reddit-rail"><span class="rv-up">\u25b2</span><span class="rv-count">' + votes + '</span><span class="rv-dn">\u25bc</span></div>' +
+      '<div class="reddit-main"><div class="reddit-meta"><b>' + esc(sub) + '</b> \u00b7 Posted by ' + esc(user) + ' \u00b7 ' + esc(d.date) + ' \u00b7 <span class="reddit-doc">' + esc(d.id) + ' \u00b7 EVIDENCE</span></div>' +
+      '<h3 class="reddit-title">' + esc(d.title) + '</h3><p class="reddit-body">' + esc(d.text) + '</p>' +
+      '<div class="reddit-actions">' + comments + ' comments \u00b7 Share \u00b7 <button type="button" data-doc-id="' + esc(d.id) + '">Open in the evidence</button></div></div></article>';
+  }).join("");
+  Array.prototype.forEach.call(feed.querySelectorAll("button[data-doc-id]"), function (b) {
+    b.addEventListener("click", function () { showScreen("intake"); openDocument(b.getAttribute("data-doc-id"), b); });
+  });
+}
+function renderAll() { renderBoard(); renderClock(); renderJudgments(); renderBrief(); renderRecords(); renderEval(); renderReddit(); }
 
 function showScreen(name) {
   Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (t) {
@@ -1466,7 +1490,7 @@ function sendChat() {
   }
   if (/^(work|run|start|go)\b/.test(low)) { work(); return; }
   if (asksStatus) { answerQuestion(text); return; }
-  var screens = { board: "board", clock: "clock", judgment: "judgments", brief: "brief", intake: "intake", file: "intake", eval: "eval" };
+  var screens = { board: "board", clock: "clock", judgment: "judgments", brief: "brief", intake: "intake", file: "intake", eval: "eval", reddit: "reddit" };
   var hit = Object.keys(screens).filter(function (k) { return low.indexOf(k) !== -1; })[0];
   var wantsScreen = /^(show|open|take me|go to|pull up|bring up|see)\b/.test(low) || low.split(/\s+/).length <= 3;
   if (hit && wantsScreen) {
