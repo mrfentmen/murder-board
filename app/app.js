@@ -846,7 +846,18 @@ function setChair(id, state, count) {
   d.classList.remove("running", "done", "failed");
   if (state !== "idle") d.classList.add(state);
   if (count != null) d.querySelector(".count").textContent = count + " posted";
-  if (state === "running") setFeedActivity(agentOf(id) + " is reviewing the assigned packet…");
+  if (state === "running") {
+    setFeedActivity(agentOf(id) + " is reviewing the assigned packet\u2026");
+    try {
+      var st = (MB.STEPS || []).filter(function (x) { return x.id === activeStepId; })[0];
+      if (st && st.handoff && typeof book !== "undefined" && book) {
+        var h = st.handoff(book);
+        (h.from || []).forEach(function (f) {
+          if (f !== id) chatBubble(f, "Handing to " + agentOf(id) + " \u00b7 " + chairNameOf(id) + ": " + h.detail + ".", "note", { recipients: [{ chair: id }] });
+        });
+      }
+    } catch (e) {}
+  }
 }
 
 function renderRegistry() {
@@ -1232,8 +1243,6 @@ function setFeedActivity(text) {
     if (!feedTimer) feedTimer = setInterval(function () {
       var st = el("feedActivity");
       if (st) st.textContent = feedBase + " \u00b7 " + fmtClock(Date.now() - feedStart);
-      var rc = el("runClock");
-      if (rc && runStart) rc.textContent = "RUN " + fmtClock(Date.now() - runStart);
       updateProgress();
     }, 1000);
   } else {
@@ -1241,8 +1250,6 @@ function setFeedActivity(text) {
     feedStart = 0;
     runStart = 0;
     if (feedTimer) { clearInterval(feedTimer); feedTimer = null; }
-    var rc2 = el("runClock");
-    if (rc2) rc2.textContent = "";
     status.textContent = text;
   }
 }
@@ -1356,7 +1363,7 @@ async function work() {
     },
     step: function (b) { book = b; renderAll();
       if (b.dropped > 0) { var dc = el("dropChip"); dc.textContent = "Quote check dropped: " + b.dropped; dc.classList.remove("hidden"); } },
-    pause: function () { return new Promise(function (r) { setTimeout(r, 700); }); }
+    pause: function () { if (window.__mbAbort) throw new Error("run stopped by the detective"); return new Promise(function (r) { setTimeout(r, 700); }); }
   };
   var door2 = null;
   var d2name = el("door2Name");
@@ -1501,6 +1508,7 @@ document.addEventListener("DOMContentLoaded", function () {
     t.addEventListener("click", function () { showScreen(t.getAttribute("data-screen")); });
   });
   el("workBtn").addEventListener("click", work);
+  el("stopBtn").addEventListener("click", function () { window.__mbAbort = true; setTimeout(function () { location.reload(); }, 250); });
   el("modalClose").addEventListener("click", closeQuotePanel);
   el("profileClose").addEventListener("click", closeProfile);
   el("profileBackdrop").addEventListener("click", closeProfile);
