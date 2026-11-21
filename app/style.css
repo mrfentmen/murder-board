@@ -362,3 +362,6 @@ th, td { border: 0; border-bottom: 1px solid var(--line); }
   background: var(--red); color: #fff; border: 0; padding: 9px 20px; cursor: pointer;
   border-radius: 3px; font-family: inherit; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;
 }
+.live-dot { color: var(--red); font-weight: bold; letter-spacing: 1px; font-size: 13px; }
+.live-dot.hidden { display: none; }
+#liveKey { max-width: 190px; }
