@@ -487,3 +487,7 @@ th, td { border: 0; border-bottom: 1px solid var(--line); }
 .eval-table { border-collapse: collapse; width: 100%; margin: 8px 0 16px; font-size: 13.5px; }
 .eval-table th, .eval-table td { border: 1px solid #3a372e; padding: 6px 9px; text-align: left; }
 .eval-table th { background: #35322a; color: #e8d9ae; }
+
+.chat-feed .ft{display:none}
+#feedActivity[data-active="true"]{animation:feedpulse 1.6s ease-in-out infinite}
+@keyframes feedpulse{0%,100%{opacity:1}50%{opacity:.4}}
