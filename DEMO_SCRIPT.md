@@ -95,10 +95,9 @@ detective does the detecting." *
   scores are the run's own. The Runner's lines are the quote
   check dropping findings and the rubric correcting scores,
   in the open."
-- "Is this a replay?" — "The runs you see are real runs from
-  today, cached and labeled as replays. The event key dies
-  tomorrow; the same pipeline runs live anywhere a key is
-  present, and the room shows live runs the same way."
+- "Is this a replay?" — "No. The squad makes live model calls for
+  this run. Each room message is composed from that chair's actual
+  output. The page does not load saved outputs or replay chat."
 - "What exists already?" — "Truleo summarizes cases, Conectir
   checks statements. Nobody packages the full judgment, alibi
   ratings, lead scores, and the evidence ledger cross-check,

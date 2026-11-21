@@ -109,11 +109,10 @@ no build step): open it through any static server, copy
 press Work the Case. Model map: `gemini-4-argon` judges for the
 Cross-Examiner and the Lead Detective; `gemini-4-carbon` builds
 the book; `gemini-4-hydrogen` holds the world for the Analyst;
-`gemini-4-neon` works the machines for Digital. Full live runs
-of all four cases are saved as
-the replay cache (`app/cache-data.js`), so the demo survives a
-network failure, and the site now works the selected case from
-its cache on its own when the page opens. The Board screen is a
+`gemini-4-neon` works the machines for Digital. The app runs the
+agents live; it does not load saved agent outputs or replay chats.
+A Gemini API key is required. Archived run data may remain in the
+repository for evaluation, but the page does not load it. The Board screen is a
 corkboard: pinned cards, sticky notes for the gaps, and yarn for
 the threads, red where the file contradicts itself.
 

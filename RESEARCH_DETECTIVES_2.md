@@ -272,8 +272,10 @@ in the house style. None needs a new agent.
 - "Why two cases?" — "One police file, one internet file. Same
   squad, same rules. The internet is where the witnesses are
   now — in public, timestamped, and deletable."
-- "What happens when the key dies tomorrow?" — "Replay mode.
-  Both runs are saved. The demo needs no key."
+- "What happens when the key dies tomorrow?" — "The browser demo
+  needs a working Gemini key for live runs. Archived evaluation
+  outputs remain in the repository, but the app does not replay
+  them."
 
 ## Sources (web, read 2026-11-21)
 - Detective tactics that work: https://explorix.org/detective-tactics-straight-out-of-hollywood-that-actually-work/

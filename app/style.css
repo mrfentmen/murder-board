@@ -487,3 +487,45 @@ th, td { border: 0; border-bottom: 1px solid var(--line); }
 .eval-table { border-collapse: collapse; width: 100%; margin: 8px 0 16px; font-size: 13.5px; }
 .eval-table th, .eval-table td { border: 1px solid #3a372e; padding: 6px 9px; text-align: left; }
 .eval-table th { background: #35322a; color: #e8d9ae; }
+
+/* Judge Mode: seven live app views, enlarged for a projector. */
+.judge-button { background: transparent; color: var(--ink); border: 1px solid var(--amber); border-radius: 3px; padding: 9px 12px; cursor: pointer; font: inherit; }
+.judge-controls[hidden] { display: none !important; }
+.judge-controls { position: fixed; z-index: 1300; inset: 10px 12px auto; display: flex; align-items: center; justify-content: center; gap: 14px; padding: 9px 14px; background: rgba(20,22,26,.96); border: 1px solid var(--amber); box-shadow: 0 4px 20px #0009; font: 14px ui-monospace, Menlo, monospace; }
+.judge-controls strong { color: var(--amber); }
+.judge-controls span { min-width: 220px; text-align: center; }
+.judge-controls button { cursor: pointer; color: var(--ink); background: var(--panel2); border: 1px solid var(--line); padding: 7px 12px; }
+.judge-mode { overflow: hidden; }
+.judge-mode > header, .judge-mode > .models-line, .judge-mode > #squadStrip, .judge-mode > .tabs { display: none !important; }
+.judge-mode .case-folder, .judge-mode .feed-wrap, .judge-mode > main, .judge-mode > #screen-eval { display: none !important; }
+.judge-mode[data-judge-slide="0"] .case-folder { display: block !important; position: fixed; inset: 18vh 8vw auto; margin: 0; }
+.judge-mode[data-judge-slide="0"] .folder-body { min-height: 220px; padding: 34px; }
+.judge-mode[data-judge-slide="0"] .folder-fields { gap: 30px; }
+.judge-mode[data-judge-slide="0"] .folder-fields .ff strong { font-size: 24px; }
+.judge-mode[data-judge-slide="0"] .folder-tab { font-size: 16px; }
+.judge-mode[data-judge-slide="1"] .feed-wrap { display: block !important; position: fixed; inset: 15vh 5vw 6vh; margin: 0; }
+.judge-mode[data-judge-slide="1"] .chat-feed { height: 100%; max-height: 100%; font-size: 18px; }
+.judge-mode[data-judge-slide="2"] > main, .judge-mode[data-judge-slide="3"] > main,
+.judge-mode[data-judge-slide="4"] > main, .judge-mode[data-judge-slide="5"] > main { display: block !important; position: fixed; inset: 64px 2vw 2vh; padding: 0; overflow: auto; }
+.judge-mode[data-judge-slide="2"] #screen-board, .judge-mode[data-judge-slide="3"] #screen-board,
+.judge-mode[data-judge-slide="4"] #screen-judgments, .judge-mode[data-judge-slide="5"] #screen-brief { display: block !important; min-height: 100%; padding: 24px; font-size: 18px; }
+.judge-mode[data-judge-slide="2"] main > .screen:not(#screen-board), .judge-mode[data-judge-slide="3"] main > .screen:not(#screen-board),
+.judge-mode[data-judge-slide="4"] main > .screen:not(#screen-judgments), .judge-mode[data-judge-slide="5"] main > .screen:not(#screen-brief) { display: none !important; }
+.judge-mode[data-judge-slide="6"] > #screen-eval { display: block !important; position: fixed; inset: 64px 2vw 2vh; overflow: auto; padding: 26px; font-size: 17px; }
+.judge-mode[data-judge-slide="6"] #screen-eval h2 { font-size: 34px; }
+.judge-mode .finding, .judge-mode td, .judge-mode th { font-size: 16px; }
+.drop-meta { color: var(--amber); font: 12px ui-monospace, Menlo, monospace; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.drop-reason { color: #f0a9a3; font-weight: bold; }
+.source-link { border: 0; padding: 0; background: none; color: #91b7c8; text-decoration: underline; cursor: pointer; font: inherit; text-align: left; }
+.table-scroll { overflow-x: auto; }
+.reconciliation { min-width: 740px; }
+.reconciliation blockquote { margin: 5px 0; font-style: italic; color: var(--muted); white-space: normal; }
+.reconcile-missing { color: #ff8075; font-weight: bold; }
+@media (max-width: 640px) {
+  .judge-controls { inset: 4px; gap: 6px; padding: 7px; font-size: 11px; }
+  .judge-controls span { min-width: 0; flex: 1; }
+  .judge-mode[data-judge-slide="2"] > main, .judge-mode[data-judge-slide="3"] > main,
+  .judge-mode[data-judge-slide="4"] > main, .judge-mode[data-judge-slide="5"] > main,
+  .judge-mode[data-judge-slide="6"] > #screen-eval { inset: 52px 6px 6px; }
+  .judge-mode[data-judge-slide="0"] .case-folder { inset: 16vh 5vw auto; }
+}

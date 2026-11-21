@@ -18,14 +18,22 @@
   <div class="runbox">
     <input id="liveKey" type="password" placeholder="Live key: paste to run live" size="18" autocomplete="off" title="Runs the squad live against the Gemini API. The key stays in this tab only. It is never saved and never sent anywhere but Google.">
     <span id="liveDot" class="live-dot hidden">● LIVE</span>
-    <label class="cache-toggle"><input type="checkbox" id="cacheToggle"> Replay cached run</label>
     <span id="cacheLabel" class="cache-label"></span>
     <button id="workBtn">Work the Case</button>
+    <button id="judgeBtn" class="judge-button">Judge Mode · P</button>
     <span id="runStatus" class="run-status"></span>
     <span id="runClock" class="run-clock"></span>
     <span id="dropChip" class="drop-chip hidden">Quote check dropped: 0</span>
   </div>
 </header>
+
+<nav id="judgeControls" class="judge-controls" aria-label="Judge Mode controls" hidden>
+  <button id="judgePrev" aria-label="Previous slide">←</button>
+  <strong id="judgeProgress">1 / 7</strong>
+  <span id="judgeSlideTitle">Case folder</span>
+  <button id="judgeNext" aria-label="Next slide">→</button>
+  <button id="judgeExit">Exit · Esc</button>
+</nav>
 
 <div class="models-line"><b>ARGON</b> judges &nbsp;·&nbsp; <b>CARBON</b> builds &nbsp;·&nbsp; <b>HYDROGEN</b> holds the world &nbsp;·&nbsp; <b>NEON</b> works the machines</div>
 <section id="squadStrip" class="squad-strip" aria-label="Squad room"></section>
@@ -113,10 +121,16 @@
   <section id="screen-judgments" class="screen">
     <h2>Judgments</h2>
     <p id="dropCount" class="drop-count"></p>
+    <h3>Dropped findings · source check</h3>
+    <p class="hint">Each rejected claim shows the quote it tried to use, its claimed source, and why the runner rejected it.</p>
+    <div id="droppedFindings"></div>
     <h3>Contradictions</h3>
     <div id="contradictionList"></div>
     <h3>Alibis, for the death window</h3>
     <table class="alibis"><thead><tr><th>Person</th><th>Rating</th><th>Why</th></tr></thead><tbody id="alibiBody"></tbody></table>
+    <h3>Ledger reconciliation</h3>
+    <p class="hint">Counts come from CSI quotes and ledger descriptions. Open either source to check the count.</p>
+    <div class="table-scroll"><table class="reconciliation"><thead><tr><th>Item</th><th>Scene report</th><th>Mentioned</th><th>Ledger</th><th>Difference</th><th>Ledger source</th></tr></thead><tbody id="ledgerRows"></tbody></table></div>
     <h3>Evidence gaps</h3>
     <div id="gapList"></div>
     <h3>Leads</h3>
@@ -175,7 +189,6 @@
 <script src="case-data.js"></script>
 <script src="agents-data.js"></script>
 <script src="records-data.js"></script>
-<script src="cache-data.js"></script>
 <script src="eval-data.js"></script>
 <script src="photos-data.js"></script>
 <script src="app.js"></script>

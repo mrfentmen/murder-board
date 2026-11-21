@@ -68,69 +68,103 @@ function quoteOk(quote, docId) {
 }
 function docKnown(id) { return Object.prototype.hasOwnProperty.call(DOC_BY_ID, id); }
 
+function closestMatch(text, quote) {
+  var source = String(text || ""), words = [], q = [];
+  var re = /[a-z0-9']+/gi, m;
+  while ((m = re.exec(source))) words.push({ word: m[0].toLowerCase(), start: m.index, end: re.lastIndex });
+  re = /[a-z0-9']+/gi;
+  while ((m = re.exec(String(quote || "")))) q.push(m[0].toLowerCase());
+  for (var size = Math.min(6, q.length); size >= 2; size--) {
+    for (var qi = 0; qi <= q.length - size; qi++) {
+      for (var di = 0; di <= words.length - size; di++) {
+        var same = true;
+        for (var k = 0; k < size; k++) if (q[qi + k] !== words[di + k].word) { same = false; break; }
+        if (same) return source.slice(words[di].start, words[di + size - 1].end);
+      }
+    }
+  }
+  return "no match";
+}
+function rejectFinding(drop, claim, quote, docId) {
+  var reason = !docKnown(docId) ? "unknown doc id"
+    : !quote ? "no quote provided"
+    : norm(quote).length < 8 ? "quote shorter than 8 chars"
+    : "quote not in cited document";
+  drop.n++;
+  drop.items.push({ step: drop.step, claim: String(claim || "Unlabeled finding"), quote: String(quote || ""),
+    doc_id: String(docId || "(missing)"), reason: reason,
+    closest: closestMatch(docKnown(docId) ? DOC_BY_ID[docId].text : "", quote) });
+}
+
 // Each validator returns the output with bad findings removed and
 // counts the drops. A finding whose quote is not in its document
 // never reaches the book.
 var VALIDATORS = {
   custody: function (o, drop) {
     o.documents = (o.documents || []).filter(function (d) {
-      if (!docKnown(d.doc_id)) { drop.n++; return false; } return true;
+      if (!docKnown(d.doc_id)) { rejectFinding(drop, d.custody_note || d.title || d.doc_id, "", d.doc_id); return false; } return true;
     });
     return o;
   },
   records: function (o) { return o; },
   coroner: function (o, drop) {
     if (o.death_window && o.death_window.quote && !quoteOk(o.death_window.quote, o.death_window.doc_id)) {
-      drop.n++; o.death_window.quote = "";
+      rejectFinding(drop, "Death window: " + (o.death_window.start || "") + " to " + (o.death_window.end || ""), o.death_window.quote, o.death_window.doc_id);
+      o.death_window.quote = "";
     }
     o.medical_facts = (o.medical_facts || []).filter(function (f) {
-      if (!quoteOk(f.quote, f.doc_id)) { drop.n++; return false; } return true;
+      if (!quoteOk(f.quote, f.doc_id)) { rejectFinding(drop, f.fact, f.quote, f.doc_id); return false; } return true;
     });
     o.medical_flags = (o.medical_flags || []).filter(function (f) {
-      if (!quoteOk(f.claim_quote, f.claim_doc) || !quoteOk(f.finding_quote, f.finding_doc)) { drop.n++; return false; } return true;
+      if (!quoteOk(f.claim_quote, f.claim_doc)) { rejectFinding(drop, f.note, f.claim_quote, f.claim_doc); return false; }
+      if (!quoteOk(f.finding_quote, f.finding_doc)) { rejectFinding(drop, f.note, f.finding_quote, f.finding_doc); return false; } return true;
     });
     return o;
   },
   csi: function (o, drop) {
     o.ledger = (o.ledger || []).filter(function (it) {
-      if (it.quote && !quoteOk(it.quote, it.doc_id)) { drop.n++; return false; } return true;
+      if (it.quote && !quoteOk(it.quote, it.doc_id)) { rejectFinding(drop, it.description, it.quote, it.doc_id); return false; } return true;
     });
     o.gaps = (o.gaps || []).filter(function (g) {
-      if (g.quote && !quoteOk(g.quote, g.doc_id)) { drop.n++; return false; } return true;
+      if (g.quote && !quoteOk(g.quote, g.doc_id)) { rejectFinding(drop, g.item + ": " + (g.problem || ""), g.quote, g.doc_id); return false; } return true;
     });
     return o;
   },
   intake: function (o, drop) {
     o.claims = (o.claims || []).filter(function (c) {
-      if (!quoteOk(c.quote, c.doc_id)) { drop.n++; return false; } return true;
+      if (!quoteOk(c.quote, c.doc_id)) { rejectFinding(drop, c.claim, c.quote, c.doc_id); return false; } return true;
     });
     o.events = (o.events || []).filter(function (e) {
-      if (!quoteOk(e.quote, e.doc_id)) { drop.n++; return false; } return true;
+      if (!quoteOk(e.quote, e.doc_id)) { rejectFinding(drop, e.what, e.quote, e.doc_id); return false; } return true;
     });
     return o;
   },
   analyst: function (o, drop) {
     o.collisions = (o.collisions || []).filter(function (c) {
       var ok = (c.quotes || []).every(function (q) { return quoteOk(q.quote, q.doc_id); });
-      if (!ok) { drop.n++; return false; } return true;
+      if (!ok) {
+        var bad = (c.quotes || []).filter(function (q) { return !quoteOk(q.quote, q.doc_id); })[0] || {};
+        rejectFinding(drop, c.explanation || c.who_or_what, bad.quote, bad.doc_id); return false;
+      } return true;
     });
     return o;
   },
   digital: function (o, drop) {
     ["machine_events", "record_checks", "camera_gaps"].forEach(function (k) {
       o[k] = (o[k] || []).filter(function (it) {
-        if (!quoteOk(it.quote, it.doc_id)) { drop.n++; return false; } return true;
+        if (!quoteOk(it.quote, it.doc_id)) { rejectFinding(drop, it.what || it.proves || it.camera, it.quote, it.doc_id); return false; } return true;
       });
     });
     return o;
   },
   cross_examiner: function (o, drop) {
     o.contradictions = (o.contradictions || []).filter(function (c) {
-      if (!quoteOk(c.a_quote, c.a_doc) || !quoteOk(c.b_quote, c.b_doc)) { drop.n++; return false; } return true;
+      if (!quoteOk(c.a_quote, c.a_doc)) { rejectFinding(drop, c.kind, c.a_quote, c.a_doc); return false; }
+      if (!quoteOk(c.b_quote, c.b_doc)) { rejectFinding(drop, c.kind, c.b_quote, c.b_doc); return false; } return true;
     });
     (o.alibis || []).forEach(function (a) {
       a.reasons = (a.reasons || []).filter(function (r) {
-        if (!quoteOk(r.quote, r.doc_id)) { drop.n++; return false; } return true;
+        if (!quoteOk(r.quote, r.doc_id)) { rejectFinding(drop, a.person + " alibi reason", r.quote, r.doc_id); return false; } return true;
       });
     });
     return o;
@@ -138,11 +172,12 @@ var VALIDATORS = {
   interviewer: function (o, drop) {
     (o.histories || []).forEach(function (h) {
       h.changes = (h.changes || []).filter(function (c) {
-        if (!quoteOk(c.earlier_quote, c.earlier_doc) || !quoteOk(c.later_quote, c.later_doc)) { drop.n++; return false; } return true;
+        if (!quoteOk(c.earlier_quote, c.earlier_doc)) { rejectFinding(drop, h.person + ": " + c.topic, c.earlier_quote, c.earlier_doc); return false; }
+        if (!quoteOk(c.later_quote, c.later_doc)) { rejectFinding(drop, h.person + ": " + c.topic, c.later_quote, c.later_doc); return false; } return true;
       });
     });
     o.next_questions = (o.next_questions || []).filter(function (q) {
-      if (!quoteOk(q.anchored_quote, q.doc_id)) { drop.n++; return false; } return true;
+      if (!quoteOk(q.anchored_quote, q.doc_id)) { rejectFinding(drop, q.person + ": " + q.question, q.anchored_quote, q.doc_id); return false; } return true;
     });
     return o;
   },
@@ -177,7 +212,7 @@ function newBook() {
     contradictions: [], alibis: [], ce_gaps: [], histories: [],
     next_questions: [], sufficiency: [], vetoes: [], corroboration_needed: [],
     leads: [], gaps: [], brief: "",
-    dropped: 0, log: [], outputs: {}, failed_steps: []
+    dropped: 0, dropped_findings: [], log: [], outputs: {}, failed_steps: []
   };
 }
 
@@ -355,23 +390,17 @@ function chairName(id) {
   var c = CHAIRS.filter(function (x) { return x.id === id; })[0];
   return c ? c.name : id;
 }
-async function runStep(step, book, hooks, cachedOutputs) {
+async function runStep(step, book, hooks) {
   hooks.chair(step.chair, "running", null);
   var ev = hooks.event || function () {};
   try {
     var output;
     if (step.id === "records" && book.door2 && book.door2.name && findFixture(book.door2.name)) {
-      // The census is a pull, not a judgment: when the Door 2 name
-      // matches a bundled fixture, the sim answers from the fixture
-      // — ahead of both the cache and the model.
+      // Fictional case names use bundled fixtures instead of an outside lookup.
       ev(chairName(step.chair), step.id + ": census answered from the bundled fixture (a pull, not a judgment)");
       output = buildRecordsFromFixture(findFixture(book.door2.name));
       var ferrs = schemaErrors(step, output);
       if (ferrs.length) throw new Error("fixture schema: " + ferrs.join("; "));
-      if (hooks.delay) await hooks.delay();
-    } else if (cachedOutputs && cachedOutputs[step.id]) {
-      ev(chairName(step.chair), step.id + ": replaying the cached run");
-      output = cachedOutputs[step.id];
       if (hooks.delay) await hooks.delay();
     } else {
       var model = modelNameFor(step);
@@ -400,10 +429,14 @@ async function runStep(step, book, hooks, cachedOutputs) {
       }
       if (!output) throw new Error("validation: " + lastErr);
     }
-    var drop = { n: 0 };
+    var drop = { n: 0, items: [], step: step.id };
     var validator = VALIDATORS[step.id];
     if (validator) output = validator(output, drop, book.log);
     book.dropped += drop.n;
+    drop.items.forEach(function (item) {
+      item.chair = chairName(step.chair);
+      book.dropped_findings.push(item);
+    });
     if (drop.n) book.log.push(step.id + ": " + drop.n + " finding(s) dropped by the quote check");
     step.apply(book, output);
     book.outputs[step.id] = output;
@@ -418,7 +451,7 @@ async function runStep(step, book, hooks, cachedOutputs) {
   }
 }
 
-async function runAll(hooks, cachedOutputs, opts) {
+async function runAll(hooks, opts) {
   var book = newBook();
   if (opts && opts.door2) book.door2 = opts.door2;
   hooks = hooks || {};
@@ -428,7 +461,7 @@ async function runAll(hooks, cachedOutputs, opts) {
   hooks.step = hooks.step || function () {};
   for (var i = 0; i < STEPS.length; i++) {
     hooks.status("Working: " + STEPS[i].id.replace(/_/g, " "));
-    await runStep(STEPS[i], book, hooks, cachedOutputs);
+    await runStep(STEPS[i], book, hooks);
     hooks.step(book);
   }
   hooks.status(book.failed_steps.length ? "Done, with failed steps: " + book.failed_steps.join("; ") : "Done" + (book.dropped ? " — quote check dropped " + book.dropped + " finding(s)" : ""));
@@ -496,10 +529,20 @@ function renderRegistry() {
   }).join("");
   Array.prototype.forEach.call(document.querySelectorAll("#registryBody tr"), function (tr) {
     tr.addEventListener("click", function () {
-      var d = MB.docById(tr.getAttribute("data-doc"));
-      el("docViewer").textContent = d ? d.text : "";
+      openDocument(tr.getAttribute("data-doc"));
     });
   });
+}
+function openDocument(id) {
+  var d = MB.docById(id);
+  if (!d) return;
+  if (document.body.classList.contains("judge-mode")) exitJudgeMode();
+  showScreen("intake");
+  el("docViewer").textContent = d.text;
+  Array.prototype.forEach.call(document.querySelectorAll("#registryBody tr"), function (tr) {
+    if (tr.getAttribute("data-doc") === id) tr.scrollIntoView({ block: "nearest" });
+  });
+  el("docViewer").scrollIntoView({ block: "nearest" });
 }
 
 function tiltFor(seed) {
@@ -678,8 +721,15 @@ function renderClock() {
 
 function renderJudgments() {
   el("dropCount").textContent = book.dropped
-    ? book.dropped + " finding(s) dropped by validation: no quote in the file. They never reached the board."
+    ? book.dropped + " finding(s) rejected by the source check. They never reached the board."
     : "Validation dropped 0 findings on this run.";
+  el("droppedFindings").innerHTML = (book.dropped_findings || []).map(function (d) {
+    return '<article class="finding red dropped-finding"><div class="drop-meta">' + esc(d.chair) + ' · ' + esc(d.step.replace(/_/g, " ")) + '</div>' +
+      '<strong>' + esc(d.claim) + '</strong>' +
+      (d.quote ? '<blockquote>&ldquo;' + esc(d.quote) + '&rdquo;</blockquote>' : '<p class="hint">No quote supplied.</p>') +
+      '<p>Claimed source: <button class="source-link" data-doc-id="' + esc(d.doc_id) + '">' + esc(d.doc_id) + (MB.docById(d.doc_id) ? " · " + esc(docTitle(d.doc_id)) : " · unknown document") + '</button></p>' +
+      '<p class="drop-reason">Rejected: ' + esc(d.reason) + '</p><p class="hint">Closest match: <q>' + esc(d.closest) + '</q></p></article>';
+  }).join("") || '<p class="hint">No findings were rejected in this run.</p>';
   el("contradictionList").innerHTML = book.contradictions.map(function (c) {
     return '<div class="finding red"><span class="sev sev-' + esc(c.severity) + '">' + esc(c.severity) + '</span> <strong>' + esc(c.kind) + '</strong>' +
       '<blockquote>&ldquo;' + esc(c.a_quote) + '&rdquo;</blockquote><cite>' + esc(docTitle(c.a_doc)) + '</cite>' +
@@ -696,6 +746,32 @@ function renderJudgments() {
   el("gapList").innerHTML = gaps.map(function (g) {
     return '<div class="finding"><strong>' + esc(g.item) + "</strong><p>" + esc(g.problem) + "</p></div>";
   }).join("");
+  function itemWords(s) {
+    return norm(s).replace(/[^a-z0-9 ]/g, " ").split(/\s+/).map(function (w) { return w.replace(/s$/, ""); })
+      .filter(function (w) { return w.length > 3 && ["missing", "evidence", "item", "ledger", "scene", "report"].indexOf(w) < 0; });
+  }
+  function quantity(s) {
+    var m = String(s || "").match(/\b(one|two|three|four|five|six|seven|eight|nine|ten|\d+)\b/i);
+    var n = m && /^(\d+)$/.test(m[1]) ? +m[1] : m ? ({ one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 })[m[1].toLowerCase()] : null;
+    return n;
+  }
+  var ledgerRows = book.csi_gaps.map(function (g) {
+    var tokens = itemWords(g.item);
+    var found = (book.ledger || []).filter(function (it) {
+      var desc = itemWords(it.description);
+      return tokens.length && tokens.every(function (t) { return desc.indexOf(t) >= 0; });
+    })[0];
+    var mentionedCount = quantity(g.quote) || quantity(g.problem);
+    var loggedCount = found && quantity(found.description);
+    var delta = mentionedCount != null && loggedCount != null ? mentionedCount - loggedCount : null;
+    var state = delta != null ? (delta === 0 ? "Counts match" : (delta > 0 ? delta + " missing" : Math.abs(delta) + " extra logged")) : found ? "Compare record" : "Not listed in ledger";
+    var sceneRef = g.doc_id ? '<button class="source-link" data-doc-id="' + esc(g.doc_id) + '">' + esc(g.doc_id) + ' · ' + esc(docTitle(g.doc_id)) + '</button>' : "No source attached";
+    var ledgerRef = found && found.doc_id ? '<button class="source-link" data-doc-id="' + esc(found.doc_id) + '">' + esc(found.doc_id) + ' · ' + esc(docTitle(found.doc_id)) + '</button>' : "Evidence ledger";
+    return '<tr><td>' + esc(g.item) + '</td><td>' + sceneRef + (g.quote ? '<blockquote>' + esc(g.quote) + '</blockquote>' : "") +
+      '</td><td>' + (mentionedCount == null ? "—" : mentionedCount) + '</td><td>' + (found ? esc(loggedCount == null ? found.description : loggedCount) : "Not listed") +
+      '</td><td class="' + (delta > 0 ? "reconcile-missing" : "") + '">' + esc(state) + '</td><td>' + ledgerRef + '</td></tr>';
+  });
+  el("ledgerRows").innerHTML = ledgerRows.join("") || '<tr><td colspan="6">No CSI reconciliation findings yet.</td></tr>';
   el("leadList").innerHTML = book.leads.map(function (l) {
     return '<div class="finding"><span class="score">' + l.score + "</span> <strong>" + esc(l.action) + '</strong><p class="arith">' + esc(l.arithmetic) + "</p><p>" + esc(l.reason) + "</p></div>";
   }).join("");
@@ -790,13 +866,59 @@ function showScreen(name) {
   if (name === "board") scheduleYarn();
 }
 
-function cacheForCurrentCase() {
-  return (window.CACHE_BY_CASE || {})[MB.currentCase()] || null;
+var judgeSlides = ["Case folder", "Squad room · first 20 seconds", "The board", "Star contradiction", "Judgments", "The brief", "Evaluation"];
+var judgePreviousScreen = "intake";
+function startJudgeMode() {
+  var active = document.querySelector(".tab.active");
+  judgePreviousScreen = active ? active.getAttribute("data-screen") : "intake";
+  document.body.classList.add("judge-mode");
+  el("judgeControls").hidden = false;
+  setJudgeSlide(0);
 }
-function updateCacheAvailability() {
-  var c = cacheForCurrentCase();
-  el("cacheToggle").disabled = !c;
-  el("cacheLabel").textContent = c ? "" : "no cached run saved for this case yet";
+function setJudgeSlide(index) {
+  judgeSlide = Math.max(0, Math.min(judgeSlides.length - 1, index));
+  document.body.setAttribute("data-judge-slide", judgeSlide);
+  el("judgeProgress").textContent = (judgeSlide + 1) + " / " + judgeSlides.length;
+  el("judgeSlideTitle").textContent = judgeSlides[judgeSlide];
+  el("quoteModal").classList.add("hidden");
+  if (judgeSlide === 2 || judgeSlide === 3) showScreen("board");
+  else if (judgeSlide === 4) showScreen("judgments");
+  else if (judgeSlide === 5) showScreen("brief");
+  else if (judgeSlide === 6) showScreen("eval");
+  if (judgeSlide === 3 && book.contradictions.length) {
+    var order = { high: 0, medium: 1, low: 2 };
+    var idx = book.contradictions.map(function (c, i) { return { c: c, i: i }; })
+      .sort(function (a, b) {
+        var av = order[String(a.c.severity).toLowerCase()], bv = order[String(b.c.severity).toLowerCase()];
+        return (av == null ? 3 : av) - (bv == null ? 3 : bv);
+      })[0].i;
+    openThread("contra", idx);
+  } else if (judgeSlide === 3) {
+    el("modalTitle").textContent = "No validated contradiction available";
+    el("quoteA").textContent = book.failed_steps.length
+      ? "The run is partial. " + book.failed_steps.join("; ")
+      : "This run has not produced a quote-checked contradiction.";
+    el("quoteACite").textContent = "Live run status";
+    el("quoteB").textContent = "No contradiction is being filled in for the presentation.";
+    el("quoteBCite").textContent = "Runner receipt";
+    el("modalAlt").textContent = "Only findings returned by the agents and accepted by the source check appear here.";
+    el("quoteModal").classList.remove("hidden");
+  }
+  if (judgeSlide === 1) {
+    Array.prototype.forEach.call(el("liveFeed").querySelectorAll(".chat-line"), function (line) {
+      line.hidden = line.hasAttribute("data-run-seconds") && +line.getAttribute("data-run-seconds") > 20;
+    });
+  } else {
+    Array.prototype.forEach.call(el("liveFeed").querySelectorAll(".chat-line"), function (line) { line.hidden = false; });
+  }
+}
+function moveJudge(delta) { setJudgeSlide(judgeSlide + delta); }
+function exitJudgeMode() {
+  document.body.classList.remove("judge-mode");
+  document.body.removeAttribute("data-judge-slide");
+  el("judgeControls").hidden = true;
+  el("quoteModal").classList.add("hidden");
+  showScreen(judgePreviousScreen);
 }
 
 var AGENT_NAMES = {
@@ -817,13 +939,14 @@ function modelOfChair(chairId) {
 var pendingReport = null;
 function trunc(t, n) { t = String(t == null ? "" : t); return t.length > n ? t.slice(0, n - 1) + "\u2026" : t; }
 
-var feedLogSeen = 0;
+var feedLogSeen = 0, judgeRunStartedAt = 0, judgeSlide = 0;
 function chatBubble(chairId, text, kind) {
   var box = el("liveFeed");
   if (!box) return;
   var idle = box.querySelector(".feed-idle");
   if (idle) idle.remove();
   var d = document.createElement("div");
+  if (judgeRunStartedAt) d.setAttribute("data-run-seconds", Math.floor((Date.now() - judgeRunStartedAt) / 1000));
   var t = new Date().toLocaleTimeString([], { hour12: false });
   if (kind === "system" || kind === "runner") {
     d.className = "chat-line " + kind;
@@ -850,8 +973,6 @@ function feedLine(chair, text) {
   var m;
   if ((m = String(text).match(/^(\S+): (gemini-\S+) took the file$/))) {
     /* filler line dropped: the report below says it */
-  } else if (/: replaying the cached run$/.test(text)) {
-    /* filler line dropped: the cache label in the header says it */
   } else if ((m = String(text).match(/^(\S+): posted (\d+) finding/))) {
     pendingReport = { stepId: m[1], chairId: cid, count: parseInt(m[2], 10) };
   } else if ((m = String(text).match(/^(\S+): FAILED, (.*)$/))) {
@@ -927,11 +1048,11 @@ var HANDOFFS = {
 };
 
 async function work() {
-  var cached = cacheForCurrentCase();
-  var useCache = el("cacheToggle").checked && cached;
   el("workBtn").disabled = true;
   MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
+  el("liveFeed").innerHTML = "";
   feedLogSeen = 0;
+  judgeRunStartedAt = Date.now();
   chatBubble(null, "Run opened: " + caseShortTitle(MB.currentCase()) + ". Ten chairs, four models.", "system");
   var runT0 = Date.now();
   var runTimer = setInterval(function () {
@@ -953,27 +1074,17 @@ async function work() {
   if (d2name && d2name.value.trim()) {
     door2 = { name: d2name.value.trim(), dob: el("door2Dob").value.trim(), state: el("door2State").value.trim() };
   }
-  if (useCache) {
-    var cd = cached.created_at ? new Date(cached.created_at) : null;
-    var when = cd ? (cd.toDateString() === new Date().toDateString() ? "today, " + cd.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : cd.toLocaleDateString() + ", " + cd.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })) : "this morning";
-    el("cacheLabel").textContent = "Ran " + when + " (saved run)";
-    book = await MB.runAll(hooks, cached.outputs, { door2: door2 });
-    if (cached.dropped) { book.dropped = cached.dropped; var dc2 = el("dropChip"); dc2.textContent = "Quote check dropped: " + book.dropped; dc2.classList.remove("hidden"); }
-    if (book.dropped) {
-      feedLine("Runner", "this replay carries the original run's quote check: " + book.dropped + " finding(s) were dropped for having no quote in the file");
-      if (!book.failed_steps.length) el("runStatus").textContent = "Done — quote check dropped " + book.dropped + " finding(s)";
-    }
-  } else {
-    el("cacheLabel").textContent = "";
-    if (!(window.MB_CONFIG && window.MB_CONFIG.apiKey)) {
-      el("runStatus").textContent = "No API key in config.js. Copy config.example.js to config.js and add the key.";
-      el("workBtn").disabled = false;
-      return;
-    }
-    book = await MB.runAll(hooks, null, { door2: door2 });
-    el("cacheLabel").textContent = "Ran today, " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + " (live)";
+  if (!(window.MB_CONFIG && window.MB_CONFIG.apiKey)) {
+    el("runStatus").textContent = "Add a Gemini API key to run the squad live.";
+    clearInterval(runTimer);
+    judgeRunStartedAt = 0;
+    el("workBtn").disabled = false;
+    return;
   }
+  book = await MB.runAll(hooks, { door2: door2 });
+  el("cacheLabel").textContent = "LIVE · " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
   clearInterval(runTimer);
+  judgeRunStartedAt = 0;
   renderAll();
   el("workBtn").disabled = false;
 }
@@ -995,7 +1106,6 @@ function sendChat() {
     sel.value = caseHit;
     sel.dispatchEvent(new Event("change"));
     if (!/work|run|start|go\b/.test(low)) return;
-    if (cacheForCurrentCase()) return;
     work();
     return;
   }
@@ -1029,9 +1139,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var v = lk.value.trim();
     if (v) {
       window.MB_CONFIG = { reasoningModel: "gemini-4-argon", fastModel: "gemini-4-carbon", worldModel: "gemini-4-hydrogen", fieldModel: "gemini-4-neon", apiKey: v };
-      el("cacheToggle").checked = false;
       el("liveDot").classList.remove("hidden");
-      el("cacheLabel").textContent = "live mode: the next run makes real calls";
+      el("cacheLabel").textContent = "LIVE · key stays in this tab";
     } else {
       window.MB_CONFIG = undefined;
       el("liveDot").classList.add("hidden");
@@ -1055,11 +1164,10 @@ document.addEventListener("DOMContentLoaded", function () {
     book = MB.newBook();
     MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
     el("docViewer").textContent = "";
+    el("liveFeed").innerHTML = '<div class="feed-line feed-idle">Selected ' + esc(caseShortTitle(sel.value)) + '. Start a live run to fill the room.</div>';
     renderCaseFolder();
     renderRegistry();
     renderAll();
-    updateCacheAvailability();
-    if (cacheForCurrentCase()) { el("cacheToggle").checked = true; work(); }
   });
   renderRegistry();
   renderCaseFolder();
@@ -1071,7 +1179,22 @@ document.addEventListener("DOMContentLoaded", function () {
   el("printBtn").addEventListener("click", function () { window.print(); });
   el("vetoToggle").addEventListener("change", renderBrief);
   window.addEventListener("resize", function () { scheduleYarn(); });
-  updateCacheAvailability();
-  if (cacheForCurrentCase()) { el("cacheToggle").checked = true; work(); }
+  el("judgeBtn").addEventListener("click", startJudgeMode);
+  el("judgePrev").addEventListener("click", function () { moveJudge(-1); });
+  el("judgeNext").addEventListener("click", function () { moveJudge(1); });
+  el("judgeExit").addEventListener("click", exitJudgeMode);
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest && e.target.closest(".source-link");
+    if (link) openDocument(link.getAttribute("data-doc-id"));
+  });
+  document.addEventListener("keydown", function (e) {
+    if (document.body.classList.contains("judge-mode")) {
+      if (e.key === "ArrowRight") { e.preventDefault(); moveJudge(1); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); moveJudge(-1); }
+      else if (e.key === "Escape") exitJudgeMode();
+      return;
+    }
+    if (e.key.toLowerCase() === "p" && !e.metaKey && !e.ctrlKey && !e.altKey && !/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) startJudgeMode();
+  });
 });
 })();

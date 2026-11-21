@@ -6,9 +6,10 @@ file and judge it, contradictions, alibis, gaps, ranked leads,
 without inventing a single quote.
 
 Written 2026-11-21, Gemini 4 NYC. All runs below are real runs
-from today, on the event key. The squad runs are saved in
-`cache/` and replay from the site. The baseline runs are saved
-in this file's numbers, quoted from the raw outputs.
+from today, on the event key. Archived squad outputs remain in
+`cache/` for evaluation; the browser app does not load or replay
+them. The baseline runs are saved in this file's numbers, quoted
+from the raw outputs.
 
 ## Method
 
@@ -186,7 +187,8 @@ again CONTRADICTED; this time no other defendant was rated
 at all, which is the cleaner read. Hydrogen's Analyst placed
 29 events on the clock and Neon's Digital pulled 12 machine
 records. The brief rebuilt the half hour and closed on the
-standing line. The shipped replay cache is this run.
+standing line. This archived run is retained for evaluation; the
+browser app does not replay it.
 
 What it missed. Ezell Rawls, who died before trial and made
 no claim in the file, was rated UNCORROBORATED; the book
