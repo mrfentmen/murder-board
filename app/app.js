@@ -1205,11 +1205,25 @@ var STEP_ACTIVITY = {
   prosecutor: "stress testing the board for court",
   lead_detective: "ranking the next investigative steps"
 };
+var feedTimer = null, feedBase = "", feedStart = 0;
 function setFeedActivity(text) {
   var status = el("feedActivity");
-  if (status) {
+  if (!status) return;
+  feedBase = text;
+  status.setAttribute("data-active", runInProgress ? "true" : "false");
+  if (runInProgress) {
+    feedStart = Date.now();
     status.textContent = text;
-    status.setAttribute("data-active", runInProgress ? "true" : "false");
+    if (!feedTimer) feedTimer = setInterval(function () {
+      var s = Math.floor((Date.now() - feedStart) / 1000);
+      var label = Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2);
+      var st = el("feedActivity");
+      if (st) st.textContent = feedBase + " \u00b7 " + label;
+    }, 1000);
+  } else {
+    feedStart = 0;
+    if (feedTimer) { clearInterval(feedTimer); feedTimer = null; }
+    status.textContent = text;
   }
 }
 function chatBubble(chairId, text, kind, extra) {
