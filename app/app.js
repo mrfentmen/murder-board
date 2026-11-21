@@ -1259,11 +1259,8 @@ function renderReddit() {
   if (!feed) return;
   var current = MB.CASES.filter(function (c) { return c.case_id === MB.currentCase(); })[0];
   var docs = current ? current.documents.filter(function (d) { return d.type === "post" || d.type === "thread" || d.type === "article"; }) : [];
-  if (!docs.length) {
-    feed.innerHTML = '<p class="reddit-empty">No public posts in this file. The Reddit fills when a case has a public trail — work the Screens case to see it full.</p>';
-    return;
-  }
-  feed.innerHTML = docs.map(function (d) {
+  var pulled = (typeof book !== "undefined" && book && book.records && book.records.starter_items) ? book.records.starter_items : [];
+  var cards = docs.map(function (d) {
     var h = 0; for (var i = 0; i < d.id.length; i++) h = (h * 31 + d.id.charCodeAt(i)) % 997;
     var votes = 40 + (h * 7) % 2200;
     var comments = 3 + h % 180;
@@ -1274,6 +1271,17 @@ function renderReddit() {
       '<h3 class="reddit-title">' + esc(d.title) + '</h3><p class="reddit-body">' + esc(d.text) + '</p>' +
       '<div class="reddit-actions">' + comments + ' comments \u00b7 Share \u00b7 <button type="button" data-doc-id="' + esc(d.id) + '">Open in the evidence</button></div></div></article>';
   }).join("");
+  if (pulled.length) {
+    cards += '<div class="reddit-divider">Pulled by Records from the public trail during this run \u00b7 also filed in the Evidence</div>' + pulled.map(function (it) {
+      return '<article class="reddit-card pulled-card"><div class="reddit-main"><div class="reddit-meta"><b>Public trail</b> \u00b7 ' + esc(it.source_class || "census") + ' \u00b7 <span class="reddit-doc">' + esc(it.label || "UNVERIFIED") + ' \u00b7 PULLED</span></div>' +
+        '<h3 class="reddit-title">' + esc(it.item) + '</h3></div></article>';
+    }).join("");
+  }
+  if (!cards) {
+    feed.innerHTML = '<p class="reddit-empty">No public posts in this file yet. When Records works the public trail during a run, what it pulls lands here and in the Evidence. The Screens case carries a full public trail of its own.</p>';
+    return;
+  }
+  feed.innerHTML = cards;
   Array.prototype.forEach.call(feed.querySelectorAll("button[data-doc-id]"), function (b) {
     b.addEventListener("click", function () { showScreen("intake"); openDocument(b.getAttribute("data-doc-id"), b); });
   });
