@@ -1,0 +1,1255 @@
+{
+ "created_at": "2026-11-21T16:27:50.245Z",
+ "outputs": {
+  "custody": {
+   "documents": [
+    {
+     "doc_id": "doc01",
+     "type": "article",
+     "legible": true,
+     "custody_note": "News article reporting on the fatal shooting of Treyvon Ellis outside a Nostrand Avenue studio, authored by Kings County News, dated October 13, 2025."
+    },
+    {
+     "doc_id": "doc02",
+     "type": "post",
+     "legible": true,
+     "custody_note": "Public precinct post cataloging vouchered property recovered from the Nostrand Avenue shooting scene, authored by NYPD 77th Precinct, dated October 14, 2025."
+    },
+    {
+     "doc_id": "doc03",
+     "type": "post",
+     "legible": true,
+     "custody_note": "Social media post stating presence in the studio all night and a dead phone, authored by Marcus Reed (@mdot), dated October 12, 2025."
+    },
+    {
+     "doc_id": "doc04",
+     "type": "post",
+     "legible": true,
+     "custody_note": "Social media post demanding payment of 14,200 for a feature and video, authored by Marcus Reed (@mdot), dated October 10, 2025."
+    },
+    {
+     "doc_id": "doc05",
+     "type": "thread",
+     "legible": true,
+     "custody_note": "Reddit post collating Sunday night timeline from public posts, authored by u/SouthsideScanner, dated October 14, 2025."
+    },
+    {
+     "doc_id": "doc06",
+     "type": "thread",
+     "legible": true,
+     "custody_note": "Reddit discussion thread regarding a mural location and a deleted social media story, authored by r/BrooklynDrillWatch commenters, dated October 14, 2025."
+    },
+    {
+     "doc_id": "doc07",
+     "type": "transcript",
+     "legible": true,
+     "custody_note": "Podcast interview transcript excerpt regarding communication with Treyvon Ellis, authored by Off the Record BK, dated November 6, 2025."
+    },
+    {
+     "doc_id": "doc08",
+     "type": "post",
+     "legible": true,
+     "custody_note": "Social media comment stating she just spoke on the phone with Trey, authored by Kayla Brooks, dated October 12, 2025."
+    },
+    {
+     "doc_id": "doc09",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Plate camera observation record of a gray sedan on the BQE at Atlantic Avenue, authored by @BQE_Traffic_Watch, dated October 13, 2025."
+    },
+    {
+     "doc_id": "doc10",
+     "type": "post",
+     "legible": true,
+     "custody_note": "Social media post stating Dot was dropped at the studio at 9:00 p.m., authored by Darnell Carter (@dee2real), dated October 13, 2025."
+    },
+    {
+     "doc_id": "doc11",
+     "type": "post",
+     "legible": true,
+     "custody_note": "Social media post from outside a Nostrand Avenue restaurant, authored by Treyvon Ellis (@liltrey), dated October 12, 2025."
+    },
+    {
+     "doc_id": "doc12",
+     "type": "transcript",
+     "legible": true,
+     "custody_note": "Lyric transcript excerpt from 'Midnight Tape (freestyle)', authored by Marcus Reed (@mdot), dated October 5, 2025."
+    }
+   ]
+  },
+  "records": {
+   "subject": "Treyvon Ellis",
+   "starter_items": [
+    {
+     "item": "Vital statistics death record and index entry for Treyvon Ellis",
+     "source_class": "death index",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Published obituary, memorial, and funeral notices for Treyvon Ellis",
+     "source_class": "obituary and funeral notices",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Press reporting and archived articles regarding the shooting outside Nostrand studio",
+     "source_class": "newspaper archives",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Civil and criminal case filings indexed to Treyvon Ellis",
+     "source_class": "court portals",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Federal and state demographic census schedules for household and address history",
+     "source_class": "census schedules",
+     "label": "UNVERIFIED"
+    }
+   ],
+   "request_next": [
+    "Certified death certificate from NYC Department of Health and Mental Hygiene",
+    "Autopsy report and identification file from the Office of Chief Medical Examiner (OCME)",
+    "NYPD 77th Precinct complaint and incident report for October 12\u201313, 2025 Nostrand studio shooting",
+    "New York State Office of Court Administration (OCA) criminal history search for Treyvon Ellis"
+   ]
+  },
+  "coroner": {
+   "cause": "Fatal shooting (per police statement; no autopsy report in file)",
+   "manner": "Unspecified (no medical examiner report in file)",
+   "death_window": {
+    "start": "11:00 p.m., Sunday, October 12, 2025",
+    "end": "midnight, Sunday, October 12, 2025",
+    "quote": "Police said the shooting occurred between 11:00 p.m. and midnight on Sunday, October 12.",
+    "doc_id": "doc01"
+   },
+   "medical_facts": [
+    {
+     "fact": "The victim, Treyvon Ellis, was taken to Kings County Hospital and pronounced dead.",
+     "quote": "Ellis was taken to Kings County Hospital, where he was pronounced dead.",
+     "doc_id": "doc01"
+    },
+    {
+     "fact": "The incident is categorized by police as a fatal shooting of a 19-year-old male.",
+     "quote": "In reference to the fatal shooting of a 19 year old male on Nostrand Avenue on Sunday, October 12, the following property was recovered and vouchered:",
+     "doc_id": "doc02"
+    }
+   ],
+   "medical_flags": []
+  },
+  "csi": {
+   "ledger": [
+    {
+     "item_no": 1,
+     "description": "One (1) spent shell casing, 9mm, recovered sidewalk.",
+     "quote": "1. One (1) spent shell casing, 9mm, recovered sidewalk.",
+     "doc_id": "doc02"
+    },
+    {
+     "item_no": 2,
+     "description": "Victim's mobile telephone, recovered from victim's jacket.",
+     "quote": "2. Victim's mobile telephone, recovered from victim's jacket.",
+     "doc_id": "doc02"
+    },
+    {
+     "item_no": 3,
+     "description": "Victim's jacket.",
+     "quote": "3. Victim's jacket.",
+     "doc_id": "doc02"
+    },
+    {
+     "item_no": 4,
+     "description": "Studio guest pass, paper, recovered sidewalk.",
+     "quote": "4. Studio guest pass, paper, recovered sidewalk.",
+     "doc_id": "doc02"
+    },
+    {
+     "item_no": 5,
+     "description": "One (1) baseball cap, black, recovered near curb.",
+     "quote": "5. One (1) baseball cap, black, recovered near curb.",
+     "doc_id": "doc02"
+    }
+   ],
+   "gaps": [
+    {
+     "item": "Spent shell casings",
+     "mentioned_in": [
+      "doc01",
+      "doc02"
+     ],
+     "problem": "Count discrepancy: doc01 reports residents heard 'several shots', but the ledger in doc02 lists only one (1) spent shell casing recovered from the sidewalk.",
+     "quote": "Residents on the block told reporters they heard several shots.",
+     "doc_id": "doc01"
+    },
+    {
+     "item": "Victim's jacket",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "Ledger item is never mentioned in any other document.",
+     "quote": "3. Victim's jacket.",
+     "doc_id": "doc02"
+    },
+    {
+     "item": "Studio guest pass, paper",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "Ledger item is never mentioned in any other document.",
+     "quote": "4. Studio guest pass, paper, recovered sidewalk.",
+     "doc_id": "doc02"
+    },
+    {
+     "item": "One (1) baseball cap, black",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "Ledger item is never mentioned in any other document.",
+     "quote": "5. One (1) baseball cap, black, recovered near curb.",
+     "doc_id": "doc02"
+    }
+   ]
+  },
+  "intake": {
+   "persons": [
+    {
+     "name": "Treyvon Ellis",
+     "aliases": [
+      "Lil Trey",
+      "Trey"
+     ],
+     "role": "Victim / recording artist"
+    },
+    {
+     "name": "Marcus Reed",
+     "aliases": [
+      "M-Dot",
+      "Dot",
+      "@mdot"
+     ],
+     "role": "Recording artist"
+    },
+    {
+     "name": "Darnell Carter",
+     "aliases": [
+      "Dee",
+      "@dee2real"
+     ],
+     "role": "Associate of Marcus Reed"
+    },
+    {
+     "name": "Kayla Brooks",
+     "aliases": [],
+     "role": "Girlfriend and merchandise manager for Treyvon Ellis"
+    },
+    {
+     "name": "u/SouthsideScanner",
+     "aliases": [],
+     "role": "Reddit poster / collation author"
+    },
+    {
+     "name": "u/BedStuyBorn",
+     "aliases": [],
+     "role": "Reddit commenter"
+    },
+    {
+     "name": "u/CrownHeightsNative",
+     "aliases": [],
+     "role": "Reddit commenter"
+    },
+    {
+     "name": "u/ScannerMod",
+     "aliases": [],
+     "role": "Reddit moderator"
+    }
+   ],
+   "claims": [
+    {
+     "person": "Residents on the block",
+     "claim": "Heard several shots fired on the block.",
+     "quote": "Residents on the block told reporters they heard several shots.",
+     "doc_id": "doc01",
+     "kind": "observation"
+    },
+    {
+     "person": "One resident",
+     "claim": "A gray sedan departed the block at high speed shortly after gunfire.",
+     "quote": "One resident said a gray sedan left the block at speed shortly after the shots.",
+     "doc_id": "doc01",
+     "kind": "observation"
+    },
+    {
+     "person": "Police",
+     "claim": "The shooting occurred between 11:00 p.m. and midnight on Sunday, October 12.",
+     "quote": "Police said the shooting occurred between 11:00 p.m. and midnight on Sunday, October 12.",
+     "doc_id": "doc01",
+     "kind": "action"
+    },
+    {
+     "person": "Marcus Reed",
+     "claim": "Remained in the studio all night, did not go outside, and his phone was dead for half the night.",
+     "quote": "been in the studio all night, ain't been outside, stop asking me about nothing. my phone was dead half the night anyway. new tape friday, that's all I know.",
+     "doc_id": "doc03",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Marcus Reed",
+     "claim": "An unnamed person owes him 14,200 for a feature and video, due by November.",
+     "quote": "he still owe me 14,200 for that feature and the video. I want my money by November or it's up. I don't do payment plans for opps.",
+     "doc_id": "doc04",
+     "kind": "relationship"
+    },
+    {
+     "person": "u/SouthsideScanner",
+     "claim": "Dot was live streaming from inside a car with a mural in Queens visible behind the window at 10:15 p.m.",
+     "quote": "Dot goes live for about four minutes. He is in a car, not a studio. There is a big mural behind the car window. That mural is in Queens, I am fairly sure.",
+     "doc_id": "doc05",
+     "kind": "observation"
+    },
+    {
+     "person": "u/SouthsideScanner",
+     "claim": "Dot's car displayed in an October 3 post carries a license plate ending in 417.",
+     "quote": "Dot's car from his October 3 post ends in 417.",
+     "doc_id": "doc05",
+     "kind": "object"
+    },
+    {
+     "person": "u/BedStuyBorn",
+     "claim": "The mural seen in the live stream is located on Nostrand Avenue by the laundromat, two blocks from the studio.",
+     "quote": "that mural ain't Queens, that's the wall on Nostrand by the laundromat, two blocks from the studio. I walk past it every day.",
+     "doc_id": "doc06",
+     "kind": "observation"
+    },
+    {
+     "person": "u/CrownHeightsNative",
+     "claim": "In the deleted story, Dot was inside a car and a GPS voice announced Nostrand Avenue.",
+     "quote": "I saw the story before it got deleted. He was in a car in the story, you could hear the GPS voice say Nostrand Ave. That's what I remember.",
+     "doc_id": "doc06",
+     "kind": "observation"
+    },
+    {
+     "person": "Kayla Brooks",
+     "claim": "Had not spoken to Treyvon Ellis since Friday and was not on the phone with him on Sunday.",
+     "quote": "I hadn't talked to Trey since Friday. We was barely speaking that whole weekend. People keep saying I was on the phone with him Sunday and I keep telling them no.",
+     "doc_id": "doc07",
+     "kind": "relationship"
+    },
+    {
+     "person": "Kayla Brooks",
+     "claim": "Was at home on Sunday and learned of the incident through Instagram.",
+     "quote": "I was home. I found out from Instagram like everybody else.",
+     "doc_id": "doc07",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Kayla Brooks",
+     "claim": "Spoke with Trey on the phone on Sunday afternoon.",
+     "quote": "just got off the phone with Trey, he good, see y'all at the show Friday",
+     "doc_id": "doc08",
+     "kind": "action"
+    },
+    {
+     "person": "@BQE_Traffic_Watch",
+     "claim": "The gray sedan captured on plate camera has a rear plate ending in 417, matching the plate ending seen in M-Dot's October 3 post.",
+     "quote": "Same plate ending visible in the October 3 car post by @mdot. Still attached.",
+     "doc_id": "doc09",
+     "kind": "object"
+    },
+    {
+     "person": "Darnell Carter",
+     "claim": "Dropped Marcus Reed at the studio at 9:00 p.m., returned home, and received no further calls.",
+     "quote": "I dropped Dot at the studio at 9 and went home. I ain't get no calls after that, my phone log clean. Don't put me in nothing.",
+     "doc_id": "doc10",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Treyvon Ellis",
+     "claim": "Making a final stop before remaining in the recording booth until midnight.",
+     "quote": "last stop then the booth till midnight",
+     "doc_id": "doc11",
+     "kind": "whereabouts"
+    }
+   ],
+   "events": [
+    {
+     "what": "Fatal shooting of Treyvon Ellis",
+     "when_text": "between 11:00 p.m. and midnight on Sunday, October 12",
+     "when_window": "2025-10-12T23:00/2025-10-13T00:00",
+     "where": "outside 1140 Nostrand Avenue",
+     "who": [
+      "Treyvon Ellis"
+     ],
+     "quote": "Police said the shooting occurred between 11:00 p.m. and midnight on Sunday, October 12.",
+     "doc_id": "doc01"
+    },
+    {
+     "what": "Gray sedan departs the block at speed",
+     "when_text": "shortly after the shots",
+     "when_window": "2025-10-12T23:00/2025-10-13T00:00",
+     "where": "the block of 1140 Nostrand Avenue",
+     "who": [],
+     "quote": "One resident said a gray sedan left the block at speed shortly after the shots.",
+     "doc_id": "doc01"
+    },
+    {
+     "what": "Treyvon Ellis pronounced dead",
+     "when_text": "shortly after residents reported gunfire",
+     "when_window": "2025-10-12T23:00/2025-10-13T01:00",
+     "where": "Kings County Hospital",
+     "who": [
+      "Treyvon Ellis"
+     ],
+     "quote": "Ellis was taken to Kings County Hospital, where he was pronounced dead.",
+     "doc_id": "doc01"
+    },
+    {
+     "what": "Police voucher property recovered from Nostrand Avenue scene",
+     "when_text": "October 14, 2025, 9:12 a.m.",
+     "when_window": "2025-10-14T09:12",
+     "where": "Nostrand Avenue",
+     "who": [],
+     "quote": "In reference to the fatal shooting of a 19 year old male on Nostrand Avenue on Sunday, October 12, the following property was recovered and vouchered",
+     "doc_id": "doc02"
+    },
+    {
+     "what": "Marcus Reed posts console photo to Instagram",
+     "when_text": "Sunday, October 12, 2025, 11:42 p.m.",
+     "when_window": "2025-10-12T23:42",
+     "where": "Instagram",
+     "who": [
+      "Marcus Reed"
+     ],
+     "quote": "Instagram post by @mdot (Marcus \"M-Dot\" Reed), Sunday, October 12, 2025, 11:42 p.m.",
+     "doc_id": "doc03"
+    },
+    {
+     "what": "Marcus Reed posts studio invoice to Instagram",
+     "when_text": "Friday, October 10, 2025, 6:31 p.m.",
+     "when_window": "2025-10-10T18:31",
+     "where": "Instagram",
+     "who": [
+      "Marcus Reed"
+     ],
+     "quote": "Instagram post by @mdot (Marcus \"M-Dot\" Reed), Friday, October 10, 2025, 6:31 p.m.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Marcus Reed conducts Instagram live broadcast",
+     "when_text": "10:15 p.m.",
+     "when_window": "2025-10-12T22:15",
+     "where": "in a car",
+     "who": [
+      "Marcus Reed"
+     ],
+     "quote": "10:15 p.m. Dot goes live for about four minutes. He is in a car, not a studio.",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Kayla Brooks posts comment on Treyvon Ellis's Instagram post",
+     "when_text": "Sunday, October 12, 2025, 4:05 p.m.",
+     "when_window": "2025-10-12T16:05",
+     "where": "Instagram",
+     "who": [
+      "Kayla Brooks"
+     ],
+     "quote": "Comment by Kayla Brooks on Treyvon Ellis's final Instagram post, Sunday, October 12, 2025, 4:05 p.m.",
+     "doc_id": "doc08"
+    },
+    {
+     "what": "Plate camera captures still of gray sedan",
+     "when_text": "11:05 p.m. Sunday, October 12",
+     "when_window": "2025-10-12T23:05",
+     "where": "Brooklyn-Queens Expressway at Atlantic Avenue",
+     "who": [],
+     "quote": "Plate cam, Brooklyn-Queens Expressway at Atlantic Avenue, 11:05 p.m. Sunday, October 12: gray sedan, rear plate ending 417.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Darnell Carter drops Marcus Reed off at recording studio",
+     "when_text": "at 9",
+     "when_window": "2025-10-12T21:00",
+     "where": "the studio",
+     "who": [
+      "Darnell Carter",
+      "Marcus Reed"
+     ],
+     "quote": "I dropped Dot at the studio at 9 and went home.",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Treyvon Ellis publishes photograph outside chicken restaurant",
+     "when_text": "Sunday, October 12, 2025, 8:15 p.m.",
+     "when_window": "2025-10-12T20:15",
+     "where": "outside a chicken restaurant on Nostrand Avenue, two blocks from the studio at 1140 Nostrand Avenue",
+     "who": [
+      "Treyvon Ellis"
+     ],
+     "quote": "Instagram post by @liltrey (Treyvon Ellis), Sunday, October 12, 2025, 8:15 p.m.",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Marcus Reed posts Midnight Tape freestyle",
+     "when_text": "October 5, 2025",
+     "when_window": "2025-10-05",
+     "where": "video platform",
+     "who": [
+      "Marcus Reed"
+     ],
+     "quote": "Lyric transcript, \"Midnight Tape (freestyle),\" posted by @mdot to a video platform, October 5, 2025.",
+     "doc_id": "doc12"
+    }
+   ],
+   "evidence_items": [
+    {
+     "description": "One (1) spent shell casing, 9mm, recovered sidewalk",
+     "doc_id": "doc02",
+     "status": "logged"
+    },
+    {
+     "description": "Victim's mobile telephone, recovered from victim's jacket",
+     "doc_id": "doc02",
+     "status": "logged"
+    },
+    {
+     "description": "Victim's jacket",
+     "doc_id": "doc02",
+     "status": "logged"
+    },
+    {
+     "description": "Studio guest pass, paper, recovered sidewalk",
+     "doc_id": "doc02",
+     "status": "logged"
+    },
+    {
+     "description": "One (1) baseball cap, black, recovered near curb",
+     "doc_id": "doc02",
+     "status": "logged"
+    },
+    {
+     "description": "Gray sedan seen leaving block at speed",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Photograph of a mixing console",
+     "doc_id": "doc03",
+     "status": "mentioned"
+    },
+    {
+     "description": "Marcus Reed's mobile telephone",
+     "doc_id": "doc03",
+     "status": "mentioned"
+    },
+    {
+     "description": "Studio invoice with name partly covered by a sticker",
+     "doc_id": "doc04",
+     "status": "mentioned"
+    },
+    {
+     "description": "Deleted Instagram story from 1 a.m.",
+     "doc_id": "doc05",
+     "status": "mentioned"
+    },
+    {
+     "description": "Plate camera still photograph, Brooklyn-Queens Expressway at Atlantic Avenue",
+     "doc_id": "doc09",
+     "status": "mentioned"
+    },
+    {
+     "description": "Photograph of call log screen with names covered by emoji",
+     "doc_id": "doc10",
+     "status": "mentioned"
+    },
+    {
+     "description": "Photograph of Treyvon Ellis outside chicken restaurant on Nostrand Avenue",
+     "doc_id": "doc11",
+     "status": "mentioned"
+    },
+    {
+     "description": "Video platform recording of 'Midnight Tape (freestyle)'",
+     "doc_id": "doc12",
+     "status": "mentioned"
+    }
+   ]
+  },
+  "analyst": {
+   "events": [
+    {
+     "id": "event-01",
+     "what": "Marcus Reed posts Midnight Tape freestyle",
+     "window": "2025-10-05",
+     "where": "video platform",
+     "who": [
+      "Marcus Reed"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc12",
+       "quote": "Lyric transcript, \"Midnight Tape (freestyle),\" posted by @mdot to a video platform, October 5, 2025."
+      }
+     ]
+    },
+    {
+     "id": "event-02",
+     "what": "Marcus Reed posts studio invoice to Instagram",
+     "window": "2025-10-10T18:31",
+     "where": "Instagram",
+     "who": [
+      "Marcus Reed"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc04",
+       "quote": "Instagram post by @mdot (Marcus \"M-Dot\" Reed), Friday, October 10, 2025, 6:31 p.m."
+      }
+     ]
+    },
+    {
+     "id": "event-03",
+     "what": "Kayla Brooks posts comment on Treyvon Ellis's Instagram post",
+     "window": "2025-10-12T16:05",
+     "where": "Instagram",
+     "who": [
+      "Kayla Brooks"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc08",
+       "quote": "Comment by Kayla Brooks on Treyvon Ellis's final Instagram post, Sunday, October 12, 2025, 4:05 p.m."
+      }
+     ]
+    },
+    {
+     "id": "event-04",
+     "what": "Treyvon Ellis publishes photograph outside chicken restaurant",
+     "window": "2025-10-12T20:15",
+     "where": "outside a chicken restaurant on Nostrand Avenue, two blocks from the studio at 1140 Nostrand Avenue",
+     "who": [
+      "Treyvon Ellis"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc11",
+       "quote": "Instagram post by @liltrey (Treyvon Ellis), Sunday, October 12, 2025, 8:15 p.m."
+      }
+     ]
+    },
+    {
+     "id": "event-05",
+     "what": "Darnell Carter drops Marcus Reed off at recording studio",
+     "window": "2025-10-12T21:00",
+     "where": "the studio",
+     "who": [
+      "Darnell Carter",
+      "Marcus Reed"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc10",
+       "quote": "I dropped Dot at the studio at 9 and went home."
+      }
+     ]
+    },
+    {
+     "id": "event-06",
+     "what": "Marcus Reed conducts Instagram live broadcast",
+     "window": "2025-10-12T22:15",
+     "where": "in a car",
+     "who": [
+      "Marcus Reed"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc05",
+       "quote": "10:15 p.m. Dot goes live for about four minutes. He is in a car, not a studio."
+      }
+     ]
+    },
+    {
+     "id": "event-07",
+     "what": "Fatal shooting of Treyvon Ellis",
+     "window": "2025-10-12T23:00/2025-10-13T00:00",
+     "where": "outside 1140 Nostrand Avenue",
+     "who": [
+      "Treyvon Ellis"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "doc_id": "doc01",
+       "quote": "Police said the shooting occurred between 11:00 p.m. and midnight on Sunday, October 12."
+      }
+     ]
+    },
+    {
+     "id": "event-08",
+     "what": "Gray sedan departs the block at speed",
+     "window": "2025-10-12T23:00/2025-10-13T00:00",
+     "where": "the block of 1140 Nostrand Avenue",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "doc_id": "doc01",
+       "quote": "One resident said a gray sedan left the block at speed shortly after the shots."
+      }
+     ]
+    },
+    {
+     "id": "event-09",
+     "what": "Plate camera captures still of gray sedan",
+     "window": "2025-10-12T23:05",
+     "where": "Brooklyn-Queens Expressway at Atlantic Avenue",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "doc_id": "doc09",
+       "quote": "Plate cam, Brooklyn-Queens Expressway at Atlantic Avenue, 11:05 p.m. Sunday, October 12: gray sedan, rear plate ending 417."
+      }
+     ]
+    },
+    {
+     "id": "event-10",
+     "what": "Marcus Reed posts console photo to Instagram",
+     "window": "2025-10-12T23:42",
+     "where": "Instagram",
+     "who": [
+      "Marcus Reed"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "doc_id": "doc03",
+       "quote": "Instagram post by @mdot (Marcus \"M-Dot\" Reed), Sunday, October 12, 2025, 11:42 p.m."
+      }
+     ]
+    },
+    {
+     "id": "event-11",
+     "what": "Treyvon Ellis pronounced dead",
+     "window": "2025-10-12T23:00/2025-10-13T01:00",
+     "where": "Kings County Hospital",
+     "who": [
+      "Treyvon Ellis"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "doc_id": "doc01",
+       "quote": "Ellis was taken to Kings County Hospital, where he was pronounced dead."
+      }
+     ]
+    },
+    {
+     "id": "event-12",
+     "what": "Police voucher property recovered from Nostrand Avenue scene",
+     "window": "2025-10-14T09:12",
+     "where": "Nostrand Avenue",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "doc_id": "doc02",
+       "quote": "In reference to the fatal shooting of a 19 year old male on Nostrand Avenue on Sunday, October 12, the following property was recovered and vouchered"
+      }
+     ]
+    }
+   ],
+   "collisions": [
+    {
+     "event_ids": [
+      "event-06",
+      "event-10"
+     ],
+     "who_or_what": "Marcus Reed",
+     "explanation": "Marcus Reed claims he was in the studio all night and did not go outside, whereas observation from his live broadcast at 10:15 p.m. places him inside a car rather than the studio.",
+     "quotes": [
+      {
+       "quote": "been in the studio all night, ain't been outside, stop asking me about nothing. my phone was dead half the night anyway. new tape friday, that's all I know.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "10:15 p.m. Dot goes live for about four minutes. He is in a car, not a studio.",
+       "doc_id": "doc05"
+      }
+     ]
+    }
+   ]
+  },
+  "digital": {
+   "machine_events": [
+    {
+     "what": "Instagram post from Marcus 'M-Dot' Reed (@mdot) displaying an invoice",
+     "when_text": "Friday, October 10, 2025, 6:31 p.m.",
+     "proves": "Proves an Instagram post was published by @mdot on October 10, 2025, at 6:31 p.m. showing an image of an invoice with a partly obscured name; does not prove who incurred or owed the debt.",
+     "quote": "Instagram post by @mdot (Marcus \"M-Dot\" Reed), Friday, October 10, 2025, 6:31 p.m.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Instagram comment posted by Kayla Brooks",
+     "when_text": "Sunday, October 12, 2025, 4:05 p.m.",
+     "proves": "Proves an account in the name of Kayla Brooks submitted a public comment on Instagram at 4:05 p.m. on October 12, 2025; does not prove that an actual telephone call occurred or what was discussed.",
+     "quote": "Comment by Kayla Brooks on Treyvon Ellis's final Instagram post, Sunday, October 12, 2025, 4:05 p.m.",
+     "doc_id": "doc08"
+    },
+    {
+     "what": "Instagram post from Treyvon Ellis (@liltrey) outside a chicken restaurant",
+     "when_text": "Sunday, October 12, 2025, 8:15 p.m.",
+     "proves": "Proves the account @liltrey published a post at 8:15 p.m. on October 12, 2025, with an image outside a restaurant on Nostrand Avenue; does not prove the exact time the photograph was captured or Ellis's subsequent movements.",
+     "quote": "Instagram post by @liltrey (Treyvon Ellis), Sunday, October 12, 2025, 8:15 p.m.",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Plate camera still capture on BQE at Atlantic Avenue",
+     "when_text": "11:05 p.m. Sunday, October 12",
+     "proves": "Proves an automated camera photographed a gray sedan with a rear license plate ending in 417 on the BQE at Atlantic Avenue at 11:05 p.m. on October 12; does not prove the full license plate number, the vehicle's ownership, or the identity of the occupants.",
+     "quote": "Plate cam, Brooklyn-Queens Expressway at Atlantic Avenue, 11:05 p.m. Sunday, October 12: gray sedan, rear plate ending 417.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Instagram post from Marcus 'M-Dot' Reed (@mdot) showing a mixing console",
+     "when_text": "Sunday, October 12, 2025, 11:42 p.m.",
+     "proves": "Proves an Instagram post was uploaded by @mdot at 11:42 p.m. on October 12, 2025; does not prove Reed's physical location at that time, when the photograph was taken, or the battery status of his phone.",
+     "quote": "Instagram post by @mdot (Marcus \"M-Dot\" Reed), Sunday, October 12, 2025, 11:42 p.m.",
+     "doc_id": "doc03"
+    },
+    {
+     "what": "Instagram post from Darnell 'Dee' Carter (@dee2real) showing a call log image",
+     "when_text": "Monday, October 13, 2025, 9:26 a.m.",
+     "proves": "Proves the account @dee2real posted an image of a phone screen displaying a call log with names obscured by emojis at 9:26 a.m. on October 13, 2025; does not independently verify carrier call records or the identities of callers.",
+     "quote": "Instagram post by @dee2real (Darnell \"Dee\" Carter), Monday, October 13, 2025, 9:26 a.m.",
+     "doc_id": "doc10"
+    }
+   ],
+   "record_checks": [
+    {
+     "claim": "Kayla Brooks stated in an interview that she had not spoken to Trey since Friday and was not on the phone with him Sunday.",
+     "record_says": "A public Instagram comment from her account on Sunday, October 12, 2025, at 4:05 p.m. states: 'just got off the phone with Trey, he good, see y'all at the show Friday'.",
+     "quote": "I hadn't talked to Trey since Friday. We was barely speaking that whole weekend. People keep saying I was on the phone with him Sunday and I keep telling them no.",
+     "doc_id": "doc07"
+    },
+    {
+     "claim": "Kayla Brooks posted an Instagram comment on Sunday afternoon asserting she had just spoken with Trey on the phone.",
+     "record_says": "In a recorded interview on November 6, 2025, Kayla Brooks denied speaking to Trey on Sunday, stating she had not talked to him since Friday.",
+     "quote": "just got off the phone with Trey, he good, see y'all at the show Friday",
+     "doc_id": "doc08"
+    },
+    {
+     "claim": "Marcus 'M-Dot' Reed claimed he was in the studio all night, had not been outside, and his phone was dead half the night.",
+     "record_says": "A traffic camera captured a gray sedan with a rear plate ending in 417 on the BQE at Atlantic Avenue at 11:05 p.m. on Sunday, October 12, matching the plate ending seen on Reed's car in an earlier post.",
+     "quote": "been in the studio all night, ain't been outside, stop asking me about nothing. my phone was dead half the night anyway.",
+     "doc_id": "doc03"
+    },
+    {
+     "claim": "Darnell 'Dee' Carter claimed he received no phone calls after 9:00 p.m. on Sunday and that his phone log was clean.",
+     "record_says": "The posted call log photograph has names obscured by emojis, meaning the underlying call history cannot be independently corroborated from the post alone.",
+     "quote": "I dropped Dot at the studio at 9 and went home. I ain't get no calls after that, my phone log clean. Don't put me in nothing.",
+     "doc_id": "doc10"
+    }
+   ],
+   "camera_gaps": [
+    {
+     "camera": "Security/video cameras on the 1140 Nostrand Avenue block",
+     "mentioned_in": "Kings County News article reporting NYPD appeal for block footage",
+     "quote": "Police asked anyone with video from the block to come forward.",
+     "doc_id": "doc01"
+    },
+    {
+     "camera": "BQE at Atlantic Avenue plate camera / traffic camera",
+     "mentioned_in": "Social media post by @BQE_Traffic_Watch referencing a grainy still",
+     "quote": "Plate cam, Brooklyn-Queens Expressway at Atlantic Avenue, 11:05 p.m. Sunday, October 12: gray sedan, rear plate ending 417.",
+     "doc_id": "doc09"
+    }
+   ]
+  },
+  "cross_examiner": {
+   "contradictions": [
+    {
+     "a_quote": "been in the studio all night, ain't been outside, stop asking me about nothing. my phone was dead half the night anyway.",
+     "a_doc": "doc03",
+     "b_quote": "10:15 p.m. Dot goes live for about four minutes. He is in a car, not a studio. There is a big mural behind the car window.",
+     "b_doc": "doc05",
+     "kind": "whereabouts",
+     "severity": "high",
+     "innocent_alternative": "Loose wording by Marcus Reed regarding when 'all night' began, or the Reddit poster misidentified the time or subject of the livestream."
+    },
+    {
+     "a_quote": "been in the studio all night, ain't been outside, stop asking me about nothing.",
+     "a_doc": "doc03",
+     "b_quote": "Plate cam, Brooklyn-Queens Expressway at Atlantic Avenue, 11:05 p.m. Sunday, October 12: gray sedan, rear plate ending 417. Same plate ending visible in the October 3 car post by @mdot.",
+     "b_doc": "doc09",
+     "kind": "whereabouts",
+     "severity": "high",
+     "innocent_alternative": "Another person was driving a vehicle associated with Marcus Reed, or the partial plate ending in 417 belongs to a different gray sedan."
+    },
+    {
+     "a_quote": "been in the studio all night, ain't been outside, stop asking me about nothing.",
+     "a_doc": "doc03",
+     "b_quote": "I saw the story before it got deleted. He was in a car in the story, you could hear the GPS voice say Nostrand Ave. That's what I remember.",
+     "b_doc": "doc06",
+     "kind": "whereabouts",
+     "severity": "medium",
+     "innocent_alternative": "The deleted story could have been recorded earlier in the evening before he arrived at the studio, or the unverified Reddit commenter misremembered the clip."
+    },
+    {
+     "a_quote": "I hadn't talked to Trey since Friday. We was barely speaking that whole weekend. People keep saying I was on the phone with him Sunday and I keep telling them no.",
+     "a_doc": "doc07",
+     "b_quote": "just got off the phone with Trey, he good, see y'all at the show Friday",
+     "b_doc": "doc08",
+     "kind": "contact",
+     "severity": "high",
+     "innocent_alternative": "Kayla Brooks posted a public promotional message for fans without actually having spoken to Ellis, or someone else with access to the merch or personal account posted the comment."
+    },
+    {
+     "a_quote": "There is a big mural behind the car window. That mural is in Queens, I am fairly sure.",
+     "a_doc": "doc05",
+     "b_quote": "that mural ain't Queens, that's the wall on Nostrand by the laundromat, two blocks from the studio. I walk past it every day.",
+     "b_doc": "doc06",
+     "kind": "location",
+     "severity": "low",
+     "innocent_alternative": "Visual misidentification of a background wall by one of the online commenters."
+    },
+    {
+     "a_quote": "Residents on the block told reporters they heard several shots.",
+     "a_doc": "doc01",
+     "b_quote": "1. One (1) spent shell casing, 9mm, recovered sidewalk.",
+     "b_doc": "doc02",
+     "kind": "physical_evidence",
+     "severity": "low",
+     "innocent_alternative": "Remaining casings were not ejected (e.g., revolver or jam), fell inside a vehicle, were missed during recovery, or echoes made a single shot sound like multiple shots to residents."
+    }
+   ],
+   "alibis": [
+    {
+     "person": "Marcus \"M-Dot\" Reed",
+     "window": "11:00 p.m. to midnight, Sunday, October 12, 2025",
+     "rating": "contradicted",
+     "reasons": [
+      {
+       "quote": "been in the studio all night, ain't been outside, stop asking me about nothing. my phone was dead half the night anyway.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "I dropped Dot at the studio at 9 and went home.",
+       "doc_id": "doc10"
+      },
+      {
+       "quote": "10:15 p.m. Dot goes live for about four minutes. He is in a car, not a studio.",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "Plate cam, Brooklyn-Queens Expressway at Atlantic Avenue, 11:05 p.m. Sunday, October 12: gray sedan, rear plate ending 417. Same plate ending visible in the October 3 car post by @mdot.",
+       "doc_id": "doc09"
+      },
+      {
+       "quote": "I saw the story before it got deleted. He was in a car in the story, you could hear the GPS voice say Nostrand Ave. That's what I remember.",
+       "doc_id": "doc06"
+      }
+     ]
+    },
+    {
+     "person": "Kayla Brooks",
+     "window": "11:00 p.m. to midnight, Sunday, October 12, 2025",
+     "rating": "uncorroborated",
+     "reasons": [
+      {
+       "quote": "I was home. I found out from Instagram like everybody else.",
+       "doc_id": "doc07"
+      }
+     ]
+    },
+    {
+     "person": "Darnell \"Dee\" Carter",
+     "window": "11:00 p.m. to midnight, Sunday, October 12, 2025",
+     "rating": "uncorroborated",
+     "reasons": [
+      {
+       "quote": "I dropped Dot at the studio at 9 and went home. I ain't get no calls after that, my phone log clean. Don't put me in nothing.",
+       "doc_id": "doc10"
+      }
+     ]
+    }
+   ],
+   "evidence_gaps": [
+    {
+     "item": "Additional spent shell casings (residents reported hearing 'several shots', but only one 9mm casing is in the recovered property list)",
+     "mentioned_in": [
+      "doc01",
+      "doc02"
+     ],
+     "problem": "Count discrepancy between witness accounts of multiple gunshots and a single recovered casing in the property ledger."
+    },
+    {
+     "item": "M-Dot's deleted 1:00 a.m. Instagram story and 10:15 p.m. Instagram Live video",
+     "mentioned_in": [
+      "doc05",
+      "doc06"
+     ],
+     "problem": "Relied upon in timeline collations to place Marcus Reed in a car near Nostrand Avenue rather than inside the studio, but absent from the property ledger and noted as unarchived."
+    },
+    {
+     "item": "BQE at Atlantic Avenue 11:05 p.m. plate camera still and M-Dot's October 3 car post showing plate ending 417",
+     "mentioned_in": [
+      "doc05",
+      "doc09"
+     ],
+     "problem": "Relied upon to link a gray sedan ending in 417 to Marcus Reed during the death window, but not vouchered in the property ledger."
+    },
+    {
+     "item": "Darnell Carter's unredacted phone call log (posted with names covered by emoji) and studio invoice (posted with name covered by a sticker)",
+     "mentioned_in": [
+      "doc04",
+      "doc10"
+     ],
+     "problem": "Mentioned and shown in social media posts with identifying information obscured, absent from the official property ledger."
+    },
+    {
+     "item": "Victim's mobile telephone, victim's jacket, paper studio guest pass, and black baseball cap",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "Routine ledger-only items listed as recovered and vouchered in the precinct post but never mentioned or analyzed in any other document."
+    }
+   ]
+  },
+  "interviewer": {
+   "histories": [
+    {
+     "person": "Kayla Brooks",
+     "changes": [
+      {
+       "topic": "Last communication with Treyvon Ellis",
+       "earlier_quote": "just got off the phone with Trey, he good, see y'all at the show Friday",
+       "earlier_doc": "doc08",
+       "later_quote": "I hadn't talked to Trey since Friday. We was barely speaking that whole weekend. People keep saying I was on the phone with him Sunday and I keep telling them no.",
+       "later_doc": "doc07"
+      }
+     ]
+    }
+   ],
+   "next_questions": [
+    {
+     "person": "Kayla Brooks",
+     "question": "On October 12 at 4:05 p.m., a public comment was posted from your account stating you had just gotten off the phone with Trey, but on November 6 you stated you had not talked to him since Friday; can you clarify whether you had phone contact with him on Sunday, October 12?",
+     "anchored_quote": "just got off the phone with Trey, he good, see y'all at the show Friday",
+     "doc_id": "doc08"
+    },
+    {
+     "person": "Marcus \"M-Dot\" Reed",
+     "question": "You stated that you had been in the studio all night and had not been outside; can you provide your precise timeline and location between 9:00 p.m. and midnight on October 12?",
+     "anchored_quote": "been in the studio all night, ain't been outside, stop asking me about nothing. my phone was dead half the night anyway. new tape friday, that's all I know.",
+     "doc_id": "doc03"
+    },
+    {
+     "person": "Marcus \"M-Dot\" Reed",
+     "question": "Who was the individual referenced in your October 10 invoice post who owed you 14,200 dollars for a feature and video?",
+     "anchored_quote": "he still owe me 14,200 for that feature and the video. I want my money by November or it's up. I don't do payment plans for opps.",
+     "doc_id": "doc04"
+    },
+    {
+     "person": "Darnell \"Dee\" Carter",
+     "question": "Whose contact names were obscured by emojis in the photograph of your call log, and can you provide the unredacted call records from the evening of October 12?",
+     "anchored_quote": "I dropped Dot at the studio at 9 and went home. I ain't get no calls after that, my phone log clean. Don't put me in nothing.",
+     "doc_id": "doc10"
+    }
+   ]
+  },
+  "prosecutor": {
+   "sufficiency": [
+    {
+     "subject": "Contradiction of Marcus Reed's studio alibi via 10:15 p.m. livestream",
+     "rating": "weak",
+     "missing": "Direct forensic extraction or subpoenaed platform data from Meta; current basis relies entirely on unpreserved hearsay from anonymous social media users."
+    },
+    {
+     "subject": "Vehicle sighting on BQE at 11:05 p.m. linking to Marcus Reed",
+     "rating": "workable",
+     "missing": "Full license plate verification, DMV registration records, and toll camera footage identifying the specific driver of the gray sedan."
+    },
+    {
+     "subject": "Kayla Brooks contact discrepancy regarding victim",
+     "rating": "workable",
+     "missing": "Certified call detail records and subscriber activity logs for both Kayla Brooks and Trey Ellis covering October 10 through October 13."
+    },
+    {
+     "subject": "Physical scene ballistics supporting multiple gunshots",
+     "rating": "weak",
+     "missing": "Ballistics comparison report, medical examiner trajectory findings, and secondary scene canvass explaining the presence of only one recovered 9mm casing despite multiple reported shots."
+    },
+    {
+     "subject": "Darnell Carter alibi and 9:00 p.m. drop-off claim",
+     "rating": "weak",
+     "missing": "Unredacted telecommunications records, studio keycard/entry logs, and surveillance video corroborating the drop-off time."
+    }
+   ],
+   "vetoes": [
+    {
+     "phrase": "Marcus Reed was driving",
+     "reason": "Plate camera captured only a partial rear plate on a vehicle; the driver's identity is unestablished."
+    },
+    {
+     "phrase": "fled on the BQE",
+     "reason": "Traffic camera sighting of a partial plate cannot be characterized as flight without proof of presence at the scene."
+    },
+    {
+     "phrase": "fabricated his alibi",
+     "reason": "Characterizes intent and veracity rather than noting factual evidentiary contradictions."
+    },
+    {
+     "phrase": "lied about calling Trey",
+     "reason": "Attributes perjury or deception to Brooks where an uncorroborated social media post may represent PR posturing."
+    },
+    {
+     "phrase": "the murder weapon was",
+     "reason": "No weapon has been recovered and ballistics have not linked the single recovered 9mm casing to the victim's fatal wounds."
+    },
+    {
+     "phrase": "proves Marcus was outside",
+     "reason": "Reddit commentary regarding deleted live video is unauthenticated and cannot serve as legal proof."
+    }
+   ],
+   "corroboration_needed": [
+    "Subpoenaed server logs, account data, and video archives from Meta for @mdot and related profiles for October 12, 2025.",
+    "Certified Call Detail Records (CDRs) and Cell Site Location Information (CSLI) for Marcus Reed, Darnell Carter, Kayla Brooks, and Trey Ellis.",
+    "Full Department of Motor Vehicles registration file for the sedan bearing partial plate ending 417, along with high-resolution toll camera captures.",
+    "Forensic laboratory reports for vouchered property: DNA and fingerprint analysis on the black baseball cap, paper studio pass, and victim's telephone.",
+    "Medical Examiner autopsy protocol and ballistics comparison report regarding the recovered 9mm casing and fatal projectile."
+   ]
+  },
+  "lead_detective": {
+   "leads": [
+    {
+     "action": "Pull the official 11:05 p.m. Sunday, October 12 plate camera image and full license plate data from the Brooklyn-Queens Expressway at Atlantic Avenue to confirm the full plate number of the gray sedan ending in 417.",
+     "score": 85,
+     "arithmetic": "40 (cites_high_contradiction) + 25 (in_window) + 20 (closes_gap) = 85",
+     "reason": "Directly works the high-severity contradiction between Marcus Reed's studio alibi (doc03) and the 11:05 p.m. plate camera capture (doc09); the 11:05 p.m. capture sits inside the 11:00 p.m. to midnight death window (doc01); and obtaining the official camera record closes the chain-of-custody gap for the unvouchered plate camera still cited in doc09.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": false
+     }
+    },
+    {
+     "action": "Pull the forensic extraction report and call detail records from Treyvon Ellis's vouchered mobile telephone (Property Item #2 in doc02) covering Friday, October 10 through midnight on Sunday, October 12, 2025.",
+     "score": 85,
+     "arithmetic": "40 (cites_high_contradiction) + 25 (in_window) + 20 (closes_gap) = 85",
+     "reason": "Works the high-severity contradiction regarding whether Kayla Brooks spoke with Treyvon Ellis on Sunday (doc07 vs. doc08), covers communications and location data up through the 11:00 p.m. to midnight death window (doc01), and closes the gap on the unexamined victim mobile telephone listed only in the property ledger (doc02).",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": false
+     }
+    },
+    {
+     "action": "Pull the unredacted booking invoice and room entry/keycard logs from the recording studio at 1140 Nostrand Avenue for Sunday, October 12, 2025.",
+     "score": 85,
+     "arithmetic": "40 (cites_high_contradiction) + 25 (in_window) + 20 (closes_gap) = 85",
+     "reason": "Works the high-severity contradiction over whether Marcus Reed was inside the studio all night (doc03 vs. doc05/doc09), covers studio occupancy during the 11:00 p.m. to midnight death window (doc01), and closes the gap of the sticker-redacted studio invoice posted on Instagram (doc04) and the unexamined paper studio guest pass recovered on the sidewalk (doc02).",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": false
+     }
+    },
+    {
+     "action": "Have the detective interview Marcus \"M-Dot\" Reed in person and ask: \"Who was driving the gray sedan with the rear plate ending in 417 on the BQE at Atlantic Avenue at 11:05 p.m. on Sunday, October 12, while you claim you were inside the studio all night?\"",
+     "score": 80,
+     "arithmetic": "40 (cites_high_contradiction) + 25 (in_window) + 15 (still_reachable) = 80",
+     "reason": "Directly works the high-severity contradiction between doc03 and doc09; focuses on the 11:05 p.m. event inside the 11:00 p.m. to midnight death window (doc01); and Marcus Reed is a living witness who is still reachable.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Subpoena Meta Platforms for the archived video, audio, and IP/location metadata of @mdot's 10:15 p.m. Instagram Live broadcast and deleted 1:00 a.m. Instagram story from October 12-13, 2025.",
+     "score": 60,
+     "arithmetic": "40 (cites_high_contradiction) + 20 (closes_gap) = 60",
+     "reason": "Directly works the high-severity contradiction between Marcus Reed's claim he was in the studio all night (doc03) and the 10:15 p.m. livestream placing him in a car (doc05), while closing the evidentiary gap for the unarchived social media videos noted in doc05 and doc06.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": false
+     }
+    },
+    {
+     "action": "Have the detective interview Kayla Brooks in person and ask: \"Why did you comment on Treyvon Ellis's Instagram post at 4:05 p.m. on Sunday, October 12 that you 'just got off the phone with Trey' if you later stated you had not spoken to him since Friday?\"",
+     "score": 55,
+     "arithmetic": "40 (cites_high_contradiction) + 15 (still_reachable) = 55",
+     "reason": "Directly works the high-severity contact contradiction between Kayla Brooks's interview statement (doc07) and her Sunday 4:05 p.m. Instagram comment (doc08), and Kayla Brooks is still reachable.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": false,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the Kings County Medical Examiner autopsy report and wound ballistics findings for Treyvon Ellis.",
+     "score": 45,
+     "arithmetic": "25 (in_window) + 20 (closes_gap) = 45",
+     "reason": "Establishes the exact number of gunshot wounds and recovered projectiles from the fatal shooting inside the 11:00 p.m. to midnight death window (doc01) and closes the gap of the missing autopsy report and projectile count discrepancy (doc01, doc02).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": false
+     }
+    },
+    {
+     "action": "Pull the unredacted carrier call detail records for Darnell \"Dee\" Carter's telephone for the night of Sunday, October 12, 2025.",
+     "score": 45,
+     "arithmetic": "25 (in_window) + 20 (closes_gap) = 45",
+     "reason": "Tests Carter's claim that he received no calls after 9:00 p.m. including during the 11:00 p.m. to midnight death window (doc10) and closes the gap caused by the emoji-redacted phone log screenshot posted online (doc10).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": false
+     }
+    }
+   ],
+   "gaps": [
+    {
+     "gap": "Autopsy and medical examiner report for Treyvon Ellis establishing official cause and manner of death, bullet count, and trajectories.",
+     "proven_by": "doc01 ('Ellis was taken to Kings County Hospital, where he was pronounced dead.')"
+    },
+    {
+     "gap": "Forensic extraction and analysis of the victim's mobile telephone, and forensic examination reports for the victim's jacket, paper studio guest pass, and black baseball cap.",
+     "proven_by": "doc02 ('2. Victim's mobile telephone, recovered from victim's person. 3. Victim's jacket. 4. Studio guest pass, paper, recovered sidewalk. 5. One (1) baseball cap, black, recovered near curb.')"
+    },
+    {
+     "gap": "Official BQE at Atlantic Avenue 11:05 p.m. plate camera still and DMV registration records for the gray sedan with rear plate ending in 417, plus the archived October 3 car post by @mdot.",
+     "proven_by": "doc09 ('Plate cam, Brooklyn-Queens Expressway at Atlantic Avenue, 11:05 p.m. Sunday, October 12: gray sedan, rear plate ending 417. Same plate ending visible in the October 3 car post by @mdot.')"
+    },
+    {
+     "gap": "Archived video and metadata for @mdot's 10:15 p.m. Instagram Live broadcast and deleted 1:00 a.m. Instagram story from October 12-13, 2025.",
+     "proven_by": "doc05 ('10:15 p.m. Dot goes live for about four minutes. He is in a car, not a studio.') and doc06 ('I saw the story before it got deleted. He was in a car in the story, you could hear the GPS voice say Nostrand Ave.')"
+    },
+    {
+     "gap": "Unredacted studio booking invoice for the October 12 session (posted with the client name covered by a sticker) and unredacted phone call log for Darnell Carter (posted with contact names covered by emoji).",
+     "proven_by": "doc04 ('Instagram post by @mdot... studio invoice') and doc10 ('I dropped Dot at the studio at 9 and went home. I ain't get no calls after that, my phone log clean.')"
+    },
+    {
+     "gap": "Ballistics canvass report or firearm examination explaining the discrepancy between residents hearing 'several shots' and only one (1) 9mm spent shell casing being recovered at the scene.",
+     "proven_by": "doc01 ('Residents on the block told reporters they heard several shots.') and doc02 ('1. One (1) spent shell casing, 9mm, recovered sidewalk.')"
+    }
+   ],
+   "brief": "THE CASE IN FIVE LINES\nOn Sunday, October 12, 2025, between 11:00 p.m. and midnight, 19-year-old Treyvon Ellis (@liltrey) was fatally shot outside the recording studio at 1140 Nostrand Avenue and pronounced dead at Kings County Hospital (doc01). Residents reported hearing several shots and seeing a gray sedan leave the block at speed shortly afterward, though police recovered only one 9mm spent shell casing alongside a paper studio guest pass and a black cap (doc01, doc02). Recording artist Marcus \"M-Dot\" Reed (@mdot) posted a studio console photo at 11:42 p.m. claiming he had been inside the studio all night with a dead phone (doc03). However, online collations and a traffic camera note place Reed in a car on Instagram Live at 10:15 p.m. and capture a gray sedan with a plate ending in 417\u2014matching a car from Reed's October 3 post\u2014on the BQE at Atlantic Avenue at 11:05 p.m. (doc05, doc09). Meanwhile, associates Kayla Brooks and Darnell \"Dee\" Carter offer uncorroborated accounts regarding their contact with Ellis and Reed that conflict with or rely upon redacted social media posts (doc07, doc08, doc10).\n\nSTRONGEST CONTRADICTION\nMarcus Reed's claim that he never left the recording studio on the night of the shooting is directly contradicted by a traffic camera capture five minutes into the death window and a prior livestream observation:\n- Claim (doc03): \"been in the studio all night, ain't been outside, stop asking me about nothing. my phone was dead half the night anyway.\"\n- Contradiction (doc09): \"Plate cam, Brooklyn-Queens Expressway at Atlantic Avenue, 11:05 p.m. Sunday, October 12: gray sedan, rear plate ending 417. Same plate ending visible in the October 3 car post by @mdot.\"\n- Contradiction (doc05): \"10:15 p.m. Dot goes live for about four minutes. He is in a car, not a studio. There is a big mural behind the car window.\"\n\nALIBI TABLE\n- Marcus \"M-Dot\" Reed | Window: 11:00 p.m. \u2013 midnight, Oct 12 | Rating: CONTRADICTED | Claims he was in the studio all night (doc03) after a 9:00 p.m. drop-off (doc10), but reported in a car on IG Live at 10:15 p.m. (doc05), heard on a deleted story near Nostrand Ave (doc06), and linked to a gray sedan ending in 417 on the BQE at 11:05 p.m. (doc09).\n- Kayla Brooks | Window: 11:00 p.m. \u2013 midnight, Oct 12 | Rating: UNCORROBORATED | Claims she was at home and learned of the shooting from Instagram (doc07); her denial of speaking to Ellis since Friday is contradicted by her own 4:05 p.m. Sunday comment stating she \"just got off the phone with Trey\" (doc08).\n- Darnell \"Dee\" Carter | Window: 11:00 p.m. \u2013 midnight, Oct 12 | Rating: UNCORROBORATED | Claims he dropped Reed at the studio at 9:00 p.m., went home, and received no calls after that, relying on an online screenshot with contact names obscured by emoji (doc10).\n\nTOP THREE LEADS\n1. (Score 85) Pull the forensic extraction and call detail records from Treyvon Ellis's vouchered mobile telephone (doc02, Item #2) for October 10\u201312 to test Kayla Brooks's Sunday phone contact contradiction (doc07 vs. doc08) and identify incoming communications and location data inside the 11:00 p.m. to midnight death window.\n2. (Score 85) Pull the official 11:05 p.m. October 12 plate camera capture and DMV registration data from the BQE at Atlantic Avenue for the gray sedan ending in 417 to voucher the primary record contradicting Marcus Reed's studio alibi inside the death window (doc03 vs. doc09).\n3. (Score 85) Pull the unredacted booking invoice and room entry/keycard logs from the studio at 1140 Nostrand Avenue for October 12 to verify who booked the room (obscured by a sticker in doc04), match the paper guest pass found on the sidewalk (doc02), and test whether Marcus Reed was inside the studio between 11:00 p.m. and midnight (doc03).\n\nGAP LIST\n- Medical examiner autopsy report and projectile recovery for Treyvon Ellis (proven by doc01).\n- Forensic extraction of victim's mobile phone and examination reports for victim's jacket, paper studio guest pass, and black baseball cap (proven by doc02).\n- Official vouchered BQE plate camera image (11:05 p.m.) and archived October 3 @mdot car post showing plate ending 417 (proven by doc09).\n- Subpoenaed Meta records for @mdot's 10:15 p.m. Instagram Live video and deleted 1:00 a.m. Instagram story (proven by doc05, doc06).\n- Unredacted studio invoice and unredacted phone call log for Darnell Carter (proven by doc04, doc10).\n- Ballistics/canvass report reconciling witness accounts of \"several shots\" with a single recovered 9mm shell casing (proven by doc01, doc02).\n\nThis board judges the file. The detective does the detecting."
+  }
+ },
+ "dropped": 0,
+ "run_log": []
+}
