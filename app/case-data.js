@@ -540,5 +540,119 @@ window.CASES = [
     "text": "Harborlight Restaurant staff roster and door codes, supplied\nby the owner, October 2016.\n\n3305 \u2014 Elena Marsh, night manager.\n2210 \u2014 Daniel Okafor, line cook.\n4417 \u2014 Priya Raman, relief manager.\n9001 \u2014 master code, issued to the night watchman on duty\n(Tomas Herrera).\n\nAlso on staff that season: Mike Johnston, dishwasher,\nemployed until September 2016.\n\nOwner's note: Herrera's hours were reduced to weekends only\nfrom October 1, 2016, on the manager's decision.\n"
    }
   ]
+ },
+ {
+  "case_id": "duck-2020",
+  "case_title": "The Duck File: a real, solved case rebuilt from the public record. Chicago, 2020 to 2024. Written for Gemini 4 NYC.",
+  "documents": [
+   {
+    "author": "News reports, August 2020",
+    "date": "2020-08-05",
+    "file": "doc01_news_article.txt",
+    "id": "doc01",
+    "title": "News article: rapper FBG Duck killed on Oak Street",
+    "type": "article",
+    "text": "News report, August 5, 2020. Summarized from Chicago Tribune\nand Chicago Sun-Times reporting of August 4 and 5, 2020.\n\nRapper FBG Duck killed in Gold Coast shooting\n\nChicago rapper FBG Duck was shot and killed Tuesday afternoon\non East Oak Street in the Gold Coast, one of the city's most\nupscale shopping districts, police said.\n\nThe rapper, whose real name was Carlton Weekly, was 26. He had\nbeen shopping for a gift for his son. At approximately 4:26\np.m., two vehicles pulled up near the 100 block of East Oak\nStreet. Four gunmen got out, two from each vehicle, and opened\nfire. Weekly was shot multiple times. Two other people were\nwounded, a woman who was with Weekly and a man nearby.\n\nWeekly was taken to Northwestern Memorial Hospital, where he\nwas pronounced dead about half an hour later.\n\nThe gunmen got back into the two vehicles and fled. Police said\nthe shooting was targeted. No one was in custody Tuesday night.\nDetectives said they were reviewing surveillance video from the\nblock, which is lined with luxury stores and cameras.\n\nWeekly was a well known figure in Chicago drill music. Police\nsaid he was involved in an ongoing gang conflict.\n"
+   },
+   {
+    "author": "Chicago Police Department",
+    "date": "2020-08-04",
+    "file": "doc02_police_statement.txt",
+    "id": "doc02",
+    "title": "Police statement at the scene: two cars, four gunmen",
+    "type": "report",
+    "text": "Chicago Police Department statement at the scene, August 4,\n2020. Deputy Chief Daniel O'Shea, summarized from news\nreporting of the police briefing.\n\nDeputy Chief O'Shea said the shoppers were standing on the\nsidewalk when a pair of vehicles pulled up, with two gunmen\nstepping out of each to open fire.\n\nHe said the shooting was a targeted attack, not a random one.\nOne weapon was recovered by police at the scene.\n\nO'Shea said Weekly had been involved in an ongoing conflict\nwith another gang. Officers noted that Weekly had been\nbroadcasting his travels on social media that day, and that he\nwas found.\n\nPolice said the two vehicles fled the scene and that\ndetectives were reviewing security footage from the area.\nPolice asked anyone with video from the block to come forward.\n"
+   },
+   {
+    "author": "News reports, August 2020",
+    "date": "2020-08-07",
+    "file": "doc03_feud_explainer.txt",
+    "id": "doc03",
+    "title": "Explainer: Tookaville, O Block, and Dead Bitches",
+    "type": "article",
+    "text": "Explainer, August 2020, updated with later reporting. The feud\nbehind the shooting, as described by police, prosecutors, and\nChicago news reporting.\n\nCarlton Weekly performed as FBG Duck. He was associated with\nTookaville, a faction of the Gangster Disciples around 63rd\nStreet on the South Side. Tookaville is named for Shondale\n\"Tooka\" Gregory, a teenager killed in 2011.\n\nHis rivals were O Block, a set of the Black Disciples based in\nand around the Parkway Gardens apartments on the South Side.\nO Block is named for Odee Perry, killed in 2011.\n\nFor years the two sides traded drill songs aimed at each\nother, naming dead members of the other side. Federal\ninvestigators later said the diss tracks between Duck and\nO Block artists fueled violence on the streets.\n\nOn July 10, 2020, Weekly released a song called \"Dead\nBitches.\" It taunted deceased O Block members by name,\nincluding Odee Perry and T-Roy.\n\nAfter the murder, an informant told Chicago police and FBI\nagents that a bounty had been offered for killing Weekly:\n$50,000 at first, later raised to $100,000. Prosecutors later\nalleged the bounty came from O Block rapper King Von. The\nbounty was an allegation. King Von was never charged in this\ncase, and he was himself killed in November 2020.\n"
+   },
+   {
+    "author": "Federal court filing summary",
+    "date": "2023-08-04",
+    "file": "doc04_turpin_tipoff.txt",
+    "id": "doc04",
+    "title": "Court filing: Turpin in the boutique, 3:59 p.m.",
+    "type": "record",
+    "text": "Summary of the government's Santiago proffer, a federal\ncourt filing in United States v. Liggins, filed August 4,\n2023. The filing describes how the shooting started.\n\nOn the afternoon of August 4, 2020, Carlton Weekly was\nshopping for clothes for his son's birthday in Milani Boutique\non East Oak Street in the Gold Coast.\n\nAt approximately 3:59 p.m., Ralph Turpin and a friend of\nTurpin's entered Milani Boutique and noticed Weekly.\n\nTurpin was an O Block associate. Weekly was a rival.\n\nTurpin made at least one phone call inside Milani Boutique to\nWeekly's rival gang members to come downtown to kill Weekly.\n\nApproximately three minutes after Turpin entered the boutique,\nat about 4:02 p.m., the O Block men began making their way to\nEast Oak Street.\n\nThe shooting followed at approximately 4:26 p.m.\n"
+   },
+   {
+    "author": "Chicago Police Department release",
+    "date": "2020-08-13",
+    "file": "doc05_surveillance_summary.txt",
+    "id": "doc05",
+    "title": "Surveillance summary: Parkway Gardens, the camera trail",
+    "type": "record",
+    "text": "Surveillance video summary. From the video Chicago police\nreleased in August 2020 and the camera evidence described at\ntrial.\n\nSurveillance video from the Parkway Gardens apartments, the\nSouth Side complex known as O Block, shows four men sprinting\ndown the steps of a building and getting into two waiting cars:\na Ford Fusion and a Chrysler 300.\n\nPolice POD cameras and license plate readers then tracked the\ntwo cars as they drove from the South Side to the Gold Coast.\n\nVideo from Oak Street shows the Ford Fusion and the Chrysler\n300 pull up. Four gunmen got out of the two cars and shot\nWeekly and the two people with him. The gunmen at Oak Street\nwere masked.\n\nPolice POD cameras tracked the two vehicles as they drove back\ntoward Parkway Gardens after the shooting. The two cars then\nsplit up in different directions.\n\nPolice released the Parkway Gardens video and asked the public\nto help identify the four men.\n"
+   },
+   {
+    "author": "Federal detention hearing summary",
+    "date": "2021-10-15",
+    "file": "doc06_fusion_record.txt",
+    "id": "doc06",
+    "title": "The Fusion: bought before, returned an hour after",
+    "type": "record",
+    "text": "Federal detention hearing summary, October 15, 2021.\nAssistant U.S. Attorney Jason Julien, as reported by the\nChicago Sun-Times.\n\nProsecutors said defendant Tacarlos Offerd purchased a vehicle\nused as a \"lead car\" in the shooting one week before the\nAugust 4, 2020 murder. The vehicle was a Ford Fusion.\n\nJulien said the Fusion was returned to the dealership in the\nChicago suburbs approximately one hour after the shooting.\n\nHe said the vehicle Offerd purchased was seen on police POD\ncameras and license plate readers.\n\nOfferd's defense attorney, John Somerville, argued there was\nno evidence linking anyone specific to driving the car that\nday. \"Mr. Offerd bought a car,\" Somerville said. \"Some unknown\nperson was in his car. Some unknown person may have driven\ndowntown.\"\n\nProsecutors said Offerd drove the Fusion in the shooting, with\ngunmen riding in it.\n"
+   },
+   {
+    "author": "Federal court filing summary",
+    "date": "2023-08-04",
+    "file": "doc07_chrysler_record.txt",
+    "id": "doc07",
+    "title": "The Chrysler: seized the next day, Roberson called",
+    "type": "record",
+    "text": "Summary of the government's Santiago proffer, federal court\nfiling in United States v. Liggins, filed August 4, 2023.\n\nThe second car in the shooting was a Chrysler 300. Prosecutors\nsaid Kenneth Roberson drove the Chrysler 300, with gunmen\nriding in it.\n\nCPD seized Roberson's Chrysler 300 the day after the murder.\n\nAfter the seizure, Roberson called CPD to get it back.\n\nThe Chrysler appears with the Ford Fusion in the surveillance\ntrail: out of Parkway Gardens before the shooting, on Oak\nStreet at the shooting, and tracked back toward the South Side\nafter it.\n"
+   },
+   {
+    "author": "Federal court filing summary",
+    "date": "2023-08-04",
+    "file": "doc08_cooperator_summary.txt",
+    "id": "doc08",
+    "title": "Roberson's own words, per the cooperators",
+    "type": "statement",
+    "text": "Summary of the government's Santiago proffer, federal court\nfiling in United States v. Liggins, filed August 4, 2023. The\nfiling describes statements Kenneth Roberson made to people\nwho later cooperated with the government.\n\nAs the crew drove toward East Oak Street on August 4, 2020,\nRoberson made statements to a cooperating witness acknowledging\nthat Roberson was on his way to murder Weekly.\n\nAfter the murder, Roberson made additional statements about it\nto the same cooperating witness.\n\nRoberson later made statements about the murder to a second\nwitness. The filing says those statements were made for\npurposes of concealment.\n\nThe filing does not name the cooperating witnesses. It refers\nto them by number.\n"
+   },
+   {
+    "author": "Trial evidence summary",
+    "date": "2023-12-01",
+    "file": "doc09_social_media_evidence.txt",
+    "id": "doc09",
+    "title": "Trial evidence: posts, videos, and the pendants",
+    "type": "record",
+    "text": "Trial evidence summary: the social media and music evidence.\nFrom the federal trial, October 2023 to January 2024, and the\nU.S. Attorney's statements.\n\nThe U.S. Attorney's Office said the O Block gang \"publicly\nclaimed responsibility for their violence and used social\nmedia and music to increase their criminal enterprise.\"\n\nProsecutors built the racketeering case in part from the\ndefendants' own posts, photos, and videos: gang signs, firearms,\nand the feud with Tookaville carried on in public, in songs and\nonline, over years.\n\nJurors saw video recorded after the murder in which King Von,\nthe O Block rapper prosecutors said put a price on Weekly's\nhead, gave the defendants diamond O Block pendants and stacks\nof cash.\n\nProsecutors told the jury the defendants believed killing FBG\nDuck would bring glory to O Block: it was about power, status,\nand retribution.\n"
+   },
+   {
+    "author": "Federal court filing summary",
+    "date": "2023-08-04",
+    "file": "doc10_phone_record.txt",
+    "id": "doc10",
+    "title": "Phone record: the call from inside the boutique",
+    "type": "record",
+    "text": "Phone record summary. From the government's Santiago\nproffer, federal court filing in United States v. Liggins,\nfiled August 4, 2023.\n\nRalph Turpin placed at least one phone call from inside Milani\nBoutique on the afternoon of August 4, 2020. The filing says\nthe call reported Weekly's location to his rivals.\n\nThe call came after Turpin entered the boutique at\napproximately 3:59 p.m. and saw Weekly inside.\n\nAt about 4:02 p.m., roughly three minutes after Turpin entered\nthe boutique, the O Block crew began moving toward East Oak\nStreet.\n\nThe shooting was at approximately 4:26 p.m. The call, the\ndrive, and the shooting sit inside one half hour.\n"
+   },
+   {
+    "author": "U.S. Department of Justice",
+    "date": "2023-04-10",
+    "file": "doc11_indictment_summary.txt",
+    "id": "doc11",
+    "title": "Indictments: five charged in 2021, Turpin in 2023",
+    "type": "report",
+    "text": "U.S. Department of Justice summary of the indictments.\nOriginal indictment October 2021; superseding indictment\nunsealed April 10, 2023.\n\nFive Chicago men were charged in October 2021 with committing\nmurder in aid of racketeering and conspiracy to commit murder\nin aid of racketeering: Charles Liggins, also known as \"C\nMurda\"; Kenneth Roberson, also known as \"Kenny Mac\"; Tacarlos\nOfferd, also known as \"Los\"; Christopher Thomas, also known as\n\"C Thang\"; and Marcus Smart, also known as \"Muwop.\"\n\nIn April 2023 a superseding indictment added a sixth\ndefendant: Ralph Turpin, also known as \"Tall\" and \"Teezy,\"\ncharged with murder in aid of racketeering and conspiracy to\ncommit murder in aid of racketeering.\n\nThe indictment alleged the six were members or associates of\nthe O Block street gang, and that they murdered Carlton Weekly\nto maintain and increase their positions in the gang.\n\nNews reporting identified a fourth gunman, Ezell Rawls, in the\nsurveillance video. Rawls died during the investigation and\nwas never tried.\n"
+   },
+   {
+    "author": "U.S. Department of Justice",
+    "date": "2024-01-17",
+    "file": "doc12_verdict_summary.txt",
+    "id": "doc12",
+    "title": "Verdict: all six convicted, January 17, 2024",
+    "type": "report",
+    "text": "U.S. Department of Justice, January 2024. Verdicts in United\nStates v. Liggins, returned January 17, 2024.\n\nA federal jury in Chicago convicted six members or associates\nof the O Block street gang of racketeering offenses that\nincluded the murder of Carlton Weekly, the rapper known as\nFBG Duck.\n\nThe jury found that the defendants participated in a criminal\norganization that engaged in violence to protect the gang's\nperceived territories on the South Side of Chicago, and that\nthey conspired to murder Weekly in order to maintain and\nincrease their positions in the gang.\n\nConvicted of committing murder in aid of racketeering:\nCharles Liggins, Kenneth Roberson, Tacarlos Offerd,\nChristopher Thomas, Marcus Smart, and Ralph Turpin. Five of\nthe six were also convicted of using a firearm in the murder.\n\nProsecutors identified the roles at trial: Liggins, Thomas,\nand Smart were gunmen; Roberson drove the Chrysler 300;\nOfferd drove the Ford Fusion; Turpin spotted Weekly in the\nboutique and called it in.\n\nThe jury returned its verdicts after a three-month trial in\nU.S. District Court in Chicago. The convictions carry\nmandatory sentences of life in federal prison.\n\n\"The jury's verdicts today hold the six defendants accountable\nfor a brutal murder that took the life of Carlton Weekly,\"\nActing U.S. Attorney Morris Pasqual said.\n"
+   }
+  ]
  }
 ];
