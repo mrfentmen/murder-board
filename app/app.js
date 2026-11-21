@@ -924,15 +924,22 @@ function renderBoard() {
   var current = selectedCase();
   var docs = current ? current.documents : [];
   var html = '<div class="pin-title" data-pin="title" data-tilt="0" id="caseQuestion" title="The question before the board"><div class="qmark">?</div><div class="who">WHO DID IT</div><div class="case-name">' + esc(current ? current.case_title : "") + '</div></div>';
-  html += book.persons.map(function (p, i) {
+  var personsToShow = book.persons;
+  if (!personsToShow.length) {
+    var pmap = (window.PERSON_PHOTOS || {})[MB.currentCase()] || {};
+    personsToShow = Object.keys(pmap).map(function (k) {
+      return { name: k.replace(/\b\w/g, function (ch) { return ch.toUpperCase(); }), role: "Named in the file. Intake has not sorted this person yet.", unsorted: true };
+    });
+  }
+  html += personsToShow.map(function (p, i) {
     var claims = book.claims.filter(function (c) { return matchesPersonName(c.person, p); });
     var isVictim = /victim/i.test(p.role || "");
     var alibi = book.alibis.filter(function (a) { return matchesPersonName(a.person, p); })[0];
-    return pinCard("pin-card person" + (isVictim ? " victim" : ""), "person:" + p.name,
+    return pinCard("pin-card person" + (isVictim ? " victim" : "") + (p.unsorted ? " unsorted" : ""), "person:" + p.name,
       photoHtml(p.name) + '<h4>' + esc(p.name) + '</h4><p class="role">' + esc(p.role) + '</p>' +
       (alibi ? '<p class="alibi-chip rate-' + esc(String(alibi.rating).toLowerCase().replace(/\s+/g, "-")) + '">' + esc(alibi.rating) + '</p>' : "") +
       claims.slice(0, 2).map(function (c) { return '<p class="q">&ldquo;' + esc(c.quote) + '&rdquo;</p>'; }).join(""),
-      p.name, "person", i, "Open profile: " + p.name);
+      p.name, p.unsorted ? "person-unsorted" : "person", i, "Open profile: " + p.name);
   }).join("");
   html += docs.map(function (d, i) {
     return pinCard("pin-card docslip", "doc:" + d.id,
@@ -1013,6 +1020,20 @@ function drawYarn() {
   documentedLinks().forEach(function (link, i) {
     out += yarn(pts["person:" + link.person.name], pts["doc:" + link.doc_id], "yarn-related", "source", i);
   });
+  if (!book.persons.length) {
+    var pmap2 = (window.PERSON_PHOTOS || {})[MB.currentCase()] || {};
+    var cur2 = selectedCase();
+    Object.keys(pmap2).forEach(function (k) {
+      var dispName = k.replace(/\b\w/g, function (ch) { return ch.toUpperCase(); });
+      var sur = k.split(" ").pop();
+      var hits = 0;
+      (cur2 ? cur2.documents : []).forEach(function (d) {
+        if (hits >= 3) return;
+        var t = (d.text || "").toLowerCase();
+        if (t.indexOf(k) !== -1 || (sur.length > 3 && t.indexOf(sur) !== -1)) { out += yarn(pts["person:" + dispName], pts["doc:" + d.id], "yarn-index", null, 0); hits++; }
+      });
+    });
+  }
   book.contradictions.forEach(function (c, i) {
     out += yarn(pts["doc:" + c.a_doc], pts["doc:" + c.b_doc], "yarn-contradiction yarn-" + String(c.severity).toLowerCase(), "contra", i);
   });
@@ -1601,6 +1622,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   renderRegistry();
   renderCaseFolder();
+  renderAll();
   Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (t) {
     t.addEventListener("click", function () { showScreen(t.getAttribute("data-screen")); });
   });
