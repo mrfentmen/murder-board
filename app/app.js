@@ -718,6 +718,7 @@ document.addEventListener("DOMContentLoaded", function () {
     renderRegistry();
     renderAll();
     updateCacheAvailability();
+    if (cacheForCurrentCase()) { el("cacheToggle").checked = true; work(); }
   });
   renderRegistry();
   Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (t) {
@@ -729,5 +730,6 @@ document.addEventListener("DOMContentLoaded", function () {
   el("vetoToggle").addEventListener("change", renderBrief);
   window.addEventListener("resize", function () { requestAnimationFrame(drawYarn); });
   updateCacheAvailability();
+  if (cacheForCurrentCase()) { el("cacheToggle").checked = true; work(); }
 });
 })();
