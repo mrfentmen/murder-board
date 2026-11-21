@@ -1,0 +1,2553 @@
+{
+ "created_at": "2026-11-21T17:36:52.993Z",
+ "outputs": {
+  "custody": {
+   "documents": [
+    {
+     "doc_id": "doc01",
+     "type": "report",
+     "legible": true,
+     "custody_note": "Scene report authored by Officer D. Whitaker, dated 2016-10-10 (\"Scene report, Officer D. Whitaker, October 10, 2016, 7:40 a.m.\")."
+    },
+    {
+     "doc_id": "doc02",
+     "type": "report",
+     "legible": true,
+     "custody_note": "Medical Examiner summary authored by Dr. L. Chen, dated 2016-10-12 (\"Medical Examiner summary, Dr. L. Chen, October 12, 2016.\")."
+    },
+    {
+     "doc_id": "doc03",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Tomas Herrera, authored/taken on 2016-10-10 (\"Statement of Tomas Herrera, 52, night watchman, Harborlight Marina and Restaurant. Taken October 10, 2016.\")."
+    },
+    {
+     "doc_id": "doc04",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Transcribed night watchman log book page authored by Tomas Herrera, dated 2016-10-09 (\"Night watchman log book, Harborlight Marina, page for Sunday, October 9, 2016. Transcribed in full. Handwriting identified as Tomas Herrera's.\")."
+    },
+    {
+     "doc_id": "doc05",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Keypad entry log from Keypad system export covering 2016-10-09, exported 2016-10-10 (\"Keypad entry log, manager's office door, Harborlight Restaurant. Exported October 10, 2016.\")."
+    },
+    {
+     "doc_id": "doc06",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Priya Raman, authored/taken on 2016-10-11 (\"Statement of Priya Raman, 29, relief manager, Harborlight Restaurant. Taken October 11, 2016.\")."
+    },
+    {
+     "doc_id": "doc07",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Marcus Delaney, authored/taken on 2016-10-12 (\"Statement of Marcus Delaney, 45, former husband of the victim. Taken October 12, 2016.\")."
+    },
+    {
+     "doc_id": "doc08",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Second statement of Marcus Delaney, authored/taken on 2017-03-03 (\"Second statement of Marcus Delaney. Taken March 3, 2017, after the toll record was shown to him.\")."
+    },
+    {
+     "doc_id": "doc09",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Harbor Bridge toll record from Harbor Bridge authority for 2016-10-09 (\"Harbor Bridge toll record, transponder account of Marcus Delaney, pickup truck. Sunday, October 9, 2016:\")."
+    },
+    {
+     "doc_id": "doc10",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Carrier record summary for victim's mobile telephone covering 2016-10-09, obtained 2016-10-14 (\"Victim's mobile telephone, carrier record summary, obtained October 14, 2016.\")."
+    },
+    {
+     "doc_id": "doc11",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Smart meter record supplied by the Electric utility in October 2016 covering 2016-10-09 to 2016-10-10 (\"Electric utility smart meter record, office circuit, Harborlight Restaurant. Supplied by the utility, October 2016.\")."
+    },
+    {
+     "doc_id": "doc12",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Daniel Okafor, authored/taken on 2016-10-10 (\"Statement of Daniel Okafor, 38, line cook, Harborlight Restaurant. Taken October 10, 2016.\")."
+    },
+    {
+     "doc_id": "doc13",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Third statement of Daniel Okafor, authored/taken on 2024-06-17 (\"Third statement of Daniel Okafor. Taken June 17, 2024, in a cold case review.\")."
+    },
+    {
+     "doc_id": "doc14",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Grace Okafor, authored/taken on 2024-06-17 (\"Statement of Grace Okafor, wife of Daniel Okafor. Taken June 17, 2024, in a cold case review.\")."
+    },
+    {
+     "doc_id": "doc15",
+     "type": "report",
+     "legible": true,
+     "custody_note": "County health and safety inspection report by County inspector, dated March 2015 / registry date 2015-03-01 (\"County health and safety inspection report, Harborlight Restaurant, March 2015. Public record, posted on the county website.\")."
+    },
+    {
+     "doc_id": "doc16",
+     "type": "article",
+     "legible": true,
+     "custody_note": "News article authored by Harbor Gazette, dated 2016-10-13 (\"Harbor Gazette, October 13, 2016. 'Marina manager's death shocks the pier.'\")."
+    },
+    {
+     "doc_id": "doc17",
+     "type": "report",
+     "legible": true,
+     "custody_note": "Evidence memo authored by Detective R. Alvarez, dated 2016-10-20 (\"Evidence memo, Detective R. Alvarez, October 20, 2016.\")."
+    },
+    {
+     "doc_id": "doc18",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Staff roster and door codes supplied by the Restaurant owner, dated October 2016 / registry date 2016-10-01 (\"Harborlight Restaurant staff roster and door codes, supplied by the owner, October 2016.\")."
+    }
+   ]
+  },
+  "records": {
+   "subject": "Unnamed victim (identified only in registry title of doc10: \"Victim's phone record: the 11:47 p.m. text\"; full document texts not provided)",
+   "starter_items": [
+    {
+     "item": "Death record and legal name verification for the victim around October 9-10, 2016 (per doc01 date \"2016-10-10\", doc02 \"ME summary: window 10:30 p.m. to 12:30 a.m.\", and doc10 \"Victim's phone record: the 11:47 p.m. text\")",
+     "source_class": "death index",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Published obituary and funeral notices post-dating October 9, 2016 to identify surviving next of kin, biographical details, and prior residences of the victim (per doc02 date \"2016-10-12\" and doc10 \"Victim's phone record: the 11:47 p.m. text\")",
+     "source_class": "obituary and funeral notices",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Local press coverage including Harbor Gazette archives around October 2016 regarding the homicide and persons connected to the victim (per doc16 \"News article: the latch, the ex-husband\", author \"Harbor Gazette\", date \"2016-10-13\")",
+     "source_class": "newspaper archives",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Civil, family/divorce, probate, and criminal court dockets involving the victim, any former spouse, or associated restaurant business (per doc16 \"News article: the latch, the ex-husband\" and doc18 author \"Restaurant owner\")",
+     "source_class": "court portals",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Historical household and enumeration records once the victim's legal name and age/birth year are established (per doc10 \"Victim's phone record: the 11:47 p.m. text\")",
+     "source_class": "census schedules",
+     "label": "UNVERIFIED"
+    }
+   ],
+   "request_next": [
+    "Full text of doc01 (\"Scene report: the office, the latch, the blinds\") and doc02 (\"ME summary: window 10:30 p.m. to 12:30 a.m.\") to establish the victim's full legal name, age or date of birth, and exact place of death before running name-based searches",
+    "Full text of doc10 (\"Victim's phone record: the 11:47 p.m. text\"), doc16 (\"News article: the latch, the ex-husband\"), and doc18 (\"Staff roster and door codes\") to confirm subscriber identity, workplace role, and named associates",
+    "Official state/county death certificate once the victim's identity is confirmed from doc01 and doc02",
+    "Marriage and divorce filings corresponding to the relationship referenced in doc16 (\"News article: the latch, the ex-husband\")",
+    "Business registration, liquor/health licensing, and county inspection filings related to the premises referenced in doc15 (\"Inspection report, 2015: the latch, in public\") and doc18 (\"Staff roster and door codes\", author \"Restaurant owner\")"
+   ]
+  },
+  "coroner": {
+   "cause": "blunt force trauma to the head",
+   "manner": "homicide",
+   "death_window": {
+    "start": "2016-10-09T22:30:00",
+    "end": "2016-10-10T00:30:00",
+    "quote": "Estimated time of death: between 10:30 p.m. and 12:30 a.m. on\nthe night of October 9 to 10, 2016, based on body temperature\nand stomach contents.",
+    "doc_id": "doc02"
+   },
+   "medical_facts": [
+    {
+     "fact": "The decedent is Elena Marsh, a 41-year-old female.",
+     "quote": "Decedent: Elena Marsh, female, 41.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "Elena Marsh was found unresponsive on the floor of the manager's office on the morning of October 10, 2016.",
+     "quote": "The victim, Elena Marsh, 41, the restaurant's night manager,\nwas on the floor of the manager's office.",
+     "doc_id": "doc01"
+    },
+    {
+     "fact": "Cause of death is blunt force trauma to the head.",
+     "quote": "Cause of death: blunt force trauma to the head.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "Manner of death is homicide.",
+     "quote": "Manner of death: homicide.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "Time of death is estimated between 10:30 p.m. on October 9, 2016, and 12:30 a.m. on October 10, 2016, determined from body temperature and stomach contents.",
+     "quote": "Estimated time of death: between 10:30 p.m. and 12:30 a.m. on\nthe night of October 9 to 10, 2016, based on body temperature\nand stomach contents.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "The decedent ate a staff meal at approximately 9:30 p.m.",
+     "quote": "The decedent had eaten a staff meal at\napproximately 9:30 p.m.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "Two blows are visible on the decedent.",
+     "quote": "Two blows are visible.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "There are no defensive wounds on the decedent.",
+     "quote": "There are no defensive wounds.",
+     "doc_id": "doc02"
+    }
+   ],
+   "medical_flags": []
+  },
+  "csi": {
+   "ledger": [],
+   "gaps": [
+    {
+     "item": "Evidence ledger",
+     "mentioned_in": [
+      "doc17"
+     ],
+     "problem": "Referenced in Detective Alvarez's evidence memo, but the evidence ledger itself is absent from the provided case file, leaving all physical and documentary items unreconciled against a master list.",
+     "quote": "The photograph described above is not in the evidence ledger.",
+     "doc_id": "doc17"
+    },
+    {
+     "item": "Guest's 11:40 p.m. photograph (original digital file)",
+     "mentioned_in": [
+      "doc17"
+     ],
+     "problem": "Explicitly documented as neither received nor entered into evidence, and explicitly noted as absent from the evidence ledger.",
+     "quote": "As of this memo the original file has not been received and has not been entered into evidence. The photograph described above is not in the evidence ledger.",
+     "doc_id": "doc17"
+    },
+    {
+     "item": "Heavy brass desk lamp",
+     "mentioned_in": [
+      "doc01"
+     ],
+     "problem": "Observed on the office floor beside the victim in the scene report, but absent from any ledger in the file.",
+     "quote": "A heavy brass desk lamp lay on the floor beside her.",
+     "doc_id": "doc01"
+    },
+    {
+     "item": "Victim's handbag",
+     "mentioned_in": [
+      "doc01",
+      "doc10"
+     ],
+     "problem": "Observed on the office desk and cited as the container from which the victim's mobile telephone was recovered, but absent from any ledger in the file.",
+     "quote": "The victim's handbag was on the office desk, undisturbed.",
+     "doc_id": "doc01"
+    },
+    {
+     "item": "Victim's mobile telephone",
+     "mentioned_in": [
+      "doc10"
+     ],
+     "problem": "Stated as recovered from the victim's handbag in the office, but absent from the scene report's item observations and absent from any ledger in the file.",
+     "quote": "The telephone was recovered from the victim's handbag in the office.",
+     "doc_id": "doc10"
+    },
+    {
+     "item": "Office computer",
+     "mentioned_in": [
+      "doc11"
+     ],
+     "problem": "Referenced in the utility smart meter record as drawing power on the office circuit until 00:20, but not mentioned in the scene report and absent from any ledger in the file.",
+     "quote": "The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.",
+     "doc_id": "doc11"
+    },
+    {
+     "item": "Manager's office door latch and keypad lock",
+     "mentioned_in": [
+      "doc01",
+      "doc05",
+      "doc15",
+      "doc16"
+     ],
+     "problem": "Described across multiple documents as having a defective latch and an electronic keypad lock, with no ledger entry in the file.",
+     "quote": "The office door latch is defective.",
+     "doc_id": "doc01"
+    },
+    {
+     "item": "Keypad entry log export",
+     "mentioned_in": [
+      "doc01",
+      "doc05"
+     ],
+     "problem": "Exported from the manager's office door keypad on October 10, 2016, with no ledger entry in the file.",
+     "quote": "Keypad entry log, manager's office door, Harborlight Restaurant. Exported October 10, 2016.",
+     "doc_id": "doc05"
+    },
+    {
+     "item": "Night watchman log book",
+     "mentioned_in": [
+      "doc04"
+     ],
+     "problem": "Transcribed and handwriting-examined in the file, with no ledger entry recording custody of the physical log book.",
+     "quote": "Night watchman log book, Harborlight Marina, page for Sunday, October 9, 2016. Transcribed in full.",
+     "doc_id": "doc04"
+    },
+    {
+     "item": "Office paperwork",
+     "mentioned_in": [
+      "doc12"
+     ],
+     "problem": "Mentioned in Daniel Okafor's statement as being worked on by the victim in the office, but not noted in the scene report and absent from any ledger in the file.",
+     "quote": "Elena was in the office doing paperwork.",
+     "doc_id": "doc12"
+    },
+    {
+     "item": "Restaurant register",
+     "mentioned_in": [
+      "doc01"
+     ],
+     "problem": "Noted in the scene report as closed out, with no ledger entry for the register or close-out records in the file.",
+     "quote": "The register was closed out.",
+     "doc_id": "doc01"
+    },
+    {
+     "item": "Office window blinds",
+     "mentioned_in": [
+      "doc01",
+      "doc17"
+     ],
+     "problem": "Noted as closed in both the scene report and the memo describing the 11:40 p.m. photograph, with no ledger entry in the file.",
+     "quote": "The office window blinds were closed.",
+     "doc_id": "doc01"
+    },
+    {
+     "item": "Priya Raman's bag",
+     "mentioned_in": [
+      "doc06"
+     ],
+     "problem": "Described by Raman as left in the office at the end of her shift and retrieved that night, with no ledger entry in the file.",
+     "quote": "I left my bag in the office at the end of my shift.",
+     "doc_id": "doc06"
+    },
+    {
+     "item": "Marcus Delaney's pickup truck and toll transponder",
+     "mentioned_in": [
+      "doc08",
+      "doc09"
+     ],
+     "problem": "Identified in the Harbor Bridge toll record and Delaney's second statement as present in the marina parking lot, with no ledger entry in the file.",
+     "quote": "Harbor Bridge toll record, transponder account of Marcus Delaney, pickup truck.",
+     "doc_id": "doc09"
+    },
+    {
+     "item": "Full autopsy report",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "Referenced in the Medical Examiner summary as following under separate cover, but absent from the case file and any ledger.",
+     "quote": "Full autopsy report follows under separate cover.",
+     "doc_id": "doc02"
+    }
+   ]
+  },
+  "intake": {
+   "persons": [
+    {
+     "name": "Elena Marsh",
+     "aliases": [],
+     "role": "Victim; night manager at Harborlight Restaurant"
+    },
+    {
+     "name": "D. Whitaker",
+     "aliases": [
+      "Officer D. Whitaker"
+     ],
+     "role": "Responding police officer"
+    },
+    {
+     "name": "Day manager (unnamed)",
+     "aliases": [],
+     "role": "Day manager at Harborlight Restaurant who let Officer Whitaker in"
+    },
+    {
+     "name": "Tomas Herrera",
+     "aliases": [],
+     "role": "Night watchman at Harborlight Marina and Restaurant"
+    },
+    {
+     "name": "L. Chen",
+     "aliases": [
+      "Dr. L. Chen"
+     ],
+     "role": "Medical Examiner"
+    },
+    {
+     "name": "Priya Raman",
+     "aliases": [],
+     "role": "Relief manager at Harborlight Restaurant"
+    },
+    {
+     "name": "Marcus Delaney",
+     "aliases": [],
+     "role": "Former husband of Elena Marsh"
+    },
+    {
+     "name": "Elena Marsh's sister (unnamed)",
+     "aliases": [],
+     "role": "Sister of the victim who exchanged calls and texts with her"
+    },
+    {
+     "name": "Daniel Okafor",
+     "aliases": [],
+     "role": "Line cook at Harborlight Restaurant"
+    },
+    {
+     "name": "Grace Okafor",
+     "aliases": [],
+     "role": "Wife of Daniel Okafor"
+    },
+    {
+     "name": "R. Alvarez",
+     "aliases": [
+      "Detective R. Alvarez"
+     ],
+     "role": "Investigating detective"
+    },
+    {
+     "name": "Restaurant guest (unnamed)",
+     "aliases": [],
+     "role": "Witness who showed Detective Alvarez a 11:40 p.m. parking lot photograph"
+    },
+    {
+     "name": "Mike Johnston",
+     "aliases": [],
+     "role": "Former dishwasher at Harborlight Restaurant employed until September 2016"
+    },
+    {
+     "name": "Harborlight Restaurant owner (unnamed)",
+     "aliases": [],
+     "role": "Owner of Harborlight Restaurant who supplied staff roster and door codes"
+    }
+   ],
+   "claims": [
+    {
+     "person": "D. Whitaker",
+     "claim": "Elena Marsh was on the manager's office floor with a heavy brass desk lamp beside her.",
+     "quote": "The victim, Elena Marsh, 41, the restaurant's night manager, was on the floor of the manager's office. A heavy brass desk lamp lay on the floor beside her.",
+     "doc_id": "doc01",
+     "kind": "observation"
+    },
+    {
+     "person": "D. Whitaker",
+     "claim": "The office door latch is defective and does not catch unless pulled hard, though it appears closed from the hallway.",
+     "quote": "The office door latch is defective. The door appears closed from the hallway but does not catch unless it is pulled hard.",
+     "doc_id": "doc01",
+     "kind": "object"
+    },
+    {
+     "person": "D. Whitaker",
+     "claim": "The office window blinds were closed and the door has a keypad lock that keeps an entry log.",
+     "quote": "The office window blinds were closed. The office door has a keypad lock; the keypad keeps an entry log.",
+     "doc_id": "doc01",
+     "kind": "observation"
+    },
+    {
+     "person": "D. Whitaker",
+     "claim": "There were no signs of forced entry, the kitchen and dining room were undisturbed, the register was closed out, and the victim's handbag was undisturbed on the desk.",
+     "quote": "No signs of forced entry anywhere in the building. The kitchen and dining room were undisturbed. The register was closed out. The victim's handbag was on the office desk, undisturbed.",
+     "doc_id": "doc01",
+     "kind": "observation"
+    },
+    {
+     "person": "Tomas Herrera",
+     "claim": "He found nothing unusual on his rounds during the night.",
+     "quote": "He stated he found nothing unusual on his rounds during the night.",
+     "doc_id": "doc01",
+     "kind": "observation"
+    },
+    {
+     "person": "L. Chen",
+     "claim": "Cause of death was blunt force trauma to the head, with two visible blows and no defensive wounds.",
+     "quote": "Two blows are visible. There are no defensive wounds.",
+     "doc_id": "doc02",
+     "kind": "observation"
+    },
+    {
+     "person": "L. Chen",
+     "claim": "Estimated time of death was between 10:30 p.m. and 12:30 a.m. on October 9 to 10, 2016.",
+     "quote": "Estimated time of death: between 10:30 p.m. and 12:30 a.m. on the night of October 9 to 10, 2016, based on body temperature and stomach contents.",
+     "doc_id": "doc02",
+     "kind": "observation"
+    },
+    {
+     "person": "Tomas Herrera",
+     "claim": "He did rounds on the hour, including the 11:00 p.m. round and the 12:30 a.m. round, and everything was quiet.",
+     "quote": "I do my rounds on the hour. Sunday night I did the 11 o'clock round and the half past midnight round. Everything was quiet.",
+     "doc_id": "doc03",
+     "kind": "action"
+    },
+    {
+     "person": "Tomas Herrera",
+     "claim": "He never entered the office that night and only checks the door from the hallway.",
+     "quote": "I never entered the office that night. I do not go in the office on my rounds. I check the door from the hallway.",
+     "doc_id": "doc03",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Tomas Herrera",
+     "claim": "At the 11:00 p.m. round the office was dark, and he saw nobody in the parking lot after 10:00 p.m.",
+     "quote": "At the 11 o'clock round the office was dark. The manager usually leaves by 11. I saw nobody in the parking lot after 10.",
+     "doc_id": "doc03",
+     "kind": "observation"
+    },
+    {
+     "person": "Tomas Herrera",
+     "claim": "He heard nothing during the night and would have heard a fight if there had been one.",
+     "quote": "I heard nothing during the night. If there had been a fight I would have heard it.",
+     "doc_id": "doc03",
+     "kind": "observation"
+    },
+    {
+     "person": "Tomas Herrera",
+     "claim": "Elena Marsh was strict but fair.",
+     "quote": "I was sorry to hear about Elena. She was strict but fair.",
+     "doc_id": "doc03",
+     "kind": "relationship"
+    },
+    {
+     "person": "Tomas Herrera",
+     "claim": "At 23:00 the office was dark and all was quiet.",
+     "quote": "23:00 — Round. Office dark. All quiet.",
+     "doc_id": "doc04",
+     "kind": "observation"
+    },
+    {
+     "person": "Tomas Herrera",
+     "claim": "At 00:07 he checked the office door and recorded it as secure.",
+     "quote": "00:07 — Checked office door, secure.",
+     "doc_id": "doc04",
+     "kind": "action"
+    },
+    {
+     "person": "Tomas Herrera",
+     "claim": "His hours were cut to weekends starting October 1 after nine years of work.",
+     "quote": "Margin note, same hand: \"Hours cut to weekends from Oct 1. Nine years and this is the thanks.\"",
+     "doc_id": "doc04",
+     "kind": "relationship"
+    },
+    {
+     "person": "Priya Raman",
+     "claim": "She returned to the office at about 10:50 p.m., used her own code to enter, talked to Elena for about two minutes, took her bag, and left.",
+     "quote": "I came back at about ten to eleven and used my own code to get in. Elena was there, alive, doing the close out. We talked for maybe two minutes. I took my bag and I left.",
+     "doc_id": "doc06",
+     "kind": "action"
+    },
+    {
+     "person": "Priya Raman",
+     "claim": "Elena Marsh was alive in the office doing the close out at about 10:50 p.m.",
+     "quote": "Elena was there, alive, doing the close out.",
+     "doc_id": "doc06",
+     "kind": "observation"
+    },
+    {
+     "person": "Priya Raman",
+     "claim": "She was home by 11:30 p.m. and asleep by 12:00 a.m.",
+     "quote": "I was home by 11:30 and asleep by 12.",
+     "doc_id": "doc06",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Priya Raman",
+     "claim": "She never lent or shared her keypad code with anyone.",
+     "quote": "I did not lend my code to anybody. We are not supposed to share codes, and I never have.",
+     "doc_id": "doc06",
+     "kind": "object"
+    },
+    {
+     "person": "Priya Raman",
+     "claim": "Elena Marsh got the manager job over her the previous spring.",
+     "quote": "Elena got the manager job over me last spring. People will say that matters. It did not, not like this.",
+     "doc_id": "doc06",
+     "kind": "relationship"
+    },
+    {
+     "person": "Marcus Delaney",
+     "claim": "He was at a poker game in Bayville from 8:00 p.m. to 1:00 a.m. and never went near the marina.",
+     "quote": "I was at a poker game in Bayville all night Sunday. I got there at 8 and I left at 1 in the morning. Ask any of the guys. I never went near the marina. I have not been to that restaurant in months.",
+     "doc_id": "doc07",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Marcus Delaney",
+     "claim": "He and Elena Marsh were divorced for two years and fought about the custody schedule.",
+     "quote": "Elena and I were divorced two years. We fought about the custody schedule, like everybody. I would never hurt her.",
+     "doc_id": "doc07",
+     "kind": "relationship"
+    },
+    {
+     "person": "Marcus Delaney",
+     "claim": "He drove to the marina arriving around 11:05 p.m., sat in the parking lot for about fifteen minutes, and drove home because the office light was off.",
+     "quote": "Fine. I drove to the marina that night. I got there at about five past 11. I wanted to talk to Elena about the custody papers before the hearing. I sat in the lot for maybe fifteen minutes. The office light was off, so I figured she had already left, and I drove home.",
+     "doc_id": "doc08",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Marcus Delaney",
+     "claim": "The office light was off while he was in the marina parking lot after 11:05 p.m.",
+     "quote": "The office light was off, so I figured she had already left, and I drove home.",
+     "doc_id": "doc08",
+     "kind": "observation"
+    },
+    {
+     "person": "Marcus Delaney",
+     "claim": "He never got out of his truck and never went inside the restaurant.",
+     "quote": "I never got out of the truck. I never went inside.",
+     "doc_id": "doc08",
+     "kind": "action"
+    },
+    {
+     "person": "Marcus Delaney",
+     "claim": "He gave a false first statement because of concerns over his custody case, and denied killing Elena Marsh.",
+     "quote": "I lied the first time because my lawyer said anything about that night would be used in the custody case. I am sorry I lied. I did not kill her.",
+     "doc_id": "doc08",
+     "kind": "action"
+    },
+    {
+     "person": "Elena Marsh",
+     "claim": "At 23:47 she was closing up and the watchman was doing his round.",
+     "quote": "23:47 — outgoing text, sister: \"closing up, watchman doing his round now, see you tomorrow.\"",
+     "doc_id": "doc10",
+     "kind": "observation"
+    },
+    {
+     "person": "Daniel Okafor",
+     "claim": "He finished his shift, left at 10:15 p.m., said goodnight to Elena through the office door, drove straight home, and was home before 11:00 p.m.",
+     "quote": "I finished my shift and I left at 10:15. Elena was in the office doing paperwork. I said goodnight through the door. I drove straight home. My wife can tell you I was home before 11.",
+     "doc_id": "doc12",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Daniel Okafor",
+     "claim": "Elena Marsh was in the office doing paperwork when he left at 10:15 p.m.",
+     "quote": "Elena was in the office doing paperwork.",
+     "doc_id": "doc12",
+     "kind": "observation"
+    },
+    {
+     "person": "Daniel Okafor",
+     "claim": "He owed Elena Marsh four hundred dollars from gambling and was paying it back out of his checks.",
+     "quote": "I owed Elena money, yes. Gambling. Four hundred dollars. She was letting me pay it back out of my checks. Everybody knew.",
+     "doc_id": "doc12",
+     "kind": "relationship"
+    },
+    {
+     "person": "Daniel Okafor",
+     "claim": "He left around 10:00 p.m. or a little after, stopped at the supply closet on his way out, spoke briefly with Elena outside the office about the Tuesday delivery, went home, and did not return.",
+     "quote": "I left around 10, maybe a little after. I did stop at the supply closet on my way out, and Elena came out of the office and we talked for a minute about the Tuesday delivery. I do not remember if I said that before. Then I went home.",
+     "doc_id": "doc13",
+     "kind": "action"
+    },
+    {
+     "person": "Daniel Okafor",
+     "claim": "He did not go back to the restaurant that night.",
+     "quote": "I did not go back to that restaurant that night.",
+     "doc_id": "doc13",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Grace Okafor",
+     "claim": "Daniel Okafor came home before 11:00 p.m., stayed home all night, and was asleep next to her by about 12:00 a.m.",
+     "quote": "Daniel came home that night before 11. I remember because the late news was not on yet. He was home all night. He was asleep by about 12, next to me.",
+     "doc_id": "doc14",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Grace Okafor",
+     "claim": "Nobody asked or called her about Daniel's whereabouts in 2016.",
+     "quote": "I was never asked about this in 2016. Nobody called me.",
+     "doc_id": "doc14",
+     "kind": "action"
+    },
+    {
+     "person": "R. Alvarez",
+     "claim": "A restaurant guest showed him a telephone photograph taken at 11:40 p.m. on October 9, 2016, showing the office window lit with the blinds closed.",
+     "quote": "A restaurant guest, name withheld in this memo, showed me a photograph on her telephone, taken in the parking lot at 11:40 p.m. on October 9, 2016. In the photograph the office window of the Harborlight is lit, with the blinds closed.",
+     "doc_id": "doc17",
+     "kind": "observation"
+    },
+    {
+     "person": "R. Alvarez",
+     "claim": "The original file of the guest's photograph had not been received or entered into evidence as of October 20, 2016.",
+     "quote": "As of this memo the original file has not been received and has not been entered into evidence. The photograph described above is not in the evidence ledger.",
+     "doc_id": "doc17",
+     "kind": "object"
+    },
+    {
+     "person": "Harborlight Restaurant owner (unnamed)",
+     "claim": "Door codes were assigned as 3305 to Elena Marsh, 2210 to Daniel Okafor, 4417 to Priya Raman, and master code 9001 to night watchman Tomas Herrera.",
+     "quote": "3305 — Elena Marsh, night manager. 2210 — Daniel Okafor, line cook. 4417 — Priya Raman, relief manager. 9001 — master code, issued to the night watchman on duty (Tomas Herrera).",
+     "doc_id": "doc18",
+     "kind": "object"
+    },
+    {
+     "person": "Harborlight Restaurant owner (unnamed)",
+     "claim": "Tomas Herrera's hours were reduced to weekends only from October 1, 2016, on the manager's decision.",
+     "quote": "Owner's note: Herrera's hours were reduced to weekends only from October 1, 2016, on the manager's decision.",
+     "doc_id": "doc18",
+     "kind": "relationship"
+    }
+   ],
+   "events": [
+    {
+     "what": "County health and safety inspection noted defective manager's office door latch and ordered repair.",
+     "when_text": "March 2015",
+     "when_window": "2015-03",
+     "where": "Harborlight Restaurant",
+     "who": [],
+     "quote": "County health and safety inspection report, Harborlight Restaurant, March 2015. Public record, posted on the county website. Item 14: The manager's office door latch is defective and does not catch unless the door is pulled firmly. Repair ordered. Re-inspection not recorded.",
+     "doc_id": "doc15"
+    },
+    {
+     "what": "Tomas Herrera's work hours were reduced to weekends only on the manager's decision.",
+     "when_text": "from October 1, 2016",
+     "when_window": "2016-10-01",
+     "where": "Harborlight Restaurant",
+     "who": [
+      "Tomas Herrera",
+      "Elena Marsh"
+     ],
+     "quote": "Owner's note: Herrera's hours were reduced to weekends only from October 1, 2016, on the manager's decision.",
+     "doc_id": "doc18"
+    },
+    {
+     "what": "Keypad entry to manager's office using code 3305.",
+     "when_text": "Sunday, October 9, 2016: 18:04",
+     "when_window": "2016-10-09T18:04",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [],
+     "quote": "18:04 — code 3305",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Outgoing 6-minute call from Elena Marsh's mobile phone to her sister.",
+     "when_text": "Sunday, October 9, 2016: 18:22",
+     "when_window": "2016-10-09T18:22",
+     "where": "",
+     "who": [
+      "Elena Marsh",
+      "Elena Marsh's sister (unnamed)"
+     ],
+     "quote": "18:22 — outgoing call, sister, 6 minutes.",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Keypad entry to manager's office using code 3305.",
+     "when_text": "Sunday, October 9, 2016: 19:31",
+     "when_window": "2016-10-09T19:31",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [],
+     "quote": "19:31 — code 3305",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Tomas Herrera logged on duty at Harborlight Marina.",
+     "when_text": "Sunday, October 9, 2016, 21:00",
+     "when_window": "2016-10-09T21:00",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "quote": "21:00 — On duty. Lot half full.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Incoming text message from sister to Elena Marsh's mobile phone.",
+     "when_text": "Sunday, October 9, 2016: 21:03",
+     "when_window": "2016-10-09T21:03",
+     "where": "",
+     "who": [
+      "Elena Marsh",
+      "Elena Marsh's sister (unnamed)"
+     ],
+     "quote": "21:03 — incoming text, sister: \"call me tomorrow.\"",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Keypad entry to manager's office using code 2210.",
+     "when_text": "Sunday, October 9, 2016: 21:15",
+     "when_window": "2016-10-09T21:15",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [],
+     "quote": "21:15 — code 2210",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Elena Marsh ate a staff meal.",
+     "when_text": "at approximately 9:30 p.m.",
+     "when_window": "",
+     "where": "",
+     "who": [
+      "Elena Marsh"
+     ],
+     "quote": "The decedent had eaten a staff meal at approximately 9:30 p.m.",
+     "doc_id": "doc02"
+    },
+    {
+     "what": "Tomas Herrera logged a watchman round.",
+     "when_text": "Sunday, October 9, 2016, 22:00",
+     "when_window": "2016-10-09T22:00",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "quote": "22:00 — Round. All quiet.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Estimated window for death of Elena Marsh by blunt force trauma.",
+     "when_text": "between 10:30 p.m. and 12:30 a.m. on the night of October 9 to 10, 2016",
+     "when_window": "2016-10-09T22:30/2016-10-10T00:30",
+     "where": "Manager's office, Harborlight Restaurant",
+     "who": [
+      "Elena Marsh"
+     ],
+     "quote": "Estimated time of death: between 10:30 p.m. and 12:30 a.m. on the night of October 9 to 10, 2016, based on body temperature and stomach contents.",
+     "doc_id": "doc02"
+    },
+    {
+     "what": "Keypad entry to manager's office using code 4417.",
+     "when_text": "Sunday, October 9, 2016: 22:52",
+     "when_window": "2016-10-09T22:52",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [],
+     "quote": "22:52 — code 4417",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Tomas Herrera logged a watchman round and noted office dark.",
+     "when_text": "Sunday, October 9, 2016, 23:00",
+     "when_window": "2016-10-09T23:00",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "quote": "23:00 — Round. Office dark. All quiet.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Marcus Delaney's pickup truck transponder recorded crossing Harbor Bridge southbound toward Harborlight Marina.",
+     "when_text": "Sunday, October 9, 2016: 23:02",
+     "when_window": "2016-10-09T23:02",
+     "where": "Harbor Bridge",
+     "who": [
+      "Marcus Delaney"
+     ],
+     "quote": "23:02 — southbound crossing, toward Harborlight Marina.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Marcus Delaney's pickup truck transponder recorded crossing Harbor Bridge northbound away from Harborlight Marina.",
+     "when_text": "Sunday, October 9, 2016: 23:21",
+     "when_window": "2016-10-09T23:21",
+     "where": "Harbor Bridge",
+     "who": [
+      "Marcus Delaney"
+     ],
+     "quote": "23:21 — northbound crossing, away from Harborlight Marina.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Restaurant guest took a photograph on her telephone in the parking lot showing the office window lit with blinds closed.",
+     "when_text": "at 11:40 p.m. on October 9, 2016",
+     "when_window": "2016-10-09T23:40",
+     "where": "Parking lot, Harborlight Restaurant",
+     "who": [
+      "Restaurant guest (unnamed)"
+     ],
+     "quote": "A restaurant guest, name withheld in this memo, showed me a photograph on her telephone, taken in the parking lot at 11:40 p.m. on October 9, 2016. In the photograph the office window of the Harborlight is lit, with the blinds closed.",
+     "doc_id": "doc17"
+    },
+    {
+     "what": "Outgoing text sent from Elena Marsh's mobile phone to her sister.",
+     "when_text": "Sunday, October 9, 2016: 23:47",
+     "when_window": "2016-10-09T23:47",
+     "where": "",
+     "who": [
+      "Elena Marsh",
+      "Elena Marsh's sister (unnamed)"
+     ],
+     "quote": "23:47 — outgoing text, sister: \"closing up, watchman doing his round now, see you tomorrow.\"",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Keypad entry to manager's office using code 3305.",
+     "when_text": "Sunday, October 9, 2016: 23:58",
+     "when_window": "2016-10-09T23:58",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [],
+     "quote": "23:58 — code 3305",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Tomas Herrera logged checking the office door.",
+     "when_text": "00:07",
+     "when_window": "2016-10-10T00:07",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "quote": "00:07 — Checked office door, secure.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Keypad entry to manager's office using master code 9001.",
+     "when_text": "00:07",
+     "when_window": "2016-10-10T00:07",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [],
+     "quote": "00:07 — code 9001",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Office electrical circuit power draw dropped from active lights/computer level to standby level.",
+     "when_text": "from early evening until 00:20 on the night of October 9 to 10, 2016",
+     "when_window": "2016-10-10T00:20",
+     "where": "Manager's office, Harborlight Restaurant",
+     "who": [],
+     "quote": "The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Tomas Herrera logged a watchman round.",
+     "when_text": "00:30",
+     "when_window": "2016-10-10T00:30",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "quote": "00:30 — Round. All quiet.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Tomas Herrera logged a watchman round.",
+     "when_text": "02:00",
+     "when_window": "2016-10-10T02:00",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "quote": "02:00 — Round. All quiet.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Tomas Herrera logged off duty.",
+     "when_text": "06:00",
+     "when_window": "2016-10-10T06:00",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "quote": "06:00 — Off duty. Nothing to report.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Officer D. Whitaker responded to Harborlight Restaurant and was let in by the day manager.",
+     "when_text": "October 10, 2016, At 6:55 a.m.",
+     "when_window": "2016-10-10T06:55",
+     "where": "Harborlight Restaurant, 88 Pier Road",
+     "who": [
+      "D. Whitaker",
+      "Day manager (unnamed)"
+     ],
+     "quote": "At 6:55 a.m. I responded to the Harborlight Restaurant, 88 Pier Road, on a report of an unresponsive employee. The day manager let me in through the kitchen entrance.",
+     "doc_id": "doc01"
+    },
+    {
+     "what": "Harbor Gazette published news article reporting faulty office door latch and police interest in former husband.",
+     "when_text": "October 13, 2016",
+     "when_window": "2016-10-13",
+     "where": "",
+     "who": [
+      "Elena Marsh",
+      "Marcus Delaney"
+     ],
+     "quote": "Harbor Gazette, October 13, 2016. \"Marina manager's death shocks the pier.\"",
+     "doc_id": "doc16"
+    }
+   ],
+   "evidence_items": [
+    {
+     "description": "Heavy brass desk lamp on the office floor beside the victim",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Defective manager's office door latch",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Office window blinds",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Office door keypad lock",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Restaurant cash register",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Elena Marsh's handbag on the office desk",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Night watchman log book page for October 9, 2016",
+     "doc_id": "doc04",
+     "status": "logged"
+    },
+    {
+     "description": "Manager's office door keypad entry log exported October 10, 2016",
+     "doc_id": "doc05",
+     "status": "logged"
+    },
+    {
+     "description": "Priya Raman's bag",
+     "doc_id": "doc06",
+     "status": "mentioned"
+    },
+    {
+     "description": "Marcus Delaney's truck",
+     "doc_id": "doc08",
+     "status": "mentioned"
+    },
+    {
+     "description": "Harbor Bridge toll transponder record for Marcus Delaney's pickup truck",
+     "doc_id": "doc09",
+     "status": "logged"
+    },
+    {
+     "description": "Elena Marsh's mobile telephone recovered from her handbag and carrier record summary",
+     "doc_id": "doc10",
+     "status": "logged"
+    },
+    {
+     "description": "Elena Marsh's handbag in the office",
+     "doc_id": "doc10",
+     "status": "mentioned"
+    },
+    {
+     "description": "Electric utility smart meter record for the office circuit",
+     "doc_id": "doc11",
+     "status": "logged"
+    },
+    {
+     "description": "Office lights and computer",
+     "doc_id": "doc11",
+     "status": "mentioned"
+    },
+    {
+     "description": "Defective manager's office door latch noted in March 2015 inspection report",
+     "doc_id": "doc15",
+     "status": "mentioned"
+    },
+    {
+     "description": "Restaurant guest's telephone photograph of the lit office window taken at 11:40 p.m. on October 9, 2016",
+     "doc_id": "doc17",
+     "status": "mentioned"
+    },
+    {
+     "description": "Harborlight Restaurant staff roster and door codes list",
+     "doc_id": "doc18",
+     "status": "logged"
+    }
+   ]
+  },
+  "analyst": {
+   "events": [
+    {
+     "id": "evt_01",
+     "what": "County health and safety inspection noted defective manager's office door latch and ordered repair, with no re-inspection recorded.",
+     "window": "2015-03",
+     "where": "Harborlight Restaurant",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "County health and safety inspection report, Harborlight Restaurant, March 2015. Public record, posted on the county website. Item 14: The manager's office door latch is defective and does not catch unless the door is pulled firmly. Repair ordered. Re-inspection not recorded.",
+       "doc_id": "doc15"
+      }
+     ]
+    },
+    {
+     "id": "evt_02",
+     "what": "Elena Marsh was selected for the manager job over Priya Raman.",
+     "window": "Spring 2016",
+     "where": "Harborlight Restaurant",
+     "who": [
+      "Elena Marsh",
+      "Priya Raman"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Elena got the manager job over me last spring. People will say that matters. It did not, not like this.",
+       "doc_id": "doc06"
+      }
+     ]
+    },
+    {
+     "id": "evt_03",
+     "what": "Tomas Herrera's work hours were reduced to weekends only on the manager's decision.",
+     "window": "2016-10-01",
+     "where": "Harborlight Restaurant / Harborlight Marina",
+     "who": [
+      "Tomas Herrera",
+      "Elena Marsh"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Owner's note: Herrera's hours were reduced to weekends only from October 1, 2016, on the manager's decision.",
+       "doc_id": "doc18"
+      },
+      {
+       "quote": "Margin note, same hand: \"Hours cut to weekends from Oct 1. Nine years and this is the thanks.\"",
+       "doc_id": "doc04"
+      }
+     ]
+    },
+    {
+     "id": "evt_04",
+     "what": "Keypad entry to manager's office using code 3305 (assigned to Elena Marsh).",
+     "window": "2016-10-09T18:04",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [
+      "Elena Marsh"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "18:04 — code 3305",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "3305 — Elena Marsh, night manager. 2210 — Daniel Okafor, line cook. 4417 — Priya Raman, relief manager. 9001 — master code, issued to the night watchman on duty (Tomas Herrera).",
+       "doc_id": "doc18"
+      }
+     ]
+    },
+    {
+     "id": "evt_05",
+     "what": "Outgoing 6-minute call from Elena Marsh's mobile phone to her sister.",
+     "window": "2016-10-09T18:22",
+     "where": "",
+     "who": [
+      "Elena Marsh",
+      "Elena Marsh's sister (unnamed)"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "18:22 — outgoing call, sister, 6 minutes.",
+       "doc_id": "doc10"
+      }
+     ]
+    },
+    {
+     "id": "evt_06",
+     "what": "Keypad entry to manager's office using code 3305 (assigned to Elena Marsh).",
+     "window": "2016-10-09T19:31",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [
+      "Elena Marsh"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "19:31 — code 3305",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "3305 — Elena Marsh, night manager. 2210 — Daniel Okafor, line cook. 4417 — Priya Raman, relief manager. 9001 — master code, issued to the night watchman on duty (Tomas Herrera).",
+       "doc_id": "doc18"
+      }
+     ]
+    },
+    {
+     "id": "evt_07",
+     "what": "Marcus Delaney claimed in his first statement that he was at a poker game in Bayville from 8:00 p.m. to 1:00 a.m. and never went near the marina.",
+     "window": "2016-10-09T20:00/2016-10-10T01:00",
+     "where": "Bayville",
+     "who": [
+      "Marcus Delaney"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "I was at a poker game in Bayville all night Sunday. I got there at 8 and I left at 1 in the morning. Ask any of the guys. I never went near the marina. I have not been to that restaurant in months.",
+       "doc_id": "doc07"
+      }
+     ]
+    },
+    {
+     "id": "evt_08",
+     "what": "Tomas Herrera logged on duty at Harborlight Marina and noted the lot was half full.",
+     "window": "2016-10-09T21:00",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "21:00 — On duty. Lot half full.",
+       "doc_id": "doc04"
+      }
+     ]
+    },
+    {
+     "id": "evt_09",
+     "what": "Incoming text message from sister to Elena Marsh's mobile phone.",
+     "window": "2016-10-09T21:03",
+     "where": "",
+     "who": [
+      "Elena Marsh",
+      "Elena Marsh's sister (unnamed)"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "21:03 — incoming text, sister: \"call me tomorrow.\"",
+       "doc_id": "doc10"
+      }
+     ]
+    },
+    {
+     "id": "evt_10",
+     "what": "Keypad entry to manager's office using code 2210 (assigned to Daniel Okafor).",
+     "window": "2016-10-09T21:15",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [
+      "Daniel Okafor"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "21:15 — code 2210",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "3305 — Elena Marsh, night manager. 2210 — Daniel Okafor, line cook. 4417 — Priya Raman, relief manager. 9001 — master code, issued to the night watchman on duty (Tomas Herrera).",
+       "doc_id": "doc18"
+      }
+     ]
+    },
+    {
+     "id": "evt_11",
+     "what": "Elena Marsh ate a staff meal.",
+     "window": "approximately 9:30 p.m. (2016-10-09)",
+     "where": "",
+     "who": [
+      "Elena Marsh"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "The decedent had eaten a staff meal at approximately 9:30 p.m.",
+       "doc_id": "doc02"
+      }
+     ]
+    },
+    {
+     "id": "evt_12",
+     "what": "Tomas Herrera logged a 22:00 watchman round as all quiet, and later stated he saw nobody in the parking lot after 10:00 p.m.",
+     "window": "2016-10-09T22:00 onward",
+     "where": "Harborlight Marina / Parking lot",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "22:00 — Round. All quiet.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "At the 11 o'clock round the office was dark. The manager usually leaves by 11. I saw nobody in the parking lot after 10.",
+       "doc_id": "doc03"
+      }
+     ]
+    },
+    {
+     "id": "evt_13",
+     "what": "Daniel Okafor stated in a later interview that he left around 10:00 p.m. or a little after, stopped at the supply closet, and spoke with Elena Marsh after she came out of the office before going home.",
+     "window": "around 10:00 p.m. or a little after (2016-10-09)",
+     "where": "Supply closet / outside manager's office, Harborlight Restaurant",
+     "who": [
+      "Daniel Okafor",
+      "Elena Marsh"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "I left around 10, maybe a little after. I did stop at the supply closet on my way out, and Elena came out of the office and we talked for a minute about the Tuesday delivery. I do not remember if I said that before. Then I went home.",
+       "doc_id": "doc13"
+      }
+     ]
+    },
+    {
+     "id": "evt_14",
+     "what": "Daniel Okafor stated in his initial interview that he finished his shift and left at 10:15 p.m., saying goodnight through the door while Elena Marsh was inside the office doing paperwork.",
+     "window": "2016-10-09T22:15",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [
+      "Daniel Okafor",
+      "Elena Marsh"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "I finished my shift and I left at 10:15. Elena was in the office doing paperwork. I said goodnight through the door. I drove straight home. My wife can tell you I was home before 11.",
+       "doc_id": "doc12"
+      }
+     ]
+    },
+    {
+     "id": "evt_15",
+     "what": "Office electrical circuit drew power consistent with office lights and computer being on from early evening until 00:20, when draw dropped to standby level.",
+     "window": "early evening on 2016-10-09 until 2016-10-10T00:20",
+     "where": "Manager's office, Harborlight Restaurant",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "evt_16",
+     "what": "Estimated time of death of Elena Marsh from blunt force trauma to the head.",
+     "window": "2016-10-09T22:30/2016-10-10T00:30",
+     "where": "Manager's office, Harborlight Restaurant",
+     "who": [
+      "Elena Marsh"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Estimated time of death: between 10:30 p.m. and 12:30 a.m. on the night of October 9 to 10, 2016, based on body temperature and stomach contents.",
+       "doc_id": "doc02"
+      },
+      {
+       "quote": "Two blows are visible. There are no defensive wounds.",
+       "doc_id": "doc02"
+      }
+     ]
+    },
+    {
+     "id": "evt_17",
+     "what": "Daniel Okafor and Grace Okafor stated Daniel arrived home before 11:00 p.m., remained home all night, and was asleep by about 12:00 a.m.",
+     "window": "before 2016-10-09T23:00 through night (asleep by ~2016-10-10T00:00)",
+     "where": "Daniel and Grace Okafor's home",
+     "who": [
+      "Daniel Okafor",
+      "Grace Okafor"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "I finished my shift and I left at 10:15. Elena was in the office doing paperwork. I said goodnight through the door. I drove straight home. My wife can tell you I was home before 11.",
+       "doc_id": "doc12"
+      },
+      {
+       "quote": "Daniel came home that night before 11. I remember because the late news was not on yet. He was home all night. He was asleep by about 12, next to me.",
+       "doc_id": "doc14"
+      },
+      {
+       "quote": "I did not go back to that restaurant that night.",
+       "doc_id": "doc13"
+      }
+     ]
+    },
+    {
+     "id": "evt_18",
+     "what": "Keypad entry to manager's office using code 4417 (assigned to Priya Raman) at 22:52; Priya Raman stated she returned at about 10:50 p.m., entered with her code, spoke for about two minutes with Elena Marsh who was alive doing the close out, took her bag, and left.",
+     "window": "about 10:50 p.m. / 2016-10-09T22:52",
+     "where": "Manager's office, Harborlight Restaurant",
+     "who": [
+      "Priya Raman",
+      "Elena Marsh"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "22:52 — code 4417",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "I came back at about ten to eleven and used my own code to get in. Elena was there, alive, doing the close out. We talked for maybe two minutes. I took my bag and I left.",
+       "doc_id": "doc06"
+      },
+      {
+       "quote": "3305 — Elena Marsh, night manager. 2210 — Daniel Okafor, line cook. 4417 — Priya Raman, relief manager. 9001 — master code, issued to the night watchman on duty (Tomas Herrera).",
+       "doc_id": "doc18"
+      }
+     ]
+    },
+    {
+     "id": "evt_19",
+     "what": "Tomas Herrera logged and stated that he completed the 23:00 watchman round, the office was dark, and all was quiet.",
+     "window": "2016-10-09T23:00",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "23:00 — Round. Office dark. All quiet.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "At the 11 o'clock round the office was dark. The manager usually leaves by 11. I saw nobody in the parking lot after 10.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "I do my rounds on the hour. Sunday night I did the 11 o'clock round and the half past midnight round. Everything was quiet.",
+       "doc_id": "doc03"
+      }
+     ]
+    },
+    {
+     "id": "evt_20",
+     "what": "Marcus Delaney's pickup truck transponder recorded crossing Harbor Bridge southbound toward Harborlight Marina.",
+     "window": "2016-10-09T23:02",
+     "where": "Harbor Bridge",
+     "who": [
+      "Marcus Delaney"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "23:02 — southbound crossing, toward Harborlight Marina.",
+       "doc_id": "doc09"
+      }
+     ]
+    },
+    {
+     "id": "evt_21",
+     "what": "Marcus Delaney stated in his second statement that he arrived at the marina at about 11:05 p.m., sat in his truck in the parking lot for maybe fifteen minutes, saw the office light was off, never got out or went inside, and drove home.",
+     "window": "about 11:05 p.m. for maybe fifteen minutes (2016-10-09)",
+     "where": "Parking lot, Harborlight Marina",
+     "who": [
+      "Marcus Delaney"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Fine. I drove to the marina that night. I got there at about five past 11. I wanted to talk to Elena about the custody papers before the hearing. I sat in the lot for maybe fifteen minutes. The office light was off, so I figured she had already left, and I drove home.",
+       "doc_id": "doc08"
+      },
+      {
+       "quote": "I never got out of the truck. I never went inside.",
+       "doc_id": "doc08"
+      }
+     ]
+    },
+    {
+     "id": "evt_22",
+     "what": "Marcus Delaney's pickup truck transponder recorded crossing Harbor Bridge northbound away from Harborlight Marina.",
+     "window": "2016-10-09T23:21",
+     "where": "Harbor Bridge",
+     "who": [
+      "Marcus Delaney"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "23:21 — northbound crossing, away from Harborlight Marina.",
+       "doc_id": "doc09"
+      }
+     ]
+    },
+    {
+     "id": "evt_23",
+     "what": "Priya Raman stated she was home by 11:30 p.m. and asleep by 12:00 a.m.",
+     "window": "by 2016-10-09T23:30 to 2016-10-10T00:00",
+     "where": "Priya Raman's home",
+     "who": [
+      "Priya Raman"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "I was home by 11:30 and asleep by 12.",
+       "doc_id": "doc06"
+      }
+     ]
+    },
+    {
+     "id": "evt_24",
+     "what": "Unnamed restaurant guest took a telephone photograph in the parking lot showing the Harborlight office window lit with blinds closed (original file not yet in evidence as of memo).",
+     "window": "2016-10-09T23:40",
+     "where": "Parking lot, Harborlight Restaurant",
+     "who": [
+      "Restaurant guest (unnamed)"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "A restaurant guest, name withheld in this memo, showed me a photograph on her telephone, taken in the parking lot at 11:40 p.m. on October 9, 2016. In the photograph the office window of the Harborlight is lit, with the blinds closed.",
+       "doc_id": "doc17"
+      },
+      {
+       "quote": "As of this memo the original file has not been received and has not been entered into evidence. The photograph described above is not in the evidence ledger.",
+       "doc_id": "doc17"
+      }
+     ]
+    },
+    {
+     "id": "evt_25",
+     "what": "Outgoing text sent from Elena Marsh's mobile phone to her sister stating she was closing up and the watchman was doing his round.",
+     "window": "2016-10-09T23:47",
+     "where": "",
+     "who": [
+      "Elena Marsh",
+      "Elena Marsh's sister (unnamed)",
+      "Tomas Herrera"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "23:47 — outgoing text, sister: \"closing up, watchman doing his round now, see you tomorrow.\"",
+       "doc_id": "doc10"
+      }
+     ]
+    },
+    {
+     "id": "evt_26",
+     "what": "Keypad entry to manager's office using code 3305 (assigned to Elena Marsh).",
+     "window": "2016-10-09T23:58",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [
+      "Elena Marsh"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "23:58 — code 3305",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "3305 — Elena Marsh, night manager. 2210 — Daniel Okafor, line cook. 4417 — Priya Raman, relief manager. 9001 — master code, issued to the night watchman on duty (Tomas Herrera).",
+       "doc_id": "doc18"
+      }
+     ]
+    },
+    {
+     "id": "evt_27",
+     "what": "Tomas Herrera logged checking the office door as secure at 00:07, and stated he never entered the office that night and only checks the door from the hallway.",
+     "window": "2016-10-10T00:07",
+     "where": "Hallway outside manager's office, Harborlight Restaurant",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "00:07 — Checked office door, secure.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "I never entered the office that night. I do not go in the office on my rounds. I check the door from the hallway.",
+       "doc_id": "doc03"
+      }
+     ]
+    },
+    {
+     "id": "evt_28",
+     "what": "Keypad entry to manager's office recorded using master code 9001 (issued to Tomas Herrera).",
+     "window": "2016-10-10T00:07",
+     "where": "Manager's office door, Harborlight Restaurant",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "00:07 — code 9001",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "3305 — Elena Marsh, night manager. 2210 — Daniel Okafor, line cook. 4417 — Priya Raman, relief manager. 9001 — master code, issued to the night watchman on duty (Tomas Herrera).",
+       "doc_id": "doc18"
+      }
+     ]
+    },
+    {
+     "id": "evt_29",
+     "what": "Tomas Herrera logged and stated he completed the 00:30 watchman round and all was quiet.",
+     "window": "2016-10-10T00:30",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "00:30 — Round. All quiet.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "I do my rounds on the hour. Sunday night I did the 11 o'clock round and the half past midnight round. Everything was quiet.",
+       "doc_id": "doc03"
+      }
+     ]
+    },
+    {
+     "id": "evt_30",
+     "what": "Tomas Herrera logged a 02:00 watchman round as all quiet.",
+     "window": "2016-10-10T02:00",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "02:00 — Round. All quiet.",
+       "doc_id": "doc04"
+      }
+     ]
+    },
+    {
+     "id": "evt_31",
+     "what": "Tomas Herrera logged off duty with nothing to report.",
+     "window": "2016-10-10T06:00",
+     "where": "Harborlight Marina",
+     "who": [
+      "Tomas Herrera"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "06:00 — Off duty. Nothing to report.",
+       "doc_id": "doc04"
+      }
+     ]
+    },
+    {
+     "id": "evt_32",
+     "what": "Officer D. Whitaker responded to Harborlight Restaurant, was let in by the day manager, and observed Elena Marsh on the manager's office floor with a heavy brass desk lamp beside her, closed window blinds, undisturbed handbag, and defective door latch.",
+     "window": "2016-10-10T06:55",
+     "where": "Harborlight Restaurant, 88 Pier Road",
+     "who": [
+      "D. Whitaker",
+      "Day manager (unnamed)",
+      "Elena Marsh"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "At 6:55 a.m. I responded to the Harborlight Restaurant, 88 Pier Road, on a report of an unresponsive employee. The day manager let me in through the kitchen entrance.",
+       "doc_id": "doc01"
+      },
+      {
+       "quote": "The victim, Elena Marsh, 41, the restaurant's night manager, was on the floor of the manager's office. A heavy brass desk lamp lay on the floor beside her.",
+       "doc_id": "doc01"
+      },
+      {
+       "quote": "The office door latch is defective. The door appears closed from the hallway but does not catch unless it is pulled hard.",
+       "doc_id": "doc01"
+      }
+     ]
+    },
+    {
+     "id": "evt_33",
+     "what": "Harbor Gazette published news article on the marina manager's death.",
+     "window": "2016-10-13",
+     "where": "",
+     "who": [
+      "Elena Marsh",
+      "Marcus Delaney"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Harbor Gazette, October 13, 2016. \"Marina manager's death shocks the pier.\"",
+       "doc_id": "doc16"
+      }
+     ]
+    }
+   ],
+   "collisions": [
+    {
+     "event_ids": [
+      "evt_07",
+      "evt_20",
+      "evt_21",
+      "evt_22"
+     ],
+     "who_or_what": "Marcus Delaney / Marcus Delaney's pickup truck",
+     "explanation": "Marcus Delaney's first statement places him at a poker game in Bayville from 8:00 p.m. to 1:00 a.m. and never near the marina, whereas Harbor Bridge transponder records place his truck crossing toward the marina at 23:02 and away at 23:21, and his second statement places him in the marina parking lot from about 11:05 p.m. for about fifteen minutes.",
+     "quotes": [
+      {
+       "quote": "I was at a poker game in Bayville all night Sunday. I got there at 8 and I left at 1 in the morning. Ask any of the guys. I never went near the marina. I have not been to that restaurant in months.",
+       "doc_id": "doc07"
+      },
+      {
+       "quote": "23:02 — southbound crossing, toward Harborlight Marina.",
+       "doc_id": "doc09"
+      },
+      {
+       "quote": "23:21 — northbound crossing, away from Harborlight Marina.",
+       "doc_id": "doc09"
+      },
+      {
+       "quote": "Fine. I drove to the marina that night. I got there at about five past 11. I wanted to talk to Elena about the custody papers before the hearing. I sat in the lot for maybe fifteen minutes. The office light was off, so I figured she had already left, and I drove home.",
+       "doc_id": "doc08"
+      }
+     ]
+    },
+    {
+     "event_ids": [
+      "evt_15",
+      "evt_19",
+      "evt_21",
+      "evt_24"
+     ],
+     "who_or_what": "Manager's office lighting and electrical state",
+     "explanation": "Tomas Herrera's log and statement report the office was dark at 23:00, and Marcus Delaney's second statement claims the office light was off between about 11:05 p.m. and 11:20 p.m., whereas utility meter data indicates the office circuit drew power consistent with the office lights and computer being on from early evening until 00:20, and a guest's 11:40 p.m. telephone photograph described in a detective's memo shows the office window lit with blinds closed.",
+     "quotes": [
+      {
+       "quote": "23:00 — Round. Office dark. All quiet.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "At the 11 o'clock round the office was dark. The manager usually leaves by 11. I saw nobody in the parking lot after 10.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "The office light was off, so I figured she had already left, and I drove home.",
+       "doc_id": "doc08"
+      },
+      {
+       "quote": "The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.",
+       "doc_id": "doc11"
+      },
+      {
+       "quote": "A restaurant guest, name withheld in this memo, showed me a photograph on her telephone, taken in the parking lot at 11:40 p.m. on October 9, 2016. In the photograph the office window of the Harborlight is lit, with the blinds closed.",
+       "doc_id": "doc17"
+      }
+     ]
+    },
+    {
+     "event_ids": [
+      "evt_12",
+      "evt_18",
+      "evt_21",
+      "evt_24"
+     ],
+     "who_or_what": "Harborlight parking lot occupancy after 22:00",
+     "explanation": "Tomas Herrera stated he saw nobody in the parking lot after 10:00 p.m., whereas Priya Raman stated she returned at about 10:50 p.m. and left, Marcus Delaney stated he sat in his truck in the marina lot from about 11:05 p.m. for maybe fifteen minutes, and an unnamed guest took a photograph in the parking lot at 11:40 p.m.",
+     "quotes": [
+      {
+       "quote": "At the 11 o'clock round the office was dark. The manager usually leaves by 11. I saw nobody in the parking lot after 10.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "I came back at about ten to eleven and used my own code to get in. Elena was there, alive, doing the close out. We talked for maybe two minutes. I took my bag and I left.",
+       "doc_id": "doc06"
+      },
+      {
+       "quote": "Fine. I drove to the marina that night. I got there at about five past 11. I wanted to talk to Elena about the custody papers before the hearing. I sat in the lot for maybe fifteen minutes. The office light was off, so I figured she had already left, and I drove home.",
+       "doc_id": "doc08"
+      },
+      {
+       "quote": "A restaurant guest, name withheld in this memo, showed me a photograph on her telephone, taken in the parking lot at 11:40 p.m. on October 9, 2016. In the photograph the office window of the Harborlight is lit, with the blinds closed.",
+       "doc_id": "doc17"
+      }
+     ]
+    },
+    {
+     "event_ids": [
+      "evt_13",
+      "evt_14"
+     ],
+     "who_or_what": "Daniel Okafor and Elena Marsh",
+     "explanation": "In his initial statement Daniel Okafor placed his departure at 10:15 p.m. and stated Elena Marsh remained inside the office doing paperwork while he said goodnight through the door, whereas in his later statement he placed his departure around 10:00 p.m. or a little after, stopping at the supply closet and speaking with Elena Marsh after she came out of the office.",
+     "quotes": [
+      {
+       "quote": "I finished my shift and I left at 10:15. Elena was in the office doing paperwork. I said goodnight through the door. I drove straight home. My wife can tell you I was home before 11.",
+       "doc_id": "doc12"
+      },
+      {
+       "quote": "I left around 10, maybe a little after. I did stop at the supply closet on my way out, and Elena came out of the office and we talked for a minute about the Tuesday delivery. I do not remember if I said that before. Then I went home.",
+       "doc_id": "doc13"
+      }
+     ]
+    },
+    {
+     "event_ids": [
+      "evt_19",
+      "evt_25",
+      "evt_27",
+      "evt_29"
+     ],
+     "who_or_what": "Tomas Herrera's watchman rounds around 23:47",
+     "explanation": "An outgoing text from Elena Marsh's phone at 23:47 states the watchman was doing his round at that time, whereas Tomas Herrera's log and statement record rounds at 23:00 and 00:30 (with a door check logged at 00:07) and state he does his rounds on the hour.",
+     "quotes": [
+      {
+       "quote": "23:47 — outgoing text, sister: \"closing up, watchman doing his round now, see you tomorrow.\"",
+       "doc_id": "doc10"
+      },
+      {
+       "quote": "I do my rounds on the hour. Sunday night I did the 11 o'clock round and the half past midnight round. Everything was quiet.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "23:00 — Round. Office dark. All quiet.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "00:07 — Checked office door, secure.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "00:30 — Round. All quiet.",
+       "doc_id": "doc04"
+      }
+     ]
+    },
+    {
+     "event_ids": [
+      "evt_27",
+      "evt_28"
+     ],
+     "who_or_what": "Tomas Herrera / Master code 9001 at manager's office door",
+     "explanation": "At 00:07 Tomas Herrera logged checking the office door as secure and stated he never entered the office that night and only checks the door from the hallway, whereas the office door keypad log records an entry at 00:07 using master code 9001, which was issued to Tomas Herrera.",
+     "quotes": [
+      {
+       "quote": "00:07 — Checked office door, secure.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "I never entered the office that night. I do not go in the office on my rounds. I check the door from the hallway.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "00:07 — code 9001",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "3305 — Elena Marsh, night manager. 2210 — Daniel Okafor, line cook. 4417 — Priya Raman, relief manager. 9001 — master code, issued to the night watchman on duty (Tomas Herrera).",
+       "doc_id": "doc18"
+      }
+     ]
+    }
+   ]
+  },
+  "digital": {
+   "machine_events": [
+    {
+     "what": "Office door keypad entry using code 3305 (assigned to Elena Marsh in doc18)",
+     "when_text": "2016-10-09 18:04",
+     "proves": "Proves code 3305 was keyed into the manager's office door keypad at 18:04. Suggests Elena Marsh entered the office. Cannot prove who physically pressed the keys, when anyone exited (keypad does not log exits), or whether other entries occurred without the keypad due to the defective door latch noted in doc01 and doc15.",
+     "quote": "18:04 — code 3305",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Outgoing 6-minute call from Elena Marsh's mobile phone to her sister",
+     "when_text": "2016-10-09 18:22",
+     "proves": "Proves an outgoing call connected between Elena Marsh's mobile telephone and her sister's number at 18:22 lasting 6 minutes. Suggests Marsh spoke with her sister. Cannot prove by carrier summary alone who held the phone, what was said, or the phone's location.",
+     "quote": "18:22 — outgoing call, sister, 6 minutes.",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Office door keypad entry using code 3305 (assigned to Elena Marsh in doc18)",
+     "when_text": "2016-10-09 19:31",
+     "proves": "Proves code 3305 was keyed into the office door keypad at 19:31. Suggests Marsh entered the office. Cannot prove who entered the code, when anyone exited, or whether unlogged entries occurred via the defective latch.",
+     "quote": "19:31 — code 3305",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Incoming text message to Elena Marsh's mobile phone from her sister",
+     "when_text": "2016-10-09 21:03",
+     "proves": "Proves Marsh's mobile phone received a text from her sister's number at 21:03 reading 'call me tomorrow.' Suggests planned contact the next day. Cannot prove whether or when Marsh read the message.",
+     "quote": "21:03 — incoming text, sister: \"call me tomorrow.\"",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Office door keypad entry using code 2210 (assigned to Daniel Okafor in doc18)",
+     "when_text": "2016-10-09 21:15",
+     "proves": "Proves code 2210 was keyed into the office door keypad at 21:15. Suggests Daniel Okafor accessed the office during his shift. Cannot prove who physically typed the code, how long the person stayed, or whether anyone later entered without a code if the defective latch failed to catch.",
+     "quote": "21:15 — code 2210",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Office door keypad entry using code 4417 (assigned to Priya Raman in doc18)",
+     "when_text": "2016-10-09 22:52",
+     "proves": "Proves code 4417 was keyed into the office door keypad at 22:52. Suggests Priya Raman unlocked the office door at 22:52. Cannot prove who keyed the code, how long the person remained inside, or when they exited.",
+     "quote": "22:52 — code 4417",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Harbor Bridge southbound toll crossing on Marcus Delaney's pickup truck transponder",
+     "when_text": "2016-10-09 23:02",
+     "proves": "Proves the transponder registered to Marcus Delaney's pickup truck crossed the Harbor Bridge southbound toward Harborlight Marina at 23:02. Suggests Delaney drove toward the marina area shortly after 23:00. Cannot prove who was driving the vehicle, who else was inside, or the vehicle's exact destination past the bridge.",
+     "quote": "23:02 — southbound crossing, toward Harborlight Marina.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Harbor Bridge northbound toll crossing on Marcus Delaney's pickup truck transponder",
+     "when_text": "2016-10-09 23:21",
+     "proves": "Proves the transponder registered to Marcus Delaney's pickup truck crossed the Harbor Bridge northbound away from Harborlight Marina at 23:21. Suggests the vehicle remained on the marina side of the bridge for approximately 19 minutes. Cannot prove who drove the truck, whether it parked at Harborlight Restaurant, or whether anyone exited the vehicle.",
+     "quote": "23:21 — northbound crossing, away from Harborlight Marina.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Guest's mobile telephone photograph of Harborlight office window (uncollected original file)",
+     "when_text": "2016-10-09 23:40",
+     "proves": "Proves only that Detective Alvarez reported viewing a photograph on a guest's phone displaying a timestamp of 11:40 p.m. on October 9, 2016, showing the office window lit with closed blinds. Suggests the office lights were on at 23:40. Cannot independently verify the timestamp, device clock accuracy, or image authenticity because the original digital file was never received or entered into evidence.",
+     "quote": "A restaurant guest, name withheld in this memo, showed me a photograph on her telephone, taken in the parking lot at 11:40 p.m. on October 9, 2016. In the photograph the office window of the Harborlight is lit, with the blinds closed.",
+     "doc_id": "doc17"
+    },
+    {
+     "what": "Outgoing text message from Elena Marsh's mobile phone to her sister",
+     "when_text": "2016-10-09 23:47",
+     "proves": "Proves an outgoing text was transmitted from Marsh's mobile phone to her sister at 23:47 stating 'closing up, watchman doing his round now, see you tomorrow.' Suggests Marsh was alive in or near the restaurant at 23:47 and observed the watchman on a round. Cannot prove who physically composed and sent the text or whether the sender's statement about the watchman was accurate.",
+     "quote": "23:47 — outgoing text, sister: \"closing up, watchman doing his round now, see you tomorrow.\"",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Office door keypad entry using code 3305 (assigned to Elena Marsh in doc18)",
+     "when_text": "2016-10-09 23:58",
+     "proves": "Proves code 3305 was keyed into the office door keypad at 23:58. Suggests either Marsh re-entered the office 11 minutes after the 'closing up' text or another person knowing code 3305 keyed it in. Cannot prove who entered the code or whether the door was previously locked or merely appeared closed.",
+     "quote": "23:58 — code 3305",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Office door keypad entry using master code 9001 (issued to night watchman Tomas Herrera in doc18)",
+     "when_text": "2016-10-10 00:07",
+     "proves": "Proves master code 9001 was keyed into the office door keypad at 00:07. Suggests Tomas Herrera (or someone with the watchman master code) unlocked the office keypad at the exact minute Herrera wrote '00:07 — Checked office door, secure' in doc04. Cannot prove whether the person crossed the threshold into the office or who physically keyed the code.",
+     "quote": "00:07 — code 9001",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Electric utility smart meter drop on restaurant office circuit",
+     "when_text": "2016-10-09 early evening to 2016-10-10 00:20",
+     "proves": "Proves electrical draw on the office circuit remained at a level consistent with the office lights and computer being on from early evening until 00:20, when it dropped to standby level. Suggests office lights and/or computer were turned off or entered standby at 00:20. Cannot distinguish who turned off equipment versus an automated computer sleep state, and takes the weaker reading that power draw is 'consistent with' lights and computer rather than isolating lighting alone.",
+     "quote": "The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Point-of-sale / cash register closed out",
+     "when_text": "Prior to 2016-10-10 06:55 (exact machine timestamp not in file)",
+     "proves": "Proves the restaurant register was in a closed-out state when Officer Whitaker inspected the scene starting at 6:55 a.m. Suggests end-of-night register close-out was completed before Marsh's death (consistent with Raman's statement in doc06 that Marsh was doing close-out around 22:52). Cannot establish the exact minute the close-out occurred because no register receipt or POS log is in the file.",
+     "quote": "The register was closed out.",
+     "doc_id": "doc01"
+    }
+   ],
+   "record_checks": [
+    {
+     "claim": "Tomas Herrera stated in doc03 that he never entered the office, does not go in on rounds, and only checks the door from the hallway, and logged '00:07 — Checked office door, secure' in doc04.",
+     "record_says": "The office keypad entry log records an entry using code 9001 (the master code issued to Herrera per doc18) at 00:07. While keypad logging proves the code was entered to unlock the door rather than proving physical footsteps inside the room, keying in an entry code conflicts with merely checking whether a closed door is secure from the hallway.",
+     "quote": "00:07 — code 9001",
+     "doc_id": "doc05"
+    },
+    {
+     "claim": "Tomas Herrera stated in doc03 'At the 11 o'clock round the office was dark' and wrote in doc04 '23:00 — Round. Office dark. All quiet.'",
+     "record_says": "The smart meter record shows the office circuit drew power consistent with the office lights and computer being on continuously from early evening until 00:20 (and doc17 notes an uncollected 23:40 photo showing the window lit with blinds closed). Under the weaker reading, closed blinds (doc01) or equipment draw could affect how light appeared from the interior hallway vs. exterior, so the meter conflicts with the lights being powered off at 23:00 but cannot by itself prove what light leaked into the hallway.",
+     "quote": "The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.",
+     "doc_id": "doc11"
+    },
+    {
+     "claim": "Tomas Herrera stated in doc03 that he did rounds on the hour—specifically the 11:00 p.m. and 12:30 a.m. rounds—and logged rounds in doc04 at 23:00 and 00:30 (plus a 00:07 door check), with no round logged around 23:47.",
+     "record_says": "Elena Marsh's phone sent an outgoing text at 23:47 stating the watchman was doing his round 'now.' The carrier record proves the text was sent at 23:47, conflicting with Herrera's logged round schedule if Marsh wrote it accurately, though the phone record cannot prove who typed the text or confirm Herrera's physical location at 23:47.",
+     "quote": "23:47 — outgoing text, sister: \"closing up, watchman doing his round now, see you tomorrow.\"",
+     "doc_id": "doc10"
+    },
+    {
+     "claim": "Tomas Herrera stated in doc03 'I saw nobody in the parking lot after 10.'",
+     "record_says": "Multiple records place activity at or toward the property after 22:00: keypad code 4417 at 22:52 (doc05), Delaney's truck transponder crossing toward the marina at 23:02 and away at 23:21 (doc09), and a reported guest phone photo taken in the parking lot at 23:40 (doc17). These records prove machine/transponder activity after 22:00, though they cannot prove Herrera had line-of-sight to the lot at those specific minutes.",
+     "quote": "I saw nobody in the parking lot after 10.",
+     "doc_id": "doc03"
+    },
+    {
+     "claim": "Priya Raman stated in doc06 that she returned to the office at 'about ten to eleven' and used her own code to get in while Marsh was doing the close-out.",
+     "record_says": "The office keypad log agrees, recording Raman's assigned code (4417 per doc18) at 22:52. Because the keypad does not log exits, the record corroborates her entry time and code use but cannot verify her statement that she stayed only about two minutes or was home by 23:30.",
+     "quote": "22:52 — code 4417",
+     "doc_id": "doc05"
+    },
+    {
+     "claim": "Marcus Delaney stated in his first statement (doc07) that he was at a poker game in Bayville from 8:00 p.m. to 1:00 a.m. and 'never went near the marina.'",
+     "record_says": "The Harbor Bridge toll record conflicts with doc07, showing the transponder on Delaney's pickup truck crossed southbound toward Harborlight Marina at 23:02 and northbound away at 23:21.",
+     "quote": "23:02 — southbound crossing, toward Harborlight Marina.",
+     "doc_id": "doc09"
+    },
+    {
+     "claim": "Marcus Delaney stated in his second statement (doc08) that he arrived at the marina at about 11:05 p.m., sat in the lot for maybe fifteen minutes, saw the office light was off, and drove home.",
+     "record_says": "His travel timing aligns with the Harbor Bridge toll crossings at 23:02 toward the marina and 23:21 away (doc09), a 19-minute window. However, his claim that the office light was off between ~23:05 and ~23:20 fights the smart meter record showing office circuit power draw consistent with lights and computer on until 00:20 (doc11) as well as the uncollected 23:40 photo memo describing the window as lit with blinds closed (doc17).",
+     "quote": "I got there at about five past 11. I wanted to talk to Elena about the custody papers before the hearing. I sat in the lot for maybe fifteen minutes. The office light was off, so I figured she had already left, and I drove home.",
+     "doc_id": "doc08"
+    },
+    {
+     "claim": "Daniel Okafor stated in doc12 that he left at 10:15 p.m. and said goodnight to Marsh through the door (and in doc13 that he left around 10:00 p.m. or a little after and Marsh came out of the office to talk near the supply closet), and that he did not return.",
+     "record_says": "The keypad log records Okafor's assigned code (2210 per doc18) entering the office earlier at 21:15 and logs no entries under code 2210 after 21:15. While consistent with no coded keypad entry by 2210 after 21:15, the keypad does not log exits and cannot rule out anyone opening the door without a code if the defective latch (doc01, doc15) was unengaged.",
+     "quote": "21:15 — code 2210",
+     "doc_id": "doc05"
+    },
+    {
+     "claim": "Outgoing text from Elena Marsh's phone at 23:47 (doc10) stated she was 'closing up' and 'see you tomorrow,' implying imminent departure.",
+     "record_says": "Eleven minutes after the 23:47 text, the office keypad logged an entry under Marsh's code (3305) at 23:58 (doc05), and the office circuit remained at active power draw until 00:20 (doc11), indicating activity at the office continued for at least 33 minutes after the 23:47 text.",
+     "quote": "23:58 — code 3305",
+     "doc_id": "doc05"
+    }
+   ],
+   "camera_gaps": [
+    {
+     "camera": "Restaurant guest's mobile telephone camera / original 11:40 p.m. parking lot photograph file (no CCTV, marina surveillance, or bridge cameras are mentioned anywhere in the file)",
+     "mentioned_in": "Detective R. Alvarez's evidence memo (October 20, 2016)",
+     "quote": "The guest was asked to send the original file. As of this memo the original file has not been received and has not been entered into evidence.",
+     "doc_id": "doc17"
+    }
+   ]
+  },
+  "cross_examiner": {
+   "contradictions": [
+    {
+     "a_quote": "I never entered the office that night. I do not go in the office on my rounds. I check the door from the hallway.",
+     "a_doc": "doc03",
+     "b_quote": "00:07 — code 9001",
+     "b_doc": "doc05",
+     "kind": "action_vs_record",
+     "severity": "high",
+     "innocent_alternative": "Herrera may have entered code 9001 at 00:07 to test the lock or push the door secure from the hallway without stepping inside, or someone else knew the master code."
+    },
+    {
+     "a_quote": "At the 11 o'clock round the office was dark. The manager usually leaves by 11.",
+     "a_doc": "doc03",
+     "b_quote": "The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.",
+     "b_doc": "doc11",
+     "kind": "observation_vs_record",
+     "severity": "high",
+     "innocent_alternative": "Closed window blinds and a solid door could prevent light from showing in the hallway, or Herrera misremembered which round the office became dark."
+    },
+    {
+     "a_quote": "23:00 — Round. Office dark. All quiet.",
+     "a_doc": "doc04",
+     "b_quote": "A restaurant guest, name withheld in this memo, showed me a photograph on her telephone, taken in the parking lot at 11:40 p.m. on October 9, 2016. In the photograph the office window of the Harborlight is lit, with the blinds closed.",
+     "b_doc": "doc17",
+     "kind": "observation_vs_record",
+     "severity": "medium",
+     "innocent_alternative": "The office light could have been turned off briefly at 23:00 and turned back on before 23:40, or the hallway view did not show light while the exterior window did."
+    },
+    {
+     "a_quote": "I saw nobody in the parking lot after 10.",
+     "a_doc": "doc03",
+     "b_quote": "Fine. I drove to the marina that night. I got there at about five past 11. I wanted to talk to Elena about the custody papers before the hearing. I sat in the lot for maybe fifteen minutes.",
+     "b_doc": "doc08",
+     "kind": "observation_vs_statement",
+     "severity": "medium",
+     "innocent_alternative": "Herrera's patrol route between 23:05 and 23:20 may not have given him a view of the parking lot while Delaney was parked there."
+    },
+    {
+     "a_quote": "I do my rounds on the hour. Sunday night I did the 11 o'clock round and the half past midnight round.",
+     "a_doc": "doc03",
+     "b_quote": "23:47 — outgoing text, sister: \"closing up, watchman doing his round now, see you tomorrow.\"",
+     "b_doc": "doc10",
+     "kind": "schedule_vs_record",
+     "severity": "medium",
+     "innocent_alternative": "Herrera may have walked past the office between scheduled hourly rounds, or Marsh heard footsteps outside and assumed it was the watchman's round."
+    },
+    {
+     "a_quote": "I was at a poker game in Bayville all night Sunday. I got there at 8 and I left at 1 in the morning. Ask any of the guys. I never went near the marina. I have not been to that restaurant in months.",
+     "a_doc": "doc07",
+     "b_quote": "23:02 — southbound crossing, toward Harborlight Marina.\n23:21 — northbound crossing, away from Harborlight Marina.",
+     "b_doc": "doc09",
+     "kind": "alibi_vs_record",
+     "severity": "high",
+     "innocent_alternative": "Delaney later admitted he drove to the marina and stated he gave an inaccurate first statement out of concern for his custody dispute."
+    },
+    {
+     "a_quote": "I was at a poker game in Bayville all night Sunday. I got there at 8 and I left at 1 in the morning. Ask any of the guys. I never went near the marina.",
+     "a_doc": "doc07",
+     "b_quote": "Fine. I drove to the marina that night. I got there at about five past 11. I wanted to talk to Elena about the custody papers before the hearing. I sat in the lot for maybe fifteen minutes.",
+     "b_doc": "doc08",
+     "kind": "self_contradiction",
+     "severity": "high",
+     "innocent_alternative": "Delaney explained that he initially concealed driving to the marina because his lawyer advised that anything about that night could affect his custody hearing."
+    },
+    {
+     "a_quote": "I sat in the lot for maybe fifteen minutes. The office light was off, so I figured she had already left, and I drove home.",
+     "a_doc": "doc08",
+     "b_quote": "The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.",
+     "b_doc": "doc11",
+     "kind": "observation_vs_record",
+     "severity": "high",
+     "innocent_alternative": "From where Delaney parked in the lot, the closed window blinds may have blocked the light, or he looked at a different window."
+    },
+    {
+     "a_quote": "I finished my shift and I left at 10:15. Elena was in the office doing paperwork. I said goodnight through the door.",
+     "a_doc": "doc12",
+     "b_quote": "I left around 10, maybe a little after. I did stop at the supply closet on my way out, and Elena came out of the office and we talked for a minute about the Tuesday delivery.",
+     "b_doc": "doc13",
+     "kind": "self_contradiction",
+     "severity": "low",
+     "innocent_alternative": "Natural memory drift over the eight years between Okafor's 2016 statement and his 2024 cold case interview."
+    }
+   ],
+   "alibis": [
+    {
+     "person": "Tomas Herrera",
+     "window": "22:30 to 00:30",
+     "rating": "contradicted",
+     "reasons": [
+      {
+       "quote": "I never entered the office that night. I do not go in the office on my rounds. I check the door from the hallway.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "At the 11 o'clock round the office was dark.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "00:07 — code 9001",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "9001 — master code, issued to the night watchman on duty (Tomas Herrera).",
+       "doc_id": "doc18"
+      },
+      {
+       "quote": "The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "person": "Marcus Delaney",
+     "window": "22:30 to 00:30",
+     "rating": "contradicted",
+     "reasons": [
+      {
+       "quote": "I was at a poker game in Bayville all night Sunday. I got there at 8 and I left at 1 in the morning. Ask any of the guys. I never went near the marina.",
+       "doc_id": "doc07"
+      },
+      {
+       "quote": "Fine. I drove to the marina that night. I got there at about five past 11. I wanted to talk to Elena about the custody papers before the hearing. I sat in the lot for maybe fifteen minutes. The office light was off, so I figured she had already left, and I drove home.",
+       "doc_id": "doc08"
+      },
+      {
+       "quote": "23:02 — southbound crossing, toward Harborlight Marina.\n23:21 — northbound crossing, away from Harborlight Marina.",
+       "doc_id": "doc09"
+      },
+      {
+       "quote": "The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "person": "Priya Raman",
+     "window": "22:30 to 00:30",
+     "rating": "uncorroborated",
+     "reasons": [
+      {
+       "quote": "I came back at about ten to eleven and used my own code to get in. Elena was there, alive, doing the close out. We talked for maybe two minutes. I took my bag and I left. I was home by 11:30 and asleep by 12.",
+       "doc_id": "doc06"
+      },
+      {
+       "quote": "22:52 — code 4417",
+       "doc_id": "doc05"
+      }
+     ]
+    },
+    {
+     "person": "Daniel Okafor",
+     "window": "22:30 to 00:30",
+     "rating": "corroborated",
+     "reasons": [
+      {
+       "quote": "I finished my shift and I left at 10:15. Elena was in the office doing paperwork. I said goodnight through the door. I drove straight home. My wife can tell you I was home before 11.",
+       "doc_id": "doc12"
+      },
+      {
+       "quote": "Daniel came home that night before 11. I remember because the late news was not on yet. He was home all night. He was asleep by about 12, next to me.",
+       "doc_id": "doc14"
+      }
+     ]
+    }
+   ],
+   "evidence_gaps": [
+    {
+     "item": "Restaurant guest's 11:40 p.m. telephone photograph of the lit office window",
+     "mentioned_in": [
+      "doc17"
+     ],
+     "problem": "Explicitly noted in doc17 as not received, not entered into evidence, and absent from the evidence ledger."
+    },
+    {
+     "item": "Full autopsy report",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "Referenced in the Medical Examiner summary as following under separate cover, but absent from the case file and no evidence ledger is provided."
+    },
+    {
+     "item": "Physical scene items and records (heavy brass desk lamp, victim's handbag, victim's mobile telephone, night watchman log book, keypad entry log)",
+     "mentioned_in": [
+      "doc01",
+      "doc04",
+      "doc05",
+      "doc10"
+     ],
+     "problem": "Items are described or recovered in reports, but no evidence ledger is present in the file to verify collection or logging."
+    }
+   ]
+  },
+  "interviewer": {
+   "histories": [
+    {
+     "person": "Marcus Delaney",
+     "changes": [
+      {
+       "topic": "Whereabouts on the night of Sunday, October 9, 2016, and whether he went to Harborlight Marina",
+       "earlier_quote": "I was at a poker game in Bayville all night Sunday. I got there at 8 and I left at 1 in the morning. Ask any of the guys. I never went near the marina. I have not been to that restaurant in months.",
+       "earlier_doc": "doc07",
+       "later_quote": "Fine. I drove to the marina that night. I got there at about five past 11. I wanted to talk to Elena about the custody papers before the hearing. I sat in the lot for maybe fifteen minutes. The office light was off, so I figured she had already left, and I drove home.",
+       "later_doc": "doc08"
+      },
+      {
+       "topic": "Characterization of the custody dispute and its connection to that night",
+       "earlier_quote": "Elena and I were divorced two years. We fought about the custody schedule, like everybody.",
+       "earlier_doc": "doc07",
+       "later_quote": "I wanted to talk to Elena about the custody papers before the hearing.",
+       "later_doc": "doc08"
+      }
+     ]
+    }
+   ],
+   "next_questions": [
+    {
+     "person": "Tomas Herrera",
+     "question": "Your statement notes you check the door from the hallway and never entered the office, while your log book records checking the office door at 00:07 and the keypad log records an entry using code 9001 at 00:07; is 9001 your keypad code, and how did you perform the 00:07 door check?",
+     "anchored_quote": "00:07 — code 9001",
+     "doc_id": "doc05"
+    },
+    {
+     "person": "Tomas Herrera",
+     "question": "Why did you omit the 00:07 office door check recorded in your log book when describing your rounds in your October 10 statement?",
+     "anchored_quote": "00:07 — Checked office door, secure.",
+     "doc_id": "doc04"
+    },
+    {
+     "person": "Tomas Herrera",
+     "question": "Elena's phone sent a text at 23:47 stating the watchman was doing his round then, whereas you stated your rounds were at 11:00 p.m. and 12:30 a.m.; were you near the office hallway or exterior around 23:47?",
+     "anchored_quote": "23:47 — outgoing text, sister: \"closing up, watchman doing his round now, see you tomorrow.\"",
+     "doc_id": "doc10"
+    },
+    {
+     "person": "Tomas Herrera",
+     "question": "You stated you saw nobody in the parking lot after 10:00 p.m., while another account places a pickup truck in the lot for roughly fifteen minutes starting around 11:05 p.m.; what part of the property did your 23:00 round cover and did it include a view of the parking lot?",
+     "anchored_quote": "At the 11 o'clock round the office was dark. The manager usually leaves by 11. I saw nobody in the parking lot after 10.",
+     "doc_id": "doc03"
+    },
+    {
+     "person": "Tomas Herrera",
+     "question": "Regarding the margin note on your October 9 log page about your hours being cut to weekends starting October 1, who made that scheduling change and did you ever discuss it with Elena?",
+     "anchored_quote": "Margin note, same hand: \"Hours cut to weekends from Oct 1. Nine years and this is the thanks.\"",
+     "doc_id": "doc04"
+    },
+    {
+     "person": "Marcus Delaney",
+     "question": "Given the bridge toll crossings at 23:02 southbound and 23:21 northbound after your earlier statement about a Bayville poker game from 8:00 p.m. to 1:00 a.m., where were you immediately before 23:02 and after 23:21, and who was present at those locations?",
+     "anchored_quote": "23:02 — southbound crossing, toward Harborlight Marina.\n23:21 — northbound crossing, away from Harborlight Marina.",
+     "doc_id": "doc09"
+    },
+    {
+     "person": "Marcus Delaney",
+     "question": "Where specifically in the marina lot did you park for those fifteen minutes, which window did you observe as dark, and did you see Elena's vehicle or any other cars or people in the lot?",
+     "anchored_quote": "I sat in the lot for maybe fifteen minutes. The office light was off, so I figured she had already left, and I drove home.",
+     "doc_id": "doc08"
+    },
+    {
+     "person": "Marcus Delaney",
+     "question": "Since Elena's phone records show no calls or texts from you that evening, why did you drive to the marina after 11:00 p.m. to discuss custody papers without calling or texting her before arriving or while waiting in the lot?",
+     "anchored_quote": "I wanted to talk to Elena about the custody papers before the hearing.",
+     "doc_id": "doc08"
+    },
+    {
+     "person": "Priya Raman",
+     "question": "Can you confirm whether keypad code 4417 used at 22:52 is yours, identify who was assigned codes 3305, 2210, and 9001, and explain whether a manager closing out would have any routine reason to re-enter the office at 23:58?",
+     "anchored_quote": "21:15 — code 2210\n22:52 — code 4417\n23:58 — code 3305\n00:07 — code 9001",
+     "doc_id": "doc05"
+    },
+    {
+     "person": "Priya Raman",
+     "question": "When you entered the office around ten to eleven and left two minutes later, were the office lights on and the window blinds open or closed, and did you see Tomas Herrera or any vehicles in the parking lot?",
+     "anchored_quote": "I came back at about ten to eleven and used my own code to get in. Elena was there, alive, doing the close out. We talked for maybe two minutes. I took my bag and I left.",
+     "doc_id": "doc06"
+    },
+    {
+     "person": "Victim's sister",
+     "question": "What did Elena say during your six-minute phone call at 18:22 on October 9 regarding her plans for closing that night, her upcoming custody hearing, or any workplace concerns?",
+     "anchored_quote": "18:22 — outgoing call, sister, 6 minutes.",
+     "doc_id": "doc10"
+    }
+   ]
+  },
+  "prosecutor": {
+   "sufficiency": [
+    {
+     "subject": "Keypad code 9001 entry vs. Tomas Herrera's denial of entering the office (doc05: \"00:07 — code 9001\"; doc18: \"9001 — master code, issued to the night watchman on duty (Tomas Herrera).\"; doc03: \"I never entered the office that night. I do not go in the office on my rounds. I check the door from the hallway.\")",
+     "rating": "workable",
+     "missing": "Evidence ledger chain of custody for the exported log (doc05: \"Keypad entry log, manager's office door, Harborlight Restaurant. Exported October 10, 2016.\"), keypad internal clock calibration, verification of whether anyone else knew master code 9001, mechanical testing showing whether entering 9001 opens or tests the lock without entering, and latent print or DNA evidence inside the office."
+    },
+    {
+     "subject": "Utility smart meter power draw vs. dark-office claims by Herrera and Delaney (doc11: \"The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.\"; doc03: \"At the 11 o'clock round the office was dark.\"; doc04: \"23:00 — Round. Office dark. All quiet.\"; doc08: \"The office light was off, so I figured she had already left, and I drove home.\")",
+     "rating": "workable",
+     "missing": "Electrical load testing separating the watt draw of the office computer from the overhead or desk lights, smart meter clock synchronization, and line-of-sight visibility testing from the hallway and parking lot with blinds shut (doc01: \"The office window blinds were closed.\")."
+    },
+    {
+     "subject": "Unnamed guest's 11:40 p.m. parking lot photograph of lit office window (doc17: \"A restaurant guest, name withheld in this memo, showed me a photograph on her telephone, taken in the parking lot at 11:40 p.m. on October 9, 2016. In the photograph the office window of the Harborlight is lit, with the blinds closed.\")",
+     "rating": "weak",
+     "missing": "Uncollected hearsay lead; requires witness identification and sworn statement, seizure of the original digital image file with EXIF timestamp authentication, and formal logging into the evidence ledger (doc17: \"As of this memo the original file has not been received and has not been entered into evidence. The photograph described above is not in the evidence ledger.\")."
+    },
+    {
+     "subject": "Marcus Delaney's contradicted poker alibi and presence at Harborlight Marina between 23:02 and 23:21 (doc07: \"I was at a poker game in Bayville all night Sunday. I got there at 8 and I left at 1 in the morning. Ask any of the guys. I never went near the marina.\"; doc09: \"23:02 — southbound crossing, toward Harborlight Marina.\\n23:21 — northbound crossing, away from Harborlight Marina.\"; doc08: \"Fine. I drove to the marina that night. I got there at about five past 11.\")",
+     "rating": "strong",
+     "missing": "Strong only for placing Delaney's truck crossing Harbor Bridge and at the marina between 23:02 and 23:21; missing interviews of the Bayville poker players to account for his movements before 23:02 and after 23:21, toll clock verification, Marina surveillance or witness corroboration that he stayed in the lot, and cell-site data confirming he did not return after 23:21."
+    },
+    {
+     "subject": "Marcus Delaney's observation of nobody/darkness vs. Tomas Herrera's parking lot claim (doc03: \"I saw nobody in the parking lot after 10.\"; doc08: \"I sat in the lot for maybe fifteen minutes.\")",
+     "rating": "weak",
+     "missing": "Diagram and timing of Herrera's patrol route between 23:05 and 23:20 showing whether the parking lot was visible during his walk, and parking lot camera footage."
+    },
+    {
+     "subject": "Victim's 23:47 outgoing text message vs. Herrera's round schedule (doc10: \"23:47 — outgoing text, sister: \\\"closing up, watchman doing his round now, see you tomorrow.\\\"\"; doc03: \"I do my rounds on the hour. Sunday night I did the 11 o'clock round and the half past midnight round.\")",
+     "rating": "workable",
+     "missing": "Chain of custody in an evidence ledger for the handset (doc10: \"The telephone was recovered from the victim's handbag in the office.\"), carrier call-detail and text records, interview of the victim's sister, and forensic device examination establishing who composed the 23:47 text."
+    },
+    {
+     "subject": "Priya Raman's 22:52 office entry and uncorroborated post-22:52 alibi (doc06: \"I came back at about ten to eleven and used my own code to get in. Elena was there, alive, doing the close out. We talked for maybe two minutes. I took my bag and I left. I was home by 11:30 and asleep by 12.\"; doc05: \"22:52 — code 4417\")",
+     "rating": "weak",
+     "missing": "Keypad assignment record confirming code 4417 belonged exclusively to Raman, exit timing evidence showing when she left the marina after 22:52, and independent transit, cell-site, or witness corroboration of her arrival home by 23:30."
+    },
+    {
+     "subject": "Daniel Okafor's shift departure and spousal alibi for 22:30 to 00:30 (doc12: \"I finished my shift and I left at 10:15. Elena was in the office doing paperwork. I said goodnight through the door.\"; doc13: \"I left around 10, maybe a little after. I did stop at the supply closet on my way out, and Elena came out of the office and we talked for a minute about the Tuesday delivery.\"; doc14: \"Daniel came home that night before 11. I remember because the late news was not on yet. He was home all night. He was asleep by about 12, next to me.\")",
+     "rating": "workable",
+     "missing": "Independent non-family corroboration of Okafor's departure time and presence at home (such as employee time-clock records, cell-site data, or transit/camera records)."
+    },
+    {
+     "subject": "Physical scene forensics, cause/time of death, and unlogged office access (doc01: \"A heavy brass desk lamp lay on the floor beside her.\", \"The office door latch is defective.\", \"The victim's handbag was on the office desk, undisturbed.\", \"The register was closed out.\"; doc02: \"Full autopsy report follows under separate cover.\"; doc17: \"The photograph described above is not in the evidence ledger.\")",
+     "rating": "weak",
+     "missing": "Master evidence ledger establishing chain of custody for all scene items, the missing full autopsy report establishing medical cause and window of death, forensic lab testing (blood, DNA, fingerprints) on the heavy brass desk lamp and defective door latch, and computer/register close-out logs."
+    }
+   ],
+   "vetoes": [
+    {
+     "phrase": "murder weapon",
+     "reason": "doc01 states only \"A heavy brass desk lamp lay on the floor beside her,\" and doc02 notes \"Full autopsy report follows under separate cover,\" with no forensic report establishing the lamp caused death."
+    },
+    {
+     "phrase": "Herrera entered the office",
+     "reason": "doc05 (\"00:07 — code 9001\") and doc18 (\"9001 — master code, issued to the night watchman on duty (Tomas Herrera).\") prove code input at the keypad, not physical entry into the room or exclusive use of the code."
+    },
+    {
+     "phrase": "entered the office at 00:07",
+     "reason": "doc05 records \"00:07 — code 9001\" on the keypad log, which does not by itself prove the door was opened and someone stepped inside."
+    },
+    {
+     "phrase": "time of death was 00:20",
+     "reason": "doc11 records an electrical power drop at 00:20 (\"when the draw dropped to standby level\"), not a medical determination of death, and the full autopsy report (doc02) is absent."
+    },
+    {
+     "phrase": "photo proves",
+     "reason": "doc17 explicitly states \"As of this memo the original file has not been received and has not been entered into evidence. The photograph described above is not in the evidence ledger.\""
+    },
+    {
+     "phrase": "photograph confirms",
+     "reason": "An uncollected, unauthenticated image on an unnamed guest's telephone in doc17 is inadmissible hearsay and cannot confirm a timeline fact."
+    },
+    {
+     "phrase": "lights were definitely on",
+     "reason": "doc11 states power draw was \"consistent with the office lights and computer being on,\" which does not isolate lighting from computer draw without testing."
+    },
+    {
+     "phrase": "only keypad holders could enter",
+     "reason": "doc01 states \"The office door latch is defective,\" leaving open the possibility of entry without keying a valid code."
+    },
+    {
+     "phrase": "lied to police",
+     "reason": "The file establishes documentary contradictions (doc03 vs. doc05/doc11; doc07 vs. doc08/doc09), whereas characterizing a witness as lying violates courtroom objectivity rules."
+    },
+    {
+     "phrase": "caught lying",
+     "reason": "Judges a person's intent rather than stating where statements conflict with records."
+    },
+    {
+     "phrase": "is guilty",
+     "reason": "No document or forensic finding in the file establishes guilt, and declaring guilt is prohibited."
+    },
+    {
+     "phrase": "the killer",
+     "reason": "Names or assumes a culpable perpetrator beyond what the documentary record supports."
+    },
+    {
+     "phrase": "killed Elena",
+     "reason": "Attributes the fatal act without forensic or eyewitness proof in the case file."
+    },
+    {
+     "phrase": "cleared as a suspect",
+     "reason": "Neither unverified post-23:21 movements (doc09), uncorroborated post-22:52 travel (doc06), nor a spousal alibi alone (doc14) forensically excludes any party."
+    }
+   ],
+   "corroboration_needed": [
+    "Master evidence ledger (referenced as existing in doc17: \"The photograph described above is not in the evidence ledger.\") to verify collection and chain of custody for the heavy brass desk lamp (doc01: \"A heavy brass desk lamp lay on the floor beside her.\"), victim's handbag (doc01: \"The victim's handbag was on the office desk, undisturbed.\"), victim's mobile telephone (doc10: \"The telephone was recovered from the victim's handbag in the office.\"), night watchman log book (doc04: \"Night watchman log book, Harborlight Marina, page for Sunday, October 9, 2016.\"), and keypad log export (doc05: \"Keypad entry log, manager's office door, Harborlight Restaurant. Exported October 10, 2016.\").",
+    "Full autopsy report (doc02: \"Full autopsy report follows under separate cover.\") to establish cause of death, medical time-of-death window, defensive wounds, and injury compatibility with the heavy brass desk lamp (doc01).",
+    "Forensic laboratory results (blood, DNA, latent fingerprints, trace evidence) from the heavy brass desk lamp (doc01), office door keypad and defective latch (doc01: \"The office door latch is defective.\"; doc05), light switches, victim's handbag (doc01), and office computer (doc11).",
+    "Identity and sworn interview of the unnamed restaurant guest, plus seizure, EXIF metadata verification, and evidence-ledger logging of the original 11:40 p.m. digital photograph (doc17: \"As of this memo the original file has not been received and has not been entered into evidence.\").",
+    "Clock synchronization and calibration records comparing the manager's office keypad (doc05), Harbor Bridge toll system (doc09: \"Harbor Bridge toll record, transponder account of Marcus Delaney, pickup truck.\"), victim's mobile telephone (doc10), and utility smart meter (doc11).",
+    "Mechanical inspection of the defective office door latch (doc01: \"The office door latch is defective.\") and complete keypad code assignment roster expanding on doc18 (\"9001 — master code, issued to the night watchman on duty (Tomas Herrera).\") to confirm who held code 4417 (doc05: \"22:52 — code 4417\"), who else knew code 9001, and whether the door could be pushed open without entering a code.",
+    "Forensic examination of the office computer (doc11: \"consistent with the office lights and computer being on from early evening until 00:20\") and restaurant register close-out records (doc01: \"The register was closed out.\"; doc12: \"Elena was in the office doing paperwork.\") to establish user activity timestamps up to 00:20.",
+    "Carrier call-detail and cell-site location records for Elena Marsh (doc10), Tomas Herrera (doc03), Marcus Delaney (doc08), Priya Raman (doc06), and Daniel Okafor (doc12), alongside witness interviews of the Bayville poker players (doc07: \"I was at a poker game in Bayville all night Sunday... Ask any of the guys.\") and Elena Marsh's sister (doc10: \"23:47 — outgoing text, sister\")."
+   ]
+  },
+  "lead_detective": {
+   "leads": [
+    {
+     "action": "Have the detective re-interview Tomas Herrera in person and ask: 'The manager's office keypad log (doc05) records master code 9001 entered at 00:07, and doc18 shows 9001 was issued to you; why was your code entered at 00:07 when you stated in doc03 that you never entered the office that night and only check the door from the hallway?'",
+     "score": 80,
+     "arithmetic": "40 + 25 + 15 = 80",
+     "reason": "Directly works the high-severity contradiction between doc03 ('I never entered the office that night. I do not go in the office on my rounds. I check the door from the hallway.') and doc05 ('00:07 — code 9001') / doc18 ('9001 — master code, issued to the night watchman on duty (Tomas Herrera).'). The 00:07 entry falls inside the 22:30 to 00:30 death window (doc02), and witness Herrera is still reachable for detective questioning.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Have the detective re-interview Tomas Herrera in person and ask: 'The utility smart meter (doc11) shows the office circuit drew power consistent with the office lights and computer being on until 00:20; how do you reconcile that with your statement in doc03 that at the 11 o'clock round the office was dark?'",
+     "score": 80,
+     "arithmetic": "40 + 25 + 15 = 80",
+     "reason": "Directly works the high-severity contradiction between doc03 ('At the 11 o'clock round the office was dark.') and doc11 ('The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.'). Both 23:00 and 00:20 sit inside the 22:30 to 00:30 death window (doc02), and Herrera is still reachable.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Have the detective re-interview Marcus Delaney in person and ask: 'You stated in doc08 that between about 11:05 and 11:20 p.m. the office light was off, yet the utility smart meter record (doc11) shows the office circuit drew power consistent with the office lights and computer being on until 00:20; which window were you looking at and from where in the parking lot?'",
+     "score": 80,
+     "arithmetic": "40 + 25 + 15 = 80",
+     "reason": "Directly works the high-severity contradiction between doc08 ('I sat in the lot for maybe fifteen minutes. The office light was off, so I figured she had already left, and I drove home.') and doc11 ('The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.'). Delaney's presence between 23:02 and 23:21 (doc09) sits inside the 22:30 to 00:30 death window (doc02), and Delaney is still reachable.",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Obtain from the unnamed restaurant guest referenced in Detective Alvarez's memo (doc17) the original digital file of the 11:40 p.m. October 9, 2016 parking lot photograph showing the lit office window, along with its EXIF metadata, and log it into evidence.",
+     "score": 60,
+     "arithmetic": "25 + 20 + 15 = 60",
+     "reason": "The product of this action is the missing original digital photograph file itself, closing the gap explicitly identified in doc17 ('As of this memo the original file has not been received and has not been entered into evidence. The photograph described above is not in the evidence ledger.'). The 23:40 photograph sits inside the 22:30 to 00:30 death window (doc02), and the guest and Detective Alvarez are reachable through the memo identity record.",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the full autopsy report from the Medical Examiner's office to complete the summary record in doc02 and verify the medical basis for the blunt force trauma finding and the 22:30 to 00:30 death window.",
+     "score": 60,
+     "arithmetic": "25 + 20 + 15 = 60",
+     "reason": "Directly retrieves the missing full autopsy report promised in doc02 ('Full autopsy report follows under separate cover.'), provides the primary medical data for the 22:30 to 00:30 death window (doc02), and the Medical Examiner's institutional archive is still reachable.",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the master property and evidence ledger from the police evidence custodian to reconcile custody and forensic logging of all scene items (heavy brass desk lamp, victim's handbag, mobile telephone, office door latch/keypad, keypad log export, and watchman log book).",
+     "score": 35,
+     "arithmetic": "20 + 15 = 35",
+     "reason": "Closes the core evidentiary gap proven by doc17 ('The photograph described above is not in the evidence ledger.') where the master ledger itself is absent from the case file, and the police department evidence custodian is still reachable.",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the forensic image and operating system activity/shutdown logs from the manager's office computer for the night of October 9 to 10, 2016 to determine whether user activity ceased or the computer powered down at 00:20.",
+     "score": 25,
+     "arithmetic": "25 + 10 = 25",
+     "reason": "Works the office power draw drop at 00:20 documented in doc11 ('The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.'), which sits inside the 22:30 to 00:30 death window (doc02).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": false
+     }
+    }
+   ],
+   "gaps": [
+    {
+     "gap": "The master evidence ledger is missing from the case file, leaving all physical items and records without a verified chain of custody.",
+     "proven_by": "doc17: \"The photograph described above is not in the evidence ledger.\""
+    },
+    {
+     "gap": "The original digital file of the restaurant guest's 11:40 p.m. photograph showing the office window lit (with closed blinds) has neither been received nor entered into evidence.",
+     "proven_by": "doc17: \"As of this memo the original file has not been received and has not been entered into evidence. The photograph described above is not in the evidence ledger.\""
+    },
+    {
+     "gap": "The full autopsy report is missing from the case file; only a summary is present.",
+     "proven_by": "doc02: \"Full autopsy report follows under separate cover.\""
+    },
+    {
+     "gap": "There is no collection record, evidence ledger entry, or forensic laboratory report (prints, blood, DNA) for the heavy brass desk lamp found beside the victim.",
+     "proven_by": "doc01: \"A heavy brass desk lamp lay on the floor beside her.\""
+    },
+    {
+     "gap": "There is no collection record or chain-of-custody ledger entry for the victim's handbag or the victim's mobile telephone recovered from inside it.",
+     "proven_by": "doc01: \"The victim's handbag was on the office desk, undisturbed.\" and doc10: \"The telephone was recovered from the victim's handbag in the office.\""
+    },
+    {
+     "gap": "There is no inspection report, collection record, or forensic examination of the office computer that was drawing power on the office circuit until 00:20.",
+     "proven_by": "doc11: \"The office circuit drew power consistent with the office lights and computer being on from early evening until 00:20 on the night of October 9 to 10, 2016, when the draw dropped to standby level.\""
+    },
+    {
+     "gap": "There is no mechanical examination report or evidence ledger entry for the defective office door latch, the electronic keypad lock, or the October 10, 2016 keypad log export.",
+     "proven_by": "doc01: \"The office door latch is defective.\" and doc05: \"Keypad entry log, manager's office door, Harborlight Restaurant. Exported October 10, 2016.\""
+    },
+    {
+     "gap": "There is no evidence ledger entry establishing chain of custody for the physical night watchman log book, the restaurant register close-out records, or the office paperwork.",
+     "proven_by": "doc04: \"Night watchman log book, Harborlight Marina, page for Sunday, October 9, 2016. Transcribed in full.\", doc01: \"The register was closed out.\", and doc12: \"Elena was in the office doing paperwork.\""
+    }
+   ],
+   "brief": "THE CASE IN FIVE LINES\n1. Victim Elena Marsh was found dead in the Harborlight Restaurant manager's office from blunt force trauma to the head, with a heavy brass desk lamp on the floor beside her (doc01, doc02).\n2. The Medical Examiner estimated the death window between 22:30 on October 9, 2016, and 00:30 on October 10, 2016 (doc02).\n3. Electronic records inside the death window show keypad code 4417 entered at 22:52 (doc05), Delaney's truck crossing Harbor Bridge toward the marina at 23:02 and away at 23:21 (doc09), an outgoing text from the victim's phone at 23:47 stating the watchman was doing his round (doc10), watchman Tomas Herrera's master code 9001 entered on the office keypad at 00:07 (doc05, doc18), and office circuit power dropping to standby at 00:20 (doc11).\n4. Both Herrera and Delaney claim the office was dark around 23:00–23:20 (doc03, doc04, doc08), contradicting the utility smart meter record showing the office lights and computer drew power until 00:20 (doc11) and a memo describing an uncollected 23:40 guest photograph of the lit office window (doc17).\n5. The file lacks the master evidence ledger (doc17), the full autopsy report (doc02), the 23:40 photograph file (doc17), and any forensic examination of the brass lamp, computer, or keypad lock (doc01, doc05, doc11).\n\nSTRONGEST CONTRADICTION\nNight watchman Tomas Herrera denies entering the office during his shift, which conflicts directly with the manager's office door keypad log and code assignment record:\n- Herrera's statement (doc03): \"I never entered the office that night. I do not go in the office on my rounds. I check the door from the hallway.\"\n- Keypad entry log (doc05): \"00:07 — code 9001\" paired with code assignment record (doc18): \"9001 — master code, issued to the night watchman on duty (Tomas Herrera).\"\n\nALIBI TABLE (Death Window: 22:30 to 00:30, doc02)\n- Tomas Herrera | Window: 22:30–00:30 | Rating: CONTRADICTED | Claims he never entered the office and that the office was dark at 23:00 (doc03, doc04); contradicted by master code 9001 entered at 00:07 (doc05, doc18) and smart meter power draw until 00:20 (doc11).\n- Marcus Delaney | Window: 22:30–00:30 | Rating: CONTRADICTED | First claimed he was at a Bayville poker game from 20:00 to 01:00 and never went near the marina (doc07); contradicted by bridge toll crossings at 23:02 and 23:21 (doc09) and his second statement admitting he sat in the marina lot from about 23:05 to 23:20 (doc08), which itself conflicts with the smart meter power draw until 00:20 (doc11).\n- Priya Raman | Window: 22:30–00:30 | Rating: UNCORROBORATED | Admits entering the office at about 22:50 using her code (doc06, matching 22:52 code 4417 in doc05) and states she spoke with a live Elena Marsh for two minutes and was home by 23:30; no independent record corroborates her departure time or arrival home.\n- Daniel Okafor | Window: 22:30–00:30 | Rating: CORROBORATED | States he left work around 22:00–22:15 and was home before 23:00 (doc12, doc13); corroborated by his wife's statement that he arrived home before the 23:00 news and remained home all night (doc14).\n\nTOP THREE LEADS\n1. Re-interview Tomas Herrera in person regarding the 00:07 keypad entry (Score: 80 = 40 high contradiction + 25 in window + 15 reachable): Ask Herrera to explain why his assigned master code 9001 was entered on the office keypad at 00:07 (doc05, doc18) given his statement in doc03 that he never entered the office and only checked the door from the hallway.\n2. Re-interview Tomas Herrera in person regarding the office lighting and power draw (Score: 80 = 40 high contradiction + 25 in window + 15 reachable): Ask Herrera how the office appeared dark at his 23:00 round (doc03, doc04) when the utility smart meter shows the office circuit drew power consistent with the lights and computer being on until 00:20 (doc11).\n3. Re-interview Marcus Delaney in person regarding his observation that the office light was off (Score: 80 = 40 high contradiction + 25 in window + 15 reachable): Ask Delaney where he parked between 23:05 and 23:20 and which window he observed as dark (doc08), given that the office circuit drew power consistent with the lights and computer being on until 00:20 (doc11).\n\nGAP LIST\n- Master evidence ledger: Missing from the file, leaving all physical items without chain of custody (proven by doc17).\n- Guest's 11:40 p.m. digital photograph file: Shown to Det. Alvarez on a telephone but never received or logged into evidence (proven by doc17).\n- Full autopsy report: Referenced as following under separate cover but absent from the file (proven by doc02).\n- Heavy brass desk lamp forensics and custody record: Observed on the floor beside the victim with no ledger entry or lab report (proven by doc01).\n- Victim's handbag and mobile telephone custody records: Recovered from the office desk/handbag with no ledger entry (proven by doc01, doc10).\n- Office computer inspection and logs: Drew power on the office circuit until 00:20 but absent from the scene report and unexamined (proven by doc11).\n- Defective office door latch and keypad lock records: Noted in the scene report and keypad export with no ledger entry or mechanical test report (proven by doc01, doc05).\n- Watchman log book, register close-out, and office paperwork custody records: Mentioned or transcribed in reports without evidence ledger entries (proven by doc01, doc04, doc12).\n\nThis board judges the file. The detective does the detecting."
+  }
+ },
+ "dropped": 0,
+ "run_log": [
+  "Lead score corrected by runner: model said 35, rubric says 25 (Pull the forensic image and operating system activity/shutdown logs from the manager's office computer for the night of October 9 to 10, 2016 to determine whether user activity ceased or the computer powered down at 00:20.)"
+ ]
+}
