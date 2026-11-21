@@ -931,7 +931,7 @@ async function work() {
     var when = cd ? (cd.toDateString() === new Date().toDateString() ? "today, " + cd.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : cd.toLocaleDateString() + ", " + cd.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })) : "this morning";
     el("cacheLabel").textContent = "Ran " + when + " (saved run)";
     book = await MB.runAll(hooks, cached.outputs, { door2: door2 });
-    if (cached.dropped) book.dropped = cached.dropped;
+    if (cached.dropped) { book.dropped = cached.dropped; var dc2 = el("dropChip"); dc2.textContent = "Quote check dropped: " + book.dropped; dc2.classList.remove("hidden"); }
     if (book.dropped) {
       feedLine("Runner", "this replay carries the original run's quote check: " + book.dropped + " finding(s) were dropped for having no quote in the file");
       if (!book.failed_steps.length) el("runStatus").textContent = "Done — quote check dropped " + book.dropped + " finding(s)";
