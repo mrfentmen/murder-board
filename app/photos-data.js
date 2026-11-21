@@ -2,6 +2,17 @@
 // from thispersondoesnotexist.com. No real person is depicted; the faces
 // are stand-ins for the fictional people in the fictional case files.
 window.PERSON_PHOTOS = {
+  "starlite-2017": {
+    "carla ibanez": "faces/starlite-ibanez.jpg",
+    "tomas reyes": "faces/starlite-reyes.jpg",
+    "tommy reyes": "faces/starlite-reyes.jpg",
+    "marcus bell": "faces/starlite-bell.jpg",
+    "derek hahn": "faces/starlite-hahn.jpg",
+    "josefina luna": "faces/starlite-luna.jpg",
+    "marco luna": "faces/starlite-marco.jpg",
+    "andre ibanez": "faces/starlite-andre.jpg",
+    "diane pruitt": "faces/starlite-pruitt.jpg"
+  },
   "delgado-2019": {
     "raymond delgado": "faces/delgado-raymond.jpg",
     "marcus webb": "faces/delgado-webb.jpg",

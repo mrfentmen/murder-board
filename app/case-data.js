@@ -542,116 +542,170 @@ window.CASES = [
   ]
  },
  {
-  "case_id": "duck-2020",
-  "case_title": "The Duck File: a real, solved case rebuilt from the public record. Chicago, 2020 to 2024. Written for Gemini 4 NYC.",
+  "case_id": "starlite-2017",
+  "case_title": "The Starlite File: a cold case built to be investigated, not skimmed. Fictional, written for Gemini 4 NYC.",
   "documents": [
    {
-    "author": "News reports, August 2020",
-    "date": "2020-08-05",
-    "file": "doc01_news_article.txt",
     "id": "doc01",
-    "title": "News article: rapper FBG Duck killed on Oak Street",
-    "type": "article",
-    "text": "News report, August 5, 2020. Summarized from Chicago Tribune\nand Chicago Sun-Times reporting of August 4 and 5, 2020.\n\nRapper FBG Duck killed in Gold Coast shooting\n\nChicago rapper FBG Duck was shot and killed Tuesday afternoon\non East Oak Street in the Gold Coast, one of the city's most\nupscale shopping districts, police said.\n\nThe rapper, whose real name was Carlton Weekly, was 26. He had\nbeen shopping for a gift for his son. At approximately 4:26\np.m., two vehicles pulled up near the 100 block of East Oak\nStreet. Four gunmen got out, two from each vehicle, and opened\nfire. Weekly was shot multiple times. Two other people were\nwounded, a woman who was with Weekly and a man nearby.\n\nWeekly was taken to Northwestern Memorial Hospital, where he\nwas pronounced dead about half an hour later.\n\nThe gunmen got back into the two vehicles and fled. Police said\nthe shooting was targeted. No one was in custody Tuesday night.\nDetectives said they were reviewing surveillance video from the\nblock, which is lined with luxury stores and cameras.\n\nWeekly was a well known figure in Chicago drill music. Police\nsaid he was involved in an ongoing gang conflict.\n"
+    "file": "doc01_scene_report.txt",
+    "title": "Scene report: the office, the latch, the open ball return",
+    "type": "report",
+    "date": "2017-11-05",
+    "author": "Officer P. Tate",
+    "text": "SCENE REPORT - Starlite Lanes, 88 Meridian Avenue. Reporting officer: P. Tate, Patrol. Date: November 5, 2017.\n\nAt 0605 hours I responded to a call from the morning opener, who found the owner, Carla Ibanez, 47, on the floor of the office behind the counter. She was pronounced at the scene at 0622 hours.\n\nThe office door was closed and the latch engaged. There were no signs of forced entry at the office door or the back door. The victim was behind the desk. On the desk was a league scoresheet dated November 4.\n\nThe cover of the lane 12 ball return stood open. The rest of the lanes were dark. The keypad panel beside the office door showed a green ready light.\n"
    },
    {
-    "author": "Chicago Police Department",
-    "date": "2020-08-04",
-    "file": "doc02_police_statement.txt",
     "id": "doc02",
-    "title": "Police statement at the scene: two cars, four gunmen",
+    "file": "doc02_me_summary.txt",
+    "title": "ME summary: window 11:30 p.m. to 1:30 a.m.",
     "type": "report",
-    "text": "Chicago Police Department statement at the scene, August 4,\n2020. Deputy Chief Daniel O'Shea, summarized from news\nreporting of the police briefing.\n\nDeputy Chief O'Shea said the shoppers were standing on the\nsidewalk when a pair of vehicles pulled up, with two gunmen\nstepping out of each to open fire.\n\nHe said the shooting was a targeted attack, not a random one.\nOne weapon was recovered by police at the scene.\n\nO'Shea said Weekly had been involved in an ongoing conflict\nwith another gang. Officers noted that Weekly had been\nbroadcasting his travels on social media that day, and that he\nwas found.\n\nPolice said the two vehicles fled the scene and that\ndetectives were reviewing security footage from the area.\nPolice asked anyone with video from the block to come forward.\n"
+    "date": "2017-11-07",
+    "author": "Dr. S. Osei",
+    "text": "MEDICAL EXAMINER SUMMARY - Case 2017-1104. Dr. S. Osei, November 7, 2017.\n\nDecedent: Carla Ibanez, 47, owner of Starlite Lanes.\n\nCause of death: blunt force injury to the head. Manner: homicide.\n\nBased on body temperature and rigor, the time of death is estimated between 11:30 p.m. on Saturday, November 4, 2017 and 1:30 a.m. on Sunday, November 5, 2017. Nothing in the examination narrows the window further.\n\nThere were no defensive wounds. A single injury pattern is noted; the instrument was not recovered at the scene.\n"
    },
    {
-    "author": "News reports, August 2020",
-    "date": "2020-08-07",
-    "file": "doc03_feud_explainer.txt",
     "id": "doc03",
-    "title": "Explainer: Tookaville, O Block, and Dead Bitches",
-    "type": "article",
-    "text": "Explainer, August 2020, updated with later reporting. The feud\nbehind the shooting, as described by police, prosecutors, and\nChicago news reporting.\n\nCarlton Weekly performed as FBG Duck. He was associated with\nTookaville, a faction of the Gangster Disciples around 63rd\nStreet on the South Side. Tookaville is named for Shondale\n\"Tooka\" Gregory, a teenager killed in 2011.\n\nHis rivals were O Block, a set of the Black Disciples based in\nand around the Parkway Gardens apartments on the South Side.\nO Block is named for Odee Perry, killed in 2011.\n\nFor years the two sides traded drill songs aimed at each\nother, naming dead members of the other side. Federal\ninvestigators later said the diss tracks between Duck and\nO Block artists fueled violence on the streets.\n\nOn July 10, 2020, Weekly released a song called \"Dead\nBitches.\" It taunted deceased O Block members by name,\nincluding Odee Perry and T-Roy.\n\nAfter the murder, an informant told Chicago police and FBI\nagents that a bounty had been offered for killing Weekly:\n$50,000 at first, later raised to $100,000. Prosecutors later\nalleged the bounty came from O Block rapper King Von. The\nbounty was an allegation. King Von was never charged in this\ncase, and he was himself killed in November 2020.\n"
-   },
-   {
-    "author": "Federal court filing summary",
-    "date": "2023-08-04",
-    "file": "doc04_turpin_tipoff.txt",
-    "id": "doc04",
-    "title": "Court filing: Turpin in the boutique, 3:59 p.m.",
-    "type": "record",
-    "text": "Summary of the government's Santiago proffer, a federal\ncourt filing in United States v. Liggins, filed August 4,\n2023. The filing describes how the shooting started.\n\nOn the afternoon of August 4, 2020, Carlton Weekly was\nshopping for clothes for his son's birthday in Milani Boutique\non East Oak Street in the Gold Coast.\n\nAt approximately 3:59 p.m., Ralph Turpin and a friend of\nTurpin's entered Milani Boutique and noticed Weekly.\n\nTurpin was an O Block associate. Weekly was a rival.\n\nTurpin made at least one phone call inside Milani Boutique to\nWeekly's rival gang members to come downtown to kill Weekly.\n\nApproximately three minutes after Turpin entered the boutique,\nat about 4:02 p.m., the O Block men began making their way to\nEast Oak Street.\n\nThe shooting followed at approximately 4:26 p.m.\n"
-   },
-   {
-    "author": "Chicago Police Department release",
-    "date": "2020-08-13",
-    "file": "doc05_surveillance_summary.txt",
-    "id": "doc05",
-    "title": "Surveillance summary: Parkway Gardens, the camera trail",
-    "type": "record",
-    "text": "Surveillance video summary. From the video Chicago police\nreleased in August 2020 and the camera evidence described at\ntrial.\n\nSurveillance video from the Parkway Gardens apartments, the\nSouth Side complex known as O Block, shows four men sprinting\ndown the steps of a building and getting into two waiting cars:\na Ford Fusion and a Chrysler 300.\n\nPolice POD cameras and license plate readers then tracked the\ntwo cars as they drove from the South Side to the Gold Coast.\n\nVideo from Oak Street shows the Ford Fusion and the Chrysler\n300 pull up. Four gunmen got out of the two cars and shot\nWeekly and the two people with him. The gunmen at Oak Street\nwere masked.\n\nPolice POD cameras tracked the two vehicles as they drove back\ntoward Parkway Gardens after the shooting. The two cars then\nsplit up in different directions.\n\nPolice released the Parkway Gardens video and asked the public\nto help identify the four men.\n"
-   },
-   {
-    "author": "Federal detention hearing summary",
-    "date": "2021-10-15",
-    "file": "doc06_fusion_record.txt",
-    "id": "doc06",
-    "title": "The Fusion: bought before, returned an hour after",
-    "type": "record",
-    "text": "Federal detention hearing summary, October 15, 2021.\nAssistant U.S. Attorney Jason Julien, as reported by the\nChicago Sun-Times.\n\nProsecutors said defendant Tacarlos Offerd purchased a vehicle\nused as a \"lead car\" in the shooting one week before the\nAugust 4, 2020 murder. The vehicle was a Ford Fusion.\n\nJulien said the Fusion was returned to the dealership in the\nChicago suburbs approximately one hour after the shooting.\n\nHe said the vehicle Offerd purchased was seen on police POD\ncameras and license plate readers.\n\nOfferd's defense attorney, John Somerville, argued there was\nno evidence linking anyone specific to driving the car that\nday. \"Mr. Offerd bought a car,\" Somerville said. \"Some unknown\nperson was in his car. Some unknown person may have driven\ndowntown.\"\n\nProsecutors said Offerd drove the Fusion in the shooting, with\ngunmen riding in it.\n"
-   },
-   {
-    "author": "Federal court filing summary",
-    "date": "2023-08-04",
-    "file": "doc07_chrysler_record.txt",
-    "id": "doc07",
-    "title": "The Chrysler: seized the next day, Roberson called",
-    "type": "record",
-    "text": "Summary of the government's Santiago proffer, federal court\nfiling in United States v. Liggins, filed August 4, 2023.\n\nThe second car in the shooting was a Chrysler 300. Prosecutors\nsaid Kenneth Roberson drove the Chrysler 300, with gunmen\nriding in it.\n\nCPD seized Roberson's Chrysler 300 the day after the murder.\n\nAfter the seizure, Roberson called CPD to get it back.\n\nThe Chrysler appears with the Ford Fusion in the surveillance\ntrail: out of Parkway Gardens before the shooting, on Oak\nStreet at the shooting, and tracked back toward the South Side\nafter it.\n"
-   },
-   {
-    "author": "Federal court filing summary",
-    "date": "2023-08-04",
-    "file": "doc08_cooperator_summary.txt",
-    "id": "doc08",
-    "title": "Roberson's own words, per the cooperators",
+    "file": "doc03_reyes_statement.txt",
+    "title": "Reyes statement, 2017: left at eleven, never went back",
     "type": "statement",
-    "text": "Summary of the government's Santiago proffer, federal court\nfiling in United States v. Liggins, filed August 4, 2023. The\nfiling describes statements Kenneth Roberson made to people\nwho later cooperated with the government.\n\nAs the crew drove toward East Oak Street on August 4, 2020,\nRoberson made statements to a cooperating witness acknowledging\nthat Roberson was on his way to murder Weekly.\n\nAfter the murder, Roberson made additional statements about it\nto the same cooperating witness.\n\nRoberson later made statements about the murder to a second\nwitness. The filing says those statements were made for\npurposes of concealment.\n\nThe filing does not name the cooperating witnesses. It refers\nto them by number.\n"
+    "date": "2017-11-05",
+    "author": "Tomas Reyes",
+    "text": "STATEMENT OF TOMAS \"TOMMY\" REYES - taken November 5, 2017, Det. R. Alvarez.\n\nI am the night mechanic at Starlite Lanes. I have worked there six years. I fix the pinsetters and the ball returns.\n\nSaturday I came in at six to work on lane 7. I finished the belt job and I left at eleven and never went back. Carla was in the office doing the books when I left. She was fine.\n\nI drove home. I passed the building again around twelve thirty on my way to get cigarettes and the building was dark, lanes off, office dark. Nobody was there.\n\nI would never hurt Carla. She cut my weekday hours in October, sure, but that is business.\n"
    },
    {
-    "author": "Trial evidence summary",
-    "date": "2023-12-01",
-    "file": "doc09_social_media_evidence.txt",
+    "id": "doc04",
+    "file": "doc04_reyes_logbook.txt",
+    "title": "Reyes sign-out log page, November 4, 2017",
+    "type": "record",
+    "date": "2017-11-04",
+    "author": "Tomas Reyes",
+    "text": "SIGN-OUT LOG PAGE - Starlite Lanes mechanic's log, week of October 30, 2017. Handwritten entries, T. Reyes.\n\nMon 10/30 - 10:15 PM - lane 3 jam, cleared.\nWed 11/1 - 11:20 PM - lane 7 belt slipping, ordered part.\nFri 11/3 - 10:50 PM - full oil, lanes 1-12.\nSat 11/4 - 9:40 PM - lane 7 belt replaced.\nSat 11/4 - 11:00 PM - out.\nSat 11/4 - 1:03 AM - checked lane 12, all good.\n\nThe log is kept in the mechanic's cage. Entries are written by the mechanic on duty at the time of the work.\n"
+   },
+   {
+    "id": "doc05",
+    "file": "doc05_keypad_log.txt",
+    "title": "Keypad entry log, office door",
+    "type": "record",
+    "date": "2017-11-04",
+    "author": "Keypad system export",
+    "text": "KEYPAD ENTRY LOG - office door, Starlite Lanes. System export, November 6, 2017. The panel logs entries only; exits are not recorded.\n\nSat Nov 4, 2017:\n6:02 PM - code 2214\n6:15 PM - code 7712\n9:31 PM - code 3308\n11:20 PM - code 4410\n11:41 PM - code 3308\nSun Nov 5, 2017:\n12:52 AM - code 2214\n1:03 AM - code 7712\n\nNo other codes were entered that night. The export is complete for the office door panel.\n"
+   },
+   {
+    "id": "doc06",
+    "file": "doc06_bell_statement.txt",
+    "title": "Bell statement: I went back for my ball",
+    "type": "statement",
+    "date": "2017-11-06",
+    "author": "Marcus Bell",
+    "text": "STATEMENT OF MARCUS BELL - taken November 6, 2017, Det. R. Alvarez.\n\nI captain the Saturday league at Starlite. I left my ball in the locker room Saturday night, so I went back for it. I let myself in at 11:20, on my own code. Carla was in the office. We talked for a minute about the league banquet. She was alive and fine and working on the scoresheets.\n\nI took my ball and left. I did not see anybody else in the building. I am telling you this myself because my code is on that log and I would rather you heard it from me.\n"
+   },
+   {
+    "id": "doc07",
+    "file": "doc07_hahn_statement1.txt",
+    "title": "Hahn statement 1: home all night",
+    "type": "statement",
+    "date": "2017-11-07",
+    "author": "Derek Hahn",
+    "text": "STATEMENT OF DEREK HAHN - taken November 7, 2017, Det. R. Alvarez.\n\nI worked the counter at Starlite until Carla fired me on October 12. She said I was shorting the register. I was not.\n\nSaturday night I was home all night. I did not go near the lanes. I have no reason to go back there and I did not.\n\nI heard she was dead on the news like everybody else.\n"
+   },
+   {
+    "id": "doc08",
+    "file": "doc08_hahn_statement2.txt",
+    "title": "Hahn statement 2: I drove there, she never answered",
+    "type": "statement",
+    "date": "2019-03-14",
+    "author": "Derek Hahn",
+    "text": "STATEMENT OF DEREK HAHN - taken March 14, 2019, Det. R. Alvarez.\n\nFine. I drove there that night. I wanted my last paycheck and I wanted to say it to her face. I got to the lot around eleven ten. I knocked on the office door off the back hall. Nobody answered. The office window was dark from where I stood.\n\nI left before eleven forty. I never went inside. I lied in 2017 because I knew how it would look, a fired man at the door that night. I am not lying now. She did not answer, and I left.\n"
+   },
+   {
     "id": "doc09",
-    "title": "Trial evidence: posts, videos, and the pendants",
+    "file": "doc09_parking_record.txt",
+    "title": "Parking gate record: Hahn in at 11:12, out at 11:38",
     "type": "record",
-    "text": "Trial evidence summary: the social media and music evidence.\nFrom the federal trial, October 2023 to January 2024, and the\nU.S. Attorney's statements.\n\nThe U.S. Attorney's Office said the O Block gang \"publicly\nclaimed responsibility for their violence and used social\nmedia and music to increase their criminal enterprise.\"\n\nProsecutors built the racketeering case in part from the\ndefendants' own posts, photos, and videos: gang signs, firearms,\nand the feud with Tookaville carried on in public, in songs and\nonline, over years.\n\nJurors saw video recorded after the murder in which King Von,\nthe O Block rapper prosecutors said put a price on Weekly's\nhead, gave the defendants diamond O Block pendants and stacks\nof cash.\n\nProsecutors told the jury the defendants believed killing FBG\nDuck would bring glory to O Block: it was about power, status,\nand retribution.\n"
+    "date": "2017-11-04",
+    "author": "Lot gate system",
+    "text": "PARKING LOT GATE RECORD - Starlite Lanes lot, license plate reader summary, November 2017 pull.\n\nThe lot gate camera reads plates on entry and exit. Records for the night of November 4-5, 2017 include:\n\nPlate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.\nPlate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.\nPlate ending 7750, white hatchback, registered to M. Bell: entered 11:18 PM, exited 11:29 PM.\n\nThe reader log is complete for the weekend. Reads are generated automatically at the gate.\n"
    },
    {
-    "author": "Federal court filing summary",
-    "date": "2023-08-04",
-    "file": "doc10_phone_record.txt",
     "id": "doc10",
-    "title": "Phone record: the call from inside the boutique",
+    "file": "doc10_phone_record.txt",
+    "title": "Victim's phone record: the 12:41 a.m. text",
     "type": "record",
-    "text": "Phone record summary. From the government's Santiago\nproffer, federal court filing in United States v. Liggins,\nfiled August 4, 2023.\n\nRalph Turpin placed at least one phone call from inside Milani\nBoutique on the afternoon of August 4, 2020. The filing says\nthe call reported Weekly's location to his rivals.\n\nThe call came after Turpin entered the boutique at\napproximately 3:59 p.m. and saw Weekly inside.\n\nAt about 4:02 p.m., roughly three minutes after Turpin entered\nthe boutique, the O Block crew began moving toward East Oak\nStreet.\n\nThe shooting was at approximately 4:26 p.m. The call, the\ndrive, and the shooting sit inside one half hour.\n"
+    "date": "2017-11-05",
+    "author": "Carrier summary",
+    "text": "VICTIM'S PHONE RECORD - carrier summary for the phone of Carla Ibanez, night of November 4-5, 2017.\n\nOutgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"\n\nIncoming call, 10:58 PM, November 4, from M. Bell, duration 1 minute.\nOutgoing call, 9:12 PM, November 4, to J. Luna, duration 2 minutes.\n\nNo further activity was recorded on the phone after 12:41 AM.\n"
    },
    {
-    "author": "U.S. Department of Justice",
-    "date": "2023-04-10",
-    "file": "doc11_indictment_summary.txt",
     "id": "doc11",
-    "title": "Indictments: five charged in 2021, Turpin in 2023",
-    "type": "report",
-    "text": "U.S. Department of Justice summary of the indictments.\nOriginal indictment October 2021; superseding indictment\nunsealed April 10, 2023.\n\nFive Chicago men were charged in October 2021 with committing\nmurder in aid of racketeering and conspiracy to commit murder\nin aid of racketeering: Charles Liggins, also known as \"C\nMurda\"; Kenneth Roberson, also known as \"Kenny Mac\"; Tacarlos\nOfferd, also known as \"Los\"; Christopher Thomas, also known as\n\"C Thang\"; and Marcus Smart, also known as \"Muwop.\"\n\nIn April 2023 a superseding indictment added a sixth\ndefendant: Ralph Turpin, also known as \"Tall\" and \"Teezy,\"\ncharged with murder in aid of racketeering and conspiracy to\ncommit murder in aid of racketeering.\n\nThe indictment alleged the six were members or associates of\nthe O Block street gang, and that they murdered Carlton Weekly\nto maintain and increase their positions in the gang.\n\nNews reporting identified a fourth gunman, Ezell Rawls, in the\nsurveillance video. Rawls died during the investigation and\nwas never tried.\n"
+    "file": "doc11_dvr_log.txt",
+    "title": "DVR motion log: the back hall after midnight",
+    "type": "record",
+    "date": "2017-11-04",
+    "author": "DVR system export",
+    "text": "DVR MOTION LOG - Starlite Lanes camera system, export November 8, 2017. The system records motion events by camera; the video itself is overwritten on a 72-hour cycle.\n\nCamera 4, back hall:\nSat Nov 4 - 9:40 PM, 11:03 PM, 11:36 PM\nSun Nov 5 - 12:58 AM, 1:03 AM, 1:19 AM\n\nCamera 2, office corridor:\nSat Nov 4 - 6:05 PM, 11:22 PM, 11:44 PM\nSun Nov 5 - 12:52 AM, 1:04 AM\n\nCamera 1, front counter: no motion after 10:47 PM.\n\nThe motion log is generated by the DVR and was exported before the overwrite cycle for that weekend completed.\n"
    },
    {
-    "author": "U.S. Department of Justice",
-    "date": "2024-01-17",
-    "file": "doc12_verdict_summary.txt",
     "id": "doc12",
-    "title": "Verdict: all six convicted, January 17, 2024",
+    "file": "doc12_luna_statement1.txt",
+    "title": "Luna statement 1, 2017: left at 11:45",
+    "type": "statement",
+    "date": "2017-11-05",
+    "author": "Josefina Luna",
+    "text": "STATEMENT OF JOSEFINA LUNA - taken November 5, 2017, Det. R. Alvarez.\n\nI clean Starlite Lanes at night. Saturday I started at nine thirty. I did the bathrooms, the concourse, and the back hall.\n\nI finished and left at 11:45. The lanes were quiet. Carla was in the office. Mr. Reyes had already gone, I thought. I locked the side door behind me and went home.\n\nI saw nobody in the back hall while I cleaned.\n"
+   },
+   {
+    "id": "doc13",
+    "file": "doc13_luna_statement2.txt",
+    "title": "Luna statement 2, 2025: the machines were running",
+    "type": "statement",
+    "date": "2025-06-09",
+    "author": "Josefina Luna",
+    "text": "STATEMENT OF JOSEFINA LUNA - taken June 9, 2025, cold case review.\n\nI have thought about that night for years. I left around midnight, I would say now. While I mopped the back hall I remember the machines running on lane 12, the pins resetting. I did not put that in my first statement because nobody asked me about sounds, and at the time I did not think it mattered.\n\nIn 2017 I said 11:45 because that is when I usually finish. In 2025 I am telling you what I actually remember: the lane 12 machine was running while I was still there.\n"
+   },
+   {
+    "id": "doc14",
+    "file": "doc14_luna_husband.txt",
+    "title": "Marco Luna statement, 2025: home by 12:30",
+    "type": "statement",
+    "date": "2025-06-09",
+    "author": "Marco Luna",
+    "text": "STATEMENT OF MARCO LUNA - taken June 9, 2025, cold case review.\n\nJosefina was home by 12:30 that night. I remember because I waited up; we were going to watch the fight replay and it started without her.\n\nNobody asked me in 2017. This is the first time anyone from the police has asked me when she got home.\n"
+   },
+   {
+    "id": "doc15",
+    "file": "doc15_inspection_report.txt",
+    "title": "Inspection report, 2017: the latch, replaced and closed",
     "type": "report",
-    "text": "U.S. Department of Justice, January 2024. Verdicts in United\nStates v. Liggins, returned January 17, 2024.\n\nA federal jury in Chicago convicted six members or associates\nof the O Block street gang of racketeering offenses that\nincluded the murder of Carlton Weekly, the rapper known as\nFBG Duck.\n\nThe jury found that the defendants participated in a criminal\norganization that engaged in violence to protect the gang's\nperceived territories on the South Side of Chicago, and that\nthey conspired to murder Weekly in order to maintain and\nincrease their positions in the gang.\n\nConvicted of committing murder in aid of racketeering:\nCharles Liggins, Kenneth Roberson, Tacarlos Offerd,\nChristopher Thomas, Marcus Smart, and Ralph Turpin. Five of\nthe six were also convicted of using a firearm in the murder.\n\nProsecutors identified the roles at trial: Liggins, Thomas,\nand Smart were gunmen; Roberson drove the Chrysler 300;\nOfferd drove the Ford Fusion; Turpin spotted Weekly in the\nboutique and called it in.\n\nThe jury returned its verdicts after a three-month trial in\nU.S. District Court in Chicago. The convictions carry\nmandatory sentences of life in federal prison.\n\n\"The jury's verdicts today hold the six defendants accountable\nfor a brutal murder that took the life of Carlton Weekly,\"\nActing U.S. Attorney Morris Pasqual said.\n"
+    "date": "2017-01-09",
+    "author": "City inspector",
+    "text": "CITY INSPECTION REPORT - Starlite Lanes, January 2017. Inspector: R. Calloway.\n\nItem 14, rear service door: the latch mechanism reported faulty in 2016 was replaced on January 9, 2017. The door was tested twenty times and latched every time. This item is closed.\n\nAll other items passed. The premises were cleared for league play.\n"
+   },
+   {
+    "id": "doc16",
+    "file": "doc16_news_article.txt",
+    "title": "News article, 2016: the break-in and the faulty latch",
+    "type": "article",
+    "date": "2016-10-18",
+    "author": "Meridian Ledger",
+    "text": "NEWS ARTICLE - Meridian Ledger, October 18, 2016. \"Break-in at Starlite Lanes.\"\n\nThieves entered Starlite Lanes through the rear service door early Sunday, taking the league prize safe. Owner Carla Ibanez said the door's latch had been faulty for months and that she had reported it twice.\n\nPolice said there were no suspects. Ibanez said the safe held about four thousand dollars in league prize money.\n"
+   },
+   {
+    "id": "doc17",
+    "file": "doc17_photo_memo.txt",
+    "title": "Evidence memo: the 12:55 a.m. photo, never collected",
+    "type": "report",
+    "date": "2017-11-20",
+    "author": "Detective R. Alvarez",
+    "text": "EVIDENCE MEMO - Det. R. Alvarez, November 20, 2017.\n\nLeague member Diane Pruitt told me she took a photograph from the parking lot at 12:55 AM on November 5, showing the office window of Starlite Lanes lit, with the blinds partly open. She showed me the photograph on her phone during our conversation on November 12.\n\nThe original photograph was never collected. Ms. Pruitt has since replaced the phone. A request to her carrier for the cloud backup is outstanding in the file; no response is recorded.\n\nThe photograph is referenced in two later statements but the image itself is not in the evidence ledger.\n"
+   },
+   {
+    "id": "doc18",
+    "file": "doc18_staff_roster.txt",
+    "title": "Staff roster and door codes",
+    "type": "record",
+    "date": "2017-10-01",
+    "author": "Starlite Lanes",
+    "text": "STAFF ROSTER AND DOOR CODES - Starlite Lanes, posted in the office, dated October 1, 2017.\n\nOwner: C. Ibanez - office code 2214\nNight mechanic: T. Reyes - master code 7712 (opens office, cage, and lane doors)\nLeague captain: M. Bell - code 4410 (locker room and office corridor)\nCleaner: J. Luna - code 3308 (service doors)\n\nMargin note, in the owner's hand: \"From Oct 1, Reyes to weekends only - C.I.\"\n\nThe master code is assigned to the mechanic because the pinsetters sit behind the office corridor.\n"
    }
   ]
  }

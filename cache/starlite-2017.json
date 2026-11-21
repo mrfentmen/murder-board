@@ -1,0 +1,2731 @@
+{
+ "created_at": "2026-11-21T21:13:57.655Z",
+ "outputs": {
+  "custody": {
+   "documents": [
+    {
+     "doc_id": "doc01",
+     "type": "report",
+     "legible": true,
+     "custody_note": "Scene report for Starlite Lanes authored by Patrol Officer P. Tate, dated November 5, 2017."
+    },
+    {
+     "doc_id": "doc02",
+     "type": "report",
+     "legible": true,
+     "custody_note": "Medical Examiner summary for Case 2017-1104 authored by Dr. S. Osei, dated November 7, 2017."
+    },
+    {
+     "doc_id": "doc03",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Tomas \"Tommy\" Reyes taken by Det. R. Alvarez, dated November 5, 2017."
+    },
+    {
+     "doc_id": "doc04",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Starlite Lanes mechanic's sign-out log page with handwritten entries by T. Reyes for the week of October 30, 2017 (registry date 2017-11-04)."
+    },
+    {
+     "doc_id": "doc05",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Keypad entry log system export for the Starlite Lanes office door covering November 4-5, 2017, exported November 6, 2017."
+    },
+    {
+     "doc_id": "doc06",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Marcus Bell taken by Det. R. Alvarez, dated November 6, 2017."
+    },
+    {
+     "doc_id": "doc07",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Derek Hahn taken by Det. R. Alvarez, dated November 7, 2017."
+    },
+    {
+     "doc_id": "doc08",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Derek Hahn taken by Det. R. Alvarez, dated March 14, 2019."
+    },
+    {
+     "doc_id": "doc09",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Starlite Lanes parking lot gate license plate reader summary for the night of November 4-5, 2017, pulled November 2017."
+    },
+    {
+     "doc_id": "doc10",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Carrier summary phone record for Carla Ibanez covering the night of November 4-5, 2017."
+    },
+    {
+     "doc_id": "doc11",
+     "type": "record",
+     "legible": true,
+     "custody_note": "DVR motion log system export for Starlite Lanes covering November 4-5, 2017, exported November 8, 2017."
+    },
+    {
+     "doc_id": "doc12",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Josefina Luna taken by Det. R. Alvarez, dated November 5, 2017."
+    },
+    {
+     "doc_id": "doc13",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Josefina Luna taken during cold case review, dated June 9, 2025."
+    },
+    {
+     "doc_id": "doc14",
+     "type": "statement",
+     "legible": true,
+     "custody_note": "Statement of Marco Luna taken during cold case review, dated June 9, 2025."
+    },
+    {
+     "doc_id": "doc15",
+     "type": "report",
+     "legible": true,
+     "custody_note": "City inspection report for Starlite Lanes authored by Inspector R. Calloway, dated January 2017 (item closed January 9, 2017)."
+    },
+    {
+     "doc_id": "doc16",
+     "type": "article",
+     "legible": true,
+     "custody_note": "News article titled \"Break-in at Starlite Lanes\" published by the Meridian Ledger, dated October 18, 2016."
+    },
+    {
+     "doc_id": "doc17",
+     "type": "report",
+     "legible": true,
+     "custody_note": "Evidence memo regarding an uncollected photograph authored by Det. R. Alvarez, dated November 20, 2017."
+    },
+    {
+     "doc_id": "doc18",
+     "type": "record",
+     "legible": true,
+     "custody_note": "Starlite Lanes staff roster and door codes with handwritten margin note by C.I., dated October 1, 2017."
+    }
+   ]
+  },
+  "records": {
+   "subject": "Unnamed victim (referred to only in registry entry doc10: \"Victim's phone record: the 12:41 a.m. text\"; associated with incident file entries doc01: \"Scene report: the office, the latch, the open ball return\" dated \"2017-11-05\" and doc02: \"ME summary: window 11:30 p.m. to 1:30 a.m.\" dated \"2017-11-07\")",
+   "starter_items": [
+    {
+     "item": "State and county death index entries circa 2017-11-04 to 2017-11-05 matching the decedent referenced in doc02 (\"ME summary: window 11:30 p.m. to 1:30 a.m.\", dated \"2017-11-07\") and doc10 (\"Victim's phone record: the 12:41 a.m. text\", dated \"2017-11-05\") once legal name is obtained",
+     "source_class": "death index",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Local obituary and funeral home notices published on or after 2017-11-05 for the decedent referenced in doc01 (\"Scene report: the office, the latch, the open ball return\", dated \"2017-11-05\") and doc02 (\"ME summary: window 11:30 p.m. to 1:30 a.m.\", dated \"2017-11-07\") to identify next of kin, survivors, and biographical dates",
+     "source_class": "obituary and funeral notices",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Archival coverage from \"Meridian Ledger\" (cited as author in doc16: \"News article, 2016: the break-in and the faulty latch\", dated \"2016-10-18\") and regional press from November 2017 forward regarding the homicide at \"Starlite Lanes\" (cited as author in doc18: \"Staff roster and door codes\", dated \"2017-10-01\") and the unnamed victim in doc10 (\"Victim's phone record: the 12:41 a.m. text\")",
+     "source_class": "newspaper archives",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Civil, family, probate, and criminal court portal filings for the victim (doc10: \"Victim's phone record: the 12:41 a.m. text\") once identified, as well as dockets involving \"Starlite Lanes\" (doc18: \"Staff roster and door codes\") and prior incident records related to doc16 (\"News article, 2016: the break-in and the faulty latch\")",
+     "source_class": "court portals",
+     "label": "UNVERIFIED"
+    },
+    {
+     "item": "Historical census schedules and public directory/residence schedules for the victim (doc10: \"Victim's phone record: the 12:41 a.m. text\") once legal name, age, and prior addresses are established from the case documents",
+     "source_class": "census schedules",
+     "label": "UNVERIFIED"
+    }
+   ],
+   "request_next": [
+    "Full text of doc01 (\"Scene report: the office, the latch, the open ball return\"), doc02 (\"ME summary: window 11:30 p.m. to 1:30 a.m.\"), doc10 (\"Victim's phone record: the 12:41 a.m. text\"), and doc18 (\"Staff roster and door codes\", author \"Starlite Lanes\") to establish the victim's full legal name, date of birth, and role before executing name-based record pulls and to prevent merging distinct individuals with the same name",
+    "Certified long-form death certificate and full medical examiner report underlying doc02 (\"ME summary: window 11:30 p.m. to 1:30 a.m.\", author \"Dr. S. Osei\", dated \"2017-11-07\")",
+    "Business registration, corporate officer filings, liquor/operating licenses, and property ownership records for \"Starlite Lanes\" (doc18: \"Staff roster and door codes\", dated \"2017-10-01\")",
+    "Complete municipal building and code enforcement file underlying doc15 (\"Inspection report, 2017: the latch, replaced and closed\", author \"City inspector\", dated \"2017-01-09\") and police report for the 2016 incident referenced in doc16 (\"News article, 2016: the break-in and the faulty latch\", dated \"2016-10-18\")",
+    "Underlying carrier subscriber information and full call/text detail records referenced in doc10 (\"Victim's phone record: the 12:41 a.m. text\", author \"Carrier summary\", dated \"2017-11-05\") and investigative file materials referenced in doc17 (\"Evidence memo: the 12:55 a.m. photo, never collected\", author \"Detective R. Alvarez\", dated \"2017-11-20\")"
+   ]
+  },
+  "coroner": {
+   "cause": "blunt force injury to the head",
+   "manner": "homicide",
+   "death_window": {
+    "start": "2017-11-04T23:30:00",
+    "end": "2017-11-05T01:30:00",
+    "quote": "Based on body temperature and rigor, the time of death is estimated between 11:30 p.m. on Saturday, November 4, 2017 and 1:30 a.m. on Sunday, November 5, 2017. Nothing in the examination narrows the window further.",
+    "doc_id": "doc02"
+   },
+   "medical_facts": [
+    {
+     "fact": "Victim Carla Ibanez, 47, was pronounced dead at the scene at 0622 hours on November 5, 2017.",
+     "quote": "She was pronounced at the scene at 0622 hours.",
+     "doc_id": "doc01"
+    },
+    {
+     "fact": "Victim was found on the floor of the office behind the desk.",
+     "quote": "The victim was behind the desk.",
+     "doc_id": "doc01"
+    },
+    {
+     "fact": "Cause of death is blunt force injury to the head and manner of death is homicide.",
+     "quote": "Cause of death: blunt force injury to the head. Manner: homicide.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "Time of death is estimated between 11:30 p.m. on November 4, 2017 and 1:30 a.m. on November 5, 2017 based on body temperature and rigor, with nothing narrowing the window further.",
+     "quote": "Based on body temperature and rigor, the time of death is estimated between 11:30 p.m. on Saturday, November 4, 2017 and 1:30 a.m. on Sunday, November 5, 2017. Nothing in the examination narrows the window further.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "The body exhibited no defensive wounds.",
+     "quote": "There were no defensive wounds.",
+     "doc_id": "doc02"
+    },
+    {
+     "fact": "A single injury pattern was noted on the decedent, and the instrument was not recovered at the scene.",
+     "quote": "A single injury pattern is noted; the instrument was not recovered at the scene.",
+     "doc_id": "doc02"
+    }
+   ],
+   "medical_flags": []
+  },
+  "csi": {
+   "ledger": [],
+   "gaps": [
+    {
+     "item": "Evidence ledger",
+     "mentioned_in": [
+      "doc17"
+     ],
+     "problem": "An evidence ledger is referenced in doc17, but no evidence ledger document is present in the case file to reconcile items against.",
+     "quote": "The photograph is referenced in two later statements but the image itself is not in the evidence ledger.",
+     "doc_id": "doc17"
+    },
+    {
+     "item": "12:55 AM photograph of Starlite Lanes office window",
+     "mentioned_in": [
+      "doc17"
+     ],
+     "problem": "Never collected from witness Diane Pruitt and explicitly noted as absent from the evidence ledger; cloud backup request to carrier has no recorded response.",
+     "quote": "The original photograph was never collected. Ms. Pruitt has since replaced the phone. A request to her carrier for the cloud backup is outstanding in the file; no response is recorded.",
+     "doc_id": "doc17"
+    },
+    {
+     "item": "Diane Pruitt's phone",
+     "mentioned_in": [
+      "doc17"
+     ],
+     "problem": "Contained the 12:55 AM photograph shown to Det. Alvarez on November 12, 2017, but was never collected and was subsequently replaced; absent from any ledger in the file.",
+     "quote": "She showed me the photograph on her phone during our conversation on November 12. The original photograph was never collected. Ms. Pruitt has since replaced the phone.",
+     "doc_id": "doc17"
+    },
+    {
+     "item": "Blunt force instrument",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "Not recovered at the scene and absent from any ledger in the file.",
+     "quote": "A single injury pattern is noted; the instrument was not recovered at the scene.",
+     "doc_id": "doc02"
+    },
+    {
+     "item": "League scoresheet(s) on office desk",
+     "mentioned_in": [
+      "doc01",
+      "doc06"
+     ],
+     "problem": "Observed on the office desk at the crime scene but absent from any ledger in the file; count discrepancy between doc01 (1 league scoresheet: 'a league scoresheet') and doc06 (multiple: 'scoresheets').",
+     "quote": "On the desk was a league scoresheet dated November 4.",
+     "doc_id": "doc01"
+    },
+    {
+     "item": "Account books ('the books')",
+     "mentioned_in": [
+      "doc03"
+     ],
+     "problem": "Mentioned as being worked on by the victim in the office on November 4, 2017, but not mentioned in the doc01 scene report and absent from any ledger in the file.",
+     "quote": "Carla was in the office doing the books when I left.",
+     "doc_id": "doc03"
+    },
+    {
+     "item": "Carla Ibanez's physical phone and carrier phone record summary",
+     "mentioned_in": [
+      "doc10"
+     ],
+     "problem": "Carrier summary is in the file (doc10), showing outgoing text activity at 12:41 AM, but recovery of the physical phone is not mentioned in the doc01 scene report and neither the device nor the record appears in a provided ledger.",
+     "quote": "VICTIM'S PHONE RECORD - carrier summary for the phone of Carla Ibanez, night of November 4-5, 2017.",
+     "doc_id": "doc10"
+    },
+    {
+     "item": "DVR surveillance video footage",
+     "mentioned_in": [
+      "doc11"
+     ],
+     "problem": "Video footage is overwritten on a 72-hour cycle; only the motion event log export is in the file, with no video footage preserved or listed in a provided ledger.",
+     "quote": "The system records motion events by camera; the video itself is overwritten on a 72-hour cycle.",
+     "doc_id": "doc11"
+    },
+    {
+     "item": "DVR motion log export",
+     "mentioned_in": [
+      "doc11"
+     ],
+     "problem": "Exported November 8, 2017 and included in the file, but no evidence ledger is present in the file listing it.",
+     "quote": "DVR MOTION LOG - Starlite Lanes camera system, export November 8, 2017.",
+     "doc_id": "doc11"
+    },
+    {
+     "item": "Mechanic's sign-out log page (week of October 30, 2017)",
+     "mentioned_in": [
+      "doc04",
+      "doc10"
+     ],
+     "problem": "Kept in the mechanic's cage and included in the file, but no evidence ledger is present in the file listing it.",
+     "quote": "SIGN-OUT LOG PAGE - Starlite Lanes mechanic's log, week of October 30, 2017. Handwritten entries, T. Reyes.",
+     "doc_id": "doc04"
+    },
+    {
+     "item": "Office door keypad panel and entry log export",
+     "mentioned_in": [
+      "doc01",
+      "doc05",
+      "doc06"
+     ],
+     "problem": "Keypad panel observed at the scene (doc01) and system export generated November 6, 2017 (doc05), but no evidence ledger is present in the file listing the export or any processing of the panel.",
+     "quote": "KEYPAD ENTRY LOG - office door, Starlite Lanes. System export, November 6, 2017.",
+     "doc_id": "doc05"
+    },
+    {
+     "item": "Parking lot gate license plate reader summary",
+     "mentioned_in": [
+      "doc09"
+     ],
+     "problem": "Included in the file from a November 2017 pull, but no evidence ledger is present in the file listing it.",
+     "quote": "PARKING LOT GATE RECORD - Starlite Lanes lot, license plate reader summary, November 2017 pull.",
+     "doc_id": "doc09"
+    },
+    {
+     "item": "Staff roster and door codes sheet (dated October 1, 2017)",
+     "mentioned_in": [
+      "doc18"
+     ],
+     "problem": "Described as posted in the office (crime scene) with a handwritten margin note, but not mentioned in the doc01 scene report and absent from any ledger in the file.",
+     "quote": "STAFF ROSTER AND DOOR CODES - Starlite Lanes, posted in the office, dated October 1, 2017.",
+     "doc_id": "doc18"
+    },
+    {
+     "item": "Lane 12 ball return cover",
+     "mentioned_in": [
+      "doc01"
+     ],
+     "problem": "Observed standing open at the crime scene in doc01, with no record of forensic processing or collection and no ledger present in the file.",
+     "quote": "The cover of the lane 12 ball return stood open.",
+     "doc_id": "doc01"
+    },
+    {
+     "item": "Marcus Bell's bowling ball",
+     "mentioned_in": [
+      "doc06"
+     ],
+     "problem": "Removed from the Starlite Lanes locker room by M. Bell on the night of November 4, 2017; not inspected or listed in any ledger in the file.",
+     "quote": "I left my ball in the locker room Saturday night, so I went back for it.",
+     "doc_id": "doc06"
+    }
+   ]
+  },
+  "intake": {
+   "persons": [
+    {
+     "name": "Carla Ibanez",
+     "aliases": [
+      "C. Ibanez",
+      "C.I."
+     ],
+     "role": "Victim; owner of Starlite Lanes"
+    },
+    {
+     "name": "P. Tate",
+     "aliases": [],
+     "role": "Reporting patrol officer"
+    },
+    {
+     "name": "Morning opener",
+     "aliases": [],
+     "role": "Employee who found the victim and called police"
+    },
+    {
+     "name": "S. Osei",
+     "aliases": [
+      "Dr. S. Osei"
+     ],
+     "role": "Medical Examiner"
+    },
+    {
+     "name": "Tomas Reyes",
+     "aliases": [
+      "Tommy",
+      "T. Reyes",
+      "Mr. Reyes"
+     ],
+     "role": "Night mechanic at Starlite Lanes"
+    },
+    {
+     "name": "R. Alvarez",
+     "aliases": [
+      "Det. R. Alvarez"
+     ],
+     "role": "Investigating detective"
+    },
+    {
+     "name": "Marcus Bell",
+     "aliases": [
+      "M. Bell"
+     ],
+     "role": "Saturday league captain at Starlite Lanes"
+    },
+    {
+     "name": "Derek Hahn",
+     "aliases": [
+      "D. Hahn"
+     ],
+     "role": "Former counter employee at Starlite Lanes, fired October 12, 2017"
+    },
+    {
+     "name": "Andre Ibanez",
+     "aliases": [],
+     "role": "Recipient of 12:41 AM text message from Carla Ibanez"
+    },
+    {
+     "name": "Josefina Luna",
+     "aliases": [
+      "J. Luna"
+     ],
+     "role": "Night cleaner at Starlite Lanes"
+    },
+    {
+     "name": "Marco Luna",
+     "aliases": [],
+     "role": "Witness regarding Josefina Luna's return home"
+    },
+    {
+     "name": "R. Calloway",
+     "aliases": [],
+     "role": "City inspector"
+    },
+    {
+     "name": "Diane Pruitt",
+     "aliases": [
+      "Ms. Pruitt"
+     ],
+     "role": "League member who reported taking a 12:55 AM photograph"
+    }
+   ],
+   "claims": [
+    {
+     "person": "P. Tate",
+     "claim": "The office door was closed with the latch engaged and there were no signs of forced entry at the office door or back door.",
+     "quote": "The office door was closed and the latch engaged. There were no signs of forced entry at the office door or the back door.",
+     "doc_id": "doc01",
+     "kind": "observation"
+    },
+    {
+     "person": "P. Tate",
+     "claim": "A league scoresheet dated November 4 was on the office desk.",
+     "quote": "On the desk was a league scoresheet dated November 4.",
+     "doc_id": "doc01",
+     "kind": "object"
+    },
+    {
+     "person": "P. Tate",
+     "claim": "The lane 12 ball return cover was open, the rest of the lanes were dark, and the office keypad showed a green ready light.",
+     "quote": "The cover of the lane 12 ball return stood open. The rest of the lanes were dark. The keypad panel beside the office door showed a green ready light.",
+     "doc_id": "doc01",
+     "kind": "observation"
+    },
+    {
+     "person": "S. Osei",
+     "claim": "Carla Ibanez died of homicide by blunt force injury to the head between 11:30 p.m. on November 4 and 1:30 a.m. on November 5, 2017.",
+     "quote": "Cause of death: blunt force injury to the head. Manner: homicide. Based on body temperature and rigor, the time of death is estimated between 11:30 p.m. on Saturday, November 4, 2017 and 1:30 a.m. on Sunday, November 5, 2017.",
+     "doc_id": "doc02",
+     "kind": "observation"
+    },
+    {
+     "person": "S. Osei",
+     "claim": "There were no defensive wounds, a single injury pattern was noted, and the instrument was not recovered at the scene.",
+     "quote": "There were no defensive wounds. A single injury pattern is noted; the instrument was not recovered at the scene.",
+     "doc_id": "doc02",
+     "kind": "observation"
+    },
+    {
+     "person": "Tomas Reyes",
+     "claim": "He has worked as the night mechanic at Starlite Lanes for six years fixing pinsetters and ball returns.",
+     "quote": "I am the night mechanic at Starlite Lanes. I have worked there six years. I fix the pinsetters and the ball returns.",
+     "doc_id": "doc03",
+     "kind": "relationship"
+    },
+    {
+     "person": "Tomas Reyes",
+     "claim": "He came in at 6:00 PM on Saturday to work on lane 7, finished the belt job, left at 11:00 PM, and never returned.",
+     "quote": "Saturday I came in at six to work on lane 7. I finished the belt job and I left at eleven and never went back.",
+     "doc_id": "doc03",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Tomas Reyes",
+     "claim": "Carla Ibanez was fine and in the office doing the books when he left at 11:00 PM.",
+     "quote": "Carla was in the office doing the books when I left. She was fine.",
+     "doc_id": "doc03",
+     "kind": "observation"
+    },
+    {
+     "person": "Tomas Reyes",
+     "claim": "He drove home and passed the building around 12:30 AM on his way to get cigarettes, observing the building, lanes, and office dark with nobody there.",
+     "quote": "I drove home. I passed the building again around twelve thirty on my way to get cigarettes and the building was dark, lanes off, office dark. Nobody was there.",
+     "doc_id": "doc03",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Tomas Reyes",
+     "claim": "Carla Ibanez cut his weekday hours in October.",
+     "quote": "She cut my weekday hours in October, sure, but that is business.",
+     "doc_id": "doc03",
+     "kind": "relationship"
+    },
+    {
+     "person": "Tomas Reyes",
+     "claim": "Handwritten log entries state he replaced the lane 7 belt at 9:40 PM, signed out at 11:00 PM, and checked lane 12 at 1:03 AM under the date Sat 11/4.",
+     "quote": "Sat 11/4 - 9:40 PM - lane 7 belt replaced. Sat 11/4 - 11:00 PM - out. Sat 11/4 - 1:03 AM - checked lane 12, all good.",
+     "doc_id": "doc04",
+     "kind": "action"
+    },
+    {
+     "person": "Marcus Bell",
+     "claim": "He captains the Saturday league at Starlite Lanes.",
+     "quote": "I captain the Saturday league at Starlite.",
+     "doc_id": "doc06",
+     "kind": "relationship"
+    },
+    {
+     "person": "Marcus Bell",
+     "claim": "He returned to Starlite Lanes on Saturday night for his bowling ball, letting himself in at 11:20 PM using his own code.",
+     "quote": "I left my ball in the locker room Saturday night, so I went back for it. I let myself in at 11:20, on my own code.",
+     "doc_id": "doc06",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Marcus Bell",
+     "claim": "Carla Ibanez was alive in the office working on scoresheets when he entered at 11:20 PM, and they talked for a minute about the league banquet.",
+     "quote": "Carla was in the office. We talked for a minute about the league banquet. She was alive and fine and working on the scoresheets.",
+     "doc_id": "doc06",
+     "kind": "observation"
+    },
+    {
+     "person": "Marcus Bell",
+     "claim": "He took his ball and left without seeing anyone else in the building.",
+     "quote": "I took my ball and left. I did not see anybody else in the building.",
+     "doc_id": "doc06",
+     "kind": "observation"
+    },
+    {
+     "person": "Derek Hahn",
+     "claim": "He worked the counter at Starlite until Carla Ibanez fired him on October 12 for allegedly shorting the register, which he denies.",
+     "quote": "I worked the counter at Starlite until Carla fired me on October 12. She said I was shorting the register. I was not.",
+     "doc_id": "doc07",
+     "kind": "relationship"
+    },
+    {
+     "person": "Derek Hahn",
+     "claim": "In his 2017 statement, he claimed he was home all Saturday night and did not go near Starlite Lanes.",
+     "quote": "Saturday night I was home all night. I did not go near the lanes. I have no reason to go back there and I did not.",
+     "doc_id": "doc07",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Derek Hahn",
+     "claim": "In his 2019 statement, he stated he drove to the Starlite lot around 11:10 PM for his last paycheck, knocked on the back hall office door with no answer, saw the office window was dark, and left before 11:40 PM without going inside.",
+     "quote": "I got to the lot around eleven ten. I knocked on the office door off the back hall. Nobody answered. The office window was dark from where I stood. I left before eleven forty. I never went inside.",
+     "doc_id": "doc08",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "Derek Hahn",
+     "claim": "He stated he gave a false account in 2017 because of how it would look for a fired employee to be at the door that night.",
+     "quote": "I lied in 2017 because I knew how it would look, a fired man at the door that night.",
+     "doc_id": "doc08",
+     "kind": "action"
+    },
+    {
+     "person": "Carla Ibanez",
+     "claim": "In a 12:41 AM text to Andre Ibanez, the sender stated Tommy was there again and was told to log it.",
+     "quote": "Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"",
+     "doc_id": "doc10",
+     "kind": "observation"
+    },
+    {
+     "person": "Josefina Luna",
+     "claim": "In her 2025 statement, she stated she remembered the machines running and pins resetting on lane 12 while she mopped the back hall.",
+     "quote": "While I mopped the back hall I remember the machines running on lane 12, the pins resetting.",
+     "doc_id": "doc13",
+     "kind": "observation"
+    },
+    {
+     "person": "Marco Luna",
+     "claim": "Josefina Luna was home by 12:30 AM that night.",
+     "quote": "Josefina was home by 12:30 that night. I remember because I waited up; we were going to watch the fight replay and it started without her.",
+     "doc_id": "doc14",
+     "kind": "whereabouts"
+    },
+    {
+     "person": "R. Calloway",
+     "claim": "The faulty rear service door latch mechanism from 2016 was replaced on January 9, 2017, and latched all twenty times when tested.",
+     "quote": "Item 14, rear service door: the latch mechanism reported faulty in 2016 was replaced on January 9, 2017. The door was tested twenty times and latched every time.",
+     "doc_id": "doc15",
+     "kind": "object"
+    },
+    {
+     "person": "Diane Pruitt",
+     "claim": "She told Det. Alvarez she took a photo from the parking lot at 12:55 AM on November 5 showing the Starlite Lanes office window lit with the blinds partly open.",
+     "quote": "League member Diane Pruitt told me she took a photograph from the parking lot at 12:55 AM on November 5, showing the office window of Starlite Lanes lit, with the blinds partly open.",
+     "doc_id": "doc17",
+     "kind": "observation"
+    },
+    {
+     "person": "R. Alvarez",
+     "claim": "Diane Pruitt showed him the 12:55 AM photograph on her phone on November 12, 2017, but the original was never collected before she replaced the phone.",
+     "quote": "She showed me the photograph on her phone during our conversation on November 12. The original photograph was never collected. Ms. Pruitt has since replaced the phone.",
+     "doc_id": "doc17",
+     "kind": "object"
+    },
+    {
+     "person": "Carla Ibanez",
+     "claim": "A handwritten margin note on the October 1, 2017 roster restricted Reyes to weekends only starting October 1.",
+     "quote": "Margin note, in the owner's hand: \"From Oct 1, Reyes to weekends only - C.I.\"",
+     "doc_id": "doc18",
+     "kind": "relationship"
+    }
+   ],
+   "events": [
+    {
+     "what": "Thieves entered Starlite Lanes through the rear service door and took the league prize safe",
+     "when_text": "early Sunday (article dated October 18, 2016)",
+     "when_window": "",
+     "where": "Starlite Lanes rear service door",
+     "who": [],
+     "quote": "Thieves entered Starlite Lanes through the rear service door early Sunday, taking the league prize safe.",
+     "doc_id": "doc16"
+    },
+    {
+     "what": "Rear service door latch mechanism replaced and tested",
+     "when_text": "January 9, 2017",
+     "when_window": "2017-01-09",
+     "where": "Starlite Lanes rear service door",
+     "who": [
+      "R. Calloway"
+     ],
+     "quote": "Item 14, rear service door: the latch mechanism reported faulty in 2016 was replaced on January 9, 2017. The door was tested twenty times and latched every time.",
+     "doc_id": "doc15"
+    },
+    {
+     "what": "Carla Ibanez fired Derek Hahn",
+     "when_text": "October 12",
+     "when_window": "2017-10-12",
+     "where": "Starlite Lanes",
+     "who": [
+      "Carla Ibanez",
+      "Derek Hahn"
+     ],
+     "quote": "I worked the counter at Starlite until Carla fired me on October 12.",
+     "doc_id": "doc07"
+    },
+    {
+     "what": "Blue sedan registered to T. Reyes (plate ending 2093) entered parking lot with no exit read that night",
+     "when_text": "entered 6:01 PM (night of November 4-5, 2017)",
+     "when_window": "2017-11-04T18:01",
+     "where": "Starlite Lanes parking lot gate",
+     "who": [
+      "Tomas Reyes"
+     ],
+     "quote": "Plate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Office door keypad entry with code 2214",
+     "when_text": "Sat Nov 4, 2017: 6:02 PM",
+     "when_window": "2017-11-04T18:02",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "quote": "Sat Nov 4, 2017: 6:02 PM - code 2214",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Motion recorded on Camera 2 (office corridor)",
+     "when_text": "Sat Nov 4 - 6:05 PM",
+     "when_window": "2017-11-04T18:05",
+     "where": "Starlite Lanes office corridor",
+     "who": [],
+     "quote": "Camera 2, office corridor: Sat Nov 4 - 6:05 PM, 11:22 PM, 11:44 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Office door keypad entry with code 7712",
+     "when_text": "Sat Nov 4, 2017: 6:15 PM",
+     "when_window": "2017-11-04T18:15",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "quote": "6:15 PM - code 7712",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Outgoing phone call from Carla Ibanez's phone to J. Luna (2 minutes)",
+     "when_text": "9:12 PM, November 4",
+     "when_window": "2017-11-04T21:12",
+     "where": "",
+     "who": [
+      "Carla Ibanez",
+      "Josefina Luna"
+     ],
+     "quote": "Outgoing call, 9:12 PM, November 4, to J. Luna, duration 2 minutes.",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Office door keypad entry with code 3308",
+     "when_text": "Sat Nov 4, 2017: 9:31 PM",
+     "when_window": "2017-11-04T21:31",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "quote": "9:31 PM - code 3308",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Mechanic log entry for lane 7 belt replaced",
+     "when_text": "Sat 11/4 - 9:40 PM",
+     "when_window": "2017-11-04T21:40",
+     "where": "Starlite Lanes",
+     "who": [
+      "Tomas Reyes"
+     ],
+     "quote": "Sat 11/4 - 9:40 PM - lane 7 belt replaced.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "when_text": "Sat Nov 4 - 9:40 PM",
+     "when_window": "2017-11-04T21:40",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "quote": "Camera 4, back hall: Sat Nov 4 - 9:40 PM, 11:03 PM, 11:36 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Last motion recorded on Camera 1 (front counter)",
+     "when_text": "10:47 PM",
+     "when_window": "2017-11-04T22:47",
+     "where": "Starlite Lanes front counter",
+     "who": [],
+     "quote": "Camera 1, front counter: no motion after 10:47 PM.",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Incoming phone call to Carla Ibanez's phone from M. Bell (1 minute)",
+     "when_text": "10:58 PM, November 4",
+     "when_window": "2017-11-04T22:58",
+     "where": "",
+     "who": [
+      "Carla Ibanez",
+      "Marcus Bell"
+     ],
+     "quote": "Incoming call, 10:58 PM, November 4, from M. Bell, duration 1 minute.",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Mechanic log entry signed 'out'",
+     "when_text": "Sat 11/4 - 11:00 PM",
+     "when_window": "2017-11-04T23:00",
+     "where": "Starlite Lanes mechanic's cage",
+     "who": [
+      "Tomas Reyes"
+     ],
+     "quote": "Sat 11/4 - 11:00 PM - out.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "when_text": "Sat Nov 4 - 11:03 PM",
+     "when_window": "2017-11-04T23:03",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "quote": "Camera 4, back hall: Sat Nov 4 - 9:40 PM, 11:03 PM, 11:36 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Gray pickup registered to D. Hahn (plate ending 4417) entered and exited parking lot",
+     "when_text": "entered 11:12 PM, exited 11:38 PM (night of November 4-5, 2017)",
+     "when_window": "2017-11-04T23:12/2017-11-04T23:38",
+     "where": "Starlite Lanes parking lot gate",
+     "who": [
+      "Derek Hahn"
+     ],
+     "quote": "Plate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "White hatchback registered to M. Bell (plate ending 7750) entered and exited parking lot",
+     "when_text": "entered 11:18 PM, exited 11:29 PM (night of November 4-5, 2017)",
+     "when_window": "2017-11-04T23:18/2017-11-04T23:29",
+     "where": "Starlite Lanes parking lot gate",
+     "who": [
+      "Marcus Bell"
+     ],
+     "quote": "Plate ending 7750, white hatchback, registered to M. Bell: entered 11:18 PM, exited 11:29 PM.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Office door keypad entry with code 4410",
+     "when_text": "Sat Nov 4, 2017: 11:20 PM",
+     "when_window": "2017-11-04T23:20",
+     "where": "Starlite Lanes office door",
+     "who": [
+      "Marcus Bell"
+     ],
+     "quote": "11:20 PM - code 4410",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Motion recorded on Camera 2 (office corridor)",
+     "when_text": "Sat Nov 4 - 11:22 PM",
+     "when_window": "2017-11-04T23:22",
+     "where": "Starlite Lanes office corridor",
+     "who": [],
+     "quote": "Camera 2, office corridor: Sat Nov 4 - 6:05 PM, 11:22 PM, 11:44 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Estimated time of death of Carla Ibanez",
+     "when_text": "between 11:30 p.m. on Saturday, November 4, 2017 and 1:30 a.m. on Sunday, November 5, 2017",
+     "when_window": "2017-11-04T23:30/2017-11-05T01:30",
+     "where": "Starlite Lanes office",
+     "who": [
+      "Carla Ibanez"
+     ],
+     "quote": "Based on body temperature and rigor, the time of death is estimated between 11:30 p.m. on Saturday, November 4, 2017 and 1:30 a.m. on Sunday, November 5, 2017.",
+     "doc_id": "doc02"
+    },
+    {
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "when_text": "Sat Nov 4 - 11:36 PM",
+     "when_window": "2017-11-04T23:36",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "quote": "Camera 4, back hall: Sat Nov 4 - 9:40 PM, 11:03 PM, 11:36 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Office door keypad entry with code 3308",
+     "when_text": "Sat Nov 4, 2017: 11:41 PM",
+     "when_window": "2017-11-04T23:41",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "quote": "11:41 PM - code 3308",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Motion recorded on Camera 2 (office corridor)",
+     "when_text": "Sat Nov 4 - 11:44 PM",
+     "when_window": "2017-11-04T23:44",
+     "where": "Starlite Lanes office corridor",
+     "who": [],
+     "quote": "Camera 2, office corridor: Sat Nov 4 - 6:05 PM, 11:22 PM, 11:44 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Outgoing text sent from Carla Ibanez's phone to Andre Ibanez",
+     "when_text": "12:41 AM, November 5",
+     "when_window": "2017-11-05T00:41",
+     "where": "",
+     "who": [
+      "Carla Ibanez",
+      "Andre Ibanez"
+     ],
+     "quote": "Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Office door keypad entry with code 2214",
+     "when_text": "Sun Nov 5, 2017: 12:52 AM",
+     "when_window": "2017-11-05T00:52",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "quote": "Sun Nov 5, 2017: 12:52 AM - code 2214",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Motion recorded on Camera 2 (office corridor)",
+     "when_text": "Sun Nov 5 - 12:52 AM",
+     "when_window": "2017-11-05T00:52",
+     "where": "Starlite Lanes office corridor",
+     "who": [],
+     "quote": "Sun Nov 5 - 12:52 AM, 1:04 AM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Diane Pruitt reportedly photographed the lit office window from the parking lot",
+     "when_text": "12:55 AM on November 5",
+     "when_window": "2017-11-05T00:55",
+     "where": "Starlite Lanes parking lot",
+     "who": [
+      "Diane Pruitt"
+     ],
+     "quote": "League member Diane Pruitt told me she took a photograph from the parking lot at 12:55 AM on November 5, showing the office window of Starlite Lanes lit, with the blinds partly open.",
+     "doc_id": "doc17"
+    },
+    {
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "when_text": "Sun Nov 5 - 12:58 AM",
+     "when_window": "2017-11-05T00:58",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "quote": "Sun Nov 5 - 12:58 AM, 1:03 AM, 1:19 AM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Mechanic log entry for checking lane 12",
+     "when_text": "Sat 11/4 - 1:03 AM",
+     "when_window": "",
+     "where": "Starlite Lanes mechanic's cage",
+     "who": [
+      "Tomas Reyes"
+     ],
+     "quote": "Sat 11/4 - 1:03 AM - checked lane 12, all good.",
+     "doc_id": "doc04"
+    },
+    {
+     "what": "Office door keypad entry with code 7712",
+     "when_text": "Sun Nov 5, 2017: 1:03 AM",
+     "when_window": "2017-11-05T01:03",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "quote": "1:03 AM - code 7712",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "when_text": "Sun Nov 5 - 1:03 AM",
+     "when_window": "2017-11-05T01:03",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "quote": "Sun Nov 5 - 12:58 AM, 1:03 AM, 1:19 AM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Motion recorded on Camera 2 (office corridor)",
+     "when_text": "Sun Nov 5 - 1:04 AM",
+     "when_window": "2017-11-05T01:04",
+     "where": "Starlite Lanes office corridor",
+     "who": [],
+     "quote": "Sun Nov 5 - 12:52 AM, 1:04 AM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "when_text": "Sun Nov 5 - 1:19 AM",
+     "when_window": "2017-11-05T01:19",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "quote": "Sun Nov 5 - 12:58 AM, 1:03 AM, 1:19 AM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Officer P. Tate responded to call from morning opener who found Carla Ibanez on the office floor",
+     "when_text": "0605 hours (November 5, 2017)",
+     "when_window": "2017-11-05T06:05",
+     "where": "Starlite Lanes office, 88 Meridian Avenue",
+     "who": [
+      "P. Tate",
+      "Morning opener",
+      "Carla Ibanez"
+     ],
+     "quote": "At 0605 hours I responded to a call from the morning opener, who found the owner, Carla Ibanez, 47, on the floor of the office behind the counter.",
+     "doc_id": "doc01"
+    },
+    {
+     "what": "Carla Ibanez pronounced dead at the scene",
+     "when_text": "0622 hours (November 5, 2017)",
+     "when_window": "2017-11-05T06:22",
+     "where": "Starlite Lanes office",
+     "who": [
+      "Carla Ibanez"
+     ],
+     "quote": "She was pronounced at the scene at 0622 hours.",
+     "doc_id": "doc01"
+    },
+    {
+     "what": "Diane Pruitt showed the 12:55 AM photograph on her phone to Det. Alvarez",
+     "when_text": "November 12 (2017)",
+     "when_window": "2017-11-12",
+     "where": "",
+     "who": [
+      "Diane Pruitt",
+      "R. Alvarez"
+     ],
+     "quote": "She showed me the photograph on her phone during our conversation on November 12.",
+     "doc_id": "doc17"
+    }
+   ],
+   "evidence_items": [
+    {
+     "description": "League scoresheet dated November 4 on the office desk",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Office door and latch",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Lane 12 ball return with open cover",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Keypad panel beside the office door",
+     "doc_id": "doc01",
+     "status": "mentioned"
+    },
+    {
+     "description": "Unrecovered blunt force instrument",
+     "doc_id": "doc02",
+     "status": "mentioned"
+    },
+    {
+     "description": "Starlite Lanes mechanic's sign-out log page for week of October 30, 2017, handwritten by T. Reyes",
+     "doc_id": "doc04",
+     "status": "logged"
+    },
+    {
+     "description": "System export of office door keypad entry log for Nov 4-5, 2017",
+     "doc_id": "doc05",
+     "status": "logged"
+    },
+    {
+     "description": "Marcus Bell's bowling ball",
+     "doc_id": "doc06",
+     "status": "mentioned"
+    },
+    {
+     "description": "Parking lot gate license plate reader summary for night of November 4-5, 2017",
+     "doc_id": "doc09",
+     "status": "logged"
+    },
+    {
+     "description": "Gray pickup, plate ending 4417, registered to D. Hahn",
+     "doc_id": "doc09",
+     "status": "mentioned"
+    },
+    {
+     "description": "Blue sedan, plate ending 2093, registered to T. Reyes",
+     "doc_id": "doc09",
+     "status": "mentioned"
+    },
+    {
+     "description": "White hatchback, plate ending 7750, registered to M. Bell",
+     "doc_id": "doc09",
+     "status": "mentioned"
+    },
+    {
+     "description": "Carrier summary for the phone of Carla Ibanez, night of November 4-5, 2017",
+     "doc_id": "doc10",
+     "status": "logged"
+    },
+    {
+     "description": "Phone of Carla Ibanez",
+     "doc_id": "doc10",
+     "status": "mentioned"
+    },
+    {
+     "description": "DVR motion log export for Starlite Lanes camera system (Nov 4-5, 2017)",
+     "doc_id": "doc11",
+     "status": "logged"
+    },
+    {
+     "description": "Starlite Lanes DVR video footage (overwritten on 72-hour cycle)",
+     "doc_id": "doc11",
+     "status": "mentioned"
+    },
+    {
+     "description": "City inspection report for Starlite Lanes, January 9, 2017",
+     "doc_id": "doc15",
+     "status": "logged"
+    },
+    {
+     "description": "Rear service door latch mechanism replaced January 9, 2017",
+     "doc_id": "doc15",
+     "status": "mentioned"
+    },
+    {
+     "description": "League prize safe stolen in October 2016 break-in",
+     "doc_id": "doc16",
+     "status": "mentioned"
+    },
+    {
+     "description": "Diane Pruitt's 12:55 AM photograph of the lit office window (never collected; not in evidence ledger)",
+     "doc_id": "doc17",
+     "status": "mentioned"
+    },
+    {
+     "description": "Diane Pruitt's phone (since replaced) and cloud backup",
+     "doc_id": "doc17",
+     "status": "mentioned"
+    },
+    {
+     "description": "Posted staff roster and door codes sheet dated October 1, 2017, with handwritten margin note",
+     "doc_id": "doc18",
+     "status": "logged"
+    }
+   ]
+  },
+  "analyst": {
+   "events": [
+    {
+     "id": "E01",
+     "what": "Thieves entered Starlite Lanes through the rear service door and took the league prize safe",
+     "window": "early Sunday (article dated 2016-10-18)",
+     "where": "Starlite Lanes rear service door",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Thieves entered Starlite Lanes through the rear service door early Sunday, taking the league prize safe.",
+       "doc_id": "doc16"
+      }
+     ]
+    },
+    {
+     "id": "E02",
+     "what": "Rear service door latch mechanism replaced and tested twenty times",
+     "window": "2017-01-09",
+     "where": "Starlite Lanes rear service door",
+     "who": [
+      "R. Calloway"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Item 14, rear service door: the latch mechanism reported faulty in 2016 was replaced on January 9, 2017. The door was tested twenty times and latched every time.",
+       "doc_id": "doc15"
+      }
+     ]
+    },
+    {
+     "id": "E03",
+     "what": "Carla Ibanez restricted Tomas Reyes to weekends only starting October 1 via margin note on roster",
+     "window": "2017-10-01",
+     "where": "Starlite Lanes",
+     "who": [
+      "Carla Ibanez",
+      "Tomas Reyes"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Margin note, in the owner's hand: \"From Oct 1, Reyes to weekends only - C.I.\"",
+       "doc_id": "doc18"
+      }
+     ]
+    },
+    {
+     "id": "E04",
+     "what": "Carla Ibanez fired Derek Hahn",
+     "window": "2017-10-12",
+     "where": "Starlite Lanes",
+     "who": [
+      "Carla Ibanez",
+      "Derek Hahn"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "I worked the counter at Starlite until Carla fired me on October 12.",
+       "doc_id": "doc07"
+      }
+     ]
+    },
+    {
+     "id": "E05",
+     "what": "Mechanic log entry for checking lane 12 (ambiguous date: logged as Sat 11/4 - 1:03 AM after Sat 11/4 - 11:00 PM entry)",
+     "window": "2017-11-04T01:03 or 2017-11-05T01:03 (ambiguous)",
+     "where": "Starlite Lanes mechanic's cage",
+     "who": [
+      "Tomas Reyes"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Sat 11/4 - 1:03 AM - checked lane 12, all good.",
+       "doc_id": "doc04"
+      }
+     ]
+    },
+    {
+     "id": "E06",
+     "what": "Tomas Reyes claims he came in at 6:00 PM to work on lane 7",
+     "window": "2017-11-04T18:00",
+     "where": "Starlite Lanes",
+     "who": [
+      "Tomas Reyes"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Saturday I came in at six to work on lane 7.",
+       "doc_id": "doc03"
+      }
+     ]
+    },
+    {
+     "id": "E07",
+     "what": "Blue sedan registered to T. Reyes (plate ending 2093) entered parking lot with no exit read that night",
+     "window": "2017-11-04T18:01",
+     "where": "Starlite Lanes parking lot gate",
+     "who": [
+      "Tomas Reyes"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Plate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.",
+       "doc_id": "doc09"
+      }
+     ]
+    },
+    {
+     "id": "E08",
+     "what": "Office door keypad entry with code 2214",
+     "window": "2017-11-04T18:02",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Sat Nov 4, 2017: 6:02 PM - code 2214",
+       "doc_id": "doc05"
+      }
+     ]
+    },
+    {
+     "id": "E09",
+     "what": "Motion recorded on Camera 2 (office corridor)",
+     "window": "2017-11-04T18:05",
+     "where": "Starlite Lanes office corridor",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Camera 2, office corridor: Sat Nov 4 - 6:05 PM, 11:22 PM, 11:44 PM",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E10",
+     "what": "Office door keypad entry with code 7712",
+     "window": "2017-11-04T18:15",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "6:15 PM - code 7712",
+       "doc_id": "doc05"
+      }
+     ]
+    },
+    {
+     "id": "E11",
+     "what": "Outgoing phone call from Carla Ibanez's phone to J. Luna (2 minutes)",
+     "window": "2017-11-04T21:12",
+     "where": "",
+     "who": [
+      "Carla Ibanez",
+      "Josefina Luna"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Outgoing call, 9:12 PM, November 4, to J. Luna, duration 2 minutes.",
+       "doc_id": "doc10"
+      }
+     ]
+    },
+    {
+     "id": "E12",
+     "what": "Office door keypad entry with code 3308",
+     "window": "2017-11-04T21:31",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "9:31 PM - code 3308",
+       "doc_id": "doc05"
+      }
+     ]
+    },
+    {
+     "id": "E13",
+     "what": "Mechanic log entry for lane 7 belt replaced",
+     "window": "2017-11-04T21:40",
+     "where": "Starlite Lanes",
+     "who": [
+      "Tomas Reyes"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Sat 11/4 - 9:40 PM - lane 7 belt replaced.",
+       "doc_id": "doc04"
+      }
+     ]
+    },
+    {
+     "id": "E14",
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "window": "2017-11-04T21:40",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Camera 4, back hall: Sat Nov 4 - 9:40 PM, 11:03 PM, 11:36 PM",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E15",
+     "what": "Josefina Luna reportedly mopped the back hall while machines were running and pins resetting on lane 12 (prior to 12:30 AM)",
+     "window": "night of 2017-11-04 before 2017-11-05T00:30",
+     "where": "Starlite Lanes back hall",
+     "who": [
+      "Josefina Luna"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "While I mopped the back hall I remember the machines running on lane 12, the pins resetting.",
+       "doc_id": "doc13"
+      },
+      {
+       "quote": "Josefina was home by 12:30 that night. I remember because I waited up; we were going to watch the fight replay and it started without her.",
+       "doc_id": "doc14"
+      }
+     ]
+    },
+    {
+     "id": "E16",
+     "what": "Last motion recorded on Camera 1 (front counter)",
+     "window": "2017-11-04T22:47",
+     "where": "Starlite Lanes front counter",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Camera 1, front counter: no motion after 10:47 PM.",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E17",
+     "what": "Incoming phone call to Carla Ibanez's phone from M. Bell (1 minute)",
+     "window": "2017-11-04T22:58",
+     "where": "",
+     "who": [
+      "Carla Ibanez",
+      "Marcus Bell"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Incoming call, 10:58 PM, November 4, from M. Bell, duration 1 minute.",
+       "doc_id": "doc10"
+      }
+     ]
+    },
+    {
+     "id": "E18",
+     "what": "Mechanic log entry signed 'out' and Tomas Reyes claims he left at 11:00 PM while Carla Ibanez was in the office and never went back",
+     "window": "2017-11-04T23:00",
+     "where": "Starlite Lanes mechanic's cage",
+     "who": [
+      "Tomas Reyes",
+      "Carla Ibanez"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Sat 11/4 - 11:00 PM - out.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "I finished the belt job and I left at eleven and never went back.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "Carla was in the office doing the books when I left. She was fine.",
+       "doc_id": "doc03"
+      }
+     ]
+    },
+    {
+     "id": "E19",
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "window": "2017-11-04T23:03",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Camera 4, back hall: Sat Nov 4 - 9:40 PM, 11:03 PM, 11:36 PM",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E20",
+     "what": "Derek Hahn claimed in 2017 he was home all Saturday night and did not go near Starlite Lanes",
+     "window": "Saturday night 2017-11-04/2017-11-05",
+     "where": "Derek Hahn's residence",
+     "who": [
+      "Derek Hahn"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Saturday night I was home all night. I did not go near the lanes. I have no reason to go back there and I did not.",
+       "doc_id": "doc07"
+      }
+     ]
+    },
+    {
+     "id": "E21",
+     "what": "Derek Hahn claimed in 2019 he arrived at the lot around 11:10 PM, knocked on the office door with no answer, saw the office window dark, and left before 11:40 PM without going inside",
+     "window": "around 2017-11-04T23:10 to before 2017-11-04T23:40",
+     "where": "Starlite Lanes parking lot and back hall office door",
+     "who": [
+      "Derek Hahn"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "I got to the lot around eleven ten. I knocked on the office door off the back hall. Nobody answered. The office window was dark from where I stood. I left before eleven forty. I never went inside.",
+       "doc_id": "doc08"
+      }
+     ]
+    },
+    {
+     "id": "E22",
+     "what": "Gray pickup registered to D. Hahn (plate ending 4417) entered and exited parking lot",
+     "window": "2017-11-04T23:12/2017-11-04T23:38",
+     "where": "Starlite Lanes parking lot gate",
+     "who": [
+      "Derek Hahn"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Plate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.",
+       "doc_id": "doc09"
+      }
+     ]
+    },
+    {
+     "id": "E23",
+     "what": "White hatchback registered to M. Bell (plate ending 7750) entered and exited parking lot",
+     "window": "2017-11-04T23:18/2017-11-04T23:29",
+     "where": "Starlite Lanes parking lot gate",
+     "who": [
+      "Marcus Bell"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Plate ending 7750, white hatchback, registered to M. Bell: entered 11:18 PM, exited 11:29 PM.",
+       "doc_id": "doc09"
+      }
+     ]
+    },
+    {
+     "id": "E24",
+     "what": "Office door keypad entry with code 4410; Marcus Bell claims he entered at 11:20 PM on his own code, spoke with Carla Ibanez alive in the office, took his ball, and left without seeing anyone else",
+     "window": "2017-11-04T23:20",
+     "where": "Starlite Lanes office door and office",
+     "who": [
+      "Marcus Bell",
+      "Carla Ibanez"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "11:20 PM - code 4410",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "I left my ball in the locker room Saturday night, so I went back for it. I let myself in at 11:20, on my own code.",
+       "doc_id": "doc06"
+      },
+      {
+       "quote": "Carla was in the office. We talked for a minute about the league banquet. She was alive and fine and working on the scoresheets.",
+       "doc_id": "doc06"
+      },
+      {
+       "quote": "I took my ball and left. I did not see anybody else in the building.",
+       "doc_id": "doc06"
+      }
+     ]
+    },
+    {
+     "id": "E25",
+     "what": "Motion recorded on Camera 2 (office corridor)",
+     "window": "2017-11-04T23:22",
+     "where": "Starlite Lanes office corridor",
+     "who": [],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "Camera 2, office corridor: Sat Nov 4 - 6:05 PM, 11:22 PM, 11:44 PM",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E26",
+     "what": "Estimated time of death of Carla Ibanez",
+     "window": "2017-11-04T23:30/2017-11-05T01:30",
+     "where": "Starlite Lanes office",
+     "who": [
+      "Carla Ibanez"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Based on body temperature and rigor, the time of death is estimated between 11:30 p.m. on Saturday, November 4, 2017 and 1:30 a.m. on Sunday, November 5, 2017.",
+       "doc_id": "doc02"
+      }
+     ]
+    },
+    {
+     "id": "E27",
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "window": "2017-11-04T23:36",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Camera 4, back hall: Sat Nov 4 - 9:40 PM, 11:03 PM, 11:36 PM",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E28",
+     "what": "Office door keypad entry with code 3308",
+     "window": "2017-11-04T23:41",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "11:41 PM - code 3308",
+       "doc_id": "doc05"
+      }
+     ]
+    },
+    {
+     "id": "E29",
+     "what": "Motion recorded on Camera 2 (office corridor)",
+     "window": "2017-11-04T23:44",
+     "where": "Starlite Lanes office corridor",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Camera 2, office corridor: Sat Nov 4 - 6:05 PM, 11:22 PM, 11:44 PM",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E30",
+     "what": "Tomas Reyes claims he passed the building around 12:30 AM on his way to get cigarettes and observed the building, lanes, and office dark with nobody there",
+     "window": "around 2017-11-05T00:30",
+     "where": "Outside Starlite Lanes",
+     "who": [
+      "Tomas Reyes"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "I drove home. I passed the building again around twelve thirty on my way to get cigarettes and the building was dark, lanes off, office dark. Nobody was there.",
+       "doc_id": "doc03"
+      }
+     ]
+    },
+    {
+     "id": "E31",
+     "what": "Marco Luna claims Josefina Luna was home by 12:30 AM",
+     "window": "by 2017-11-05T00:30",
+     "where": "Luna residence",
+     "who": [
+      "Josefina Luna",
+      "Marco Luna"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Josefina was home by 12:30 that night. I remember because I waited up; we were going to watch the fight replay and it started without her.",
+       "doc_id": "doc14"
+      }
+     ]
+    },
+    {
+     "id": "E32",
+     "what": "Outgoing text sent from Carla Ibanez's phone to Andre Ibanez stating Tommy is there again",
+     "window": "2017-11-05T00:41",
+     "where": "",
+     "who": [
+      "Carla Ibanez",
+      "Andre Ibanez",
+      "Tomas Reyes"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"",
+       "doc_id": "doc10"
+      }
+     ]
+    },
+    {
+     "id": "E33",
+     "what": "Office door keypad entry with code 2214",
+     "window": "2017-11-05T00:52",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Sun Nov 5, 2017: 12:52 AM - code 2214",
+       "doc_id": "doc05"
+      }
+     ]
+    },
+    {
+     "id": "E34",
+     "what": "Motion recorded on Camera 2 (office corridor)",
+     "window": "2017-11-05T00:52",
+     "where": "Starlite Lanes office corridor",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Sun Nov 5 - 12:52 AM, 1:04 AM",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E35",
+     "what": "Diane Pruitt reportedly photographed the lit office window with partly open blinds from the parking lot",
+     "window": "2017-11-05T00:55",
+     "where": "Starlite Lanes parking lot",
+     "who": [
+      "Diane Pruitt"
+     ],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "League member Diane Pruitt told me she took a photograph from the parking lot at 12:55 AM on November 5, showing the office window of Starlite Lanes lit, with the blinds partly open.",
+       "doc_id": "doc17"
+      }
+     ]
+    },
+    {
+     "id": "E36",
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "window": "2017-11-05T00:58",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Sun Nov 5 - 12:58 AM, 1:03 AM, 1:19 AM",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E37",
+     "what": "Office door keypad entry with code 7712",
+     "window": "2017-11-05T01:03",
+     "where": "Starlite Lanes office door",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "1:03 AM - code 7712",
+       "doc_id": "doc05"
+      }
+     ]
+    },
+    {
+     "id": "E38",
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "window": "2017-11-05T01:03",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Sun Nov 5 - 12:58 AM, 1:03 AM, 1:19 AM",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E39",
+     "what": "Motion recorded on Camera 2 (office corridor)",
+     "window": "2017-11-05T01:04",
+     "where": "Starlite Lanes office corridor",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Sun Nov 5 - 12:52 AM, 1:04 AM",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E40",
+     "what": "Motion recorded on Camera 4 (back hall)",
+     "window": "2017-11-05T01:19",
+     "where": "Starlite Lanes back hall",
+     "who": [],
+     "in_window": true,
+     "sources": [
+      {
+       "quote": "Sun Nov 5 - 12:58 AM, 1:03 AM, 1:19 AM",
+       "doc_id": "doc11"
+      }
+     ]
+    },
+    {
+     "id": "E41",
+     "what": "Officer P. Tate responded to call from morning opener who found Carla Ibanez on the office floor",
+     "window": "2017-11-05T06:05",
+     "where": "Starlite Lanes office, 88 Meridian Avenue",
+     "who": [
+      "P. Tate",
+      "Morning opener",
+      "Carla Ibanez"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "At 0605 hours I responded to a call from the morning opener, who found the owner, Carla Ibanez, 47, on the floor of the office behind the counter.",
+       "doc_id": "doc01"
+      }
+     ]
+    },
+    {
+     "id": "E42",
+     "what": "Carla Ibanez pronounced dead at the scene",
+     "window": "2017-11-05T06:22",
+     "where": "Starlite Lanes office",
+     "who": [
+      "Carla Ibanez"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "She was pronounced at the scene at 0622 hours.",
+       "doc_id": "doc01"
+      }
+     ]
+    },
+    {
+     "id": "E43",
+     "what": "Diane Pruitt showed the 12:55 AM photograph on her phone to Det. Alvarez",
+     "window": "2017-11-12",
+     "where": "",
+     "who": [
+      "Diane Pruitt",
+      "R. Alvarez"
+     ],
+     "in_window": false,
+     "sources": [
+      {
+       "quote": "She showed me the photograph on her phone during our conversation on November 12.",
+       "doc_id": "doc17"
+      }
+     ]
+    }
+   ],
+   "collisions": [
+    {
+     "event_ids": [
+      "E20",
+      "E21",
+      "E22"
+     ],
+     "who_or_what": "Derek Hahn and gray pickup (plate ending 4417)",
+     "explanation": "In 2017 (doc07), Derek Hahn claimed he was home all Saturday night and did not go near Starlite Lanes. In 2019 (doc08), he stated he drove to the Starlite lot around 11:10 PM, knocked on the back hall office door, and left before 11:40 PM, which aligns with the parking lot gate log (doc09) recording his gray pickup entering at 11:12 PM and exiting at 11:38 PM.",
+     "quotes": [
+      {
+       "quote": "Saturday night I was home all night. I did not go near the lanes. I have no reason to go back there and I did not.",
+       "doc_id": "doc07"
+      },
+      {
+       "quote": "I got to the lot around eleven ten. I knocked on the office door off the back hall. Nobody answered. The office window was dark from where I stood. I left before eleven forty. I never went inside.",
+       "doc_id": "doc08"
+      },
+      {
+       "quote": "Plate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.",
+       "doc_id": "doc09"
+      }
+     ]
+    },
+    {
+     "event_ids": [
+      "E18",
+      "E30",
+      "E07",
+      "E32",
+      "E05"
+     ],
+     "who_or_what": "Tomas Reyes and blue sedan (plate ending 2093)",
+     "explanation": "Tomas Reyes stated he left Starlite Lanes at 11:00 PM and never went back, drove home, and passed the building around 12:30 AM seeing it dark with nobody there (doc03). This collides with: (1) the parking lot gate log recording no exit read for his blue sedan after entering at 6:01 PM (doc09); (2) the 12:41 AM outgoing text from Carla Ibanez's phone stating 'tommy is here again' (doc10); and (3) potentially the mechanic log entry 'Sat 11/4 - 1:03 AM - checked lane 12, all good' (doc04) if that entry was made on Sunday 11/5 at 1:03 AM after the 11:00 PM out entry rather than Saturday 11/4 at 1:03 AM (note: date wording is ambiguous).",
+     "quotes": [
+      {
+       "quote": "Saturday I came in at six to work on lane 7. I finished the belt job and I left at eleven and never went back.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "I drove home. I passed the building again around twelve thirty on my way to get cigarettes and the building was dark, lanes off, office dark. Nobody was there.",
+       "doc_id": "doc03"
+      },
+      {
+       "quote": "Plate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.",
+       "doc_id": "doc09"
+      },
+      {
+       "quote": "Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"",
+       "doc_id": "doc10"
+      },
+      {
+       "quote": "Sat 11/4 - 1:03 AM - checked lane 12, all good.",
+       "doc_id": "doc04"
+      }
+     ]
+    },
+    {
+     "event_ids": [
+      "E21",
+      "E24"
+     ],
+     "who_or_what": "Carla Ibanez / Starlite Lanes office occupancy (11:10 PM - 11:40 PM window)",
+     "explanation": "Within overlapping windows, Marcus Bell stated he entered at 11:20 PM and talked with Carla Ibanez in the office while she worked on scoresheets (doc06; parking lot 11:18-11:29 PM in doc09), whereas Derek Hahn stated he arrived around 11:10 PM, left before 11:40 PM (parking lot 11:12-11:38 PM in doc09), knocked on the office door with no answer, and saw the office window dark (doc08). Note: Hahn's knock could have occurred outside Bell's 11:18-11:29 PM window, though their parking lot windows overlap from 11:18 PM to 11:29 PM.",
+     "quotes": [
+      {
+       "quote": "I got to the lot around eleven ten. I knocked on the office door off the back hall. Nobody answered. The office window was dark from where I stood. I left before eleven forty. I never went inside.",
+       "doc_id": "doc08"
+      },
+      {
+       "quote": "Plate ending 7750, white hatchback, registered to M. Bell: entered 11:18 PM, exited 11:29 PM.",
+       "doc_id": "doc09"
+      },
+      {
+       "quote": "Carla was in the office. We talked for a minute about the league banquet. She was alive and fine and working on the scoresheets.",
+       "doc_id": "doc06"
+      },
+      {
+       "quote": "I took my ball and left. I did not see anybody else in the building.",
+       "doc_id": "doc06"
+      }
+     ]
+    }
+   ]
+  },
+  "digital": {
+   "machine_events": [
+    {
+     "what": "Parking lot gate license plate reader recorded entry of blue sedan with plate ending 2093 (registered to T. Reyes), with no exit read recorded that night",
+     "when_text": "2017-11-04 6:01 PM",
+     "proves": "Proves a vehicle bearing plate ending 2093 passed the lot entry reader at 6:01 PM and no exit read was generated for that plate that night; suggests the vehicle either stayed in the lot or exited without triggering a read, and cannot prove who was driving or when any occupant left on foot or in another vehicle.",
+     "quote": "Plate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Office door keypad recorded entry of code 2214 (assigned on staff roster doc18 to C. Ibanez)",
+     "when_text": "2017-11-04 6:02 PM",
+     "proves": "Proves code 2214 was keyed into the office door panel at 6:02 PM; suggests C. Ibanez unlocked the office door, but cannot prove who physically entered the code or when anyone exited.",
+     "quote": "6:02 PM - code 2214",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "DVR Camera 2 (office corridor) recorded a motion event",
+     "when_text": "2017-11-04 6:05 PM",
+     "proves": "Proves the DVR triggered a motion event on Camera 2 in the office corridor at 6:05 PM; cannot identify who or what caused the motion because video was overwritten.",
+     "quote": "Sat Nov 4 - 6:05 PM, 11:22 PM, 11:44 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Office door keypad recorded entry of code 7712 (master code assigned on staff roster doc18 to T. Reyes)",
+     "when_text": "2017-11-04 6:15 PM",
+     "proves": "Proves code 7712 was keyed into the office door panel at 6:15 PM; suggests T. Reyes accessed the office door shortly after arriving, but cannot prove who physically keyed the code.",
+     "quote": "6:15 PM - code 7712",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "Outgoing phone call from Carla Ibanez's phone to J. Luna lasting 2 minutes",
+     "when_text": "2017-11-04 9:12 PM",
+     "proves": "Proves a 2-minute outgoing call connected from Carla Ibanez's phone line to J. Luna's number at 9:12 PM; cannot prove who spoke or the content of the conversation.",
+     "quote": "Outgoing call, 9:12 PM, November 4, to J. Luna, duration 2 minutes.",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Office door keypad recorded entry of code 3308 (assigned on staff roster doc18 to cleaner J. Luna)",
+     "when_text": "2017-11-04 9:31 PM",
+     "proves": "Proves code 3308 was keyed into the office door panel at 9:31 PM; suggests J. Luna entered via the office door panel near the start of her shift, though doc18 lists 3308 for service doors and keypad logs cannot prove who keyed the digits.",
+     "quote": "9:31 PM - code 3308",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "DVR Camera 4 (back hall) recorded a motion event",
+     "when_text": "2017-11-04 9:40 PM",
+     "proves": "Proves the DVR triggered a motion event in the back hall at 9:40 PM; cannot identify the person, direction of travel, or activity.",
+     "quote": "Sat Nov 4 - 9:40 PM, 11:03 PM, 11:36 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "DVR Camera 1 (front counter) ceased recording motion events for the night",
+     "when_text": "2017-11-04 after 10:47 PM",
+     "proves": "Proves Camera 1 registered no motion events at the front counter after 10:47 PM; suggests nobody passed within Camera 1's detection zone at the front counter after that time.",
+     "quote": "Camera 1, front counter: no motion after 10:47 PM.",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Incoming phone call to Carla Ibanez's phone from M. Bell lasting 1 minute",
+     "when_text": "2017-11-04 10:58 PM",
+     "proves": "Proves a 1-minute call from M. Bell's number connected to Carla Ibanez's phone at 10:58 PM; cannot prove who answered or what was said.",
+     "quote": "Incoming call, 10:58 PM, November 4, from M. Bell, duration 1 minute.",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "DVR Camera 4 (back hall) recorded a motion event",
+     "when_text": "2017-11-04 11:03 PM",
+     "proves": "Proves the DVR triggered a motion event in the back hall at 11:03 PM; cannot identify who or what moved in the hall.",
+     "quote": "Sat Nov 4 - 9:40 PM, 11:03 PM, 11:36 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Parking lot gate license plate reader recorded entry of gray pickup with plate ending 4417 (registered to D. Hahn)",
+     "when_text": "2017-11-04 11:12 PM",
+     "proves": "Proves a vehicle bearing plate ending 4417 passed the lot entry reader at 11:12 PM; suggests D. Hahn's pickup entered the lot, but cannot prove who was inside the vehicle or whether occupants entered the building.",
+     "quote": "Plate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Parking lot gate license plate reader recorded entry of white hatchback with plate ending 7750 (registered to M. Bell)",
+     "when_text": "2017-11-04 11:18 PM",
+     "proves": "Proves a vehicle bearing plate ending 7750 passed the lot entry reader at 11:18 PM; cannot by itself prove who was driving.",
+     "quote": "Plate ending 7750, white hatchback, registered to M. Bell: entered 11:18 PM, exited 11:29 PM.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Office door keypad recorded entry of code 4410 (assigned on staff roster doc18 to M. Bell)",
+     "when_text": "2017-11-04 11:20 PM",
+     "proves": "Proves code 4410 was keyed into the office door panel at 11:20 PM; suggests M. Bell accessed the office door, though it cannot prove who physically keyed the code or when they left.",
+     "quote": "11:20 PM - code 4410",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "DVR Camera 2 (office corridor) recorded a motion event",
+     "when_text": "2017-11-04 11:22 PM",
+     "proves": "Proves motion occurred in the office corridor at 11:22 PM; suggests movement near the office shortly after code 4410 was entered, without identifying the individual.",
+     "quote": "Sat Nov 4 - 6:05 PM, 11:22 PM, 11:44 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Parking lot gate license plate reader recorded exit of white hatchback with plate ending 7750 (registered to M. Bell)",
+     "when_text": "2017-11-04 11:29 PM",
+     "proves": "Proves a vehicle bearing plate ending 7750 passed the lot exit reader at 11:29 PM, eleven minutes after its entry read; cannot prove who was inside the vehicle.",
+     "quote": "Plate ending 7750, white hatchback, registered to M. Bell: entered 11:18 PM, exited 11:29 PM.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "DVR Camera 4 (back hall) recorded a motion event",
+     "when_text": "2017-11-04 11:36 PM",
+     "proves": "Proves motion occurred in the back hall at 11:36 PM; cannot identify whether the motion was an employee, a visitor inside, or something else within the camera's field of view.",
+     "quote": "Sat Nov 4 - 9:40 PM, 11:03 PM, 11:36 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Parking lot gate license plate reader recorded exit of gray pickup with plate ending 4417 (registered to D. Hahn)",
+     "when_text": "2017-11-04 11:38 PM",
+     "proves": "Proves a vehicle bearing plate ending 4417 passed the lot exit reader at 11:38 PM, twenty-six minutes after its 11:12 PM entry read; cannot prove who drove it or what the occupant did while on site.",
+     "quote": "Plate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.",
+     "doc_id": "doc09"
+    },
+    {
+     "what": "Office door keypad recorded entry of code 3308 (assigned on staff roster doc18 to J. Luna)",
+     "when_text": "2017-11-04 11:41 PM",
+     "proves": "Proves code 3308 was keyed into the office door panel as an entry at 11:41 PM (exits are not recorded by the panel); cannot prove who keyed the code or when that person left the building.",
+     "quote": "11:41 PM - code 3308",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "DVR Camera 2 (office corridor) recorded a motion event",
+     "when_text": "2017-11-04 11:44 PM",
+     "proves": "Proves motion occurred in the office corridor at 11:44 PM; cannot identify who moved or in which direction.",
+     "quote": "Sat Nov 4 - 6:05 PM, 11:22 PM, 11:44 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Outgoing text message from Carla Ibanez's phone to Andre Ibanez, followed by cessation of phone activity",
+     "when_text": "2017-11-05 12:41 AM",
+     "proves": "Proves Carla Ibanez's phone transmitted the quoted text to Andre Ibanez at 12:41 AM and had no carrier-recorded call or text activity afterward; suggests Carla Ibanez was alive and using her phone at 12:41 AM and perceived 'tommy' to be present, but a carrier record alone cannot prove who typed and sent the message.",
+     "quote": "Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"",
+     "doc_id": "doc10"
+    },
+    {
+     "what": "Office door keypad recorded entry of code 2214 (assigned on staff roster doc18 to C. Ibanez)",
+     "when_text": "2017-11-05 12:52 AM",
+     "proves": "Proves code 2214 was keyed into the office door panel at 12:52 AM; suggests someone knowing C. Ibanez's code unlocked the office door, but cannot prove whether C. Ibanez or another person entered the code.",
+     "quote": "12:52 AM - code 2214",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "DVR Camera 2 (office corridor) recorded a motion event",
+     "when_text": "2017-11-05 12:52 AM",
+     "proves": "Proves motion occurred in the office corridor at 12:52 AM, coinciding with the 12:52 AM keypad entry on the office door; cannot identify the person.",
+     "quote": "Sun Nov 5 - 12:52 AM, 1:04 AM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Reported cell phone photograph by Diane Pruitt showing office window lit (viewed by detective on Nov 12, never collected)",
+     "when_text": "2017-11-05 12:55 AM (reported)",
+     "proves": "Proves only that Det. Alvarez documented being told by Diane Pruitt of a 12:55 AM photo and viewing an image on her phone on Nov 12; because the file lacks the image and its EXIF/carrier metadata, the timestamp and authenticity are unverified by machine record.",
+     "quote": "League member Diane Pruitt told me she took a photograph from the parking lot at 12:55 AM on November 5, showing the office window of Starlite Lanes lit, with the blinds partly open.",
+     "doc_id": "doc17"
+    },
+    {
+     "what": "DVR Camera 4 (back hall) recorded a motion event",
+     "when_text": "2017-11-05 12:58 AM",
+     "proves": "Proves motion occurred in the back hall at 12:58 AM; cannot identify who or what triggered the camera.",
+     "quote": "Sun Nov 5 - 12:58 AM, 1:03 AM, 1:19 AM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Office door keypad recorded entry of code 7712 (master code assigned on staff roster doc18 to T. Reyes)",
+     "when_text": "2017-11-05 1:03 AM",
+     "proves": "Proves code 7712 was keyed into the office door panel at 1:03 AM and no later codes were entered that night; suggests someone using the mechanic's master code opened the office door at 1:03 AM, but cannot prove who physically keyed the code.",
+     "quote": "1:03 AM - code 7712",
+     "doc_id": "doc05"
+    },
+    {
+     "what": "DVR Camera 4 (back hall) recorded a motion event",
+     "when_text": "2017-11-05 1:03 AM",
+     "proves": "Proves motion occurred in the back hall at 1:03 AM, the same minute code 7712 was entered at the office door; cannot identify how many people were present or who triggered each device.",
+     "quote": "Sun Nov 5 - 12:58 AM, 1:03 AM, 1:19 AM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "DVR Camera 2 (office corridor) recorded its final motion event of the night",
+     "when_text": "2017-11-05 1:04 AM",
+     "proves": "Proves motion occurred in the office corridor at 1:04 AM, one minute after code 7712 was keyed on the office door; cannot identify the person or direction of movement.",
+     "quote": "Sun Nov 5 - 12:52 AM, 1:04 AM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "DVR Camera 4 (back hall) recorded its final motion event of the night",
+     "when_text": "2017-11-05 1:19 AM",
+     "proves": "Proves motion occurred in the back hall at 1:19 AM; suggests movement toward or in the rear hall area fifteen minutes after the last office corridor motion, without identifying who moved.",
+     "quote": "Sun Nov 5 - 12:58 AM, 1:03 AM, 1:19 AM",
+     "doc_id": "doc11"
+    },
+    {
+     "what": "Patrol response to morning opener's call, scene observation of green ready light on office keypad, and pronouncement of death",
+     "when_text": "2017-11-05 0605 hours to 0622 hours",
+     "proves": "Proves Officer Tate responded at 0605 hours, Carla Ibanez was pronounced dead at 0622 hours, and the office door latch was engaged with the keypad panel showing a green ready light upon patrol inspection.",
+     "quote": "At 0605 hours I responded to a call from the morning opener, who found the owner, Carla Ibanez, 47, on the floor of the office behind the counter. She was pronounced at the scene at 0622 hours.",
+     "doc_id": "doc01"
+    }
+   ],
+   "record_checks": [
+    {
+     "claim": "T. Reyes stated in doc03 that he came in at six on Saturday, left at eleven, drove home, and never went back.",
+     "record_says": "The parking gate LPR aligns with a 6:01 PM arrival for the blue sedan registered to T. Reyes (plate ending 2093), but records no exit read for that plate at 11:00 PM or at any point that night.",
+     "quote": "Plate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.",
+     "doc_id": "doc09"
+    },
+    {
+     "claim": "T. Reyes stated in doc03 that he left at eleven and never went back (while his handwritten log in doc04 contains both an '11:00 PM - out' entry and a '1:03 AM - checked lane 12, all good' entry).",
+     "record_says": "The office door keypad log records code 7712 (assigned to T. Reyes in doc18) being entered at 1:03 AM on November 5, matching the 1:03 AM timestamp on the handwritten mechanic's log and conflicting with the claim that no return occurred after 11:00 PM, though the keypad only proves the code was entered, not who keyed it.",
+     "quote": "1:03 AM - code 7712",
+     "doc_id": "doc05"
+    },
+    {
+     "claim": "T. Reyes stated in doc03 that he never went back after eleven and that when he passed the building around 12:30 AM it was dark and nobody was there.",
+     "record_says": "Carla Ibanez's carrier summary shows an outgoing text sent from her phone at 12:41 AM stating 'tommy is here again. told him if he is going to be here he logs it this time', indicating the sender of the text was active at 12:41 AM and reported 'tommy' present.",
+     "quote": "Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"",
+     "doc_id": "doc10"
+    },
+    {
+     "claim": "M. Bell stated in doc06 that he went back for his bowling ball, let himself in at 11:20 PM on his own code, spoke briefly with Carla Ibanez, and left.",
+     "record_says": "The office door keypad log confirms code 4410 (assigned to M. Bell in doc18) was entered at 11:20 PM; additionally, doc09 records Bell's registered plate entering at 11:18 PM and exiting at 11:29 PM, and doc10 shows a 1-minute call from M. Bell to Ibanez earlier at 10:58 PM (unmentioned in Bell's statement).",
+     "quote": "11:20 PM - code 4410",
+     "doc_id": "doc05"
+    },
+    {
+     "claim": "D. Hahn stated in doc07 (2017) that he was home all night Saturday and did not go near Starlite Lanes, then stated in doc08 (2019) that he drove to the lot around 11:10 PM and left before 11:40 PM.",
+     "record_says": "The parking gate LPR conflicts with Hahn's 2017 statement and aligns with the lot arrival/departure window in his 2019 statement, recording plate ending 4417 (registered to D. Hahn) entering at 11:12 PM and exiting at 11:38 PM.",
+     "quote": "Plate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.",
+     "doc_id": "doc09"
+    },
+    {
+     "claim": "D. Hahn stated in doc08 (2019) that while in the lot between ~11:10 PM and before 11:40 PM he knocked on the office door off the back hall, nobody answered, and he never went inside; J. Luna stated in doc12 that she cleaned the back hall and saw nobody there before leaving.",
+     "record_says": "DVR Camera 4 in the back hall recorded a motion event at 11:36 PM (two minutes before Hahn's truck exited the gate at 11:38 PM and while Luna was still on shift), proving motion occurred inside the back hall camera zone at 11:36 PM without identifying whether it was Luna, Hahn, or someone else.",
+     "quote": "Sat Nov 4 - 9:40 PM, 11:03 PM, 11:36 PM",
+     "doc_id": "doc11"
+    },
+    {
+     "claim": "J. Luna stated in doc12 (2017) that she started at 9:30 PM and finished and left at 11:45 PM, and later stated in doc13 (2025) that she left around midnight and heard lane 12's pinsetter running while mopping the back hall.",
+     "record_says": "The office door keypad log records code 3308 (assigned to J. Luna in doc18) entered at 9:31 PM and again as an entry at 11:41 PM (followed by Camera 2 office corridor motion at 11:44 PM in doc11, with no back hall motion on Camera 4 between 11:36 PM and 12:58 AM); because exits and lane pinsetter power states are not logged, machine records confirm activity near the office at 11:41–11:44 PM but cannot fix her exact exit time from a side door or confirm whether lane 12 was running.",
+     "quote": "11:41 PM - code 3308",
+     "doc_id": "doc05"
+    }
+   ],
+   "camera_gaps": [
+    {
+     "camera": "Starlite Lanes interior DVR video for Camera 1 (front counter), Camera 2 (office corridor), and Camera 4 (back hall)",
+     "mentioned_in": "doc11",
+     "quote": "DVR MOTION LOG - Starlite Lanes camera system, export November 8, 2017. The system records motion events by camera; the video itself is overwritten on a 72-hour cycle.",
+     "doc_id": "doc11"
+    },
+    {
+     "camera": "Parking lot gate camera (full video or still images beyond the automated license plate reader text summary)",
+     "mentioned_in": "doc09",
+     "quote": "The lot gate camera reads plates on entry and exit.",
+     "doc_id": "doc09"
+    },
+    {
+     "camera": "Diane Pruitt's cell phone photograph reportedly taken from the parking lot at 12:55 AM on November 5 (and unreturned carrier cloud backup)",
+     "mentioned_in": "doc17",
+     "quote": "The original photograph was never collected. Ms. Pruitt has since replaced the phone. A request to her carrier for the cloud backup is outstanding in the file; no response is recorded.",
+     "doc_id": "doc17"
+    }
+   ]
+  },
+  "cross_examiner": {
+   "contradictions": [
+    {
+     "a_quote": "I finished the belt job and I left at eleven and never went back.",
+     "a_doc": "doc03",
+     "b_quote": "Sat 11/4 - 1:03 AM - checked lane 12, all good.",
+     "b_doc": "doc04",
+     "kind": "alibi_vs_record",
+     "severity": "high",
+     "innocent_alternative": "Reyes may have misdated an entry from a previous shift or pre-logged a routine check before leaving at 11:00 PM."
+    },
+    {
+     "a_quote": "I finished the belt job and I left at eleven and never went back.",
+     "a_doc": "doc03",
+     "b_quote": "Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"",
+     "b_doc": "doc10",
+     "kind": "alibi_vs_record",
+     "severity": "high",
+     "innocent_alternative": "Someone else used Carla Ibanez's phone to send the text, or Carla mistook another person on the premises for Reyes."
+    },
+    {
+     "a_quote": "She cut my weekday hours in October, sure, but that is business.",
+     "a_doc": "doc03",
+     "b_quote": "Margin note, in the owner's hand: \"From Oct 1, Reyes to weekends only - C.I.\"",
+     "b_doc": "doc18",
+     "kind": "statement_vs_record",
+     "severity": "low",
+     "innocent_alternative": "Reyes used 'cut my weekday hours' as loose phrasing for eliminating his weekday shifts entirely, though his log (doc04) also shows he worked Mon 10/30 and Wed 11/1."
+    },
+    {
+     "a_quote": "Margin note, in the owner's hand: \"From Oct 1, Reyes to weekends only - C.I.\"",
+     "a_doc": "doc18",
+     "b_quote": "Mon 10/30 - 10:15 PM - lane 3 jam, cleared.\nWed 11/1 - 11:20 PM - lane 7 belt slipping, ordered part.",
+     "b_doc": "doc04",
+     "kind": "record_vs_record",
+     "severity": "low",
+     "innocent_alternative": "Despite the October 1 weekends-only restriction, Reyes was called in for specific weekday repairs at the end of October."
+    },
+    {
+     "a_quote": "Saturday night I was home all night. I did not go near the lanes. I have no reason to go back there and I did not.",
+     "a_doc": "doc07",
+     "b_quote": "Plate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.",
+     "b_doc": "doc09",
+     "kind": "alibi_vs_record",
+     "severity": "high",
+     "innocent_alternative": "Hahn admitted in 2019 (doc08) that he withheld his presence at the lot in 2017 out of fear of how it would look after being fired."
+    },
+    {
+     "a_quote": "I got to the lot around eleven ten. I knocked on the office door off the back hall. Nobody answered. The office window was dark from where I stood. I left before eleven forty.",
+     "a_doc": "doc08",
+     "b_quote": "I let myself in at 11:20, on my own code. Carla was in the office. We talked for a minute about the league banquet. She was alive and fine and working on the scoresheets.",
+     "b_doc": "doc06",
+     "kind": "statement_vs_statement",
+     "severity": "medium",
+     "innocent_alternative": "Hahn knocked either before 11:20 PM or after Bell left at 11:29 PM while Carla was momentarily away from her desk or had the blinds drawn."
+    },
+    {
+     "a_quote": "I finished and left at 11:45. The lanes were quiet.",
+     "a_doc": "doc12",
+     "b_quote": "I left around midnight, I would say now. While I mopped the back hall I remember the machines running on lane 12, the pins resetting.",
+     "b_doc": "doc13",
+     "kind": "self_contradiction",
+     "severity": "medium",
+     "innocent_alternative": "In 2017 Luna gave her routine departure time and interpreted 'quiet' as no customers bowling, clarifying in 2025 her specific memory of pinsetter machinery and a slightly later departure."
+    }
+   ],
+   "alibis": [
+    {
+     "person": "Tomas Reyes",
+     "window": "11:30 PM - 1:30 AM",
+     "rating": "contradicted",
+     "reasons": [
+      {
+       "quote": "Sat 11/4 - 1:03 AM - checked lane 12, all good.",
+       "doc_id": "doc04"
+      },
+      {
+       "quote": "Plate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.",
+       "doc_id": "doc09"
+      },
+      {
+       "quote": "Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"",
+       "doc_id": "doc10"
+      }
+     ]
+    },
+    {
+     "person": "Derek Hahn",
+     "window": "11:30 PM - 1:30 AM",
+     "rating": "contradicted",
+     "reasons": [
+      {
+       "quote": "Saturday night I was home all night. I did not go near the lanes.",
+       "doc_id": "doc07"
+      },
+      {
+       "quote": "Plate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.",
+       "doc_id": "doc09"
+      }
+     ]
+    },
+    {
+     "person": "Marcus Bell",
+     "window": "11:30 PM - 1:30 AM",
+     "rating": "corroborated",
+     "reasons": [
+      {
+       "quote": "11:20 PM - code 4410",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "Plate ending 7750, white hatchback, registered to M. Bell: entered 11:18 PM, exited 11:29 PM.",
+       "doc_id": "doc09"
+      }
+     ]
+    },
+    {
+     "person": "Josefina Luna",
+     "window": "11:30 PM - 1:30 AM",
+     "rating": "uncorroborated",
+     "reasons": [
+      {
+       "quote": "I finished and left at 11:45.",
+       "doc_id": "doc12"
+      },
+      {
+       "quote": "I left around midnight, I would say now.",
+       "doc_id": "doc13"
+      },
+      {
+       "quote": "11:41 PM - code 3308",
+       "doc_id": "doc05"
+      },
+      {
+       "quote": "Josefina was home by 12:30 that night.",
+       "doc_id": "doc14"
+      }
+     ]
+    }
+   ],
+   "evidence_gaps": [
+    {
+     "item": "Evidence ledger",
+     "mentioned_in": [
+      "doc17"
+     ],
+     "problem": "The case file does not contain an evidence ledger document; doc17 references an 'evidence ledger', making it impossible to verify which physical items were formally logged."
+    },
+    {
+     "item": "Diane Pruitt's 12:55 AM photograph of the lit office window (and carrier cloud backup)",
+     "mentioned_in": [
+      "doc17"
+     ],
+     "problem": "Det. Alvarez viewed the photo on November 12, 2017, but never collected it before Pruitt replaced her phone; the carrier cloud backup request remains outstanding with no response recorded, and doc17 explicitly notes the image is absent from the evidence ledger."
+    },
+    {
+     "item": "Two later statements referencing Diane Pruitt's 12:55 AM photograph",
+     "mentioned_in": [
+      "doc17"
+     ],
+     "problem": "Doc17 states the 12:55 AM photograph 'is referenced in two later statements', but no statements in the file mention the photograph."
+    },
+    {
+     "item": "DVR surveillance video footage for the night of November 4-5, 2017",
+     "mentioned_in": [
+      "doc11"
+     ],
+     "problem": "Only the DVR motion event log was exported; the video footage itself was overwritten on a 72-hour cycle and was not preserved."
+    },
+    {
+     "item": "Blunt force instrument / murder weapon",
+     "mentioned_in": [
+      "doc02"
+     ],
+     "problem": "The medical examiner notes a single blunt force injury pattern, but the instrument was not recovered at the scene."
+    },
+    {
+     "item": "League scoresheet dated November 4 on the office desk",
+     "mentioned_in": [
+      "doc01",
+      "doc06"
+     ],
+     "problem": "Observed on the victim's desk at the scene and mentioned by Marcus Bell, but no collection record or forensic examination is present in the file."
+    }
+   ]
+  },
+  "interviewer": {
+   "histories": [
+    {
+     "person": "Derek Hahn",
+     "changes": [
+      {
+       "topic": "Whether he went to Starlite Lanes on Saturday night, November 4, 2017",
+       "earlier_quote": "Saturday night I was home all night. I did not go near the lanes.",
+       "earlier_doc": "doc07",
+       "later_quote": "Fine. I drove there that night. I wanted my last paycheck and I wanted to say it to her face. I got to the lot around eleven ten. I knocked on the office door off the back hall.",
+       "later_doc": "doc08"
+      },
+      {
+       "topic": "Whether he had a reason to return to Starlite Lanes after being fired",
+       "earlier_quote": "I have no reason to go back there and I did not.",
+       "earlier_doc": "doc07",
+       "later_quote": "I wanted my last paycheck and I wanted to say it to her face.",
+       "later_doc": "doc08"
+      }
+     ]
+    }
+   ],
+   "next_questions": [
+    {
+     "person": "Tomas \"Tommy\" Reyes",
+     "question": "You stated on November 5, 2017, that you left at 11:00 PM and never went back, yet the mechanic's log in your handwriting contains an entry for 1:03 AM checking lane 12; when and under what circumstances did you write that entry?",
+     "anchored_quote": "Sat 11/4 - 1:03 AM - checked lane 12, all good.",
+     "doc_id": "doc04"
+    },
+    {
+     "person": "Tomas \"Tommy\" Reyes",
+     "question": "Carla Ibanez's phone record shows a 12:41 AM text stating that you were at the building again and were told to log your presence; did you return to Starlite Lanes and speak with Carla around 12:41 AM?",
+     "anchored_quote": "Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"",
+     "doc_id": "doc10"
+    },
+    {
+     "person": "Tomas \"Tommy\" Reyes",
+     "question": "You stated that you drove home at 11:00 PM and drove past the building around 12:30 AM, but the parking gate camera recorded your blue sedan entering at 6:01 PM with no exit read that night; where was your car parked, and how did you exit the lot?",
+     "anchored_quote": "Plate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.",
+     "doc_id": "doc09"
+    },
+    {
+     "person": "Tomas \"Tommy\" Reyes",
+     "question": "What keypad code was assigned to you for the office door panel, and did you enter code 7712 at 6:15 PM and again at 1:03 AM?",
+     "anchored_quote": "1:03 AM - code 7712",
+     "doc_id": "doc05"
+    },
+    {
+     "person": "Derek Hahn",
+     "question": "In your 2019 statement you said you never went inside the building, yet you also said you knocked on the office door off the back hall and saw the office window was dark; how did you access the office door off the back hall without entering the building?",
+     "anchored_quote": "I knocked on the office door off the back hall. Nobody answered. The office window was dark from where I stood.",
+     "doc_id": "doc08"
+    },
+    {
+     "person": "Derek Hahn",
+     "question": "The parking gate log records your pickup in the lot for 26 minutes, from 11:12 PM to 11:38 PM, overlapping with Marcus Bell's vehicle from 11:18 PM to 11:29 PM; what did you do during those 26 minutes, and did you see Bell, Bell's white hatchback, or Tommy Reyes's blue sedan?",
+     "anchored_quote": "Plate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.",
+     "doc_id": "doc09"
+    },
+    {
+     "person": "Derek Hahn",
+     "question": "When you worked the counter prior to October 12, did you have a code for the office door keypad, and if so, what was that code?",
+     "anchored_quote": "I worked the counter at Starlite until Carla fired me on October 12.",
+     "doc_id": "doc07"
+    },
+    {
+     "person": "Marcus Bell",
+     "question": "You were not re-interviewed after Derek Hahn stated in 2019 that he was in the lot and at the office door between roughly 11:10 PM and 11:40 PM; when you were at Starlite between 11:18 PM and 11:29 PM, did you see Hahn, a gray pickup truck, or Tommy Reyes's blue sedan in the lot?",
+     "anchored_quote": "I got to the lot around eleven ten. I knocked on the office door off the back hall.",
+     "doc_id": "doc08"
+    },
+    {
+     "person": "Marcus Bell",
+     "question": "Carla Ibanez's phone record shows a one-minute incoming call from you at 10:58 PM that was not mentioned in your November 6, 2017 statement; what did you and Carla discuss on that call?",
+     "anchored_quote": "Incoming call, 10:58 PM, November 4, from M. Bell, duration 1 minute.",
+     "doc_id": "doc10"
+    },
+    {
+     "person": "Marcus Bell",
+     "question": "The keypad log for 11:20 PM records code 4410 on the office door panel; why did you have a keypad code to the office door as a league captain, and how did you enter the outer building to reach the locker room and office?",
+     "anchored_quote": "11:20 PM - code 4410",
+     "doc_id": "doc05"
+    },
+    {
+     "person": "Andre Ibanez",
+     "question": "Regarding the 12:41 AM text from Carla's phone saying 'tommy is here again. told him if he is going to be here he logs it this time,' what prior incidents was she referring to, and did you have any other communication with her that night?",
+     "anchored_quote": "Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"",
+     "doc_id": "doc10"
+    },
+    {
+     "person": "J. Luna",
+     "question": "Carla Ibanez's phone record logs a two-minute outgoing call to you at 9:12 PM on November 4; what was discussed during that call, and do you know which employees or guests were assigned office keypad codes 2214, 7712, 3308, and 4410?",
+     "anchored_quote": "Outgoing call, 9:12 PM, November 4, to J. Luna, duration 2 minutes.",
+     "doc_id": "doc10"
+    }
+   ]
+  },
+  "prosecutor": {
+   "sufficiency": [
+    {
+     "subject": "Contradiction of Tomas Reyes's 11:00 PM departure and 12:30 AM drive-by statement in doc03 (\"I finished the belt job and I left at eleven and never went back.\" and \"I passed the building again around twelve thirty on my way to get cigarettes and the building was dark, lanes off, office dark. Nobody was there.\") against doc10 ('Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"'), doc09 (\"Plate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.\"), and doc04 (\"Sat 11/4 - 1:03 AM - checked lane 12, all good.\")",
+     "rating": "workable",
+     "missing": "Physical recovery and forensic extraction of Carla Ibanez's phone beyond the carrier summary in doc10 (\"VICTIM'S PHONE RECORD - carrier summary for the phone of Carla Ibanez, night of November 4-5, 2017.\") to verify device possession at 12:41 AM; handwriting examination and date-convention proof resolving whether doc04 (\"Sat 11/4 - 1:03 AM - checked lane 12, all good.\") was written early Sunday morning 11/5 rather than Saturday morning 11/4 or pre-logged; gate sensor/bypass testing explaining doc09 (\"no exit read that night\"); and formal chain-of-custody logging in the missing evidence ledger referenced in doc17 (\"the image itself is not in the evidence ledger.\")."
+    },
+    {
+     "subject": "Impeachment of Derek Hahn's 2017 alibi in doc07 (\"Saturday night I was home all night. I did not go near the lanes. I have no reason to go back there and I did not.\") and placement of his vehicle in the Starlite Lanes lot from 11:12 PM to 11:38 PM via doc09 (\"Plate ending 4417, gray pickup, registered to D. Hahn: entered 11:12 PM, exited 11:38 PM.\") and doc08 (\"I got to the lot around eleven ten. I knocked on the office door off the back hall. Nobody answered. The office window was dark from where I stood. I left before eleven forty. I never went inside.\")",
+     "rating": "strong",
+     "missing": "Evidence ledger chain-of-custody documentation for the LPR pull in doc09 (\"PARKING LOT GATE RECORD - Starlite Lanes lot, license plate reader summary, November 2017 pull.\"), independent alibi or cell-site verification of Hahn's whereabouts after 11:38 PM, and architectural/access clarification of how Hahn reached \"the office door off the back hall\" while claiming \"I never went inside\" in doc08."
+    },
+    {
+     "subject": "Collision between Derek Hahn's account of a dark, unanswered office in doc08 (\"I knocked on the office door off the back hall. Nobody answered. The office window was dark from where I stood.\") and Marcus Bell's account of speaking with Carla Ibanez in the office in doc06 (\"I let myself in at 11:20, on my own code. Carla was in the office. We talked for a minute about the league banquet. She was alive and fine and working on the scoresheets.\")",
+     "rating": "weak",
+     "missing": "Exact timestamp of Hahn's knock within his 11:12 PM to 11:38 PM gate window in doc09 (\"entered 11:12 PM, exited 11:38 PM.\") relative to Bell's 11:18 PM to 11:29 PM window in doc09 (\"entered 11:18 PM, exited 11:29 PM.\"), plus scene visibility/blind documentation showing whether an occupied office could appear dark from Hahn's position in doc08 (\"The office window was dark from where I stood.\")."
+    },
+    {
+     "subject": "Marcus Bell's 11:18 PM - 11:29 PM visit and last confirmed live sighting of Carla Ibanez across doc06 (\"I let myself in at 11:20, on my own code. Carla was in the office. We talked for a minute about the league banquet. She was alive and fine and working on the scoresheets.\"), doc05 (\"11:20 PM - code 4410\"), doc09 (\"Plate ending 7750, white hatchback, registered to M. Bell: entered 11:18 PM, exited 11:29 PM.\"), and doc01 (\"On the desk was a league scoresheet dated November 4.\")",
+     "rating": "strong",
+     "missing": "Forensic collection and fingerprint/handwriting examination of the desk document in doc01 (\"On the desk was a league scoresheet dated November 4.\") reconciling the singular/plural discrepancy with doc06 (\"scoresheets\"), inspection of the item Bell removed in doc06 (\"I left my ball in the locker room Saturday night, so I went back for it.\"), verification of Bell's whereabouts after 11:29 PM, and chain-of-custody entries in an evidence ledger (doc17)."
+    },
+    {
+     "subject": "Josefina Luna's late-night departure timeline and 2025 recollection of lane 12 pinsetter activity across doc12 (\"I finished and left at 11:45. The lanes were quiet.\"), doc13 (\"I left around midnight, I would say now. While I mopped the back hall I remember the machines running on lane 12, the pins resetting.\"), doc05 (\"11:41 PM - code 3308\"), doc14 (\"Josefina was home by 12:30 that night.\"), and doc01 (\"The cover of the lane 12 ball return stood open.\")",
+     "rating": "weak",
+     "missing": "Independent corroboration reconciling Luna's 2017 statement in doc12 (\"I finished and left at 11:45. The lanes were quiet.\") with her 2025 statement in doc13 (\"I left around midnight, I would say now. While I mopped the back hall I remember the machines running on lane 12, the pins resetting.\"), explanation of the 11:41 PM office keypad entry in doc05 (\"11:41 PM - code 3308\") and the transit gap before doc14 (\"Josefina was home by 12:30 that night.\"), and forensic processing of lane 12 in doc01 (\"The cover of the lane 12 ball return stood open.\")."
+    },
+    {
+     "subject": "Diane Pruitt's uncollected 12:55 AM photograph of the Starlite Lanes office window in doc17 (\"She showed me the photograph on her phone during our conversation on November 12. The original photograph was never collected. Ms. Pruitt has since replaced the phone. A request to her carrier for the cloud backup is outstanding in the file; no response is recorded.\" and \"The photograph is referenced in two later statements but the image itself is not in the evidence ledger.\")",
+     "rating": "weak",
+     "missing": "Carrier production of the original image file with authenticated EXIF timestamp and metadata from the cloud backup in doc17 (\"A request to her carrier for the cloud backup is outstanding in the file; no response is recorded.\"), production of the missing \"two later statements\" and \"evidence ledger\" referenced in doc17, and direct sworn foundation from Diane Pruitt."
+    },
+    {
+     "subject": "Tomas Reyes's October schedule reduction as potential workplace friction across doc03 (\"She cut my weekday hours in October, sure, but that is business.\"), doc18 ('Margin note, in the owner's hand: \"From Oct 1, Reyes to weekends only - C.I.\"'), and doc04 (\"Mon 10/30 - 10:15 PM - lane 3 jam, cleared.\\nWed 11/1 - 11:20 PM - lane 7 belt slipping, ordered part.\")",
+     "rating": "weak",
+     "missing": "Handwriting authentication and scene-collection documentation for doc18 (\"STAFF ROSTER AND DOOR CODES - Starlite Lanes, posted in the office, dated October 1, 2017.\"), payroll/timecard records clarifying why Reyes logged weekday repairs in doc04 (\"Mon 10/30 - 10:15 PM\" and \"Wed 11/1 - 11:20 PM\") despite doc18 (\"From Oct 1, Reyes to weekends only - C.I.\"), and witness testimony showing any dispute over hours or unauthorized shifts."
+    },
+    {
+     "subject": "Physical and digital crime scene foundation across doc02 (\"A single injury pattern is noted; the instrument was not recovered at the scene.\"), doc11 (\"The system records motion events by camera; the video itself is overwritten on a 72-hour cycle.\"), doc01 (\"The cover of the lane 12 ball return stood open.\" and \"On the desk was a league scoresheet dated November 4.\"), doc03 (\"Carla was in the office doing the books when I left.\"), and doc17 (\"the image itself is not in the evidence ledger.\")",
+     "rating": "weak",
+     "missing": "Recovery or forensic tool/object comparison for the missing blunt force instrument in doc02 (\"the instrument was not recovered at the scene.\"), production of the complete evidence ledger referenced in doc17, latent print/DNA reports on the office keypad (doc05), desk scoresheet (doc01), and lane 12 ball return cover (doc01), and scene accounting for the account books mentioned in doc03 (\"Carla was in the office doing the books when I left.\")."
+    }
+   ],
+   "vetoes": [
+    {
+     "phrase": "killed Carla",
+     "reason": "No witness, video in doc11 (\"the video itself is overwritten on a 72-hour cycle.\"), or forensic link in doc02 (\"the instrument was not recovered at the scene.\") identifies who inflicted the fatal injury."
+    },
+    {
+     "phrase": "murdered Carla",
+     "reason": "Naming any person as the perpetrator exceeds the record, where doc02 notes \"A single injury pattern is noted; the instrument was not recovered at the scene.\" and doc11 preserves no video."
+    },
+    {
+     "phrase": "the killer",
+     "reason": "The file contains uncorroborated timelines and missing physical evidence in doc02 (\"the instrument was not recovered at the scene.\") and doc17 (\"the image itself is not in the evidence ledger.\"), barring attribution of guilt."
+    },
+    {
+     "phrase": "is guilty",
+     "reason": "The record supports only documented contradictions and gaps across doc02, doc09, doc10, doc11, and doc17, never a conclusion of guilt."
+    },
+    {
+     "phrase": "Reyes lied",
+     "reason": "The brief must report the conflict between doc03 (\"I finished the belt job and I left at eleven and never went back.\") and doc04, doc09, and doc10 without labeling the speaker deceptive."
+    },
+    {
+     "phrase": "Hahn lied",
+     "reason": "The brief must report the conflict between doc07 (\"Saturday night I was home all night.\"), doc09 (\"entered 11:12 PM, exited 11:38 PM.\"), and doc08 without judging the person."
+    },
+    {
+     "phrase": "Luna lied",
+     "reason": "The shift between doc12 (\"I finished and left at 11:45. The lanes were quiet.\") and doc13 (\"I left around midnight, I would say now.\") is an uncorroborated discrepancy across eight years, not proven falsehood."
+    },
+    {
+     "phrase": "proves Reyes was inside",
+     "reason": "Doc10 ('\"tommy is here again\"'), doc04 (\"Sat 11/4 - 1:03 AM - checked lane 12, all good.\"), and doc09 (\"no exit read that night.\") create a workable contradiction against doc03, not conclusive proof of interior presence without device authentication, date verification, or video."
+    },
+    {
+     "phrase": "photograph proves",
+     "reason": "Doc17 explicitly states \"The original photograph was never collected.\" and \"the image itself is not in the evidence ledger.\", so the uncollected image proves nothing in court."
+    },
+    {
+     "phrase": "confirmed murder weapon",
+     "reason": "Doc02 states \"A single injury pattern is noted; the instrument was not recovered at the scene.\""
+    },
+    {
+     "phrase": "video shows",
+     "reason": "Doc11 states \"The system records motion events by camera; the video itself is overwritten on a 72-hour cycle.\", leaving only motion event logs rather than video images."
+    },
+    {
+     "phrase": "eliminates Marcus Bell",
+     "reason": "Doc05 (\"11:20 PM - code 4410\") and doc09 (\"entered 11:18 PM, exited 11:29 PM.\") corroborate only Bell's 11-minute visit, while his removed bowling ball in doc06 (\"I left my ball in the locker room Saturday night, so I went back for it.\") was unexamined and post-11:29 PM whereabouts are unverified."
+    },
+    {
+     "phrase": "eliminates Derek Hahn",
+     "reason": "Doc09 (\"entered 11:12 PM, exited 11:38 PM.\") tracks only Hahn's pickup truck at the parking gate and does not establish his whereabouts after 11:38 PM or exclude pedestrian access."
+    },
+    {
+     "phrase": "logged at 1:03 AM Sunday",
+     "reason": "Doc04 literally reads \"Sat 11/4 - 1:03 AM - checked lane 12, all good.\", so treating it as an established Sunday November 5 entry upgrades an ambiguous record into fact."
+    }
+   ],
+   "corroboration_needed": [
+    "Produce the missing master evidence ledger referenced in doc17 (\"The photograph is referenced in two later statements but the image itself is not in the evidence ledger.\") to establish chain of custody for doc04, doc05, doc09, doc10, doc11, and doc18.",
+    "Enforce and record the carrier response for Diane Pruitt's cloud backup and locate the two missing statements referenced in doc17 (\"A request to her carrier for the cloud backup is outstanding in the file; no response is recorded.\" and \"The photograph is referenced in two later statements\").",
+    "Obtain physical-device recovery records and forensic extraction for Carla Ibanez's phone to authenticate authorship and device location for the 12:41 AM outgoing text in doc10 ('Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \"tommy is here again. told him if he is going to be here he logs it this time\"') and interview Andre Ibanez.",
+    "Conduct questioned-document/ink/sequence analysis on doc04 (\"Sat 11/4 - 1:03 AM - checked lane 12, all good.\") and doc18 ('Margin note, in the owner's hand: \"From Oct 1, Reyes to weekends only - C.I.\"') to determine when the 1:03 AM entry was written and authenticate the owner's margin note.",
+    "Test or obtain maintenance/accuracy records for the parking lot gate LPR in doc09 (\"Plate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.\") to determine how a vehicle could exit without a read.",
+    "Obtain latent fingerprint, DNA, and trace evidence reports for the crime scene office keypad in doc05 (\"KEYPAD ENTRY LOG - office door, Starlite Lanes. System export, November 6, 2017.\"), the scoresheet in doc01 (\"On the desk was a league scoresheet dated November 4.\"), and the lane 12 mechanism in doc01 (\"The cover of the lane 12 ball return stood open.\").",
+    "Account for the missing financial records referenced in doc03 (\"Carla was in the office doing the books when I left.\") to determine whether they were collected at the scene or removed.",
+    "Cross-reference the exported camera timestamps in doc11 (\"DVR MOTION LOG - Starlite Lanes camera system, export November 8, 2017.\") against keypad entries in doc05, gate reads in doc09, Luna's lane 12 pinsetter recollection in doc13 (\"While I mopped the back hall I remember the machines running on lane 12, the pins resetting.\"), and Hahn's back-hall knock in doc08 (\"I knocked on the office door off the back hall.\").",
+    "Compare pathology specifications of the injury in doc02 (\"A single injury pattern is noted; the instrument was not recovered at the scene.\") against accessible lane maintenance tools, pinsetter parts, and Marcus Bell's bowling ball in doc06 (\"I left my ball in the locker room Saturday night, so I went back for it.\").",
+    "Obtain cell-site/call detail records and independent alibi verification for Tomas Reyes, Derek Hahn (after 11:38 PM in doc09), Marcus Bell (after 11:29 PM in doc09), and Josefina Luna (between \"11:41 PM - code 3308\" in doc05 and \"Josefina was home by 12:30 that night.\" in doc14)."
+   ]
+  },
+  "lead_detective": {
+   "leads": [
+    {
+     "action": "Pull the forensic extraction report and property receipt for Carla Ibanez's physical phone to prove or disprove device possession, unlock method, and location when the 12:41 AM text (\"tommy is here again. told him if he is going to be here he logs it this time\", doc10) was sent.",
+     "score": 100,
+     "arithmetic": "40 + 25 + 20 + 15 = 100",
+     "reason": "Directly works the high-severity contradiction between Tomas Reyes's 11:00 PM departure claim (\"I finished the belt job and I left at eleven and never went back.\", doc03) and the 12:41 AM outgoing text (doc10) (cites_high_contradiction: 40); evaluates evidence at 12:41 AM inside the 11:30 PM - 1:30 AM death window (doc02) (in_window: 25); produces the missing physical phone recovery and extraction record (doc10) (closes_gap: 20); and targets law enforcement property and carrier archives that are still reachable today (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Have the detective question Tomas Reyes in person: \"Why does the mechanic's log contain the entry 'Sat 11/4 - 1:03 AM - checked lane 12, all good' after your 'Sat 11/4 - 11:00 PM - out' entry (doc04), and why did code 7712 unlock the office door at 1:03 AM on November 5 (doc05) if you left at 11:00 PM and never went back (doc03)?\"",
+     "score": 80,
+     "arithmetic": "40 + 25 + 15 = 80",
+     "reason": "Directly works the high-severity contradiction between Reyes's 11:00 PM departure claim (doc03) and the 1:03 AM mechanic's log entry (doc04) (cites_high_contradiction: 40); focuses on the 1:03 AM log and keypad events inside the 11:30 PM - 1:30 AM death window (doc02) (in_window: 25); and targets a living witness who is still reachable (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Have the detective question Tomas Reyes in person: \"How did your blue sedan, plate ending 2093, leave the Starlite Lanes lot on November 4 if the parking lot gate reader recorded your entry at 6:01 PM and no exit read that night (doc09), and why did Carla Ibanez's phone text Andre Ibanez at 12:41 AM that 'tommy is here again' (doc10)?\"",
+     "score": 80,
+     "arithmetic": "40 + 25 + 15 = 80",
+     "reason": "Directly works the high-severity contradiction between Reyes's statement that he left at 11:00 PM and saw the building dark at 12:30 AM (doc03) and the 12:41 AM text message (doc10) along with the parking lot gate record (doc09) (cites_high_contradiction: 40); addresses presence at 12:30 AM - 12:41 AM inside the 11:30 PM - 1:30 AM death window (doc02) (in_window: 25); and targets a witness who is still reachable (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Have the detective question Derek Hahn in person: \"Why did you state in 2017 that 'Saturday night I was home all night. I did not go near the lanes' (doc07) when the gate reader recorded your gray pickup, plate ending 4417, in the lot from 11:12 PM to 11:38 PM (doc09), and how did you knock on 'the office door off the back hall' while claiming 'I never went inside' (doc08)?\"",
+     "score": 80,
+     "arithmetic": "40 + 25 + 15 = 80",
+     "reason": "Directly works the high-severity contradiction between Hahn's 2017 statement (doc07) and the parking lot gate record (doc09) (cites_high_contradiction: 40); covers 11:12 PM to 11:38 PM, overlapping the 11:30 PM - 1:30 AM death window (doc02) and the 11:36 PM back hall motion event (doc11) (in_window: 25); and targets a witness who is still reachable (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": true,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the carrier response and image file with EXIF metadata for the outstanding cloud backup request on Diane Pruitt's replaced phone (doc17) to prove or disprove that the Starlite Lanes office window was lit with blinds partly open at 12:55 AM on November 5.",
+     "score": 60,
+     "arithmetic": "25 + 20 + 15 = 60",
+     "reason": "Targets a 12:55 AM photograph inside the 11:30 PM - 1:30 AM death window (doc02) (in_window: 25); produces the missing 12:55 AM photograph and carrier cloud backup response noted as outstanding in doc17 (closes_gap: 20); and queries the carrier on an outstanding request that is still reachable (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the two missing witness statements referenced in doc17 (\"The photograph is referenced in two later statements\") from the investigative archive to determine who else saw or discussed the 12:55 AM photograph of the lit office window.",
+     "score": 60,
+     "arithmetic": "25 + 20 + 15 = 60",
+     "reason": "Addresses evidence of the office window condition at 12:55 AM inside the 11:30 PM - 1:30 AM death window (doc02) (in_window: 25); produces the two missing statements explicitly referenced in doc17 (closes_gap: 20); and pulls existing case file records that are still reachable (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Have the detective question Andre Ibanez in person: \"At 12:41 AM on November 5, Carla Ibanez's phone sent you the text 'tommy is here again. told him if he is going to be here he logs it this time' (doc10)—what prior discussions or replies occurred that night, and did you or anyone else use code 2214 on the office door keypad at 6:02 PM or 12:52 AM (doc05)?\"",
+     "score": 40,
+     "arithmetic": "25 + 15 = 40",
+     "reason": "Examines the 12:41 AM text recipient (doc10) and the 12:52 AM keypad entry with code 2214 (doc05), both inside the 11:30 PM - 1:30 AM death window (doc02) (in_window: 25); and targets a witness who is still reachable (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Have the detective question Josefina Luna in person: \"Why did you state in 2017 that 'I finished and left at 11:45. The lanes were quiet' (doc12), but in 2025 stated 'I left around midnight, I would say now. While I mopped the back hall I remember the machines running on lane 12, the pins resetting' (doc13), and what did you observe when code 3308 was entered on the office door at 11:41 PM (doc05)?\"",
+     "score": 40,
+     "arithmetic": "25 + 15 = 40",
+     "reason": "Addresses the 11:41 PM office keypad entry (doc05), the 11:44 PM office corridor motion (doc11), and Luna's 11:45 PM - 12:00 AM departure window (doc12, doc13), all inside the 11:30 PM - 1:30 AM death window (doc02) (in_window: 25); and targets a witness interviewed as recently as 2025 who is still reachable (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": true,
+      "closes_gap": false,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the master case evidence ledger referenced in doc17 (\"the image itself is not in the evidence ledger\") to reconcile which physical and digital items from Starlite Lanes were collected, logged, or submitted for forensic analysis.",
+     "score": 35,
+     "arithmetic": "20 + 15 = 35",
+     "reason": "Produces the missing evidence ledger explicitly proven to exist by doc17 (closes_gap: 20); and targets an agency administrative record that is still reachable (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the crime scene collection record and latent print examination report for the \"league scoresheet dated November 4\" observed on the office desk (doc01) and referenced by Marcus Bell (doc06) to verify handling and resolve the count discrepancy.",
+     "score": 35,
+     "arithmetic": "20 + 15 = 35",
+     "reason": "Produces the missing collection and forensic processing record for the desk scoresheet documented at the crime scene in doc01 and doc06 (closes_gap: 20); and targets departmental evidence records that are still reachable (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the crime scene processing and latent print report for the \"cover of the lane 12 ball return\" observed standing open at the crime scene (doc01) to prove or disprove who accessed lane 12's machinery.",
+     "score": 35,
+     "arithmetic": "20 + 15 = 35",
+     "reason": "Produces the missing forensic processing report for the open lane 12 ball return cover noted in doc01 (closes_gap: 20); and targets crime lab records that are still reachable (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    },
+    {
+     "action": "Pull the scene inventory or property record for the account books (\"the books\") to prove or disprove whether the books Tomas Reyes claimed Carla Ibanez was working on at 11:00 PM (\"Carla was in the office doing the books when I left.\", doc03) were present in the office.",
+     "score": 35,
+     "arithmetic": "20 + 15 = 35",
+     "reason": "Produces the missing documentation accounting for 'the books' mentioned in doc03 but absent from doc01 (closes_gap: 20); and targets case property records that are still reachable (still_reachable: 15).",
+     "components": {
+      "cites_high_contradiction": false,
+      "in_window": false,
+      "closes_gap": true,
+      "still_reachable": true
+     }
+    }
+   ],
+   "gaps": [
+    {
+     "gap": "Master evidence ledger for the investigation, needed to verify chain of custody and which scene items were collected.",
+     "proven_by": "doc17: \"The photograph is referenced in two later statements but the image itself is not in the evidence ledger.\""
+    },
+    {
+     "gap": "Diane Pruitt's 12:55 AM photograph of the lit Starlite Lanes office window, her replaced phone, and the carrier's response to the cloud backup request.",
+     "proven_by": "doc17: \"The original photograph was never collected. Ms. Pruitt has since replaced the phone. A request to her carrier for the cloud backup is outstanding in the file; no response is recorded.\""
+    },
+    {
+     "gap": "Two later witness statements that reference Diane Pruitt's 12:55 AM photograph.",
+     "proven_by": "doc17: \"The photograph is referenced in two later statements but the image itself is not in the evidence ledger.\""
+    },
+    {
+     "gap": "Physical recovery, property voucher, and forensic device extraction of Carla Ibanez's phone (only a carrier summary is in the file).",
+     "proven_by": "doc10: \"VICTIM'S PHONE RECORD - carrier summary for the phone of Carla Ibanez, night of November 4-5, 2017.\""
+    },
+    {
+     "gap": "DVR surveillance video footage from the Starlite Lanes camera system for the night of November 4-5, 2017 (overwritten before preservation).",
+     "proven_by": "doc11: \"The system records motion events by camera; the video itself is overwritten on a 72-hour cycle.\""
+    },
+    {
+     "gap": "The blunt force instrument used to inflict the fatal head injury.",
+     "proven_by": "doc02: \"A single injury pattern is noted; the instrument was not recovered at the scene.\""
+    },
+    {
+     "gap": "Collection record and forensic examination of the league scoresheet(s) on the office desk, needed to reconcile the singular/plural discrepancy between the scene report and Marcus Bell's statement.",
+     "proven_by": "doc01: \"On the desk was a league scoresheet dated November 4.\" and doc06: \"She was alive and fine and working on the scoresheets.\""
+    },
+    {
+     "gap": "Forensic processing and latent print records for the open lane 12 ball return cover and the office door keypad panel.",
+     "proven_by": "doc01: \"The cover of the lane 12 ball return stood open.\" and doc05: \"KEYPAD ENTRY LOG - office door, Starlite Lanes. System export, November 6, 2017.\""
+    },
+    {
+     "gap": "Scene inventory accounting for the account books ('the books') that Tomas Reyes stated Carla Ibanez was working on at 11:00 PM.",
+     "proven_by": "doc03: \"Carla was in the office doing the books when I left.\""
+    },
+    {
+     "gap": "Inspection or collection record for Marcus Bell's bowling ball removed from the locker room on the night of November 4, 2017.",
+     "proven_by": "doc06: \"I left my ball in the locker room Saturday night, so I went back for it.\""
+    }
+   ],
+   "brief": "THE CASE IN FIVE LINES\nOn Sunday, November 5, 2017, at 0605 hours, Officer P. Tate responded to Starlite Lanes, 88 Meridian Avenue, after the morning opener found owner Carla Ibanez, 47, deceased on the office floor behind the counter (doc01). She was pronounced dead at 0622 hours (doc01), and the medical examiner ruled the death a homicide caused by blunt force injury to the head from an unrecovered instrument, estimating the time of death between 11:30 PM on November 4 and 1:30 AM on November 5 (doc02). Marcus Bell entered the office on keypad code 4410 at 11:20 PM (doc05; lot gate 11:18 PM - 11:29 PM, doc09) and reported speaking with Ibanez while she was alive and working on scoresheets (doc06). Inside the 11:30 PM - 1:30 AM death window, digital logs and witness accounts record Derek Hahn's pickup in the lot until 11:38 PM (doc09), back hall and office corridor motion between 11:36 PM and 1:19 AM (doc11), office keypad entries using codes 3308 (11:41 PM), 2214 (12:52 AM), and 7712 (1:03 AM) (doc05), an outgoing text from Ibanez's phone at 12:41 AM stating \"tommy is here again\" (doc10), a 12:55 AM witness photo of the lit office window (doc17), and a 1:03 AM mechanic's log entry for lane 12 by Tomas Reyes (doc04). At the scene, the lane 12 ball return cover stood open and a November 4 league scoresheet lay on the office desk (doc01).\n\nTHE STRONGEST CONTRADICTION\nTomas Reyes's alibi that he left Starlite Lanes at 11:00 PM and only passed a dark, empty building around 12:30 AM directly fights the victim's phone records, the mechanic's sign-out log, and the parking lot gate reader:\n- Statement (doc03): \"I finished the belt job and I left at eleven and never went back.\" / \"I passed the building again around twelve thirty on my way to get cigarettes and the building was dark, lanes off, office dark. Nobody was there.\"\n- Record (doc10): \"Outgoing text, 12:41 AM, November 5, to Andre Ibanez: \\\"tommy is here again. told him if he is going to be here he logs it this time\\\"\"\n- Corroborating Records (doc04, doc09): The mechanic's log contains the handwritten entry \"Sat 11/4 - 1:03 AM - checked lane 12, all good.\" below \"Sat 11/4 - 11:00 PM - out.\" (doc04), and the lot gate reader shows \"Plate ending 2093, blue sedan, registered to T. Reyes: entered 6:01 PM, no exit read that night.\" (doc09).\n\nTHE ALIBI TABLE\n- Tomas Reyes | Window: 11:30 PM - 1:30 AM | Rating: CONTRADICTED | Claims 11:00 PM departure and 12:30 AM drive-by of a dark building (doc03); contradicted by his sedan having no lot exit read after 6:01 PM (doc09), the 12:41 AM text from Ibanez's phone to Andre Ibanez stating \"tommy is here again\" (doc10), and the \"Sat 11/4 - 1:03 AM - checked lane 12, all good\" mechanic log entry (doc04).\n- Derek Hahn | Window: 11:30 PM - 1:30 AM | Rating: CONTRADICTED | Claimed in 2017 \"Saturday night I was home all night. I did not go near the lanes\" (doc07); contradicted by lot gate LPR reading his gray pickup (plate 4417) entering at 11:12 PM and exiting at 11:38 PM (doc09), which he conceded in 2019 while claiming he knocked on the dark office door off the back hall and never went inside (doc08).\n- Marcus Bell | Window: 11:30 PM - 1:30 AM | Rating: CORROBORATED | Stated he entered at 11:20 PM on his code, spoke with Ibanez, retrieved his bowling ball, and left (doc06); corroborated by the 11:20 PM code 4410 keypad log (doc05) and lot gate LPR showing his white hatchback (plate 7750) entering at 11:18 PM and exiting at 11:29 PM (doc09), prior to the 11:30 PM death window start.\n- Josefina Luna | Window: 11:30 PM - 1:30 AM | Rating: UNCORROBORATED | Stated in 2017 she left at 11:45 PM and the lanes were quiet (doc12), but in 2025 stated she left around midnight and heard lane 12 machines running and pins resetting while mopping the back hall (doc13); office keypad logged code 3308 at 11:41 PM (doc05), and Marco Luna stated she was home by 12:30 AM (doc14).\n\nTHE TOP THREE LEADS\n1. [Score 100 | 40+25+20+15] Pull the forensic extraction report and property receipt for Carla Ibanez's physical phone to prove or disprove device possession, unlock method, and location when the 12:41 AM text (\"tommy is here again. told him if he is going to be here he logs it this time\", doc10) was sent.\n2. [Score 80 | 40+25+15] Have the detective question Tomas Reyes in person: \"Why does the mechanic's log contain the entry 'Sat 11/4 - 1:03 AM - checked lane 12, all good' after your 'Sat 11/4 - 11:00 PM - out' entry (doc04), and why did code 7712 unlock the office door at 1:03 AM on November 5 (doc05) if you left at 11:00 PM and never went back (doc03)?\"\n3. [Score 80 | 40+25+15] Have the detective question Tomas Reyes in person: \"How did your blue sedan, plate ending 2093, leave the Starlite Lanes lot on November 4 if the parking lot gate reader recorded your entry at 6:01 PM and no exit read that night (doc09), and why did Carla Ibanez's phone text Andre Ibanez at 12:41 AM that 'tommy is here again' (doc10)?\"\n\nTHE GAP LIST\n- Master evidence ledger: Referenced in doc17 (\"the image itself is not in the evidence ledger\") but absent from the file.\n- Diane Pruitt's 12:55 AM photograph and carrier cloud backup response: Viewed by Det. Alvarez on November 12, 2017, never collected before the phone was replaced, and carrier backup request has no recorded response (doc17).\n- Two later statements referencing the 12:55 AM photograph: Explicitly noted in doc17 (\"The photograph is referenced in two later statements\") but missing from the file.\n- Carla Ibanez's physical phone and extraction report: Only a carrier summary is present (doc10); physical recovery is absent from the scene report (doc01).\n- DVR surveillance video footage: Overwritten on a 72-hour cycle; only the November 8, 2017 motion log export is in the file (doc11).\n- Blunt force instrument: Noted as unrecovered at the scene in the autopsy report (doc02).\n- League scoresheet(s) on the office desk: Observed at the scene (\"a league scoresheet dated November 4\", doc01) and mentioned by Bell (\"working on the scoresheets\", doc06), with no collection or latent print record.\n- Lane 12 ball return cover and office keypad panel forensic reports: Open cover observed at the scene (doc01) and keypad log exported (doc05), with no latent print or DNA reports in the file.\n- Account books ('the books') and Marcus Bell's bowling ball: Reyes stated Ibanez was \"doing the books\" at 11:00 PM (doc03) and Bell stated he removed his bowling ball (doc06), with neither accounted for in scene or property records.\n\nThis board judges the file. The detective does the detecting."
+  }
+ },
+ "dropped": 14,
+ "run_log": [
+  "intake: 5 finding(s) dropped by the quote check",
+  "digital: gemini-4-neon gave no usable output in two attempts; gemini-4-carbon covered the step (fallback, logged)",
+  "cross_examiner: 9 finding(s) dropped by the quote check"
+ ]
+}
