@@ -19,7 +19,7 @@ carries a verbatim quote or it does not exist.
 ## What it does
 
 The detective (or the user) gives an order in the squad room
-chat ("work the case", "work the Duck case") and ten agents,
+chat ("work the case", "work the Starlite case") and ten agents,
 each holding a real chair from a real investigation (First
 Officer, Records, Coroner, CSI, Analyst, Digital,
 Cross-Examiner, Interviewer, Prosecutor, Lead Detective), work
@@ -52,12 +52,13 @@ a failed step turns its chair red and the run continues.
 Scored against per-case bibles: three fictional cases (a police
 file, an internet drill case built from public posts, and a
 cold case sim built to be solved only by a four record chain)
-plus the Duck File, the real 2020 Chicago FBG Duck case rebuilt
-from the public record and run blind twice. The squad caught
-the planted contradictions at HIGH, the watchman's keypad code
-in the sim, and the defense lawyer's "unknown person" claim in
-the real case; it never claimed the masked gunmen on camera
-were anybody. A single call baseline found the seams too; the
+plus the Starlite File, a cold case written today for this
+event and present in no training data. The squad caught
+the planted contradictions at HIGH and the watchman's keypad
+code in the sim. Earlier today the squad also ran a real
+solved case; the builders retired that eval themselves when
+they saw the verdict sat inside its own file, so it tested
+reading, not detection. A single call baseline found the seams too; the
 squad's edge is discipline: dropped findings counted in the
 open, severity that discriminates, leads kept to single
 actions, no person judged. Misses are in EVAL.md too, named.
