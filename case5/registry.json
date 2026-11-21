@@ -1,0 +1,150 @@
+{
+  "case_id": "starlite-2017",
+  "case_title": "The Starlite File: a cold case built to be investigated, not skimmed. Fictional, written for Gemini 4 NYC.",
+  "documents": [
+    {
+      "id": "doc01",
+      "file": "doc01_scene_report.txt",
+      "title": "Scene report: the office, the latch, the open ball return",
+      "type": "report",
+      "date": "2017-11-05",
+      "author": "Officer P. Tate"
+    },
+    {
+      "id": "doc02",
+      "file": "doc02_me_summary.txt",
+      "title": "ME summary: window 11:30 p.m. to 1:30 a.m.",
+      "type": "report",
+      "date": "2017-11-07",
+      "author": "Dr. S. Osei"
+    },
+    {
+      "id": "doc03",
+      "file": "doc03_reyes_statement.txt",
+      "title": "Reyes statement, 2017: left at eleven, never went back",
+      "type": "statement",
+      "date": "2017-11-05",
+      "author": "Tomas Reyes"
+    },
+    {
+      "id": "doc04",
+      "file": "doc04_reyes_logbook.txt",
+      "title": "Reyes sign-out log page, November 4, 2017",
+      "type": "record",
+      "date": "2017-11-04",
+      "author": "Tomas Reyes"
+    },
+    {
+      "id": "doc05",
+      "file": "doc05_keypad_log.txt",
+      "title": "Keypad entry log, office door",
+      "type": "record",
+      "date": "2017-11-04",
+      "author": "Keypad system export"
+    },
+    {
+      "id": "doc06",
+      "file": "doc06_bell_statement.txt",
+      "title": "Bell statement: I went back for my ball",
+      "type": "statement",
+      "date": "2017-11-06",
+      "author": "Marcus Bell"
+    },
+    {
+      "id": "doc07",
+      "file": "doc07_hahn_statement1.txt",
+      "title": "Hahn statement 1: home all night",
+      "type": "statement",
+      "date": "2017-11-07",
+      "author": "Derek Hahn"
+    },
+    {
+      "id": "doc08",
+      "file": "doc08_hahn_statement2.txt",
+      "title": "Hahn statement 2: I drove there, she never answered",
+      "type": "statement",
+      "date": "2019-03-14",
+      "author": "Derek Hahn"
+    },
+    {
+      "id": "doc09",
+      "file": "doc09_parking_record.txt",
+      "title": "Parking gate record: Hahn in at 11:12, out at 11:38",
+      "type": "record",
+      "date": "2017-11-04",
+      "author": "Lot gate system"
+    },
+    {
+      "id": "doc10",
+      "file": "doc10_phone_record.txt",
+      "title": "Victim's phone record: the 12:41 a.m. text",
+      "type": "record",
+      "date": "2017-11-05",
+      "author": "Carrier summary"
+    },
+    {
+      "id": "doc11",
+      "file": "doc11_dvr_log.txt",
+      "title": "DVR motion log: the back hall after midnight",
+      "type": "record",
+      "date": "2017-11-04",
+      "author": "DVR system export"
+    },
+    {
+      "id": "doc12",
+      "file": "doc12_luna_statement1.txt",
+      "title": "Luna statement 1, 2017: left at 11:45",
+      "type": "statement",
+      "date": "2017-11-05",
+      "author": "Josefina Luna"
+    },
+    {
+      "id": "doc13",
+      "file": "doc13_luna_statement2.txt",
+      "title": "Luna statement 2, 2025: the machines were running",
+      "type": "statement",
+      "date": "2025-06-09",
+      "author": "Josefina Luna"
+    },
+    {
+      "id": "doc14",
+      "file": "doc14_luna_husband.txt",
+      "title": "Marco Luna statement, 2025: home by 12:30",
+      "type": "statement",
+      "date": "2025-06-09",
+      "author": "Marco Luna"
+    },
+    {
+      "id": "doc15",
+      "file": "doc15_inspection_report.txt",
+      "title": "Inspection report, 2017: the latch, replaced and closed",
+      "type": "report",
+      "date": "2017-01-09",
+      "author": "City inspector"
+    },
+    {
+      "id": "doc16",
+      "file": "doc16_news_article.txt",
+      "title": "News article, 2016: the break-in and the faulty latch",
+      "type": "article",
+      "date": "2016-10-18",
+      "author": "Meridian Ledger"
+    },
+    {
+      "id": "doc17",
+      "file": "doc17_photo_memo.txt",
+      "title": "Evidence memo: the 12:55 a.m. photo, never collected",
+      "type": "report",
+      "date": "2017-11-20",
+      "author": "Detective R. Alvarez"
+    },
+    {
+      "id": "doc18",
+      "file": "doc18_staff_roster.txt",
+      "title": "Staff roster and door codes",
+      "type": "record",
+      "date": "2017-10-01",
+      "author": "Starlite Lanes"
+    }
+  ]
+}
