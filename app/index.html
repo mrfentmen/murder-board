@@ -30,9 +30,20 @@
   </div>
 </section>
 
-<section class="feed-wrap" aria-label="Live feed">
-  <div class="feed-head"><span>SQUAD ROOM · LIVE FEED</span><span>every line is a real step, posted as it happens</span></div>
-  <div id="liveFeed" class="live-feed"><div class="feed-line feed-idle">Press Work the Case. The squad posts here as it works.</div></div>
+<section class="feed-wrap" aria-label="Squad room">
+  <div class="feed-head"><span>SQUAD ROOM</span><span>the squad talks here. every report is real output from the run</span></div>
+  <div id="liveFeed" class="live-feed chat-feed"><div class="feed-line feed-idle">Tell the room to work the case. They post here as they work.</div></div>
+  <div class="chat-chips">
+    <button class="chip" data-say="Work the case">Work the case</button>
+    <button class="chip" data-say="Work the Duck case">The Duck case</button>
+    <button class="chip" data-say="Work the Harborlight case">Harborlight</button>
+    <button class="chip" data-say="Show me the board">The board</button>
+    <button class="chip" data-say="Show me the brief">The brief</button>
+  </div>
+  <div class="chat-input">
+    <input id="chatText" type="text" placeholder="Talk to the squad room: &quot;work the case&quot;, &quot;work the Duck case&quot;, &quot;the board&quot;&hellip;" autocomplete="off">
+    <button id="chatSend">Send</button>
+  </div>
 </section>
 
 <nav class="tabs">
