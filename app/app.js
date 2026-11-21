@@ -30,7 +30,7 @@ function setCase(caseId) {
   return false;
 }
 
-function cfg() { return G.MB_CONFIG || { reasoningModel: "gemini-4-argon", fastModel: "gemini-3.8-flash", apiKey: "" }; }
+function cfg() { return G.MB_CONFIG || { reasoningModel: "gemini-4-argon", fastModel: "gemini-4-carbon", apiKey: "" }; }
 
 // ---------- transport ----------
 async function callGemini(model, systemText, userText) {
@@ -43,7 +43,7 @@ async function callGemini(model, systemText, userText) {
     body: JSON.stringify({
       systemInstruction: { parts: [{ text: systemText }] },
       contents: [{ parts: [{ text: userText }] }],
-      generationConfig: { responseMimeType: "application/json", temperature: 0.2 }
+      generationConfig: { responseMimeType: "application/json", temperature: 0.2, maxOutputTokens: 16384 }
     })
   });
   if (!res.ok) throw new Error("Gemini HTTP " + res.status);
@@ -164,7 +164,7 @@ function recomputeScore(c) {
 // ---------- the book ----------
 function newBook() {
   return {
-    documents: DOCS, custody: null, records: null, coroner: null,
+    documents: DOCS, custody: null, records: null, coroner: null, door2: null,
     ledger: [], csi_gaps: [], persons: [], claims: [], intake_events: [],
     evidence_items: [], timeline: [], collisions: [], machine: null,
     contradictions: [], alibis: [], ce_gaps: [], histories: [],
@@ -174,8 +174,46 @@ function newBook() {
   };
 }
 
-function docsText(ids) {
-  return DOCS.filter(function (d) { return !ids || ids.indexOf(d.id) !== -1; })
+// Records simulation: the Door 2 census, run against bundled
+// fixtures for the fictional cases. Deterministic, no model call,
+// no outside lookup. Quotes are checked against the fixture text
+// itself, the same law as the case file: no quote, no item.
+var FIXTURES = G.RECORDS_FIXTURES || [];
+function normName(s) { return String(s || "").toLowerCase().replace(/\s+/g, " ").trim(); }
+function findFixture(name) {
+  var n = normName(name);
+  if (!n) return null;
+  for (var i = 0; i < FIXTURES.length; i++) {
+    var names = [FIXTURES[i].subject.name].concat(FIXTURES[i].subject.aliases || []);
+    for (var j = 0; j < names.length; j++) if (normName(names[j]) === n) return FIXTURES[i];
+  }
+  return null;
+}
+function fixtureQuoteOk(quote, text) {
+  return norm(text).indexOf(norm(quote)) !== -1;
+}
+function buildRecordsFromFixture(fx) {
+  var items = [];
+  fx.items.forEach(function (it) {
+    if (!fixtureQuoteOk(it.quote, it.text)) return;
+    items.push({
+      item: it.title + ": " + it.quote,
+      source_class: it.type + " / " + it.source_name,
+      label: it.label,
+      quote: it.quote,
+      fixture_ref: "fixture:" + fx.case_id
+    });
+  });
+  return {
+    subject: fx.subject.name,
+    starter_items: items,
+    collisions: fx.collisions.map(function (c) { return { name: c.name, note: c.note }; }),
+    request_next: ["Live census sources are off in this simulation build."],
+    notes: "Simulation census for " + fx.subject.name + ": pulled from the bundled fixtures for this fictional case, not from live sources."
+  };
+}
+
+function docsText(ids) {  return DOCS.filter(function (d) { return !ids || ids.indexOf(d.id) !== -1; })
     .map(function (d) { return "===== " + d.id + " (" + d.title + ", " + d.date + ") =====\n" + d.text; })
     .join("\n\n");
 }
@@ -302,7 +340,15 @@ async function runStep(step, book, hooks, cachedOutputs) {
   hooks.chair(step.chair, "running", null);
   try {
     var output;
-    if (cachedOutputs && cachedOutputs[step.id]) {
+    if (step.id === "records" && book.door2 && book.door2.name && findFixture(book.door2.name)) {
+      // The census is a pull, not a judgment: when the Door 2 name
+      // matches a bundled fixture, the sim answers from the fixture
+      // — ahead of both the cache and the model.
+      output = buildRecordsFromFixture(findFixture(book.door2.name));
+      var ferrs = schemaErrors(step, output);
+      if (ferrs.length) throw new Error("fixture schema: " + ferrs.join("; "));
+      if (hooks.delay) await hooks.delay();
+    } else if (cachedOutputs && cachedOutputs[step.id]) {
       output = cachedOutputs[step.id];
       if (hooks.delay) await hooks.delay();
     } else {
@@ -339,8 +385,9 @@ async function runStep(step, book, hooks, cachedOutputs) {
   }
 }
 
-async function runAll(hooks, cachedOutputs) {
+async function runAll(hooks, cachedOutputs, opts) {
   var book = newBook();
+  if (opts && opts.door2) book.door2 = opts.door2;
   hooks = hooks || {};
   hooks.chair = hooks.chair || function () {};
   hooks.status = hooks.status || function () {};
@@ -356,6 +403,7 @@ G.MB = {
   runAll: runAll, newBook: newBook, recomputeScore: recomputeScore,
   quoteOk: quoteOk, VALIDATORS: VALIDATORS, STEPS: STEPS, CHAIRS: CHAIRS,
   DOC_BY_ID: DOC_BY_ID, CASES: CASES, setCase: setCase,
+  findFixture: findFixture, buildRecordsFromFixture: buildRecordsFromFixture,
   currentCase: function () { return CURRENT_CASE; },
   docById: function (id) { return DOC_BY_ID[id]; }
 };
@@ -416,19 +464,48 @@ function renderRegistry() {
   });
 }
 
+function tiltFor(seed) {
+  var h = 0;
+  for (var i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) % 997;
+  return ((h % 5) - 2) * 1.1;
+}
+function pinCard(cls, pinKey, inner, seed) {
+  return '<div class="' + cls + '" data-pin="' + esc(pinKey) + '" style="transform: rotate(' + tiltFor(seed || pinKey) + 'deg)">' + inner + '</div>';
+}
+function initialsOf(name) {
+  return String(name).replace(/["']/g, "").split(/\s+/).map(function (w) { return w.charAt(0); }).join("").slice(0, 2).toUpperCase();
+}
 function renderBoard() {
-  el("personCards").innerHTML = book.persons.map(function (p) {
+  var layer = el("pinLayer");
+  if (!layer) return;
+  var current = MB.CASES.filter(function (c) { return c.case_id === MB.currentCase(); })[0];
+  var docs = current ? current.documents : [];
+  var html = '<div class="pin-title" data-pin="title"><div class="qmark">?</div><div class="who">WHO DID IT</div><div class="case-name">' + esc(current ? current.case_title : "") + '</div></div>';
+  html += book.persons.map(function (p) {
     var claims = book.claims.filter(function (c) { return c.person === p.name; });
-    return '<div class="card"><h4>' + esc(p.name) + '</h4><p>' + esc(p.role) + '</p>' +
-      claims.slice(0, 3).map(function (c) {
-        return '<p class="q">&ldquo;' + esc(c.quote) + '&rdquo; <cite>' + esc(docTitle(c.doc_id)) + '</cite></p>';
-      }).join("") + "</div>";
-  }).join("") || '<p class="hint">Run the case to build the board.</p>';
-  var items = book.ledger.length ? book.ledger : book.evidence_items;
-  el("evidenceCards").innerHTML = items.map(function (it) {
-    var desc = it.description || "";
-    return '<div class="card"><h4>' + esc(it.item_no ? "Item " + it.item_no : "Item") + '</h4><p>' + esc(desc) + "</p></div>";
+    var isVictim = /victim/i.test(p.role || "");
+    var alibi = book.alibis.filter(function (a) { return a.person === p.name; })[0];
+    return pinCard("pin-card person" + (isVictim ? " victim" : ""), "person:" + p.name,
+      '<div class="photo">' + esc(initialsOf(p.name)) + '</div><h4>' + esc(p.name) + '</h4><p class="role">' + esc(p.role) + '</p>' +
+      (alibi ? '<p class="alibi-chip rate-' + esc(String(alibi.rating).toLowerCase().replace(/\s+/g, "-")) + '">' + esc(alibi.rating) + '</p>' : "") +
+      claims.slice(0, 2).map(function (c) { return '<p class="q">&ldquo;' + esc(c.quote) + '&rdquo;</p>'; }).join(""),
+      p.name);
   }).join("");
+  html += docs.map(function (d) {
+    return pinCard("pin-card docslip", "doc:" + d.id,
+      '<h5>' + esc(d.id) + ' &middot; ' + esc(d.type) + '</h5><p>' + esc(d.title) + '</p><p class="role">' + esc(d.date) + ' &middot; ' + esc(d.author) + '</p>', d.id);
+  }).join("");
+  var items = book.ledger.length ? book.ledger : book.evidence_items;
+  html += items.slice(0, 8).map(function (it, i) {
+    return pinCard("pin-card evidence", "ev:" + i,
+      '<h5>' + esc(it.item_no ? "Item " + it.item_no : "Item") + '</h5><p>' + esc(it.description || "") + '</p>', "ev" + i);
+  }).join("");
+  var gaps = book.csi_gaps.concat(book.ce_gaps);
+  html += gaps.slice(0, 6).map(function (g, i) {
+    return pinCard("pin-note", "gap:" + i,
+      '<p class="note-q">' + esc(g.item) + '</p><p>' + esc(g.problem) + '</p>', "gap" + i);
+  }).join("");
+  layer.innerHTML = html;
   var threads = book.contradictions.map(function (c, i) {
     return '<button class="thread red" data-kind="contra" data-idx="' + i + '"><span class="sev sev-' + esc(c.severity) + '">' + esc(c.severity) + '</span>' + esc(c.kind) + ": " + esc(c.a_doc) + " vs " + esc(c.b_doc) + "</button>";
   });
@@ -438,6 +515,41 @@ function renderBoard() {
   el("threadList").innerHTML = threads.join("") || '<p class="hint">No threads yet.</p>';
   Array.prototype.forEach.call(document.querySelectorAll(".thread"), function (t) {
     t.addEventListener("click", function () { openThread(t.getAttribute("data-kind"), +t.getAttribute("data-idx")); });
+  });
+  requestAnimationFrame(drawYarn);
+}
+
+function drawYarn() {
+  var svg = el("yarnSvg"), board = el("corkboard"), layer = el("pinLayer");
+  if (!svg || !board || !layer) return;
+  var bb = board.getBoundingClientRect();
+  if (!bb.width) return;
+  var pts = {};
+  Array.prototype.forEach.call(layer.querySelectorAll("[data-pin]"), function (n) {
+    var r = n.getBoundingClientRect();
+    pts[n.getAttribute("data-pin")] = { x: r.left - bb.left + r.width / 2, y: r.top - bb.top + 9 };
+  });
+  var W = board.scrollWidth, H = board.scrollHeight;
+  svg.setAttribute("width", W); svg.setAttribute("height", H);
+  svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+  function yarn(a, b, cls, kind, idx) {
+    if (!a || !b) return "";
+    var mx = (a.x + b.x) / 2, my = Math.max(a.y, b.y) + 14 + Math.abs(b.x - a.x) * 0.05;
+    return '<path class="yarn-line ' + cls + '" data-kind="' + kind + '" data-idx="' + idx + '" d="M ' + a.x + " " + a.y + " Q " + mx + " " + my + " " + b.x + " " + b.y + '"/>';
+  }
+  var out = "";
+  book.persons.forEach(function (p) { out += yarn(pts.title, pts["person:" + p.name], "yarn-gray", "", ""); });
+  book.contradictions.forEach(function (c, i) {
+    out += yarn(pts["doc:" + c.a_doc], pts["doc:" + c.b_doc], "yarn-" + String(c.severity).toLowerCase(), "contra", i);
+  });
+  book.collisions.forEach(function (c, i) {
+    var ds = [];
+    (c.quotes || []).forEach(function (q) { if (ds.indexOf(q.doc_id) < 0) ds.push(q.doc_id); });
+    if (ds.length >= 2) out += yarn(pts["doc:" + ds[0]], pts["doc:" + ds[1]], "yarn-collision", "collision", i);
+  });
+  svg.innerHTML = out;
+  Array.prototype.forEach.call(svg.querySelectorAll(".yarn-line[data-kind='contra'], .yarn-line[data-kind='collision']"), function (p) {
+    p.addEventListener("click", function () { openThread(p.getAttribute("data-kind"), +p.getAttribute("data-idx")); });
   });
 }
 
@@ -520,7 +632,22 @@ function renderBrief() {
   }
 }
 
-function renderAll() { renderBoard(); renderClock(); renderJudgments(); renderBrief(); }
+function renderRecords() {
+  var box = el("door2Results");
+  if (!box) return;
+  if (!book.records || !book.records.starter_items) { box.innerHTML = ""; return; }
+  var h = "<h3>Starter file from the census: " + esc(book.records.subject || "") + "</h3>";
+  h += book.records.starter_items.map(function (it) {
+    return "<div class='finding'><span class='sev " + (it.label === "SOURCED" ? "low" : "medium") + "'>" + esc(it.label || "UNVERIFIED") + "</span> <b>" + esc(it.item) + "</b><div class='docref'>" + esc(it.source_class || "") + "</div></div>";
+  }).join("");
+  (book.records.collisions || []).forEach(function (c) {
+    h += "<div class='finding'><span class='sev high'>name collision</span> <b>" + esc(c.name) + "</b><p>" + esc(c.note) + "</p></div>";
+  });
+  if (book.records.notes) h += "<p class='hint'>" + esc(book.records.notes) + "</p>";
+  box.innerHTML = h;
+}
+
+function renderAll() { renderBoard(); renderClock(); renderJudgments(); renderBrief(); renderRecords(); }
 
 function showScreen(name) {
   Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (t) {
@@ -529,6 +656,7 @@ function showScreen(name) {
   Array.prototype.forEach.call(document.querySelectorAll(".screen"), function (s) {
     s.classList.toggle("active", s.id === "screen-" + name);
   });
+  if (name === "board") requestAnimationFrame(drawYarn);
 }
 
 function cacheForCurrentCase() {
@@ -550,10 +678,15 @@ async function work() {
     status: function (s) { el("runStatus").textContent = s; },
     delay: function () { return new Promise(function (r) { setTimeout(r, 650); }); }
   };
+  var door2 = null;
+  var d2name = el("door2Name");
+  if (d2name && d2name.value.trim()) {
+    door2 = { name: d2name.value.trim(), dob: el("door2Dob").value.trim(), state: el("door2State").value.trim() };
+  }
   if (useCache) {
     var when = cached.created_at ? new Date(cached.created_at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "this morning";
     el("cacheLabel").textContent = "cached run from " + when;
-    book = await MB.runAll(hooks, cached.outputs);
+    book = await MB.runAll(hooks, cached.outputs, { door2: door2 });
     if (cached.dropped) book.dropped = cached.dropped;
   } else {
     el("cacheLabel").textContent = "";
@@ -562,7 +695,7 @@ async function work() {
       el("workBtn").disabled = false;
       return;
     }
-    book = await MB.runAll(hooks, null);
+    book = await MB.runAll(hooks, null, { door2: door2 });
   }
   renderAll();
   el("workBtn").disabled = false;
@@ -573,7 +706,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var sel = el("caseSelect");
   MB.CASES.forEach(function (c) {
     var o = document.createElement("option");
-    o.value = c.case_id; o.textContent = c.case_id === "screens-2025" ? "The Screens File (internet case)" : "The Delgado File (police file)";
+    var labels = { "delgado-2019": "The Delgado File (police file)", "screens-2025": "The Screens File (internet case)", "harborlight-2016": "The Harborlight File (the sim)" };
+    o.value = c.case_id; o.textContent = labels[c.case_id] || c.case_id;
     sel.appendChild(o);
   });
   sel.addEventListener("change", function () {
@@ -593,6 +727,7 @@ document.addEventListener("DOMContentLoaded", function () {
   el("modalClose").addEventListener("click", function () { el("quoteModal").classList.add("hidden"); });
   el("printBtn").addEventListener("click", function () { window.print(); });
   el("vetoToggle").addEventListener("change", renderBrief);
+  window.addEventListener("resize", function () { requestAnimationFrame(drawYarn); });
   updateCacheAvailability();
 });
 })();
