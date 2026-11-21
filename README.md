@@ -52,6 +52,15 @@ rest. A full live run of the fictional case is saved as the replay
 cache (`app/cache-data.js`), so the demo survives a network failure:
 check "Replay cached run" and press the button.
 
+The app carries two cases. The Delgado file is a police file.
+The Screens File (`CASE2_BIBLE.md`, `case2/`) is the internet
+case: a fictional Brooklyn drill killing whose whole file is
+public posts, a plate cam still, a podcast transcript, and the
+Reddit thread where strangers collated the night. Same squad,
+same checks. Its first live run caught both planted
+contradictions at HIGH, rated the poster CONTRADICTED, and
+carried the innocent reading on the partial plate.
+
 First live run, scored against `EXPECTED_FINDINGS.md`: the Webb car
 contradiction at HIGH with the tow record quote, the Whitfield
 Sunday visit flagged, the missing second casing at the top of the
