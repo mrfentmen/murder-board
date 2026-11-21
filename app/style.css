@@ -530,3 +530,6 @@ h1{font-weight:800}
 .reddit-body{white-space:pre-wrap;color:#cfd6dd;font-size:14px;line-height:1.5;margin:0 0 8px}
 .reddit-actions{font-size:12px;color:#9aa3ad}.reddit-actions button{background:none;border:none;color:var(--amber);cursor:pointer;font:inherit;padding:0}
 .reddit-empty{color:#9aa3ad}
+
+.registry tr.pulled td{background:rgba(224,164,88,.07)}
+.registry tr.pulled td:first-child{color:var(--amber);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px}
