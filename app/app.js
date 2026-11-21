@@ -177,7 +177,7 @@ function newBook() {
     contradictions: [], alibis: [], ce_gaps: [], histories: [],
     next_questions: [], sufficiency: [], vetoes: [], corroboration_needed: [],
     leads: [], gaps: [], brief: "",
-    dropped: 0, log: [], outputs: {}, failed_steps: []
+    dropped: 0, log: [], outputs: {}, failed_steps: [], squad_notes: []
   };
 }
 
@@ -259,25 +259,33 @@ var STEPS = [
     apply: function (b, o) { b.custody = o; } },
   { id: "records", chair: "records", file: "02_records.md", model: "fast",
     required: ["subject", "starter_items"],
-    input: function () { return "THE REGISTRY:\n" + registryText(); },
+    handoff: function () { return { from: ["custody"], detail: "document registry and the First Officer's custody note" }; },
+    input: function (b) { return "THE REGISTRY:\n" + registryText() + "\n\nCUSTODY NOTE:\n" + JSON.stringify(b.custody || {}, null, 1); },
     apply: function (b, o) { b.records = o; } },
   { id: "coroner", chair: "coroner", file: "03_coroner.md", model: "fast",
     required: ["cause", "manner", "death_window"],
-    input: function () { return docsText(["doc01", "doc02"]); },
+    handoff: function () { return { from: ["custody"], detail: "medical records and the First Officer's custody note" }; },
+    input: function (b) { return docsText(["doc01", "doc02"]) + "\n\nCUSTODY NOTE:\n" + JSON.stringify(b.custody || {}, null, 1); },
     apply: function (b, o) { b.coroner = o; } },
   { id: "csi", chair: "csi", file: "04_csi.md", model: "fast",
     required: ["ledger", "gaps"],
-    input: function () { return docsText(); },
+    handoff: function () { return { from: ["custody"], detail: "case documents and the First Officer's custody note" }; },
+    input: function (b) { return docsText() + "\n\nCUSTODY NOTE:\n" + JSON.stringify(b.custody || {}, null, 1); },
     apply: function (b, o) { b.ledger = o.ledger || []; b.csi_gaps = o.gaps || []; } },
   { id: "intake", chair: "first_officer", file: "05_intake.md", model: "fast",
     required: ["persons", "claims", "events"],
-    input: function () { return docsText(); },
+    handoff: function () { return { from: ["custody", "coroner"], detail: "custody note and medical findings" }; },
+    input: function (b) { return docsText() + "\n\nCUSTODY NOTE:\n" + JSON.stringify(b.custody || {}, null, 1) + "\n\nCORONER FINDINGS:\n" + JSON.stringify(b.coroner || {}, null, 1); },
     apply: function (b, o) {
       b.persons = o.persons || []; b.claims = o.claims || [];
       b.intake_events = o.events || []; b.evidence_items = o.evidence_items || [];
     } },
   { id: "analyst", chair: "analyst", file: "06_analyst.md", model: "world",
     required: ["events"],
+    handoff: function (b) { return {
+      from: ["intake", "coroner"],
+      detail: (b.intake_events || []).length + " events, " + (b.claims || []).length + " quote-checked claims, and " + (b.coroner && b.coroner.death_window ? "the examiner's death window" : "no usable examiner window")
+    }; },
     input: function (b) {
       return "INTAKE OUTPUT:\n" + JSON.stringify({ events: b.intake_events, claims: b.claims }, null, 1)
         + "\n\nDEATH WINDOW:\n" + JSON.stringify(b.coroner ? b.coroner.death_window : {}, null, 1);
@@ -285,13 +293,20 @@ var STEPS = [
     apply: function (b, o) { b.timeline = o.events || []; b.collisions = o.collisions || []; } },
   { id: "digital", chair: "digital", file: "07_digital.md", model: "field",
     required: ["machine_events"],
-    input: function () { return docsText(); },
+    handoff: function () { return { from: ["intake"], detail: "quote-checked claims and event inventory from intake" }; },
+    input: function (b) { return docsText() + "\n\nINTAKE CLAIMS AND EVENTS:\n" + JSON.stringify({ claims: b.claims, events: b.intake_events }, null, 1); },
     apply: function (b, o) { b.machine = o; } },
   { id: "cross_examiner", chair: "cross_examiner", file: "08_cross_examiner.md", model: "reasoning",
     required: ["contradictions", "alibis"],
+    handoff: function (b) { return {
+      from: ["intake", "coroner", "analyst", "digital"],
+      detail: "intake claims, analyst timeline, digital records, and " + (b.coroner && b.coroner.death_window ? "the examiner's death window" : "no usable examiner window")
+    }; },
     input: function (b) {
       return "THE DOCUMENTS:\n" + docsText()
         + "\n\nINTAKE CLAIMS:\n" + JSON.stringify(b.claims, null, 1)
+        + "\n\nDIGITAL RECORDS:\n" + JSON.stringify(b.machine || {}, null, 1)
+        + "\n\nANALYST TIMELINE AND COLLISIONS:\n" + JSON.stringify({ timeline: b.timeline, collisions: b.collisions }, null, 1)
         + "\n\nDEATH WINDOW:\n" + JSON.stringify(b.coroner ? b.coroner.death_window : {}, null, 1);
     },
     apply: function (b, o) {
@@ -299,6 +314,10 @@ var STEPS = [
     } },
   { id: "interviewer", chair: "interviewer", file: "09_interviewer.md", model: "fast",
     required: ["histories", "next_questions"],
+    handoff: function (b) { return {
+      from: ["cross_examiner"],
+      detail: (b.contradictions || []).length + " quote-checked contradiction finding(s) to compare against the statements"
+    }; },
     input: function (b) {
       return "THE STATEMENTS:\n" + docsText(["doc03", "doc04", "doc05", "doc06", "doc07", "doc08", "doc09", "doc10"])
         + "\n\nCONTRADICTIONS FOUND:\n" + JSON.stringify(b.contradictions, null, 1);
@@ -306,10 +325,16 @@ var STEPS = [
     apply: function (b, o) { b.histories = o.histories || []; b.next_questions = o.next_questions || []; } },
   { id: "prosecutor", chair: "prosecutor", file: "10_prosecutor.md", model: "fast",
     required: ["sufficiency", "vetoes"],
+    handoff: function (b) { return {
+      from: ["csi", "analyst", "digital", "cross_examiner", "interviewer"],
+      detail: (b.contradictions || []).length + " contradictions, " + (b.alibis || []).length + " alibis, " + ((b.csi_gaps || []).length + (b.ce_gaps || []).length) + " evidence gaps, and " + (b.collisions || []).length + " timeline collision(s)"
+    }; },
     input: function (b) {
       return "THE BOARD:\n" + JSON.stringify({
         contradictions: b.contradictions, alibis: b.alibis,
-        csi_gaps: b.csi_gaps, ce_gaps: b.ce_gaps, collisions: b.collisions
+        csi_gaps: b.csi_gaps, ce_gaps: b.ce_gaps, collisions: b.collisions,
+        csi_ledger: b.ledger, timeline: b.timeline, machine_records: b.machine,
+        interviews: b.histories, next_questions: b.next_questions
       }, null, 1);
     },
     apply: function (b, o) {
@@ -318,12 +343,19 @@ var STEPS = [
     } },
   { id: "lead_detective", chair: "lead_detective", file: "11_lead_detective.md", model: "reasoning",
     required: ["leads", "gaps", "brief"],
+    handoff: function (b) { return {
+      from: ["coroner", "csi", "analyst", "digital", "cross_examiner", "interviewer", "prosecutor"],
+      detail: "current board: " + (b.contradictions || []).length + " contradictions, " + (b.alibis || []).length + " alibis, " + ((b.csi_gaps || []).length + (b.ce_gaps || []).length) + " evidence gaps, " + (b.collisions || []).length + " timeline collision(s), and " + (b.sufficiency || []).length + " court-review item(s)"
+    }; },
     input: function (b) {
       return "THE BOARD:\n" + JSON.stringify({
         coroner: b.coroner ? { cause: b.coroner.cause, manner: b.coroner.manner, death_window: b.coroner.death_window } : null,
         contradictions: b.contradictions, alibis: b.alibis,
-        csi_gaps: b.csi_gaps, ce_gaps: b.ce_gaps, collisions: b.collisions,
-        timeline: b.timeline, sufficiency: b.sufficiency
+        csi_ledger: b.ledger, csi_gaps: b.csi_gaps, ce_gaps: b.ce_gaps,
+        collisions: b.collisions, timeline: b.timeline, digital: b.machine,
+        interviews: b.histories, next_questions: b.next_questions,
+        sufficiency: b.sufficiency, prosecutor_vetoes: b.vetoes,
+        corroboration_needed: b.corroboration_needed
       }, null, 1);
     },
     apply: function (b, o) { b.leads = o.leads || []; b.gaps = o.gaps || []; b.brief = o.brief || ""; } }
@@ -331,7 +363,7 @@ var STEPS = [
 
 function countFindings(o) {
   var n = 0;
-  Object.keys(o || {}).forEach(function (k) { if (Array.isArray(o[k])) n += o[k].length; });
+  Object.keys(o || {}).forEach(function (k) { if (k !== "squad_note" && Array.isArray(o[k])) n += o[k].length; });
   return n;
 }
 
@@ -347,6 +379,7 @@ function schemaErrors(step, o) {
   (step.required || []).forEach(function (k) {
     if (!(k in o)) errs.push("missing key: " + k);
   });
+  if (!validSquadNote(o.squad_note)) errs.push("missing or invalid quote-backed squad note");
   return errs;
 }
 
@@ -355,30 +388,27 @@ function chairName(id) {
   var c = CHAIRS.filter(function (x) { return x.id === id; })[0];
   return c ? c.name : id;
 }
-async function runStep(step, book, hooks, cachedOutputs) {
+function noteRecipients(step, book) {
+  return STEPS.filter(function (target) {
+    return target.handoff && target.handoff(book).from.indexOf(step.id) !== -1;
+  });
+}
+async function runStep(step, book, hooks) {
   hooks.chair(step.chair, "running", null);
   var ev = hooks.event || function () {};
   try {
     var output;
-    if (step.id === "records" && book.door2 && book.door2.name && findFixture(book.door2.name)) {
-      // The census is a pull, not a judgment: when the Door 2 name
-      // matches a bundled fixture, the sim answers from the fixture
-      // — ahead of both the cache and the model.
-      ev(chairName(step.chair), step.id + ": census answered from the bundled fixture (a pull, not a judgment)");
-      output = buildRecordsFromFixture(findFixture(book.door2.name));
-      var ferrs = schemaErrors(step, output);
-      if (ferrs.length) throw new Error("fixture schema: " + ferrs.join("; "));
-      if (hooks.delay) await hooks.delay();
-    } else if (cachedOutputs && cachedOutputs[step.id]) {
-      ev(chairName(step.chair), step.id + ": replaying the cached run");
-      output = cachedOutputs[step.id];
-      if (hooks.delay) await hooks.delay();
-    } else {
+    {
       var model = modelNameFor(step);
       ev(chairName(step.chair), step.id + ": " + model + " took the file");
       var prompt = PROMPTS[step.file];
       if (!prompt) throw new Error("prompt file missing: " + step.file);
+      var recipients = noteRecipients(step, book);
+      var targetNames = recipients.map(function (target) { return chairName(target.chair); }).join(", ") || "the squad room";
+      prompt += "\n\nSQUAD ROOM NOTE: Add a top-level `squad_note` object to your JSON: {\"message\":\"...\",\"evidence\":[{\"doc_id\":\"doc01\",\"quote\":\"exact quote from that document\"}]}. Write one short note in your own chair's voice to " + targetNames + ". Use only your findings. Every case fact in the note must be backed by an exact quote in evidence. Use at most two quotes. Do not add conclusions or facts that are absent from your structured findings. If the file cannot support a useful note, return exactly {\"message\":\"No quote-backed handoff.\",\"evidence\":[]} for squad_note.";
       var userText = step.input(book);
+      var incomingNotes = (book.squad_notes || []).filter(function (note) { return note.toStepId === step.id; });
+      if (incomingNotes.length) userText += "\n\nVERIFIED SQUAD HANDOFF NOTES:\n" + JSON.stringify(incomingNotes, null, 1);
       var models = [model];
       if ((step.model === "world" || step.model === "field") && cfg().fastModel !== model) models.push(cfg().fastModel);
       var output = null, lastErr = null;
@@ -403,6 +433,18 @@ async function runStep(step, book, hooks, cachedOutputs) {
     var drop = { n: 0 };
     var validator = VALIDATORS[step.id];
     if (validator) output = validator(output, drop, book.log);
+    var recipients = noteRecipients(step, book);
+    if (output.squad_note.message !== "No quote-backed handoff.") {
+      recipients.forEach(function (recipient) {
+        book.squad_notes.push({
+          fromChair: step.chair, toChair: recipient.chair,
+          fromStepId: step.id, toStepId: recipient.id,
+          message: output.squad_note.message,
+          evidence: output.squad_note.evidence
+        });
+      });
+      if (hooks.note) hooks.note(step, output.squad_note, recipients);
+    }
     book.dropped += drop.n;
     if (drop.n) book.log.push(step.id + ": " + drop.n + " finding(s) dropped by the quote check");
     step.apply(book, output);
@@ -418,7 +460,14 @@ async function runStep(step, book, hooks, cachedOutputs) {
   }
 }
 
-async function runAll(hooks, cachedOutputs, opts) {
+function validSquadNote(note) {
+  if (!note || typeof note.message !== "string" || !note.message.trim() || note.message.length > 500
+    || !Array.isArray(note.evidence) || note.evidence.length > 2) return false;
+  if (!note.evidence.length) return note.message === "No quote-backed handoff.";
+  return note.evidence.every(function (item) { return item && quoteOk(item.quote, item.doc_id); });
+}
+
+async function runAll(hooks, opts) {
   var book = newBook();
   if (opts && opts.door2) book.door2 = opts.door2;
   hooks = hooks || {};
@@ -428,11 +477,45 @@ async function runAll(hooks, cachedOutputs, opts) {
   hooks.step = hooks.step || function () {};
   for (var i = 0; i < STEPS.length; i++) {
     hooks.status("Working: " + STEPS[i].id.replace(/_/g, " "));
-    await runStep(STEPS[i], book, hooks, cachedOutputs);
+    await runStep(STEPS[i], book, hooks);
     hooks.step(book);
+    if (i < STEPS.length - 1 && hooks.pause) await hooks.pause();
   }
   hooks.status(book.failed_steps.length ? "Done, with failed steps: " + book.failed_steps.join("; ") : "Done" + (book.dropped ? " — quote check dropped " + book.dropped + " finding(s)" : ""));
   return book;
+}
+
+async function askAgent(chairId, question, currentBook, activeStep) {
+  var step = STEPS.filter(function (x) { return x.chair === chairId; })[0] || STEPS[STEPS.length - 1];
+  var chair = CHAIRS.filter(function (x) { return x.id === chairId; })[0] || CHAIRS[CHAIRS.length - 1];
+  var reply = await callGemini(modelNameFor(step),
+    "You are " + chair.name + ", a member of the Murder Board squad. Answer the user's question directly in 2 to 4 short sentences. Use only the provided case documents and posted agent findings. Do not decide guilt, call anyone a liar, or turn a lead into proof. If the current run is incomplete, say that. Every factual statement about the case must be backed by an exact document quote in the evidence array. Return JSON only: {\"reply\":\"...\",\"evidence\":[{\"doc_id\":\"doc01\",\"quote\":\"verbatim quote from that document\"}]}. Keep evidence to at most three quotes. If the file cannot answer, say so and return an empty evidence array.",
+    "CASE: " + CURRENT_CASE + "\nCHAIR: " + chair.name + "\nCURRENT RUN STEP: " + (activeStep || "complete") + "\nUSER: " + question + "\n\nPOSTED AGENT FINDINGS:\n" + JSON.stringify({
+      custody: currentBook.custody,
+      records: currentBook.records,
+      coroner: currentBook.coroner,
+      csi_ledger: (currentBook.ledger || []).slice(0, 40),
+      claims: (currentBook.claims || []).slice(0, 80),
+      csi_gaps: (currentBook.csi_gaps || []).slice(0, 12),
+      timeline: (currentBook.timeline || []).slice(0, 20),
+      collisions: (currentBook.collisions || []).slice(0, 12),
+      contradictions: (currentBook.contradictions || []).slice(0, 12),
+      alibis: currentBook.alibis,
+      interviews: (currentBook.histories || []).slice(0, 12),
+      sufficiency: (currentBook.sufficiency || []).slice(0, 12),
+      leads: (currentBook.leads || []).slice(0, 8),
+      gaps: (currentBook.gaps || []).slice(0, 12),
+      brief: currentBook.brief || "",
+      squad_notes: (currentBook.squad_notes || []).slice(-12),
+      failed_steps: currentBook.failed_steps || []
+    }, null, 1) + "\n\nCASE DOCUMENTS:\n" + docsText());
+  var parsed = parseModelJson(reply);
+  if (typeof parsed.reply !== "string" || !parsed.reply.trim() || !Array.isArray(parsed.evidence)) throw new Error("reply did not include an answer and source list");
+  var evidence = parsed.evidence.filter(function (item) {
+    return item && docKnown(item.doc_id) && quoteOk(item.quote, item.doc_id);
+  }).slice(0, 3);
+  if (evidence.length !== parsed.evidence.length) throw new Error("one or more cited quotes did not match the case file");
+  return { reply: parsed.reply.slice(0, 900), evidence: evidence };
 }
 
 G.MB = {
@@ -440,6 +523,7 @@ G.MB = {
   quoteOk: quoteOk, VALIDATORS: VALIDATORS, STEPS: STEPS, CHAIRS: CHAIRS,
   DOC_BY_ID: DOC_BY_ID, CASES: CASES, setCase: setCase,
   findFixture: findFixture, buildRecordsFromFixture: buildRecordsFromFixture, setLiveFixture: setLiveFixture,
+  askAgent: askAgent,
   currentCase: function () { return CURRENT_CASE; },
   docById: function (id) { return DOC_BY_ID[id]; }
 };
@@ -456,6 +540,9 @@ var book = MB.newBook();
 var chairEls = {};
 var quoteReturnFocus = null;
 var profileReturnFocus = null;
+var runInProgress = false;
+var activeStepId = null;
+var questionInProgress = false;
 
 function el(id) { return document.getElementById(id); }
 function esc(s) {
@@ -759,6 +846,7 @@ function setChair(id, state, count) {
   d.classList.remove("running", "done", "failed");
   if (state !== "idle") d.classList.add(state);
   if (count != null) d.querySelector(".count").textContent = count + " posted";
+  if (state === "running") setFeedActivity(agentOf(id) + " is reviewing the assigned packet…");
 }
 
 function renderRegistry() {
@@ -1087,15 +1175,6 @@ function showScreen(name) {
   if (name === "board") scheduleYarn();
 }
 
-function cacheForCurrentCase() {
-  return (window.CACHE_BY_CASE || {})[MB.currentCase()] || null;
-}
-function updateCacheAvailability() {
-  var c = cacheForCurrentCase();
-  el("cacheToggle").disabled = !c;
-  el("cacheLabel").textContent = c ? "" : "no cached run saved for this case yet";
-}
-
 var AGENT_NAMES = {
   first_officer: "Mara Voss", records: "Elias Renn", coroner: "Dr. Ines Halden",
   csi: "Kojo Mensah", analyst: "Lucia Ibarra", digital: "Felix Quill",
@@ -1111,31 +1190,72 @@ function modelOfChair(chairId) {
   var st = MB.STEPS.filter(function (x) { return x.chair === chairId; })[0];
   return st ? String(MB.modelFor(st)).replace("gemini-4-", "").toUpperCase() : "";
 }
-var pendingReport = null;
 function trunc(t, n) { t = String(t == null ? "" : t); return t.length > n ? t.slice(0, n - 1) + "\u2026" : t; }
 
-var feedLogSeen = 0;
-function chatBubble(chairId, text, kind) {
+var STEP_ACTIVITY = {
+  custody: "checking the document registry and custody lines",
+  records: "checking the case's records leads",
+  coroner: "setting the medical findings and death window",
+  csi: "reconciling the evidence ledger",
+  intake: "extracting people, claims, and events from the file",
+  analyst: "placing events against the death window",
+  digital: "checking records from phones and machines",
+  cross_examiner: "testing claims against the documents",
+  interviewer: "comparing statement changes",
+  prosecutor: "stress testing the board for court",
+  lead_detective: "ranking the next investigative steps"
+};
+function setFeedActivity(text) {
+  var status = el("feedActivity");
+  if (status) {
+    status.textContent = text;
+    status.setAttribute("data-active", runInProgress ? "true" : "false");
+  }
+}
+function chatBubble(chairId, text, kind, extra) {
   var box = el("liveFeed");
   if (!box) return;
+  extra = extra || {};
   var idle = box.querySelector(".feed-idle");
   if (idle) idle.remove();
   var d = document.createElement("div");
   var t = new Date().toLocaleTimeString([], { hour12: false });
+  var sources = (extra.evidence || []).map(function (item) {
+    return '<div class="chat-source"><button type="button" data-doc-id="' + esc(item.doc_id) + '">' + esc(item.doc_id + " · " + docTitle(item.doc_id)) + '</button><blockquote>' + esc(item.quote) + '</blockquote></div>';
+  }).join("");
+  var route = extra.recipients ? '<span class="chat-route">to ' + esc(extra.recipients.map(function (recipient) { return agentOf(recipient.chair) + " · " + chairNameOf(recipient.chair); }).join(", ") || "the squad room") + '</span>' : "";
   if (kind === "system" || kind === "runner") {
     d.className = "chat-line " + kind;
     d.innerHTML = '<span class="ft">' + t + '</span> ' + esc(text);
+  } else if (kind === "summary") {
+    d.className = "chat-line summary";
+    d.innerHTML = '<div class="chat-head"><span class="chat-name">Board summary</span><span class="chat-role">Current board · no live model reply</span><span class="ft">' + t + "</span></div>" + '<div class="chat-text">' + esc(text) + "</div>" + sources;
   } else if (kind === "you") {
     d.className = "chat-line you";
     d.innerHTML = '<div class="chat-head"><span class="chat-name">You</span><span class="ft">' + t + '</span></div><div class="chat-text">' + esc(text) + "</div>";
   } else {
-    d.className = "chat-line agent" + (kind === "fail" ? " fail" : "");
-    d.innerHTML = '<div class="chat-head"><span class="chat-name">' + esc(agentOf(chairId)) + '</span><span class="chat-role">' + esc(chairNameOf(chairId)) + " \u00b7 " + esc(modelOfChair(chairId)) + '</span><span class="ft">' + t + "</span></div>" +
-      '<div class="chat-text">' + esc(text) + "</div>";
+    d.className = "chat-line agent" + (kind === "fail" ? " fail" : "") + (kind === "note" ? " handoff" : "");
+    d.innerHTML = '<div class="chat-head">' + (kind === "note" ? '<span class="handoff-tag">HANDOFF</span>' : "") + '<span class="chat-name">' + esc(agentOf(chairId)) + '</span><span class="chat-role">' + esc(chairNameOf(chairId)) + " \u00b7 " + esc(modelOfChair(chairId)) + '</span>' + route + '<span class="ft">' + t + "</span></div>" +
+      '<div class="chat-text">' + esc(text) + "</div>" + sources;
   }
   box.appendChild(d);
+  Array.prototype.forEach.call(d.querySelectorAll(".chat-source button"), function (button) {
+    button.addEventListener("click", function () { openDocument(button.getAttribute("data-doc-id"), button); });
+  });
   while (box.children.length > 120) box.removeChild(box.firstChild);
   box.scrollTop = box.scrollHeight;
+}
+function chatTyping(chairId, text) {
+  var box = el("liveFeed");
+  if (!box) return null;
+  var idle = box.querySelector(".feed-idle");
+  if (idle) idle.remove();
+  var d = document.createElement("div");
+  d.className = "chat-line typing";
+  d.innerHTML = '<div class="chat-head"><span class="chat-name">' + esc(agentOf(chairId)) + '</span><span class="chat-role">' + esc(chairNameOf(chairId)) + " \u00b7 " + esc(modelOfChair(chairId)) + '</span></div><div class="chat-text"><span>' + esc(text) + '</span><i class="typing-dots" aria-hidden="true"><b></b><b></b><b></b></i></div>';
+  box.appendChild(d);
+  box.scrollTop = box.scrollHeight;
+  return d;
 }
 function chairNameOf(chairId) {
   var c = MB.CHAIRS.filter(function (x) { return x.id === chairId; })[0];
@@ -1145,79 +1265,39 @@ function feedLine(chair, text) {
   var cid = chairIdByName(chair);
   if (!cid) { chatBubble(null, text, chair === "Runner" ? "runner" : "system"); return; }
   var m;
-  if ((m = String(text).match(/^(\S+): (gemini-\S+) took the file$/))) {
-    chatBubble(cid, "Taking the file. Reading now.");
-  } else if (/: replaying the cached run$/.test(text)) {
-    chatBubble(cid, "Working from the saved run.");
-  } else if ((m = String(text).match(/^(\S+): posted (\d+) finding/))) {
-    pendingReport = { stepId: m[1], chairId: cid, count: parseInt(m[2], 10) };
+  if ((m = String(text).match(/^(\S+): gemini-\S+ took the file$/))) {
+    activeStepId = m[1];
+    setFeedActivity(agentOf(cid) + " is " + (STEP_ACTIVITY[activeStepId] || "reviewing the file") + "…");
+  } else if (/^\S+: posted \d+ finding/.test(String(text))) {
+    setFeedActivity(agentOf(cid) + " posted a checked report to the squad room.");
   } else if ((m = String(text).match(/^(\S+): FAILED, (.*)$/))) {
-    chatBubble(cid, "I hit a wall: " + m[2], "fail");
+    activeStepId = null;
+    setFeedActivity(agentOf(cid) + " could not finish this step.");
+    chatBubble(cid, "I couldn't finish this step: " + m[2], "fail");
   } else if ((m = String(text).match(/^\S+: (census answered.*)$/))) {
-    chatBubble(cid, m[1]);
+    setFeedActivity("Records is checking the bundled, labeled census fixture…");
   } else {
     chatBubble(cid, text);
   }
 }
-function composeReport(stepId, b, count) {
-  var o = b.outputs[stepId];
-  if (!o) return;
-  var st = MB.STEPS.filter(function (x) { return x.id === stepId; })[0];
-  var cid = st ? st.chair : stepId;
-  var say = function (t) { chatBubble(cid, t); };
-  if (stepId === "custody") {
-    say("File received and logged: " + (o.documents || []).length + " documents, custody noted on each. The room can work.");
-  } else if (stepId === "records") {
-    say("Census for " + (o.subject || "the name given") + ": " + (o.starter_items || []).length + " items pulled, every one labeled SOURCED or UNVERIFIED. Collisions stay on the Intake screen, shown, never merged.");
-  } else if (stepId === "coroner") {
-    var w = o.death_window || {};
-    say("Cause: " + (o.cause || "?") + ". Manner: " + (o.manner || "?") + ". Death window: " + (w.start || "?") + " to " + (w.end || "?") + ". Everything else hangs off that window.");
-  } else if (stepId === "csi") {
-    var g = (o.gaps || [])[0];
-    say("Evidence ledger checked: " + (o.ledger || []).length + " items." + (g ? " First gap: " + g.item + " \u2014 " + trunc(g.problem, 120) : " No gaps in the ledger."));
-  } else if (stepId === "intake") {
-    var names = (b.persons || []).map(function (p) { return p.name; });
-    say("Board is up: " + (o.persons || []).length + " persons, " + (o.claims || []).length + " claims pinned. " + trunc(names.slice(0, 5).join(", "), 90) + (names.length > 5 ? ", and " + (names.length - 5) + " more." : "."));
-  } else if (stepId === "analyst") {
-    var col = (o.collisions || [])[0];
-    say("One clock: " + (o.events || []).length + " events placed." + ((o.collisions || []).length ? " " + o.collisions.length + " collision(s) \u2014 " + trunc(col ? col.who_or_what : "", 80) + ": " + trunc(col ? col.explanation : "", 110) : " No collisions."));
-  } else if (stepId === "digital") {
-    var me = (o.machine_events || [])[0];
-    say("Machines checked: " + (o.record_checks || []).length + " records." + (me ? " " + me.what + " (" + me.when_text + ") \u2014 " + trunc(me.proves, 110) : ""));
-  } else if (stepId === "cross_examiner") {
-    var top = (o.contradictions || []).slice().sort(function (a, z) { return ({ high: 0, medium: 1, low: 2 })[a.severity] - ({ high: 0, medium: 1, low: 2 })[z.severity]; })[0];
-    if (top) say("\u201c" + trunc(top.a_quote, 120) + "\u201d \u2014 against \u2014 \u201c" + trunc(top.b_quote, 120) + "\u201d (" + top.a_doc + " / " + top.b_doc + "). That is a " + String(top.severity).toUpperCase() + ".");
-    var contra = (o.alibis || []).filter(function (a) { return a.rating === "contradicted"; });
-    if (contra.length) contra.forEach(function (a) { say(a.person + ": alibi CONTRADICTED."); });
-    else if ((o.alibis || []).length) say("Alibis rated: " + o.alibis.map(function (a) { return a.person + " " + String(a.rating).toUpperCase(); }).join(", ") + ".");
-  } else if (stepId === "interviewer") {
-    var h = (o.histories || [])[0];
-    say(((h ? h.person + " moved between statements" : "Statements compared")) + ": " + (o.next_questions || []).length + " questions queued for the next interviews." + (h && h.changes && h.changes[0] ? " First drift: " + trunc(h.changes[0].topic, 100) + "." : ""));
-  } else if (stepId === "prosecutor") {
-    say("Court test run on " + (o.sufficiency || []).length + " subjects. " + (o.vetoes || []).length + " phrases flagged in the brief; toggle the Prosecutor's cuts on the Brief screen to see them struck.");
-  } else if (stepId === "lead_detective") {
-    var lead = (o.leads || [])[0];
-    if (lead) say("Top lead, " + lead.score + ": " + trunc(lead.action, 130));
-    say("The book is built. Board, clock, judgments and brief are on the screens. It judges the file; the detective does the detecting.");
-  } else {
-    say("Posted " + count + " finding(s).");
-  }
-}
-
-function flushLog(b) {
-  if (!b || !b.log) return;
-  while (feedLogSeen < b.log.length) {
-    feedLine("Runner", b.log[feedLogSeen]);
-    feedLogSeen++;
-  }
-}
-
 async function work() {
-  var cached = cacheForCurrentCase();
-  var useCache = el("cacheToggle").checked && cached;
+  if (runInProgress) {
+    chatBubble("lead_detective", "The squad is already working this file. Ask me for a status update and I’ll tell you which step is active.");
+    return;
+  }
+  if (!(window.MB_CONFIG && window.MB_CONFIG.apiKey)) {
+    setFeedActivity("Live work needs a Gemini API key.");
+    chatBubble("lead_detective", "I need a Gemini API key to work the file live. Paste it in the top bar, then start the case.");
+    return;
+  }
+  runInProgress = true;
   el("workBtn").disabled = true;
+  el("caseSelect").disabled = true;
   MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
-  feedLogSeen = 0;
+  activeStepId = null;
+  book = MB.newBook();
+  renderAll();
+  setFeedActivity("Live run: waiting for the first agent result.");
   chatBubble(null, "Run opened: " + caseShortTitle(MB.currentCase()) + ". Ten chairs, four models.", "system");
   var runT0 = Date.now();
   var runTimer = setInterval(function () {
@@ -1227,41 +1307,81 @@ async function work() {
   el("dropChip").classList.add("hidden");
   var hooks = {
     chair: setChair,
-    status: function (s) { el("runStatus").textContent = s; },
+    status: function (s) {
+      el("runStatus").textContent = s;
+      if (s.indexOf("Working: ") === 0) {
+        activeStepId = s.slice(9).replace(/ /g, "_");
+        var st = MB.STEPS.filter(function (x) { return x.id === activeStepId; })[0];
+        if (st) setFeedActivity(agentOf(st.chair) + " is " + (STEP_ACTIVITY[activeStepId] || "reviewing the file") + "…");
+      }
+    },
     event: feedLine,
-    step: function (b) { book = b; renderAll(); flushLog(b);
-      if (b.dropped > 0) { var dc = el("dropChip"); dc.textContent = "Quote check dropped: " + b.dropped; dc.classList.remove("hidden"); }
-      if (pendingReport) { composeReport(pendingReport.stepId, b, pendingReport.count); pendingReport = null; } },
-    delay: function () { return new Promise(function (r) { setTimeout(r, 650); }); }
+    note: function (step, note, recipients) {
+      activeStepId = null;
+      chatBubble(step.chair, note.message, "note", { evidence: note.evidence, recipients: recipients });
+    },
+    step: function (b) { book = b; renderAll();
+      if (b.dropped > 0) { var dc = el("dropChip"); dc.textContent = "Quote check dropped: " + b.dropped; dc.classList.remove("hidden"); } },
+    pause: function () { return new Promise(function (r) { setTimeout(r, 700); }); }
   };
   var door2 = null;
   var d2name = el("door2Name");
   if (d2name && d2name.value.trim()) {
     door2 = { name: d2name.value.trim(), dob: el("door2Dob").value.trim(), state: el("door2State").value.trim() };
   }
-  if (useCache) {
-    var cd = cached.created_at ? new Date(cached.created_at) : null;
-    var when = cd ? (cd.toDateString() === new Date().toDateString() ? "today, " + cd.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : cd.toLocaleDateString() + ", " + cd.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })) : "this morning";
-    el("cacheLabel").textContent = "Ran " + when + " (saved run)";
-    book = await MB.runAll(hooks, cached.outputs, { door2: door2 });
-    if (cached.dropped) { book.dropped = cached.dropped; var dc2 = el("dropChip"); dc2.textContent = "Quote check dropped: " + book.dropped; dc2.classList.remove("hidden"); }
-    if (book.dropped) {
-      feedLine("Runner", "this replay carries the original run's quote check: " + book.dropped + " finding(s) were dropped for having no quote in the file");
-      if (!book.failed_steps.length) el("runStatus").textContent = "Done — quote check dropped " + book.dropped + " finding(s)";
-    }
-  } else {
-    el("cacheLabel").textContent = "";
-    if (!(window.MB_CONFIG && window.MB_CONFIG.apiKey)) {
-      el("runStatus").textContent = "No API key in config.js. Copy config.example.js to config.js and add the key.";
-      el("workBtn").disabled = false;
-      return;
-    }
-    book = await MB.runAll(hooks, null, { door2: door2 });
-    el("cacheLabel").textContent = "Ran today, " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + " (live)";
+  try {
+    book = await MB.runAll(hooks, { door2: door2 });
+  } catch (error) {
+    el("runStatus").textContent = "Run stopped: " + (error && error.message ? error.message : String(error));
+    chatBubble("lead_detective", "The runner stopped before the case was complete: " + (error && error.message ? error.message : String(error)), "fail");
+  } finally {
+    clearInterval(runTimer);
+    runInProgress = false;
+    activeStepId = null;
+    renderAll();
+    el("workBtn").disabled = false;
+    el("caseSelect").disabled = false;
+    setFeedActivity(book.failed_steps.length ? "Run complete with a failed step. Check the run status above." : "Run complete. Ask about the findings or open the board, clock, judgments, or brief.");
   }
-  clearInterval(runTimer);
-  renderAll();
-  el("workBtn").disabled = false;
+}
+
+function answerChair(question) {
+  var q = question.toLowerCase();
+  if (/\b(death|medical|coroner|wound|cause of death|manner of death)\b/.test(q)) return "coroner";
+  if (/\b(ledger|evidence|casing|shell|scene item|physical evidence)\b/.test(q)) return "csi";
+  if (/\b(timeline|chronology|when did|where was|time window|clock)\b/.test(q)) return "analyst";
+  if (/\b(alibi|contradict|conflict|innocent alternative)\b/.test(q)) return "cross_examiner";
+  if (/\b(statement|interview|what changed|next question)\b/.test(q)) return "interviewer";
+  if (/\b(court|prosecutor|sufficien|overclaim)\b/.test(q)) return "prosecutor";
+  if (/\b(census|record|alias|same name|identity)\b/.test(q)) return "records";
+  if (/\b(phone|camera|machine|call log|digital)\b/.test(q)) return "digital";
+  return "lead_detective";
+}
+
+async function answerQuestion(question) {
+  var chairId = answerChair(question);
+  if (!(window.MB_CONFIG && window.MB_CONFIG.apiKey)) {
+    chatBubble(null, "Add a Gemini API key in the top bar for a live answer.", "system");
+    return;
+  }
+  if (questionInProgress) {
+    chatBubble(null, "A live answer is still in progress. Try again in a moment.", "system");
+    return;
+  }
+  questionInProgress = true;
+  var typing = chatTyping(chairId, "Checking the current board and case documents");
+  setFeedActivity(agentOf(chairId) + " is checking your question against the file…");
+  try {
+    var answer = await MB.askAgent(chairId, question, book, activeStepId);
+    if (typing && typing.parentNode) typing.parentNode.removeChild(typing);
+    chatBubble(chairId, answer.reply, null, { evidence: answer.evidence });
+  } catch (error) {
+    if (typing && typing.parentNode) typing.parentNode.removeChild(typing);
+    chatBubble(null, "The live answer could not be verified: " + (error && error.message ? error.message : String(error)), "system");
+  } finally {
+    questionInProgress = false;
+    setFeedActivity(runInProgress ? "The squad is still working. You can ask another question." : "Ask about the findings or open the board, clock, judgments, or brief.");
+  }
 }
 
 function sendChat() {
@@ -1271,21 +1391,30 @@ function sendChat() {
   inp.value = "";
   chatBubble(null, text, "you");
   var low = text.toLowerCase();
+  var asksStatus = /\b(what(?:'s|s| is) going on|what(?:'s|s| is) happening|status|update|where are we|what have you found|how(?:'s|s| is) the case going)\b/.test(low);
   var caseHit = null;
   if (/delgado/.test(low)) caseHit = "delgado-2019";
   else if (/screens|trey/.test(low)) caseHit = "screens-2025";
   else if (/harborlight|marsh/.test(low)) caseHit = "harborlight-2016";
   else if (/duck|fbg|weekly/.test(low)) caseHit = "duck-2020";
   var sel = el("caseSelect");
+  if (runInProgress && caseHit && caseHit !== MB.currentCase()) {
+    chatBubble("lead_detective", "The squad is working " + caseShortTitle(MB.currentCase()) + " now. I’ll finish this file before switching cases.");
+    return;
+  }
   if (caseHit && sel.value !== caseHit) {
     sel.value = caseHit;
     sel.dispatchEvent(new Event("change"));
-    if (!/work|run|start|go\b/.test(low)) return;
-    if (cacheForCurrentCase()) return;
+    if (!/^(work|run|start|go)\b/.test(low)) {
+      if (asksStatus) answerQuestion(text);
+      else chatBubble("lead_detective", "Switched to " + caseShortTitle(caseHit) + ". Ask for a status update or tell me to work the case.");
+      return;
+    }
     work();
     return;
   }
-  if (/work|run|start|go\b/.test(low)) { work(); return; }
+  if (/^(work|run|start|go)\b/.test(low)) { work(); return; }
+  if (asksStatus) { answerQuestion(text); return; }
   var screens = { board: "board", clock: "clock", judgment: "judgments", brief: "brief", intake: "intake", file: "intake", eval: "eval" };
   var hit = Object.keys(screens).filter(function (k) { return low.indexOf(k) !== -1; })[0];
   if (hit) {
@@ -1293,7 +1422,7 @@ function sendChat() {
     chatBubble("lead_detective", screens[hit] === "board" ? "Board's up." : screens[hit] === "brief" ? "Brief's on the screen." : "On the screen.");
     return;
   }
-  chatBubble("lead_detective", "Copy. Orders I take: \u201cwork the case\u201d, a case name (Delgado, Screens, Harborlight, Duck), or a screen (board, clock, judgments, brief).");
+  answerQuestion(text);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -1303,13 +1432,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var v = lk.value.trim();
     if (v) {
       window.MB_CONFIG = { reasoningModel: "gemini-4-argon", fastModel: "gemini-4-carbon", worldModel: "gemini-4-hydrogen", fieldModel: "gemini-4-neon", apiKey: v };
-      el("cacheToggle").checked = false;
       el("liveDot").classList.remove("hidden");
-      el("cacheLabel").textContent = "live mode: the next run makes real calls";
     } else {
       window.MB_CONFIG = undefined;
       el("liveDot").classList.add("hidden");
-      el("cacheLabel").textContent = "";
     }
   });
   el("chatSend").addEventListener("click", sendChat);
@@ -1334,8 +1460,6 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCaseFolder();
     renderRegistry();
     renderAll();
-    updateCacheAvailability();
-    if (cacheForCurrentCase()) { el("cacheToggle").checked = true; work(); }
   });
   renderRegistry();
   renderCaseFolder();
@@ -1364,7 +1488,5 @@ document.addEventListener("DOMContentLoaded", function () {
   el("printBtn").addEventListener("click", function () { window.print(); });
   el("vetoToggle").addEventListener("change", renderBrief);
   window.addEventListener("resize", function () { scheduleYarn(); });
-  updateCacheAvailability();
-  if (cacheForCurrentCase()) { el("cacheToggle").checked = true; work(); }
 });
 })();

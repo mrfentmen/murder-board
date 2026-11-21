@@ -16,10 +16,8 @@
     <p class="proof-links"><a href="https://github.com/mrfentmen/murder-board" target="_blank" rel="noopener">Public repo</a> · <a href="https://github.com/mrfentmen/murder-board/blob/main/EVAL.md" target="_blank" rel="noopener">The evaluation</a> · <a href="https://github.com/mrfentmen/murder-board/blob/main/DEMO_SCRIPT.md" target="_blank" rel="noopener">Demo script</a> · Built today at Gemini 4 NYC</p>
   </div>
   <div class="runbox">
-    <input id="liveKey" type="password" placeholder="Live key: paste to run live" size="18" autocomplete="off" title="Runs the squad live against the Gemini API. The key stays in this tab only. It is never saved and never sent anywhere but Google.">
+    <input id="liveKey" type="password" placeholder="Live key: paste to run live" size="18" autocomplete="off" title="Runs the squad and live question replies against Gemini API. The key stays in this tab only. It is never saved and never sent anywhere but Google.">
     <span id="liveDot" class="live-dot hidden">● LIVE</span>
-    <label class="cache-toggle"><input type="checkbox" id="cacheToggle"> Replay cached run</label>
-    <span id="cacheLabel" class="cache-label"></span>
     <button id="workBtn">Work the Case</button>
     <span id="runStatus" class="run-status"></span>
     <span id="runClock" class="run-clock"></span>
@@ -39,17 +37,18 @@
 </section>
 
 <section class="feed-wrap" aria-label="Squad room">
-  <div class="feed-head"><span>SQUAD ROOM</span><span>the squad talks here. every report is real output from the run</span></div>
-  <div id="liveFeed" class="live-feed chat-feed"><div class="feed-line feed-idle">Tell the room to work the case. They post here as they work.</div></div>
+  <div class="feed-head"><span>SQUAD ROOM</span><span>Live notes come from the agents. The runner passes their checked findings to the next chair.</span><span id="feedActivity" aria-live="polite">Add a Gemini key, then work the case.</span></div>
+  <div id="liveFeed" class="live-feed chat-feed" aria-live="polite"><div class="feed-line feed-idle">The room shows findings from the case file and the handoffs between agents.</div></div>
   <div class="chat-chips">
     <button class="chip" data-say="Work the case">Work the case</button>
+    <button class="chip" data-say="What's going on?">What’s going on?</button>
     <button class="chip" data-say="Work the Duck case">The Duck case</button>
     <button class="chip" data-say="Work the Harborlight case">Harborlight</button>
     <button class="chip" data-say="Show me the board">The board</button>
     <button class="chip" data-say="Show me the brief">The brief</button>
   </div>
   <div class="chat-input">
-    <input id="chatText" type="text" placeholder="Talk to the squad room: &quot;work the case&quot;, &quot;work the Duck case&quot;, &quot;the board&quot;&hellip;" autocomplete="off">
+    <input id="chatText" type="text" placeholder="Ask the Lead Detective what’s happening, or ask about a finding…" autocomplete="off">
     <button id="chatSend">Send</button>
   </div>
 </section>
@@ -181,7 +180,6 @@
 <script src="case-data.js"></script>
 <script src="agents-data.js"></script>
 <script src="records-data.js"></script>
-<script src="cache-data.js"></script>
 <script src="eval-data.js"></script>
 <script src="photos-data.js"></script>
 <script src="app.js"></script>

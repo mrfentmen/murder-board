@@ -2,8 +2,8 @@
 // Live pipeline harness: runs the app's own runner in Node, with the
 // Gemini transport routed through the connector helper (the API key
 // never enters this process; the helper carries a surrogate).
-// Writes the fallback cache: cache/delgado-2019.json and
-// app/cache-data.js. Run from the repo root: node tools/run_live.js
+// Writes a live-run archive for evaluation. The app does not load it.
+// Run from the repo root: node tools/run_live.js
 "use strict";
 const { spawnSync } = require("child_process");
 const fs = require("fs");
@@ -47,7 +47,7 @@ const MB = require(path.join(ROOT, "app", "app.js"));
   const book = await MB.runAll({
     chair: (id, state, count) => console.log("chair", id, state, count == null ? "" : count),
     status: (s) => console.log("status", s)
-  }, null, { door2: door2 });
+  }, { door2: door2 });
   const secs = ((Date.now() - t0) / 1000).toFixed(0);
   console.log("=== RUN DONE in " + secs + "s ===");
   console.log("failed steps:", JSON.stringify(book.failed_steps));

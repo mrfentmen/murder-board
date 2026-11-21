@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-// Repair run: rebuild the book from the saved cache outputs and call
-// live only for steps missing from the cache. Rewrites the cache.
+// Refresh a run archive with a complete live run. The app does not load it.
 // Run from the repo root: node tools/repair_run.js
 "use strict";
 const { spawnSync } = require("child_process");
@@ -35,15 +34,13 @@ global.__MB_TRANSPORT = function (model, systemText, userText) {
 const MB = require(path.join(ROOT, "app", "app.js"));
 
 (async () => {
-  const cache = JSON.parse(fs.readFileSync(path.join(ROOT, "cache", CASE_ID + ".json"), "utf8"));
-  console.log("cached steps:", Object.keys(cache.outputs).join(", "));
-  const book = await MB.runAll({ chair: () => {}, status: (s) => console.log("status", s) }, cache.outputs);
+  const book = await MB.runAll({ chair: () => {}, status: (s) => console.log("status", s) });
   console.log("failed steps:", JSON.stringify(book.failed_steps));
   console.log("leads:", book.leads.map((l) => l.score + " " + l.action).join(" | "));
   console.log("gaps order (csi):", book.csi_gaps.slice(0, 3).map((g) => g.item).join(" | "));
   console.log("brief chars:", book.brief.length);
   console.log("log:", book.log.join(" ; "));
-  const out = { created_at: new Date().toISOString(), outputs: book.outputs, dropped: cache.dropped || book.dropped, run_log: cache.run_log || book.log };
+  const out = { created_at: new Date().toISOString(), outputs: book.outputs, dropped: book.dropped, run_log: book.log };
   fs.writeFileSync(path.join(ROOT, "cache", CASE_ID + ".json"), JSON.stringify(out, null, 1));
-  console.log("cache rewritten with", Object.keys(book.outputs).length, "steps");
+  console.log("live-run archive written with", Object.keys(book.outputs).length, "steps");
 })().catch((e) => { console.error("REPAIR ERROR", e); process.exit(1); });
