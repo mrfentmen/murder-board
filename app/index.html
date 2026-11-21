@@ -36,6 +36,7 @@
   <button data-screen="judgments" class="tab">4 Judgments</button>
   <button data-screen="brief" class="tab">5 The Brief</button>
   <button data-screen="eval" class="tab">6 The Eval</button>
+  <button data-screen="reddit" class="tab">7 The Reddit</button>
 </nav>
 
 <div class="models-line"><b>ARGON</b> judges &nbsp;·&nbsp; <b>CARBON</b> builds &nbsp;·&nbsp; <b>HYDROGEN</b> holds the world &nbsp;·&nbsp; <b>NEON</b> works the machines</div>
@@ -61,6 +62,7 @@
     <button class="chip" data-say="Work the Harborlight case">Harborlight</button>
     <button class="chip" data-say="Show me the board">The board</button>
     <button class="chip" data-say="Show me the brief">The brief</button>
+    <button class="chip" data-say="What are people saying on the Reddit about this case?">The Reddit</button>
   </div>
   <div class="chat-input">
     <input id="chatText" type="text" placeholder="Ask the Lead Detective what’s happening, or ask about a finding…" autocomplete="off">
@@ -145,6 +147,11 @@
     </div>
     <div id="briefHead" class="brief-head"></div>
     <article id="briefPage" class="brief-page"></article>
+  </section>
+  <section id="screen-reddit" class="screen">
+    <h2>The Reddit <span class="sim-tag">SIMULATED</span></h2>
+    <p class="evidence-note">The case's public posts, in their native habitat. Same evidence as the table, word for word — this is where the internet detectives read it. The squad reads it too: ask in the room, "What are people saying on the Reddit?"</p>
+    <div id="redditFeed"></div>
   </section>
 </main>
 
