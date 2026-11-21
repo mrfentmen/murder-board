@@ -24,7 +24,7 @@ is not in the file is dropped before it can reach the board.
 **Problem Statement One, 5 Sigma.** A real task agents struggle
 with (judging a case file without inventing evidence), a system
 that does it reliably, and proof: `EVAL.md` scores the squad
-against a single-model-call baseline on all three cases, with
+against a single-model-call baseline on all four cases, with
 the failure analysis left in.
 
 All four Gemini 4 models, four clear jobs. **Argon judges**
@@ -73,6 +73,9 @@ scene report counts and the evidence ledger does not.
 - `case3/`, `CASE3_BIBLE.md` — the Harborlight File, the sim: a
   cold case built to be investigated, solved by a chain of four
   records, with the loud suspect provably out of the window.
+- `case4/`, `CASE4_BIBLE.md` — the Duck File: a real, solved
+  case (Chicago, 2020) rebuilt from the public record and run
+  blind, scored against what actually solved it.
 - `EVAL.md` — the squad against a single model call, scored
   against the bibles, failures included.
 - `records/` — the Door 2 census fixtures (fictional), with the
@@ -87,21 +90,27 @@ no build step): open it through any static server, copy
 `config.example.js` to `config.js`, add the Gemini API key, and
 press Work the Case. Model map: `gemini-4-argon` judges for the
 Cross-Examiner and the Lead Detective; `gemini-4-carbon` builds
-every other step. Full live runs of all three cases are saved as
+the book; `gemini-4-hydrogen` holds the world for the Analyst;
+`gemini-4-neon` works the machines for Digital. Full live runs
+of all four cases are saved as
 the replay cache (`app/cache-data.js`), so the demo survives a
 network failure, and the site now works the selected case from
 its cache on its own when the page opens. The Board screen is a
 corkboard: pinned cards, sticky notes for the gaps, and yarn for
 the threads, red where the file contradicts itself.
 
-The app carries three cases. The Delgado file is a police file.
+The app carries four cases. The Delgado file is a police file.
 The Screens File (`CASE2_BIBLE.md`, `case2/`) is the internet
 case: a fictional Brooklyn drill killing whose whole file is
 public posts, a plate cam still, a podcast transcript, and the
 Reddit thread where strangers collated the night. Same squad,
 same checks. Its first live run caught both planted
 contradictions at HIGH, rated the poster CONTRADICTED, and
-carried the innocent reading on the partial plate.
+carried the innocent reading on the partial plate. The Duck
+File (`CASE4_BIBLE.md`, `case4/`) is the real one: the 2020
+Chicago killing of Carlton "FBG Duck" Weekly, rebuilt from
+court filings and reporting, run blind and scored in
+`EVAL.md` against what actually solved it.
 
 First live run, scored against `EXPECTED_FINDINGS.md`: the Webb car
 contradiction at HIGH with the tow record quote, the Whitfield
