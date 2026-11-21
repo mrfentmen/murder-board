@@ -423,7 +423,7 @@ async function runAll(hooks, cachedOutputs, opts) {
     await runStep(STEPS[i], book, hooks, cachedOutputs);
     hooks.step(book);
   }
-  hooks.status(book.failed_steps.length ? "Done, with failed steps: " + book.failed_steps.join("; ") : "Done");
+  hooks.status(book.failed_steps.length ? "Done, with failed steps: " + book.failed_steps.join("; ") : "Done" + (book.dropped ? " — quote check dropped " + book.dropped + " finding(s)" : ""));
   return book;
 }
 
@@ -923,7 +923,10 @@ async function work() {
     el("cacheLabel").textContent = "cached run from " + when;
     book = await MB.runAll(hooks, cached.outputs, { door2: door2 });
     if (cached.dropped) book.dropped = cached.dropped;
-    if (book.dropped) feedLine("Runner", "this replay carries the original run's quote check: " + book.dropped + " finding(s) were dropped for having no quote in the file");
+    if (book.dropped) {
+      feedLine("Runner", "this replay carries the original run's quote check: " + book.dropped + " finding(s) were dropped for having no quote in the file");
+      if (!book.failed_steps.length) el("runStatus").textContent = "Done — quote check dropped " + book.dropped + " finding(s)";
+    }
   } else {
     el("cacheLabel").textContent = "";
     if (!(window.MB_CONFIG && window.MB_CONFIG.apiKey)) {
