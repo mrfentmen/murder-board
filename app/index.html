@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Murder Board</title>
+<title>Murder Board: a Gemini 4 squad works a homicide file</title>
+<meta name="description" content="Ten named Gemini agents sort a homicide file into a murder book and judge it. Every finding carries a verbatim quote or it does not exist. Argon judges, Carbon builds, Hydrogen holds the world, Neon works the machines.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%238a1f1f'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23f5efe0' text-anchor='middle'%3EMB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,6 +13,7 @@
   <div class="brand">
     <h1>MURDER BOARD</h1>
     <p class="tagline">It sorts the file. It judges the file. The detective does the detecting.</p>
+    <p class="proof-links"><a href="https://github.com/mrfentmen/murder-board" target="_blank" rel="noopener">Public repo</a> · <a href="https://github.com/mrfentmen/murder-board/blob/main/EVAL.md" target="_blank" rel="noopener">The evaluation</a> · <a href="https://github.com/mrfentmen/murder-board/blob/main/DEMO_SCRIPT.md" target="_blank" rel="noopener">Demo script</a> · Built today at Gemini 4 NYC</p>
   </div>
   <div class="runbox">
     <input id="liveKey" type="password" placeholder="Live key: paste to run live" size="18" autocomplete="off" title="Runs the squad live against the Gemini API. The key stays in this tab only. It is never saved and never sent anywhere but Google.">
@@ -22,6 +25,7 @@
   </div>
 </header>
 
+<div class="models-line"><b>ARGON</b> judges &nbsp;·&nbsp; <b>CARBON</b> builds &nbsp;·&nbsp; <b>HYDROGEN</b> holds the world &nbsp;·&nbsp; <b>NEON</b> works the machines</div>
 <section id="squadStrip" class="squad-strip" aria-label="Squad room"></section>
 
 <section class="case-folder" aria-label="Case file">
