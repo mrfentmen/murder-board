@@ -502,3 +502,7 @@ h1{font-weight:800}
 .tab{font-weight:600;letter-spacing:.4px}
 .folder-stamp,.chair .model,.run-clock,#feedActivity,.chat-route,.folder-fields b{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,monospace}
 .chat-source blockquote,blockquote{font-family:Georgia,'Times New Roman',serif}
+
+.progress-track{height:10px;background:#22262c;border-radius:5px;overflow:hidden;margin:10px 0 4px}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--green));transition:width .6s ease}
+.progress-label{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:1px;color:var(--ink);opacity:.75;margin-bottom:6px}
