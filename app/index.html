@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Murder Board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <h1>MURDER BOARD</h1>
+    <p class="tagline">It sorts the file. It judges the file. The detective does the detecting.</p>
+  </div>
+  <div class="runbox">
+    <label class="cache-toggle"><input type="checkbox" id="cacheToggle"> Replay cached run</label>
+    <span id="cacheLabel" class="cache-label"></span>
+    <button id="workBtn">Work the Case</button>
+    <span id="runStatus" class="run-status"></span>
+  </div>
+</header>
+
+<section id="squadStrip" class="squad-strip" aria-label="Squad room"></section>
+
+<nav class="tabs">
+  <button data-screen="intake" class="tab active">1 Intake</button>
+  <button data-screen="board" class="tab">2 The Board</button>
+  <button data-screen="clock" class="tab">3 The Clock</button>
+  <button data-screen="judgments" class="tab">4 Judgments</button>
+  <button data-screen="brief" class="tab">5 The Brief</button>
+</nav>
+
+<main>
+  <section id="screen-intake" class="screen active">
+    <h2>The file</h2>
+    <p class="case-title" id="caseTitle"></p>
+    <table class="registry">
+      <thead><tr><th>Doc</th><th>Title</th><th>Type</th><th>Date</th><th>Author</th><th></th></tr></thead>
+      <tbody id="registryBody"></tbody>
+    </table>
+    <div id="docViewer" class="doc-viewer"></div>
+    <div class="door2">
+      <h3>Door 2: a name and a photo</h3>
+      <p>For the family member, the nonprofit, the journalist who holds a name
+      and maybe a photograph. Records runs the public census (death index,
+      obituaries, newspaper archives, court portals) and builds a labeled
+      starter file: every item SOURCED or UNVERIFIED, name collisions shown,
+      never merged. Police-only systems are out of scope and never claimed.</p>
+    </div>
+  </section>
+
+  <section id="screen-board" class="screen">
+    <h2>The Board</h2>
+    <div class="board-cols">
+      <div>
+        <h3>People</h3>
+        <div id="personCards" class="cards"></div>
+        <h3>Evidence</h3>
+        <div id="evidenceCards" class="cards"></div>
+      </div>
+      <div>
+        <h3>Threads</h3>
+        <p class="hint">Red threads are contradictions. Click one to see the two quotes side by side.</p>
+        <div id="threadList"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screen-clock" class="screen">
+    <h2>The Clock</h2>
+    <p class="hint">October 11 to October 14, 2019. The shaded band is the medical examiner's death window.</p>
+    <div id="clockStrip" class="clock-strip"></div>
+    <div id="collisionList"></div>
+  </section>
+
+  <section id="screen-judgments" class="screen">
+    <h2>Judgments</h2>
+    <p id="dropCount" class="drop-count"></p>
+    <h3>Contradictions</h3>
+    <div id="contradictionList"></div>
+    <h3>Alibis, for the death window</h3>
+    <table class="alibis"><thead><tr><th>Person</th><th>Rating</th><th>Why</th></tr></thead><tbody id="alibiBody"></tbody></table>
+    <h3>Evidence gaps</h3>
+    <div id="gapList"></div>
+    <h3>Leads</h3>
+    <p class="hint">Scores are a sort order, not a probability. The runner recomputes every score from the rubric: high contradiction 40, in the death window 25, closes a gap 20, still reachable 15.</p>
+    <div id="leadList"></div>
+    <h3>Next interview questions</h3>
+    <div id="questionList"></div>
+    <h3>The court test</h3>
+    <div id="sufficiencyList"></div>
+  </section>
+
+  <section id="screen-brief" class="screen">
+    <h2>The Brief</h2>
+    <div class="brief-actions">
+      <button id="printBtn">Print the brief</button>
+      <label><input type="checkbox" id="vetoToggle"> Show the Prosecutor's cuts</label>
+    </div>
+    <article id="briefPage" class="brief-page"></article>
+  </section>
+</main>
+
+<div id="quoteModal" class="modal hidden">
+  <div class="modal-card">
+    <button id="modalClose" class="modal-close">Close</button>
+    <h3 id="modalTitle"></h3>
+    <div class="quote-pair">
+      <figure><blockquote id="quoteA"></blockquote><figcaption id="quoteACite"></figcaption></figure>
+      <figure><blockquote id="quoteB"></blockquote><figcaption id="quoteBCite"></figcaption></figure>
+    </div>
+    <p id="modalAlt" class="innocent"></p>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="case-data.js"></script>
+<script src="agents-data.js"></script>
+<script src="cache-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
