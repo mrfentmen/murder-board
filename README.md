@@ -86,9 +86,14 @@ scene report counts and the evidence ledger does not.
 - `case3/`, `CASE3_BIBLE.md` — the Harborlight File, the sim: a
   cold case built to be investigated, solved by a chain of four
   records, with the loud suspect provably out of the window.
+- `case5/`, `CASE5_BIBLE.md` — the Starlite File: a fictional
+  cold case written today, in no training data, solved only by
+  a four record chain, scored cold.
 - `case4/`, `CASE4_BIBLE.md` — the Duck File: a real, solved
-  case (Chicago, 2020) rebuilt from the public record and run
-  blind, scored against what actually solved it.
+  case (Chicago, 2020). Its eval was retired by the builders
+  on November 21: the verdict sat inside its own file, so the
+  run tested reading, not detection. Kept in the repo, out of
+  the app and out of the eval.
 - `EVAL.md` — the squad against a single model call, scored
   against the bibles, failures included.
 - `records/` — the Door 2 census fixtures (fictional), with the
@@ -119,11 +124,12 @@ public posts, a plate cam still, a podcast transcript, and the
 Reddit thread where strangers collated the night. Same squad,
 same checks. Its first live run caught both planted
 contradictions at HIGH, rated the poster CONTRADICTED, and
-carried the innocent reading on the partial plate. The Duck
-File (`CASE4_BIBLE.md`, `case4/`) is the real one: the 2020
-Chicago killing of Carlton "FBG Duck" Weekly, rebuilt from
-court filings and reporting, run blind and scored in
-`EVAL.md` against what actually solved it.
+carried the innocent reading on the partial plate. The Starlite
+File (`CASE5_BIBLE.md`, `case5/`) is the cold one: a bowling
+alley owner, a mechanic whose own log puts him at the office
+door at 1:03 AM, and a fired man the records clear an hour
+before the victim's last text. Written today, in no training
+data, scored in `EVAL.md` against its bible.
 
 First live run, scored against `EXPECTED_FINDINGS.md`: the Webb car
 contradiction at HIGH with the tow record quote, the Whitfield
