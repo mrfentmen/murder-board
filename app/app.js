@@ -343,23 +343,31 @@ function schemaErrors(step, o) {
 }
 
 // ---------- the runner ----------
+function chairName(id) {
+  var c = CHAIRS.filter(function (x) { return x.id === id; })[0];
+  return c ? c.name : id;
+}
 async function runStep(step, book, hooks, cachedOutputs) {
   hooks.chair(step.chair, "running", null);
+  var ev = hooks.event || function () {};
   try {
     var output;
     if (step.id === "records" && book.door2 && book.door2.name && findFixture(book.door2.name)) {
       // The census is a pull, not a judgment: when the Door 2 name
       // matches a bundled fixture, the sim answers from the fixture
       // — ahead of both the cache and the model.
+      ev(chairName(step.chair), step.id + ": census answered from the bundled fixture (a pull, not a judgment)");
       output = buildRecordsFromFixture(findFixture(book.door2.name));
       var ferrs = schemaErrors(step, output);
       if (ferrs.length) throw new Error("fixture schema: " + ferrs.join("; "));
       if (hooks.delay) await hooks.delay();
     } else if (cachedOutputs && cachedOutputs[step.id]) {
+      ev(chairName(step.chair), step.id + ": replaying the cached run");
       output = cachedOutputs[step.id];
       if (hooks.delay) await hooks.delay();
     } else {
       var model = modelNameFor(step);
+      ev(chairName(step.chair), step.id + ": " + model + " took the file");
       var prompt = PROMPTS[step.file];
       if (!prompt) throw new Error("prompt file missing: " + step.file);
       var userText = step.input(book);
@@ -392,10 +400,12 @@ async function runStep(step, book, hooks, cachedOutputs) {
     step.apply(book, output);
     book.outputs[step.id] = output;
     hooks.chair(step.chair, "done", countFindings(output));
+    ev(chairName(step.chair), step.id + ": posted " + countFindings(output) + " finding(s)");
     return true;
   } catch (e) {
     book.failed_steps.push(step.id + ": " + (e && e.message ? e.message : String(e)));
     hooks.chair(step.chair, "failed", null);
+    ev(chairName(step.chair), step.id + ": FAILED, " + (e && e.message ? e.message : String(e)));
     return false;
   }
 }
@@ -406,9 +416,12 @@ async function runAll(hooks, cachedOutputs, opts) {
   hooks = hooks || {};
   hooks.chair = hooks.chair || function () {};
   hooks.status = hooks.status || function () {};
+  hooks.event = hooks.event || function () {};
+  hooks.step = hooks.step || function () {};
   for (var i = 0; i < STEPS.length; i++) {
     hooks.status("Working: " + STEPS[i].id.replace(/_/g, " "));
     await runStep(STEPS[i], book, hooks, cachedOutputs);
+    hooks.step(book);
   }
   hooks.status(book.failed_steps.length ? "Done, with failed steps: " + book.failed_steps.join("; ") : "Done");
   return book;
@@ -770,14 +783,42 @@ function updateCacheAvailability() {
   el("cacheLabel").textContent = c ? "" : "no cached run saved for this case yet";
 }
 
+var feedLogSeen = 0;
+function feedLine(chair, text) {
+  var box = el("liveFeed");
+  if (!box) return;
+  var idle = box.querySelector(".feed-idle");
+  if (idle) idle.remove();
+  var d = document.createElement("div");
+  d.className = "feed-line" + (String(text).indexOf("FAILED") !== -1 ? " fail" : "");
+  var t = new Date().toLocaleTimeString([], { hour12: false });
+  d.innerHTML = '<span class="ft">' + t + '</span> <span class="fc">' + esc(chair) + "</span> " + esc(text);
+  box.appendChild(d);
+  while (box.children.length > 60) box.removeChild(box.firstChild);
+  box.scrollTop = box.scrollHeight;
+}
+function flushLog(b) {
+  if (!b || !b.log) return;
+  while (feedLogSeen < b.log.length) {
+    feedLine("Runner", b.log[feedLogSeen]);
+    feedLogSeen++;
+  }
+}
+
 async function work() {
   var cached = cacheForCurrentCase();
   var useCache = el("cacheToggle").checked && cached;
   el("workBtn").disabled = true;
   MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
+  feedLogSeen = 0;
+  var feedBox = el("liveFeed");
+  if (feedBox) feedBox.innerHTML = "";
+  feedLine("Squad room", "case opened: " + caseShortTitle(MB.currentCase()) + ". Ten chairs, four models. Watch them post.");
   var hooks = {
     chair: setChair,
     status: function (s) { el("runStatus").textContent = s; },
+    event: feedLine,
+    step: function (b) { book = b; renderAll(); flushLog(b); },
     delay: function () { return new Promise(function (r) { setTimeout(r, 650); }); }
   };
   var door2 = null;
@@ -790,6 +831,7 @@ async function work() {
     el("cacheLabel").textContent = "cached run from " + when;
     book = await MB.runAll(hooks, cached.outputs, { door2: door2 });
     if (cached.dropped) book.dropped = cached.dropped;
+    if (book.dropped) feedLine("Runner", "this replay carries the original run's quote check: " + book.dropped + " finding(s) were dropped for having no quote in the file");
   } else {
     el("cacheLabel").textContent = "";
     if (!(window.MB_CONFIG && window.MB_CONFIG.apiKey)) {
