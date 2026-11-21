@@ -186,10 +186,16 @@ function newBook() {
 // no outside lookup. Quotes are checked against the fixture text
 // itself, the same law as the case file: no quote, no item.
 var FIXTURES = G.RECORDS_FIXTURES || [];
+var LIVE_FIXTURE = null;
+function setLiveFixture(fx) { LIVE_FIXTURE = fx; }
 function normName(s) { return String(s || "").toLowerCase().replace(/\s+/g, " ").trim(); }
 function findFixture(name) {
   var n = normName(name);
   if (!n) return null;
+  if (LIVE_FIXTURE) {
+    var ln = [LIVE_FIXTURE.subject.name].concat(LIVE_FIXTURE.subject.aliases || []);
+    for (var k = 0; k < ln.length; k++) if (normName(ln[k]) === n) return LIVE_FIXTURE;
+  }
   for (var i = 0; i < FIXTURES.length; i++) {
     var names = [FIXTURES[i].subject.name].concat(FIXTURES[i].subject.aliases || []);
     for (var j = 0; j < names.length; j++) if (normName(names[j]) === n) return FIXTURES[i];
@@ -215,8 +221,10 @@ function buildRecordsFromFixture(fx) {
     subject: fx.subject.name,
     starter_items: items,
     collisions: fx.collisions.map(function (c) { return { name: c.name, note: c.note }; }),
-    request_next: ["Live census sources are off in this simulation build."],
-    notes: "Simulation census for " + fx.subject.name + ": pulled from the bundled fixtures for this fictional case, not from live sources."
+    request_next: fx.live ? ["Widen the subreddit set and pull the subject's own posts and comments by author."] : ["Live census sources are off in this simulation build."],
+    notes: fx.live
+      ? "LIVE census for " + fx.subject.name + ": pulled from public sources at " + (fx.pulled_at || "") + " (Reddit via the Arctic Shift archive; social posts via public search). Public posts only, desk work only, nothing contacted. Summary-sourced items are labeled UNVERIFIED."
+      : "Simulation census for " + fx.subject.name + ": pulled from the bundled fixtures for this fictional case, not from live sources."
   };
 }
 
@@ -431,7 +439,7 @@ G.MB = {
   runAll: runAll, newBook: newBook, recomputeScore: recomputeScore, modelFor: modelNameFor,
   quoteOk: quoteOk, VALIDATORS: VALIDATORS, STEPS: STEPS, CHAIRS: CHAIRS,
   DOC_BY_ID: DOC_BY_ID, CASES: CASES, setCase: setCase,
-  findFixture: findFixture, buildRecordsFromFixture: buildRecordsFromFixture,
+  findFixture: findFixture, buildRecordsFromFixture: buildRecordsFromFixture, setLiveFixture: setLiveFixture,
   currentCase: function () { return CURRENT_CASE; },
   docById: function (id) { return DOC_BY_ID[id]; }
 };

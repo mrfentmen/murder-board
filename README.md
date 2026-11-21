@@ -48,6 +48,19 @@ lead outranks which and by how much, is the rubric recompute in
 the runner: deterministic, inspectable, shown with its
 arithmetic. `EVAL.md` states this in full.
 
+## Records pulls like an internet detective
+
+Door 2 is a name and a photograph, and the census works the way
+the internet actually works cases: public posts. In the harness
+build, the Records chair pulls live Reddit discussion (through
+the Arctic Shift archive) and public Instagram, Facebook and
+Threads posts about the subject. Every item lands with its
+source, its date and a verbatim quote; anything that came
+through a summary is labeled UNVERIFIED. Public posts only,
+desk work only, no contact, and same-name collisions are shown,
+never merged. The public demo page runs the same logic on
+labeled fixtures.
+
 ## The demo case
 
 The demo runs on a fictional 2019 cold case written for this event

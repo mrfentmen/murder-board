@@ -11,3 +11,5 @@ training data; its scores carry that caveat, as in EVAL.md.
 
 | time (UTC) | case | steps | dropped | checks | failed checks |
 |---|---|---|---|---|---|
+| 19:10:53 | delgado-2019 | 11/11 | 9 | 3/4 | top lead 80 |
+| 19:25:04 | screens-2025 | 11/11 | 1 | 3/3 | none |
