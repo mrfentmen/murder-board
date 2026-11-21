@@ -470,7 +470,8 @@ function tiltFor(seed) {
   return ((h % 5) - 2) * 1.1;
 }
 function pinCard(cls, pinKey, inner, seed) {
-  return '<div class="' + cls + '" data-pin="' + esc(pinKey) + '" style="transform: rotate(' + tiltFor(seed || pinKey) + 'deg)">' + inner + '</div>';
+  var t = tiltFor(seed || pinKey);
+  return '<div class="' + cls + '" data-pin="' + esc(pinKey) + '" data-tilt="' + t + '" style="transform: rotate(' + t + 'deg)">' + inner + '</div>';
 }
 function initialsOf(name) {
   return String(name).replace(/["']/g, "").split(/\s+/).map(function (w) { return w.charAt(0); }).join("").slice(0, 2).toUpperCase();
@@ -480,7 +481,7 @@ function renderBoard() {
   if (!layer) return;
   var current = MB.CASES.filter(function (c) { return c.case_id === MB.currentCase(); })[0];
   var docs = current ? current.documents : [];
-  var html = '<div class="pin-title" data-pin="title"><div class="qmark">?</div><div class="who">WHO DID IT</div><div class="case-name">' + esc(current ? current.case_title : "") + '</div></div>';
+  var html = '<div class="pin-title" data-pin="title" data-tilt="0" id="caseQuestion" title="The question before the board"><div class="qmark">?</div><div class="who">WHO DID IT</div><div class="case-name">' + esc(current ? current.case_title : "") + '</div></div>';
   html += book.persons.map(function (p) {
     var claims = book.claims.filter(function (c) { return c.person === p.name; });
     var isVictim = /victim/i.test(p.role || "");
@@ -506,6 +507,8 @@ function renderBoard() {
       '<p class="note-q">' + esc(g.item) + '</p><p>' + esc(g.problem) + '</p>', "gap" + i);
   }).join("");
   layer.innerHTML = html;
+  var qc = el("caseQuestion");
+  if (qc) qc.addEventListener("click", openCaseQuestion);
   var threads = book.contradictions.map(function (c, i) {
     return '<button class="thread red" data-kind="contra" data-idx="' + i + '"><span class="sev sev-' + esc(c.severity) + '">' + esc(c.severity) + '</span>' + esc(c.kind) + ": " + esc(c.a_doc) + " vs " + esc(c.b_doc) + "</button>";
   });
@@ -516,26 +519,32 @@ function renderBoard() {
   Array.prototype.forEach.call(document.querySelectorAll(".thread"), function (t) {
     t.addEventListener("click", function () { openThread(t.getAttribute("data-kind"), +t.getAttribute("data-idx")); });
   });
-  requestAnimationFrame(drawYarn);
+  scheduleYarn();
 }
 
+function scheduleYarn() { requestAnimationFrame(drawYarn); setTimeout(drawYarn, 400); }
 function drawYarn() {
   var svg = el("yarnSvg"), board = el("corkboard"), layer = el("pinLayer");
   if (!svg || !board || !layer) return;
-  var bb = board.getBoundingClientRect();
-  if (!bb.width) return;
+  if (!board.clientWidth) return;
   var pts = {};
   Array.prototype.forEach.call(layer.querySelectorAll("[data-pin]"), function (n) {
-    var r = n.getBoundingClientRect();
-    pts[n.getAttribute("data-pin")] = { x: r.left - bb.left + r.width / 2, y: r.top - bb.top + 9 };
+    var cx = layer.offsetLeft + n.offsetLeft + n.offsetWidth / 2;
+    var cy = layer.offsetTop + n.offsetTop + n.offsetHeight / 2;
+    var th = parseFloat(n.getAttribute("data-tilt") || "0") * Math.PI / 180;
+    var r = n.offsetHeight / 2 - 2;
+    pts[n.getAttribute("data-pin")] = { x: cx + r * Math.sin(th), y: cy - r * Math.cos(th) };
   });
-  var W = board.scrollWidth, H = board.scrollHeight;
+  var W = board.clientWidth, H = board.clientHeight;
   svg.setAttribute("width", W); svg.setAttribute("height", H);
   svg.setAttribute("viewBox", "0 0 " + W + " " + H);
   function yarn(a, b, cls, kind, idx) {
     if (!a || !b) return "";
     var mx = (a.x + b.x) / 2, my = Math.max(a.y, b.y) + 14 + Math.abs(b.x - a.x) * 0.05;
-    return '<path class="yarn-line ' + cls + '" data-kind="' + kind + '" data-idx="' + idx + '" d="M ' + a.x + " " + a.y + " Q " + mx + " " + my + " " + b.x + " " + b.y + '"/>';
+    var d = "M " + a.x + " " + a.y + " Q " + mx + " " + my + " " + b.x + " " + b.y;
+    var line = '<path class="yarn-line ' + cls + '" d="' + d + '"/>';
+    if (!kind) return line;
+    return line + '<path class="yarn-hit" data-kind="' + kind + '" data-idx="' + idx + '" d="' + d + '"><title>Open the thread</title></path>';
   }
   var out = "";
   book.persons.forEach(function (p) { out += yarn(pts.title, pts["person:" + p.name], "yarn-gray", "", ""); });
@@ -548,9 +557,24 @@ function drawYarn() {
     if (ds.length >= 2) out += yarn(pts["doc:" + ds[0]], pts["doc:" + ds[1]], "yarn-collision", "collision", i);
   });
   svg.innerHTML = out;
-  Array.prototype.forEach.call(svg.querySelectorAll(".yarn-line[data-kind='contra'], .yarn-line[data-kind='collision']"), function (p) {
+  Array.prototype.forEach.call(svg.querySelectorAll(".yarn-hit"), function (p) {
     p.addEventListener("click", function () { openThread(p.getAttribute("data-kind"), +p.getAttribute("data-idx")); });
   });
+}
+
+function openCaseQuestion() {
+  var current = MB.CASES.filter(function (c) { return c.case_id === MB.currentCase(); })[0];
+  var victim = book.persons.filter(function (p) { return /victim/i.test(p.role || ""); })[0];
+  var question = victim ? "Who killed " + victim.name + "?" : "Who did it?";
+  el("modalTitle").textContent = "The question before the board";
+  el("quoteA").textContent = question;
+  el("quoteACite").textContent = current ? current.case_title : "";
+  var win = "";
+  if (book.coroner && book.coroner.death_window) win = "Death window: " + book.coroner.death_window.start + " to " + book.coroner.death_window.end + ".";
+  el("quoteB").textContent = win;
+  el("quoteBCite").textContent = win ? "The Coroner's window, from the file" : "";
+  el("modalAlt").textContent = "This board judges the file. The detective does the detecting.";
+  el("quoteModal").classList.remove("hidden");
 }
 
 function openThread(kind, idx) {
@@ -656,7 +680,7 @@ function showScreen(name) {
   Array.prototype.forEach.call(document.querySelectorAll(".screen"), function (s) {
     s.classList.toggle("active", s.id === "screen-" + name);
   });
-  if (name === "board") requestAnimationFrame(drawYarn);
+  if (name === "board") scheduleYarn();
 }
 
 function cacheForCurrentCase() {
@@ -728,7 +752,7 @@ document.addEventListener("DOMContentLoaded", function () {
   el("modalClose").addEventListener("click", function () { el("quoteModal").classList.add("hidden"); });
   el("printBtn").addEventListener("click", function () { window.print(); });
   el("vetoToggle").addEventListener("change", renderBrief);
-  window.addEventListener("resize", function () { requestAnimationFrame(drawYarn); });
+  window.addEventListener("resize", function () { scheduleYarn(); });
   updateCacheAvailability();
   if (cacheForCurrentCase()) { el("cacheToggle").checked = true; work(); }
 });
