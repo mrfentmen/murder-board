@@ -1368,7 +1368,7 @@ function updateProgress() {
 }
 var feedTimer = null, feedBase = "", feedStart = 0, runStart = 0;
 var runTypingEl = null, lastTypingChair = null;
-var typingPhraseTimer = null;
+var typingPhraseTimer = null, docTimer = null;
 function fmtClock(ms) { var s = Math.floor(ms / 1000); return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
 function setFeedActivity(text) {
   var status = el("feedActivity");
@@ -1388,6 +1388,7 @@ function setFeedActivity(text) {
       if (runChairId !== lastTypingChair) {
         if (runTypingEl) { runTypingEl.remove(); runTypingEl = null; }
         if (typingPhraseTimer) { clearInterval(typingPhraseTimer); typingPhraseTimer = null; }
+        if (docTimer) { clearInterval(docTimer); docTimer = null; }
         if (runChairId) {
           runTypingEl = chatTyping(runChairId, STEP_ACTIVITY[activeStepId] || "reviewing the file");
           var phrases = [STEP_ACTIVITY[activeStepId] || "reviewing the file", "Gathering info", "Finding evidence", "Sifting through words", "Checking quotes against the file", "Cross-checking the statements"];
@@ -1398,6 +1399,16 @@ function setFeedActivity(text) {
             var sp = runTypingEl.querySelector(".chat-text span");
             if (sp) sp.textContent = phrases[pi];
           }, 2200);
+          var docsNow = (selectedCase() ? selectedCase().documents : []);
+          if (docsNow.length && runTypingEl) {
+            var readEl = document.createElement("div");
+            readEl.className = "chat-reading";
+            runTypingEl.appendChild(readEl);
+            var di = 0;
+            var showDoc = function () { var d = docsNow[di % docsNow.length]; di++; readEl.textContent = "Reading " + d.id + " \u00b7 " + d.title; };
+            showDoc();
+            docTimer = setInterval(showDoc, 3500);
+          }
         }
         lastTypingChair = runChairId;
       }
@@ -1406,6 +1417,7 @@ function setFeedActivity(text) {
     updateProgress();
     if (runTypingEl) { runTypingEl.remove(); runTypingEl = null; }
     if (typingPhraseTimer) { clearInterval(typingPhraseTimer); typingPhraseTimer = null; }
+    if (docTimer) { clearInterval(docTimer); docTimer = null; }
     lastTypingChair = null;
     feedStart = 0;
     runStart = 0;
@@ -1500,6 +1512,9 @@ async function work() {
   renderAll();
   setFeedActivity("Live run: waiting for the first agent result.");
   chatBubble(null, "Run opened: " + caseShortTitle(MB.currentCase()) + ". Ten chairs, four models.", "system");
+  var om = CASE_META[MB.currentCase()] || {};
+  var oc = selectedCase();
+  chatBubble("lead_detective", "The file is open. Victim: " + (om.victim || "not yet established") + ". Window: " + (om.window || "not yet established") + ". " + (oc ? oc.documents.length : 0) + " documents in evidence. Custody registers the file first, then Records works the public trail. Nobody gets judged here. The file does.", "note");
   var runT0 = performance.now();
   var runTimer = null;
   (function tickClock() {
