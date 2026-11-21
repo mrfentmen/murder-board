@@ -61,13 +61,15 @@ model proposes. The runner decides."
 
 ## 2:30 — the real one, the brief, the close
 
-(Tap the chip: The Duck case. The folder changes: MB-2020-0804,
-SOLVED 2024.)
-"This morning we fed it a real one. Chicago, 2020, the FBG
-Duck case, rebuilt from the court record and run blind. It
-caught the defense lawyer's own words against the prosecution
-file, and it never claimed the masked gunmen on camera were
-anybody. Both runs, and the misses, are scored in EVAL.md."
+(Tap the chip: The Starlite case. The folder changes: MB-2017-1104,
+COLD CASE.)
+"One more, and nobody has ever seen this one before today. A
+bowling alley owner, 2017. The mechanic swore he left at eleven
+and never went back. His own sign-out log, and the office
+keypad, say 1:03 AM. And the fired man everybody wants for it
+was gone an hour before her last text. It is fictional, written
+this morning, in no training data anywhere. The board cannot
+remember this case. It can only read it."
 (The Brief screen. One page, letterhead.)
 "One page. The case, the strongest contradiction, the alibi
 table, the leads worth tomorrow morning, and what was never
@@ -78,11 +80,13 @@ detective does the detecting." *
 
 ## If a judge asks the hard questions
 
-- "Is this real police data?" — "The Duck file is a real,
-  solved case rebuilt from the public record. The other three
-  are fictional cases written for this event. Real department
-  files need chain of custody and local processing. That is
-  the roadmap, and we say so."
+- "Is this real police data?" — "No, and that is deliberate.
+  All four cases are fictional, written for this event, so the
+  board can only read, never recall. We ran a real solved case
+  this morning and retired it ourselves: the verdict was
+  inside its own file, so the run proved reading, not
+  detection. Real department files need chain of custody and
+  local processing. That is the roadmap, and we say so."
 - "Does it accuse people?" — "Never. It judges consistency of
   the file. Every flag carries an innocent alternative, and
   the detective weighs it."
