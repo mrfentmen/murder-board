@@ -1,0 +1,11 @@
+Electric utility smart meter record, office circuit,
+Harborlight Restaurant. Supplied by the utility, October
+2016.
+
+The office circuit drew power consistent with the office
+lights and computer being on from early evening until 00:20
+on the night of October 9 to 10, 2016, when the draw dropped
+to standby level.
+
+The kitchen and dining room circuits are metered separately
+and are not part of this record.
