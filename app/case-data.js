@@ -372,5 +372,173 @@ window.CASES = [
     "text": "Lyric transcript, \"Midnight Tape (freestyle),\" posted by\n@mdot to a video platform, October 5, 2025. Excerpt,\ntranscribed in full:\n\n\"we spin at midnight, cameras off, phones dead,\nsay he owe me, better watch what he said\"\n\nThe track is a freestyle over a drill beat. The comment\nsection is mostly fire emojis and requests for a full version.\n"
    }
   ]
+ },
+ {
+  "case_id": "harborlight-2016",
+  "case_title": "The Harborlight File: a cold case built to be investigated, not skimmed. Fictional, written for Gemini 4 NYC.",
+  "documents": [
+   {
+    "id": "doc01",
+    "file": "doc01_scene_report.txt",
+    "title": "Scene report: the office, the latch, the blinds",
+    "type": "report",
+    "date": "2016-10-10",
+    "author": "Officer D. Whitaker",
+    "text": "Scene report, Officer D. Whitaker, October 10, 2016, 7:40 a.m.\n\nAt 6:55 a.m. I responded to the Harborlight Restaurant, 88 Pier\nRoad, on a report of an unresponsive employee. The day manager\nlet me in through the kitchen entrance.\n\nThe victim, Elena Marsh, 41, the restaurant's night manager,\nwas on the floor of the manager's office. A heavy brass desk\nlamp lay on the floor beside her.\n\nThe office door latch is defective. The door appears closed\nfrom the hallway but does not catch unless it is pulled hard.\nThe office window blinds were closed. The office door has a\nkeypad lock; the keypad keeps an entry log.\n\nNo signs of forced entry anywhere in the building. The kitchen\nand dining room were undisturbed. The register was closed out.\nThe victim's handbag was on the office desk, undisturbed.\n\nThe night watchman, Tomas Herrera, was on scene. He stated he\nfound nothing unusual on his rounds during the night.\n"
+   },
+   {
+    "id": "doc02",
+    "file": "doc02_me_summary.txt",
+    "title": "ME summary: window 10:30 p.m. to 12:30 a.m.",
+    "type": "report",
+    "date": "2016-10-12",
+    "author": "Dr. L. Chen",
+    "text": "Medical Examiner summary, Dr. L. Chen, October 12, 2016.\n\nDecedent: Elena Marsh, female, 41.\n\nCause of death: blunt force trauma to the head.\nManner of death: homicide.\n\nEstimated time of death: between 10:30 p.m. and 12:30 a.m. on\nthe night of October 9 to 10, 2016, based on body temperature\nand stomach contents. The decedent had eaten a staff meal at\napproximately 9:30 p.m.\n\nTwo blows are visible. There are no defensive wounds. Full\nautopsy report follows under separate cover.\n"
+   },
+   {
+    "id": "doc03",
+    "file": "doc03_herrera_statement.txt",
+    "title": "Herrera statement, 2016: never entered the office",
+    "type": "statement",
+    "date": "2016-10-10",
+    "author": "Tomas Herrera",
+    "text": "Statement of Tomas Herrera, 52, night watchman, Harborlight\nMarina and Restaurant. Taken October 10, 2016.\n\nI have worked nights at the marina for nine years. I do my\nrounds on the hour. Sunday night I did the 11 o'clock round\nand the half past midnight round. Everything was quiet.\n\nI never entered the office that night. I do not go in the\noffice on my rounds. I check the door from the hallway.\n\nAt the 11 o'clock round the office was dark. The manager\nusually leaves by 11. I saw nobody in the parking lot after\n10.\n\nI heard nothing during the night. If there had been a fight I\nwould have heard it. I was sorry to hear about Elena. She was\nstrict but fair.\n"
+   },
+   {
+    "id": "doc04",
+    "file": "doc04_herrera_logbook.txt",
+    "title": "Herrera log book page, October 9, 2016",
+    "type": "record",
+    "date": "2016-10-09",
+    "author": "Tomas Herrera",
+    "text": "Night watchman log book, Harborlight Marina, page for Sunday,\nOctober 9, 2016. Transcribed in full. Handwriting identified\nas Tomas Herrera's.\n\n21:00 \u2014 On duty. Lot half full.\n22:00 \u2014 Round. All quiet.\n23:00 \u2014 Round. Office dark. All quiet.\n00:07 \u2014 Checked office door, secure.\n00:30 \u2014 Round. All quiet.\n02:00 \u2014 Round. All quiet.\n06:00 \u2014 Off duty. Nothing to report.\n\nMargin note, same hand: \"Hours cut to weekends from Oct 1.\nNine years and this is the thanks.\"\n"
+   },
+   {
+    "id": "doc05",
+    "file": "doc05_keypad_log.txt",
+    "title": "Keypad entry log, office door",
+    "type": "record",
+    "date": "2016-10-09",
+    "author": "Keypad system export",
+    "text": "Keypad entry log, manager's office door, Harborlight\nRestaurant. Exported October 10, 2016. The keypad logs entries\nonly; it does not log exits.\n\nSunday, October 9, 2016:\n18:04 \u2014 code 3305\n19:31 \u2014 code 3305\n21:15 \u2014 code 2210\n22:52 \u2014 code 4417\n23:58 \u2014 code 3305\n00:07 \u2014 code 9001\n\nNo other entries that night.\n"
+   },
+   {
+    "id": "doc06",
+    "file": "doc06_raman_statement.txt",
+    "title": "Raman statement: I went back for my bag",
+    "type": "statement",
+    "date": "2016-10-11",
+    "author": "Priya Raman",
+    "text": "Statement of Priya Raman, 29, relief manager, Harborlight\nRestaurant. Taken October 11, 2016.\n\nI want to say this first, before anyone asks: I went back to\nthe office that night. I left my bag in the office at the end\nof my shift. I came back at about ten to eleven and used my\nown code to get in. Elena was there, alive, doing the close\nout. We talked for maybe two minutes. I took my bag and I\nleft. I was home by 11:30 and asleep by 12.\n\nI did not lend my code to anybody. We are not supposed to\nshare codes, and I never have.\n\nElena got the manager job over me last spring. People will\nsay that matters. It did not, not like this.\n"
+   },
+   {
+    "id": "doc07",
+    "file": "doc07_delaney_statement1.txt",
+    "title": "Delaney statement 1: poker all night",
+    "type": "statement",
+    "date": "2016-10-12",
+    "author": "Marcus Delaney",
+    "text": "Statement of Marcus Delaney, 45, former husband of the\nvictim. Taken October 12, 2016.\n\nI was at a poker game in Bayville all night Sunday. I got\nthere at 8 and I left at 1 in the morning. Ask any of the\nguys. I never went near the marina. I have not been to that\nrestaurant in months.\n\nElena and I were divorced two years. We fought about the\ncustody schedule, like everybody. I would never hurt her.\n"
+   },
+   {
+    "id": "doc08",
+    "file": "doc08_delaney_statement2.txt",
+    "title": "Delaney statement 2: I drove there, the light was off",
+    "type": "statement",
+    "date": "2017-03-03",
+    "author": "Marcus Delaney",
+    "text": "Second statement of Marcus Delaney. Taken March 3, 2017,\nafter the toll record was shown to him.\n\nFine. I drove to the marina that night. I got there at about\nfive past 11. I wanted to talk to Elena about the custody\npapers before the hearing. I sat in the lot for maybe fifteen\nminutes. The office light was off, so I figured she had\nalready left, and I drove home.\n\nI never got out of the truck. I never went inside. I lied the\nfirst time because my lawyer said anything about that night\nwould be used in the custody case. I am sorry I lied. I did\nnot kill her.\n"
+   },
+   {
+    "id": "doc09",
+    "file": "doc09_toll_record.txt",
+    "title": "Toll record: Delaney truck, 11:02 and 11:21 p.m.",
+    "type": "record",
+    "date": "2016-10-09",
+    "author": "Harbor Bridge authority",
+    "text": "Harbor Bridge toll record, transponder account of Marcus\nDelaney, pickup truck. Sunday, October 9, 2016:\n\n23:02 \u2014 southbound crossing, toward Harborlight Marina.\n23:21 \u2014 northbound crossing, away from Harborlight Marina.\n\nNo other crossings that night.\n"
+   },
+   {
+    "id": "doc10",
+    "file": "doc10_phone_record.txt",
+    "title": "Victim's phone record: the 11:47 p.m. text",
+    "type": "record",
+    "date": "2016-10-09",
+    "author": "Carrier summary",
+    "text": "Victim's mobile telephone, carrier record summary, obtained\nOctober 14, 2016.\n\nSunday, October 9, 2016:\n18:22 \u2014 outgoing call, sister, 6 minutes.\n21:03 \u2014 incoming text, sister: \"call me tomorrow.\"\n23:47 \u2014 outgoing text, sister: \"closing up, watchman doing\nhis round now, see you tomorrow.\"\n\nNo other activity that night. The telephone was recovered\nfrom the victim's handbag in the office.\n"
+   },
+   {
+    "id": "doc11",
+    "file": "doc11_meter_record.txt",
+    "title": "Smart meter record: office circuit until 00:20",
+    "type": "record",
+    "date": "2016-10-09",
+    "author": "Electric utility",
+    "text": "Electric utility smart meter record, office circuit,\nHarborlight Restaurant. Supplied by the utility, October\n2016.\n\nThe office circuit drew power consistent with the office\nlights and computer being on from early evening until 00:20\non the night of October 9 to 10, 2016, when the draw dropped\nto standby level.\n\nThe kitchen and dining room circuits are metered separately\nand are not part of this record.\n"
+   },
+   {
+    "id": "doc12",
+    "file": "doc12_okafor_statement1.txt",
+    "title": "Okafor statement 1, 2016: left at 10:15",
+    "type": "statement",
+    "date": "2016-10-10",
+    "author": "Daniel Okafor",
+    "text": "Statement of Daniel Okafor, 38, line cook, Harborlight\nRestaurant. Taken October 10, 2016.\n\nI finished my shift and I left at 10:15. Elena was in the\noffice doing paperwork. I said goodnight through the door.\nI drove straight home. My wife can tell you I was home\nbefore 11.\n\nI owed Elena money, yes. Gambling. Four hundred dollars. She\nwas letting me pay it back out of my checks. Everybody knew.\n"
+   },
+   {
+    "id": "doc13",
+    "file": "doc13_okafor_statement3.txt",
+    "title": "Okafor statement 3, 2024: the supply closet",
+    "type": "statement",
+    "date": "2024-06-17",
+    "author": "Daniel Okafor",
+    "text": "Third statement of Daniel Okafor. Taken June 17, 2024, in a\ncold case review.\n\nI have had eight years to think about that night. I left\naround 10, maybe a little after. I did stop at the supply\ncloset on my way out, and Elena came out of the office and\nwe talked for a minute about the Tuesday delivery. I do not\nremember if I said that before. Then I went home.\n\nI have told the truth every time. Memories get fuzzy, that\nis all. I did not go back to that restaurant that night.\n"
+   },
+   {
+    "id": "doc14",
+    "file": "doc14_wife_statement.txt",
+    "title": "Grace Okafor statement, 2024: home before 11",
+    "type": "statement",
+    "date": "2024-06-17",
+    "author": "Grace Okafor",
+    "text": "Statement of Grace Okafor, wife of Daniel Okafor. Taken\nJune 17, 2024, in a cold case review.\n\nDaniel came home that night before 11. I remember because\nthe late news was not on yet. He was home all night. He was\nasleep by about 12, next to me.\n\nI was never asked about this in 2016. Nobody called me. I am\nsaying it now because it is true.\n"
+   },
+   {
+    "id": "doc15",
+    "file": "doc15_inspection_report.txt",
+    "title": "Inspection report, 2015: the latch, in public",
+    "type": "report",
+    "date": "2015-03-01",
+    "author": "County inspector",
+    "text": "County health and safety inspection report, Harborlight\nRestaurant, March 2015. Public record, posted on the county\nwebsite.\n\nItem 14: The manager's office door latch is defective and\ndoes not catch unless the door is pulled firmly. Repair\nordered. Re-inspection not recorded.\n\nOther items concern kitchen equipment and are omitted here.\n"
+   },
+   {
+    "id": "doc16",
+    "file": "doc16_news_article.txt",
+    "title": "News article: the latch, the ex-husband",
+    "type": "article",
+    "date": "2016-10-13",
+    "author": "Harbor Gazette",
+    "text": "Harbor Gazette, October 13, 2016. \"Marina manager's death\nshocks the pier.\"\n\nPolice are investigating the death of Elena Marsh, 41, found\nin her office at the Harborlight Restaurant early Monday.\n\nA source close to the investigation noted that the office\ndoor's latch was known to be faulty, and that the door may\nnot have been locked at all that night.\n\nPolice are looking closely at the victim's former husband,\nwho was seen in the area that night, the Gazette has learned.\nNo arrests have been made.\n"
+   },
+   {
+    "id": "doc17",
+    "file": "doc17_guest_photo_memo.txt",
+    "title": "Evidence memo: the guest's 11:40 p.m. photo",
+    "type": "report",
+    "date": "2016-10-20",
+    "author": "Detective R. Alvarez",
+    "text": "Evidence memo, Detective R. Alvarez, October 20, 2016.\n\nA restaurant guest, name withheld in this memo, showed me a\nphotograph on her telephone, taken in the parking lot at\n11:40 p.m. on October 9, 2016. In the photograph the office\nwindow of the Harborlight is lit, with the blinds closed.\n\nThe guest was asked to send the original file. As of this\nmemo the original file has not been received and has not\nbeen entered into evidence. The photograph described above\nis not in the evidence ledger.\n"
+   },
+   {
+    "id": "doc18",
+    "file": "doc18_staff_roster.txt",
+    "title": "Staff roster and door codes",
+    "type": "record",
+    "date": "2016-10-01",
+    "author": "Restaurant owner",
+    "text": "Harborlight Restaurant staff roster and door codes, supplied\nby the owner, October 2016.\n\n3305 \u2014 Elena Marsh, night manager.\n2210 \u2014 Daniel Okafor, line cook.\n4417 \u2014 Priya Raman, relief manager.\n9001 \u2014 master code, issued to the night watchman on duty\n(Tomas Herrera).\n\nAlso on staff that season: Mike Johnston, dishwasher,\nemployed until September 2016.\n\nOwner's note: Herrera's hours were reduced to weekends only\nfrom October 1, 2016, on the manager's decision.\n"
+   }
+  ]
  }
 ];
