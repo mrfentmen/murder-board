@@ -519,3 +519,14 @@ h1{font-weight:800}
 
 .evidence-note{border:1px solid var(--amber);border-left:5px solid var(--amber);padding:9px 12px;background:rgba(224,164,88,.08);max-width:75ch}
 .evidence-status{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;letter-spacing:1px;color:var(--amber)}
+
+.sim-tag{font-size:11px;letter-spacing:2px;color:#ff6a33;border:1px solid #ff6a33;border-radius:3px;padding:2px 7px;vertical-align:middle;font-family:'IBM Plex Mono',monospace}
+.reddit-card{display:flex;gap:10px;background:#15171b;border:1px solid #2c313a;border-radius:8px;padding:12px 14px;margin-bottom:12px;max-width:85ch}
+.reddit-rail{display:flex;flex-direction:column;align-items:center;gap:2px;color:#8a919c;font-family:'IBM Plex Mono',monospace;font-size:12px}
+.rv-up{color:#ff6a33}.rv-count{color:var(--ink);font-weight:600}
+.reddit-meta{font-size:12px;color:#9aa3ad;margin-bottom:5px}.reddit-meta b{color:var(--ink)}
+.reddit-doc{color:var(--amber);font-family:'IBM Plex Mono',monospace;font-size:11px}
+.reddit-title{margin:2px 0 6px;font-size:17px}
+.reddit-body{white-space:pre-wrap;color:#cfd6dd;font-size:14px;line-height:1.5;margin:0 0 8px}
+.reddit-actions{font-size:12px;color:#9aa3ad}.reddit-actions button{background:none;border:none;color:var(--amber);cursor:pointer;font:inherit;padding:0}
+.reddit-empty{color:#9aa3ad}
