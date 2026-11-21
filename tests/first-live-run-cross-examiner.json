@@ -1,0 +1,282 @@
+{
+ "contradictions": [
+  {
+   "a_quote": "My car was in the shop all that week. Transmission was shot. It sat on the lift at the shop from Monday on.",
+   "a_doc": "doc03",
+   "b_quote": "I towed Mr. Webb's blue sedan out of the shop on Friday, October 11, and took it to his house. He said he needed it for the weekend.",
+   "b_doc": "doc08",
+   "kind": "statement vs statement",
+   "severity": "high",
+   "innocent_alternative": "Webb may have misremembered which week his vehicle was towed home."
+  },
+  {
+   "a_quote": "Like I said in October, the car was at the shop. It was up on the lift with the transmission out. I didn't have wheels that weekend, which is part of why I stayed in.",
+   "a_doc": "doc04",
+   "b_quote": "Date: Friday, October 11, 2019\nPickup time: 4:52 PM\nPickup location: Delgado Auto Body, 1140 Fifth Avenue\nVehicle: 2014 Ford Taurus, blue sedan\nRegistered owner: Marcus Webb\nDrop-off location: Webb residence, 412 78th Street",
+   "b_doc": "doc11",
+   "kind": "statement vs record",
+   "severity": "high",
+   "innocent_alternative": "The tow yard record could contain a clerical date error, or Webb misremembered the date of the tow."
+  },
+  {
+   "a_quote": "We pushed it onto the flatbed. It wasn't driveable, but he wanted it home.",
+   "a_doc": "doc08",
+   "b_quote": "There was a blue sedan parked on the street in front of the shop that night. It looked like the one Mr. Webb drives. I can't swear it was his, but it was the same kind of car.",
+   "b_doc": "doc10",
+   "kind": "statement vs statement",
+   "severity": "medium",
+   "innocent_alternative": "The blue sedan seen by Vasquez on Sunday night was a different vehicle of a similar make and color, or Webb's car was repaired between Friday afternoon and Sunday night."
+  },
+  {
+   "a_quote": "When did you last see Mr. Delgado?\nA: Friday afternoon at the shop.",
+   "a_doc": "doc03",
+   "b_quote": "Oct 12 \u2014 M \u2014 buyout talk again Tues. He wants numbers I don't have.",
+   "b_doc": "doc14",
+   "kind": "statement vs record",
+   "severity": "medium",
+   "innocent_alternative": "The Saturday October 12 buyout talk could have happened by phone rather than in person, or 'M' refers to someone other than Marcus Webb."
+  },
+  {
+   "a_quote": "Did Mr. Delgado owe you money personally?\nA: The shop owed suppliers. Ray and I were square.",
+   "a_doc": "doc04",
+   "b_quote": "Oct 10 \u2014 M.W. owes shop 14,200 all in. Settle by Nov or it comes out of his share.",
+   "b_doc": "doc14",
+   "kind": "statement vs record",
+   "severity": "medium",
+   "innocent_alternative": "Webb may have distinguished between owing the shop and owing Delgado personally, or considered the balance already offset by his equity share."
+  },
+  {
+   "a_quote": "Did Mr. Webb take money out of the shop that fall?\nA: Not that I ever saw in the books.",
+   "a_doc": "doc06",
+   "b_quote": "Oct 5 \u2014 M.W. took 1,900 from register for \"supplier run.\" No receipt yet.",
+   "b_doc": "doc14",
+   "kind": "statement vs record",
+   "severity": "low",
+   "innocent_alternative": "Delgado recorded the withdrawal in his personal paper ledger rather than the formal accounting books maintained by Whitfield."
+  },
+  {
+   "a_quote": "I left the shop Friday at five o'clock and I did not come back until Monday morning. I was home all weekend.",
+   "a_doc": "doc05",
+   "b_quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office.",
+   "b_doc": "doc07",
+   "kind": "self-contradiction",
+   "severity": "high",
+   "innocent_alternative": "Whitfield initially forgot or omitted the brief routine errand because it did not seem relevant to discovering the body on Monday."
+  },
+  {
+   "a_quote": "No. I wasn't at the shop that weekend at all. Like I said last year, I left Friday and came back Monday and found him.",
+   "a_doc": "doc06",
+   "b_quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices. I had my key. I was there maybe twenty minutes, in the front office, not Ray's office.",
+   "b_doc": "doc07",
+   "kind": "self-contradiction",
+   "severity": "high",
+   "innocent_alternative": "Whitfield overlooked the brief Sunday afternoon invoice drop-off during earlier questioning focused on the crime and shop accounts."
+  },
+  {
+   "a_quote": "Two shell casings were observed on the office floor near the desk.",
+   "a_doc": "doc01",
+   "b_quote": "7. One (1) spent shell casing, brass, recovered office floor.",
+   "b_doc": "doc13",
+   "kind": "record vs record",
+   "severity": "high",
+   "innocent_alternative": "Patrol officer Brennan miscounted or mistook debris for a second casing at the scene, or there is a clerical error in the evidence ledger."
+  }
+ ],
+ "alibis": [
+  {
+   "person": "Marcus Webb",
+   "window": "9:00 PM to midnight on Sunday, October 13, 2019",
+   "rating": "uncorroborated",
+   "reasons": [
+    {
+     "quote": "Home. I was home alone Sunday night. I never left the house. I watched television and went to bed early.",
+     "doc_id": "doc03"
+    },
+    {
+     "quote": "I've told you all of it. I was home that Sunday night, alone, the whole night. Nothing has changed.",
+     "doc_id": "doc04"
+    },
+    {
+     "quote": "There was a blue sedan parked on the street in front of the shop that night. It looked like the one Mr. Webb drives. I can't swear it was his, but it was the same kind of car.",
+     "doc_id": "doc10"
+    }
+   ]
+  },
+  {
+   "person": "Dana Whitfield",
+   "window": "9:00 PM to midnight on Sunday, October 13, 2019",
+   "rating": "uncorroborated",
+   "reasons": [
+    {
+     "quote": "I left the shop Friday at five o'clock and I did not come back until Monday morning. I was home all weekend.",
+     "doc_id": "doc05"
+    },
+    {
+     "quote": "I did stop by the shop that Sunday afternoon, briefly, to drop off invoices.",
+     "doc_id": "doc07"
+    },
+    {
+     "quote": "What time Sunday?\nA: Mid afternoon. Three, maybe four o'clock.",
+     "doc_id": "doc07"
+    }
+   ]
+  },
+  {
+   "person": "Edward \"Eddie\" Kowalski",
+   "window": "9:00 PM to midnight on Sunday, October 13, 2019",
+   "rating": "uncorroborated",
+   "reasons": [
+    {
+     "quote": "Were you at the shop Sunday?\nA: No. No calls that Sunday at all.",
+     "doc_id": "doc08"
+    }
+   ]
+  }
+ ],
+ "evidence_gaps": [
+  {
+   "item": "Second shell casing observed on the office floor",
+   "mentioned_in": [
+    "doc01"
+   ],
+   "problem": "Mentioned in scene report (two shell casings observed), but evidence ledger Item 7 only lists one (1) spent shell casing."
+  },
+  {
+   "item": "Diner camera footage facing the shop front",
+   "mentioned_in": [
+    "doc01"
+   ],
+   "problem": "Mentioned in scene report as not yet requested; absent from the evidence ledger."
+  },
+  {
+   "item": "Decedent's clothing and effects",
+   "mentioned_in": [
+    "doc02"
+   ],
+   "problem": "ME summary states clothing and effects were released to the investigating unit, but only the jacket, wallet, and keys are in the ledger; the rest of the clothing is absent."
+  },
+  {
+   "item": "Full autopsy report",
+   "mentioned_in": [
+    "doc02"
+   ],
+   "problem": "ME summary states full autopsy report follows under separate cover, but it is absent from the file and evidence ledger."
+  },
+  {
+   "item": "Invoices dropped off by Dana Whitfield on her desk",
+   "mentioned_in": [
+    "doc07"
+   ],
+   "problem": "Mentioned by Whitfield as left on her desk in the front office on Sunday; ledger only lists invoices from the victim's office desk/drawer (Items 5 and 18)."
+  },
+  {
+   "item": "Marcus Webb's 2014 Ford Taurus (blue sedan)",
+   "mentioned_in": [
+    "doc03",
+    "doc04",
+    "doc08",
+    "doc10",
+    "doc11"
+   ],
+   "problem": "Discussed across multiple statements and tow records, but never inspected, processed, or entered into the evidence ledger."
+  },
+  {
+   "item": "1. Photographs of the office and shop interior (24 exposures).",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  },
+  {
+   "item": "2. Victim's desk calendar, 2019.",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  },
+  {
+   "item": "3. Victim's mobile telephone, recovered from desk.",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  },
+  {
+   "item": "6. Two projectile fragments, recovered from office wall.",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  },
+  {
+   "item": "8. Victim's wallet and contents.",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned specifically in any other document."
+  },
+  {
+   "item": "10. Office telephone, with call log printout.",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  },
+  {
+   "item": "11. Shop security DVR unit (no drives installed).",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  },
+  {
+   "item": "12. Front door lock cylinder.",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  },
+  {
+   "item": "13. Bay door padlock and chain.",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  },
+  {
+   "item": "14. Victim's jacket, recovered from office chair.",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned specifically in any other document."
+  },
+  {
+   "item": "15. Coffee cup, office desk.",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  },
+  {
+   "item": "20. Victim's vehicle, shop lot (processed and released).",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  },
+  {
+   "item": "21. Swabs, office door handle.",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  },
+  {
+   "item": "22. Swabs, desk surface.",
+   "mentioned_in": [
+    "doc13"
+   ],
+   "problem": "Present in the evidence ledger, never mentioned in any other document."
+  }
+ ]
+}
