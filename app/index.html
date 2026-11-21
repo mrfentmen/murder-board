@@ -16,10 +16,8 @@
     <p class="proof-links"><a href="https://github.com/mrfentmen/murder-board" target="_blank" rel="noopener">Public repo</a> · <a href="https://github.com/mrfentmen/murder-board/blob/main/EVAL.md" target="_blank" rel="noopener">The evaluation</a> · <a href="https://github.com/mrfentmen/murder-board/blob/main/DEMO_SCRIPT.md" target="_blank" rel="noopener">Demo script</a> · Built today at Gemini 4 NYC</p>
   </div>
   <div class="runbox">
-    <input id="liveKey" type="password" placeholder="Live key: paste to run live" size="18" autocomplete="off" title="Runs the squad live against the Gemini API. The key stays in this tab only. It is never saved and never sent anywhere but Google.">
+    <input id="liveKey" type="password" placeholder="Live key: paste to run live" size="18" autocomplete="off" title="Runs the squad and live question replies against Gemini API. The key stays in this tab only. It is never saved and never sent anywhere but Google.">
     <span id="liveDot" class="live-dot hidden">● LIVE</span>
-    <label class="cache-toggle"><input type="checkbox" id="cacheToggle"> Replay cached run</label>
-    <span id="cacheLabel" class="cache-label"></span>
     <button id="workBtn">Work the Case</button>
     <span id="runStatus" class="run-status"></span>
     <span id="runClock" class="run-clock"></span>
@@ -39,18 +37,18 @@
 </section>
 
 <section class="feed-wrap" aria-label="Squad room">
-  <div class="feed-head"><span>SQUAD ROOM</span><span>Live notes come from the agents. The runner passes their checked findings to the next chair.</span></div>
-  <div id="liveFeed" class="live-feed chat-feed"><div class="feed-line feed-idle">Tell the room to work the case. They post here as they work.</div></div>
+  <div class="feed-head"><span>SQUAD ROOM</span><span>Live notes come from the agents. The runner passes their checked findings to the next chair.</span><span id="feedActivity" aria-live="polite">Add a Gemini key, then work the case.</span></div>
+  <div id="liveFeed" class="live-feed chat-feed" aria-live="polite"><div class="feed-line feed-idle">The room shows findings from the case file and the handoffs between agents.</div></div>
   <div class="chat-chips">
     <button class="chip" data-say="Work the case">Work the case</button>
-    <button class="chip" data-say="What's going on?">What's going on?</button>
+    <button class="chip" data-say="What's going on?">What’s going on?</button>
     <button class="chip" data-say="Work the Starlite case">The Starlite case</button>
     <button class="chip" data-say="Work the Harborlight case">Harborlight</button>
     <button class="chip" data-say="Show me the board">The board</button>
     <button class="chip" data-say="Show me the brief">The brief</button>
   </div>
   <div class="chat-input">
-    <input id="chatText" type="text" placeholder="Talk to the squad room: &quot;work the case&quot;, &quot;work the Starlite case&quot;, &quot;the board&quot;&hellip;" autocomplete="off">
+    <input id="chatText" type="text" placeholder="Ask the Lead Detective what’s happening, or ask about a finding…" autocomplete="off">
     <button id="chatSend">Send</button>
   </div>
 </section>
@@ -94,12 +92,13 @@
 
   <section id="screen-board" class="screen">
     <h2>The Board</h2>
+    <p class="portrait-note">Portraits are illustrative, not evidence.</p>
     <div id="corkboard" class="corkboard">
       <svg id="yarnSvg" class="yarn"></svg>
       <div id="pinLayer" class="pin-layer"></div>
     </div>
     <h3>Threads</h3>
-    <p class="hint">Red yarn is a contradiction. Click the yarn, or a thread below, to see the two quotes side by side.</p>
+    <p class="hint">Click a thread or its yarn to see the supporting quotes and sources.</p>
     <div id="threadList"></div>
   </section>
 
@@ -148,8 +147,7 @@
     <div class="eval-card"><h4>The Screens File</h4><p>Both planted catches at HIGH: the studio claim against the plate camera, the podcast line against his own comment. Reed CONTRADICTED. The deleted 1 AM story is gap two. The lyric was never promoted to evidence. Nothing dropped.</p><p class="eval-miss">Miss: none recorded.</p></div>
     <div class="eval-card"><h4>The Harborlight File</h4><p>Solved on a four record chain: the victim's 11:47 PM text, her own keypad code at 23:58, the office meter drawing power to 00:20, the watchman's master code at 00:07 against his sworn never entered. Herrera CONTRADICTED, top leads 80 and 80.</p><p class="eval-miss">Miss: the cook called CORROBORATED on a 2024 confirmation; the bible says UNCORROBORATED.</p></div>
     <div class="eval-card"><h4>The Starlite File, written today</h4><p>First live run, scored cold: Reyes CONTRADICTED on his own sign-out log and the keypad, Hahn CONTRADICTED and cleared by the clock in the same breath, Luna UNCORROBORATED. The 12:55 AM photo sits in the gap list where the bible puts it. Top Reyes lead at 80, twice. 14 findings dropped by the quote check.</p><p class="eval-miss">Miss: Bell rated CORROBORATED. The bible says UNCORROBORATED: his visit is confirmed by two records, his account of it is still only his. Same overcall the squad made on Harborlight.</p></div>
-    <div class="eval-card"><h4>The Duck File, retired by the builders</h4><p>We ran the squad on the real FBG Duck case, and then we killed the eval ourselves. The case is solved, and its verdict sat inside its own file as a document. A run on it tests reading, not detection.</p><p class="eval-miss">Replaced by the Starlite File: a cold case written today, in no training data, scored cold against its bible. The retired runs stay in EVAL.md, labeled retired.</p></div>
-  </div>
+    <div class="eval-card"><h4>The Duck File, retired by the builders</h4><p>We ran the squad on the real FBG Duck case, and then we killed the eval ourselves. The case is solved, and its verdict sat inside its own file as a document. A run on it tests reading, not detection.</p><p class="eval-miss">Replaced by the Starlite File: a cold case written today, in no training data, scored cold against its bible. The retired runs stay in EVAL.md, labeled retired.</p></div></div>
   <h3>The baseline it had to beat</h3>
   <p>One single Argon call per case, the whole file, one plain instruction. It found the seams too, credit where due. Then the discipline failed: Whitfield overcalled CONTRADICTED, seven HIGHs on one file including a motive dressed as a contradiction, lead scores of 98, 92, 88 with no arithmetic, and a top lead that read re-interview and arrest, language this board is built never to use. The squad's edge is not finding. It is the quote check with its drop count in the open, severity that discriminates, scores the runner recomputes, and no person ever judged.</p>
   <h3>Live runs, today, scored by machine</h3>
@@ -159,23 +157,29 @@
   <p>Three of the four cases were written by this team, which is why this project declares Problem Statement One and not Two. The baseline is one run per case, not a distribution. The Decisions API does not exist in the event key's model list, checked live; the decision function here is the rubric recompute in the runner, deterministic, its arithmetic shown on every lead.</p>
 </section>
 
-<div id="quoteModal" class="modal hidden">
-  <div class="modal-card">
-    <button id="modalClose" class="modal-close">Close</button>
+<div id="quoteModal" class="modal hidden" hidden>
+  <div id="modal-card" class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+    <button id="modalClose" class="modal-close" type="button">Close</button>
     <h3 id="modalTitle"></h3>
-    <div class="quote-pair">
+    <div id="quotePair" class="quote-pair">
       <figure><blockquote id="quoteA"></blockquote><figcaption id="quoteACite"></figcaption></figure>
       <figure><blockquote id="quoteB"></blockquote><figcaption id="quoteBCite"></figcaption></figure>
     </div>
+    <div id="sourceBody" class="source-body" hidden></div>
     <p id="modalAlt" class="innocent"></p>
   </div>
 </div>
+
+<button id="profileBackdrop" class="profile-backdrop" type="button" aria-label="Close person profile" hidden></button>
+<aside id="profileDrawer" class="profile-drawer" role="dialog" aria-modal="true" aria-labelledby="profileName" hidden>
+  <button id="profileClose" class="modal-close" type="button">Close</button>
+  <div id="profileContent"></div>
+</aside>
 
 <script src="config.js"></script>
 <script src="case-data.js"></script>
 <script src="agents-data.js"></script>
 <script src="records-data.js"></script>
-<script src="cache-data.js"></script>
 <script src="eval-data.js"></script>
 <script src="photos-data.js"></script>
 <script src="app.js"></script>
