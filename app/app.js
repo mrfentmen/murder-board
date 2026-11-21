@@ -30,7 +30,14 @@ function setCase(caseId) {
   return false;
 }
 
-function cfg() { return G.MB_CONFIG || { reasoningModel: "gemini-4-argon", fastModel: "gemini-4-carbon", apiKey: "" }; }
+function cfg() { return G.MB_CONFIG || { reasoningModel: "gemini-4-argon", fastModel: "gemini-4-carbon", worldModel: "gemini-4-hydrogen", fieldModel: "gemini-4-neon", apiKey: "" }; }
+function modelNameFor(step) {
+  var c = cfg();
+  return step.model === "reasoning" ? c.reasoningModel
+    : step.model === "world" ? (c.worldModel || c.fastModel)
+    : step.model === "field" ? (c.fieldModel || c.fastModel)
+    : c.fastModel;
+}
 
 // ---------- transport ----------
 async function callGemini(model, systemText, userText) {
@@ -261,14 +268,14 @@ var STEPS = [
       b.persons = o.persons || []; b.claims = o.claims || [];
       b.intake_events = o.events || []; b.evidence_items = o.evidence_items || [];
     } },
-  { id: "analyst", chair: "analyst", file: "06_analyst.md", model: "fast",
+  { id: "analyst", chair: "analyst", file: "06_analyst.md", model: "world",
     required: ["events"],
     input: function (b) {
       return "INTAKE OUTPUT:\n" + JSON.stringify({ events: b.intake_events, claims: b.claims }, null, 1)
         + "\n\nDEATH WINDOW:\n" + JSON.stringify(b.coroner ? b.coroner.death_window : {}, null, 1);
     },
     apply: function (b, o) { b.timeline = o.events || []; b.collisions = o.collisions || []; } },
-  { id: "digital", chair: "digital", file: "07_digital.md", model: "fast",
+  { id: "digital", chair: "digital", file: "07_digital.md", model: "field",
     required: ["machine_events"],
     input: function () { return docsText(); },
     apply: function (b, o) { b.machine = o; } },
@@ -352,20 +359,28 @@ async function runStep(step, book, hooks, cachedOutputs) {
       output = cachedOutputs[step.id];
       if (hooks.delay) await hooks.delay();
     } else {
-      var model = step.model === "reasoning" ? cfg().reasoningModel : cfg().fastModel;
+      var model = modelNameFor(step);
       var prompt = PROMPTS[step.file];
       if (!prompt) throw new Error("prompt file missing: " + step.file);
       var userText = step.input(book);
+      var models = [model];
+      if ((step.model === "world" || step.model === "field") && cfg().fastModel !== model) models.push(cfg().fastModel);
       var output = null, lastErr = null;
-      for (var attempt = 0; attempt < 2 && !output; attempt++) {
-        var raw = await callGemini(model, prompt, attempt === 0 ? userText
-          : userText + "\n\nYour previous reply failed validation: " + lastErr + ". Reply again with the full JSON only, all required keys present, and every quote inside string values properly escaped.");
-        try {
-          var parsed = parseModelJson(raw);
-          var errs = schemaErrors(step, parsed);
-          if (errs.length) { lastErr = errs.join("; "); continue; }
-          output = parsed;
-        } catch (pe) { lastErr = "reply was not valid JSON (" + pe.message + ")"; }
+      for (var mi = 0; mi < models.length && !output; mi++) {
+        if (mi > 0) book.log.push(step.id + ": " + models[0] + " gave no usable output in two attempts; " + models[mi] + " covered the step (fallback, logged)");
+        for (var attempt = 0; attempt < 2 && !output; attempt++) {
+          var raw;
+          try {
+            raw = await callGemini(models[mi], prompt, attempt === 0 ? userText
+              : userText + "\n\nYour previous reply failed validation: " + lastErr + ". Reply again with the full JSON only, all required keys present, and every quote inside string values properly escaped.");
+          } catch (ce) { lastErr = "call failed (" + (ce && ce.message ? ce.message : String(ce)) + ")"; continue; }
+          try {
+            var parsed = parseModelJson(raw);
+            var errs = schemaErrors(step, parsed);
+            if (errs.length) { lastErr = errs.join("; "); continue; }
+            output = parsed;
+          } catch (pe) { lastErr = "reply was not valid JSON (" + pe.message + ")"; }
+        }
       }
       if (!output) throw new Error("validation: " + lastErr);
     }
@@ -400,7 +415,7 @@ async function runAll(hooks, cachedOutputs, opts) {
 }
 
 G.MB = {
-  runAll: runAll, newBook: newBook, recomputeScore: recomputeScore,
+  runAll: runAll, newBook: newBook, recomputeScore: recomputeScore, modelFor: modelNameFor,
   quoteOk: quoteOk, VALIDATORS: VALIDATORS, STEPS: STEPS, CHAIRS: CHAIRS,
   DOC_BY_ID: DOC_BY_ID, CASES: CASES, setCase: setCase,
   findFixture: findFixture, buildRecordsFromFixture: buildRecordsFromFixture,
@@ -436,7 +451,9 @@ function buildStrip() {
   MB.CHAIRS.forEach(function (c) {
     var d = document.createElement("div");
     d.className = "chair"; d.id = "chair-" + c.id;
-    d.innerHTML = esc(c.name) + '<span class="count"></span>';
+    var st = MB.STEPS.filter(function (x) { return x.chair === c.id; })[0];
+    var mn = st ? String(MB.modelFor(st)).replace("gemini-4-", "").toUpperCase() : "";
+    d.innerHTML = esc(c.name) + '<span class="model">' + esc(mn) + '</span><span class="count"></span>';
     strip.appendChild(d);
     chairEls[c.id] = d;
   });
@@ -669,7 +686,42 @@ function renderJudgments() {
   }).join("");
 }
 
+var CASE_META = {
+  "delgado-2019": { no: "MB-2019-1014", victim: "Raymond Delgado, 58", window: "Sun Oct 13, 2019, 9:00 PM to midnight", place: "Delgado Auto Body, Fifth Avenue", stamp: "COLD CASE", stampCls: "stamp-cold" },
+  "screens-2025": { no: "MB-2025-1012", victim: "Treyvon Ellis, 19", window: "Sun Oct 12, 2025, 11:00 PM to midnight", place: "Brooklyn, New York", stamp: "OPEN", stampCls: "stamp-open" },
+  "harborlight-2016": { no: "MB-2016-1010", victim: "Elena Marsh, 41", window: "Mon Oct 10, 2016, 10:30 PM to 12:30 AM", place: "Harborlight Restaurant and Marina", stamp: "COLD CASE", stampCls: "stamp-cold" },
+  "duck-2020": { no: "MB-2020-0804", victim: "Carlton Weekly, 26", window: "Tue Aug 4, 2020, about 4:26 PM", place: "East Oak Street, Gold Coast, Chicago", stamp: "SOLVED 2024", stampCls: "stamp-solved" }
+};
+function caseShortTitle(id) {
+  var c = MB.CASES.filter(function (x) { return x.case_id === id; })[0];
+  return c ? c.case_title.split(/[:\u2014]/)[0].trim() : id;
+}
+function renderCaseFolder() {
+  var id = MB.currentCase();
+  var m = CASE_META[id];
+  if (!m || !el("folderTab")) return;
+  el("folderTab").textContent = "CASE FILE " + m.no;
+  el("folderFields").innerHTML =
+    '<div class="ff"><span>Case</span><strong>' + esc(caseShortTitle(id)) + "</strong></div>" +
+    '<div class="ff"><span>Victim</span><strong>' + esc(m.victim) + "</strong></div>" +
+    '<div class="ff"><span>Death window</span><strong>' + esc(m.window) + "</strong></div>" +
+    '<div class="ff"><span>Place</span><strong>' + esc(m.place) + "</strong></div>";
+  var st = el("folderStamp");
+  st.textContent = m.stamp;
+  st.className = "folder-stamp " + m.stampCls;
+}
+function renderBriefHead() {
+  var id = MB.currentCase();
+  var m = CASE_META[id];
+  if (!el("briefHead")) return;
+  el("briefHead").innerHTML =
+    '<div class="bh-org">MURDER BOARD</div><div class="bh-title">Case brief</div>' +
+    '<div class="bh-meta">' + (m ? "Case file " + m.no + " \u00b7 " : "") + esc(caseShortTitle(id)) +
+    "<br>Prepared by the Lead Detective chair (Argon). Every claim in this brief carries a quote from the file.</div>";
+}
+
 function renderBrief() {
+  renderBriefHead();
   var text = book.brief || "Run the case to write the brief.";
   if (el("vetoToggle").checked && book.vetoes.length) {
     var needles = book.vetoes.map(function (v) { return v.phrase.toLowerCase(); });
@@ -756,7 +808,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var sel = el("caseSelect");
   MB.CASES.forEach(function (c) {
     var o = document.createElement("option");
-    var labels = { "delgado-2019": "The Delgado File (police file)", "screens-2025": "The Screens File (internet case)", "harborlight-2016": "The Harborlight File (the sim)" };
+    var labels = { "delgado-2019": "The Delgado File (police file)", "screens-2025": "The Screens File (internet case)", "harborlight-2016": "The Harborlight File (the sim)", "duck-2020": "The Duck File (real case, public record)" };
     o.value = c.case_id; o.textContent = labels[c.case_id] || c.case_id;
     sel.appendChild(o);
   });
@@ -765,12 +817,14 @@ document.addEventListener("DOMContentLoaded", function () {
     book = MB.newBook();
     MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
     el("docViewer").textContent = "";
+    renderCaseFolder();
     renderRegistry();
     renderAll();
     updateCacheAvailability();
     if (cacheForCurrentCase()) { el("cacheToggle").checked = true; work(); }
   });
   renderRegistry();
+  renderCaseFolder();
   Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (t) {
     t.addEventListener("click", function () { showScreen(t.getAttribute("data-screen")); });
   });
