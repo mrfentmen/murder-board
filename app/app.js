@@ -867,16 +867,28 @@ function renderRegistry() {
   if (es) {
     var n = current ? current.documents.length : 0;
     var claims = (typeof book !== "undefined" && book && book.claims) ? book.claims.length : 0;
-    es.textContent = n + " documents in evidence." + (claims ? " Intake has extracted " + claims + " quote-checked claims from them so far." : " Not yet worked — work the case and Intake extracts the claims.");
+    var pulledN = (typeof book !== "undefined" && book && book.records && book.records.starter_items) ? book.records.starter_items.length : 0;
+    es.textContent = n + " documents in evidence." + (claims ? " Intake has extracted " + claims + " quote-checked claims from them so far." : " Not yet worked — work the case and Intake extracts the claims.") + (pulledN ? " Records has pulled " + pulledN + " items from the public trail into evidence." : "");
   }
   var docs = current ? current.documents : [];
-  el("registryBody").innerHTML = docs.map(function (d) {
+  var pulledItems = (typeof book !== "undefined" && book && book.records && book.records.starter_items) ? book.records.starter_items : [];
+  var rowsHtml = docs.map(function (d) {
     return "<tr data-doc='" + d.id + "'><td>" + d.id + "</td><td>" + esc(d.title) + "</td><td>" + esc(d.type) + "</td><td>" + esc(d.date) + "</td><td>" + esc(d.author) + "</td><td>view</td></tr>";
   }).join("");
+  rowsHtml += pulledItems.map(function (it, ix) {
+    return "<tr class='pulled' data-pull='" + ix + "'><td>PULLED</td><td>" + esc(it.item) + "</td><td>pulled · census</td><td></td><td>" + esc(it.source_class || "public trail") + "</td><td>view</td></tr>";
+  }).join("");
+  el("registryBody").innerHTML = rowsHtml;
   Array.prototype.forEach.call(document.querySelectorAll("#registryBody tr"), function (tr) {
     tr.addEventListener("click", function () {
       var d = MB.docById(tr.getAttribute("data-doc"));
       el("docViewer").textContent = d ? d.text : "";
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("#registryBody tr.pulled"), function (tr) {
+    tr.addEventListener("click", function () {
+      var it = pulledItems[Number(tr.getAttribute("data-pull"))];
+      el("docViewer").textContent = it ? (it.item + "\n\n" + (it.label || "UNVERIFIED") + " · " + (it.source_class || "") + "\nPulled by Records from the public trail during this run and added to the evidence.") : "";
     });
   });
 }
@@ -1204,7 +1216,7 @@ function renderReddit() {
     b.addEventListener("click", function () { showScreen("intake"); openDocument(b.getAttribute("data-doc-id"), b); });
   });
 }
-function renderAll() { renderBoard(); renderClock(); renderJudgments(); renderBrief(); renderRecords(); renderEval(); renderReddit(); }
+function renderAll() { renderRegistry(); renderBoard(); renderClock(); renderJudgments(); renderBrief(); renderRecords(); renderEval(); renderReddit(); }
 
 function showScreen(name) {
   Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (t) {
