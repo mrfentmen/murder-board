@@ -130,3 +130,83 @@ th { background: var(--panel); }
   #screen-brief { display: block !important; border: 0; background: #fff; }
   .brief-page { box-shadow: none; margin: 0; }
 }
+
+/* ---- The corkboard (Board screen) ---- */
+.corkboard {
+  position: relative;
+  margin: 14px 0 20px;
+  padding: 26px 22px 30px;
+  border: 14px solid #4a3421;
+  border-radius: 6px;
+  background:
+    radial-gradient(circle at 12% 22%, rgba(0,0,0,.13) 0 2px, transparent 3px),
+    radial-gradient(circle at 68% 64%, rgba(0,0,0,.11) 0 2px, transparent 3px),
+    radial-gradient(circle at 84% 18%, rgba(255,255,255,.10) 0 2px, transparent 3px),
+    radial-gradient(circle at 33% 82%, rgba(0,0,0,.12) 0 2px, transparent 3px),
+    radial-gradient(circle at 47% 41%, rgba(255,255,255,.08) 0 2px, transparent 3px),
+    repeating-linear-gradient(37deg, rgba(0,0,0,.028) 0 7px, transparent 7px 14px),
+    repeating-linear-gradient(-53deg, rgba(255,255,255,.03) 0 6px, transparent 6px 13px),
+    linear-gradient(160deg, #c49a63, #b0824e 55%, #a67a45);
+  box-shadow: inset 0 0 60px rgba(59, 38, 16, .45), 0 10px 28px rgba(0,0,0,.5);
+  overflow: hidden;
+}
+.yarn { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.yarn-line { fill: none; stroke-width: 2.4; pointer-events: stroke; }
+.yarn-gray { stroke: rgba(238, 234, 226, .75); stroke-width: 1.6; pointer-events: none; }
+.yarn-high { stroke: #c62f22; cursor: pointer; }
+.yarn-medium { stroke: #d97a26; cursor: pointer; }
+.yarn-low { stroke: #8f4a3a; cursor: pointer; }
+.yarn-collision { stroke: #5b7fa6; stroke-dasharray: 6 4; cursor: pointer; }
+.yarn-line[data-kind="contra"]:hover, .yarn-line[data-kind="collision"]:hover { stroke-width: 4.5; }
+.pin-layer { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 20px 18px; align-items: flex-start; }
+.pin-title {
+  position: relative; width: 100%; text-align: center; color: #7c1d12;
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  padding: 2px 0 6px;
+}
+.pin-title .qmark { font-size: 64px; line-height: .9; font-weight: 700; color: #c62f22; display: inline-block; transform: rotate(-4deg); }
+.pin-title .who { display: inline-block; font-size: 30px; line-height: 1.05; margin-left: 12px; text-align: left; letter-spacing: 2px; color: #33302b; }
+.pin-title .case-name { margin-top: 6px; font-size: 15px; color: #4c4438; letter-spacing: .4px; }
+.pin-card {
+  position: relative; background: #f6f1e5; color: #26241f; border-radius: 2px;
+  box-shadow: 0 6px 14px rgba(43, 28, 8, .45); padding: 16px 14px 12px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.pin-card::before, .pin-note::before, .pin-title::before {
+  content: ""; position: absolute; top: -7px; left: 50%; margin-left: -9px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ff9d8a, #c62f22 62%, #7c1d12);
+  box-shadow: 0 3px 5px rgba(0,0,0,.5); z-index: 4;
+}
+.pin-card:hover { transform: rotate(0deg) scale(1.035) !important; box-shadow: 0 14px 26px rgba(43,28,8,.55); z-index: 5; }
+.pin-card.person { width: 218px; }
+.pin-card.person .photo {
+  height: 86px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center;
+  font-size: 30px; font-weight: 700; letter-spacing: 2px; color: #e8e2d2;
+  background: linear-gradient(150deg, #5d6066, #33363b 70%); border: 3px solid #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,.35);
+}
+.pin-card.person.victim .photo { background: linear-gradient(150deg, #7a4a42, #4a2b26 70%); }
+.pin-card h4 { margin: 2px 0 2px; font-size: 16px; }
+.pin-card .role { margin: 0 0 6px; font-size: 12px; color: #6d675a; font-style: italic; }
+.pin-card .q { font-size: 12px; line-height: 1.45; margin: 5px 0 0; color: #3c392f; }
+.alibi-chip { display: inline-block; margin: 2px 0 4px; padding: 1px 8px; font-size: 11px; font-weight: 700; letter-spacing: .6px; border-radius: 2px; background: #ddd5c0; color: #4c4438; }
+.alibi-chip.rate-contradicted { background: #c62f22; color: #fff; }
+.alibi-chip.rate-corroborated { background: #3e7d3a; color: #fff; }
+.alibi-chip.rate-uncorroborated { background: #d9a03c; color: #33270a; }
+.pin-card.docslip { width: 188px; background: #fdfcf7; }
+.pin-card.docslip h5 { margin: 0 0 4px; font-size: 11px; letter-spacing: .8px; color: #8a2f23; text-transform: uppercase; }
+.pin-card.docslip p { margin: 0 0 4px; font-size: 12.5px; line-height: 1.4; }
+.pin-card.evidence { width: 172px; background: #efe9da; }
+.pin-card.evidence h5 { margin: 0 0 4px; font-size: 11px; letter-spacing: .8px; color: #5d5646; text-transform: uppercase; }
+.pin-card.evidence p { margin: 0; font-size: 12px; line-height: 1.4; }
+.pin-note {
+  position: relative; width: 196px; min-height: 128px; padding: 18px 14px 12px;
+  background: linear-gradient(170deg, #f9e77e, #f3dc55); color: #3d381c;
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  box-shadow: 0 8px 15px rgba(43, 28, 8, .45);
+  transition: transform .18s ease;
+}
+.pin-note:hover { transform: rotate(0deg) scale(1.04) !important; z-index: 5; }
+.pin-note .note-q { font-size: 14.5px; font-weight: 700; margin: 0 0 5px; line-height: 1.3; }
+.pin-note p { font-size: 12.5px; margin: 0; line-height: 1.4; }
