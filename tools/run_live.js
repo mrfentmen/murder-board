@@ -39,10 +39,15 @@ const MB = require(path.join(ROOT, "app", "app.js"));
 
 (async () => {
   const t0 = Date.now();
+  if (process.env.MB_SOCIAL_FIXTURE) {
+    MB.setLiveFixture(JSON.parse(require("fs").readFileSync(process.env.MB_SOCIAL_FIXTURE, "utf8")));
+    console.log("live social fixture loaded:", process.env.MB_SOCIAL_FIXTURE);
+  }
+  const door2 = process.env.MB_DOOR2_NAME ? { name: process.env.MB_DOOR2_NAME, dob: "", state: "" } : null;
   const book = await MB.runAll({
     chair: (id, state, count) => console.log("chair", id, state, count == null ? "" : count),
     status: (s) => console.log("status", s)
-  }, null);
+  }, null, { door2: door2 });
   const secs = ((Date.now() - t0) / 1000).toFixed(0);
   console.log("=== RUN DONE in " + secs + "s ===");
   console.log("failed steps:", JSON.stringify(book.failed_steps));
