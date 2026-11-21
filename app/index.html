@@ -30,7 +30,7 @@
 </header>
 
 <nav class="tabs">
-  <button data-screen="intake" class="tab active">1 Intake</button>
+  <button data-screen="intake" class="tab active">1 The Evidence</button>
   <button data-screen="board" class="tab">2 The Board</button>
   <button data-screen="clock" class="tab">3 The Clock</button>
   <button data-screen="judgments" class="tab">4 Judgments</button>
@@ -72,7 +72,9 @@
 
 <main>
   <section id="screen-intake" class="screen active">
-    <h2>The file</h2>
+    <h2>The evidence</h2>
+    <p class="evidence-note">EVIDENCE — the file as handed to the squad. The agents did not make these documents and cannot change them. Every finding they post has to quote from this table, or the quote check drops it.</p>
+    <p id="evidenceStatus" class="evidence-status"></p>
     <p><label>Case <select id="caseSelect"></select></label></p>
     <p class="case-title" id="caseTitle"></p>
     <table class="registry">
