@@ -516,3 +516,6 @@ h1{font-weight:800}
 .chair[class*="agent-"] .agent{color:var(--ac)}
 .chat-line.agent[class*="agent-"]{border-left:3px solid var(--ac);padding-left:10px}
 .chat-line[class*="agent-"] .chat-name{color:var(--ac)}
+
+.evidence-note{border:1px solid var(--amber);border-left:5px solid var(--amber);padding:9px 12px;background:rgba(224,164,88,.08);max-width:75ch}
+.evidence-status{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;letter-spacing:1px;color:var(--amber)}
