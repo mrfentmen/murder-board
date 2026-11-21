@@ -1446,6 +1446,16 @@ async function work() {
     note: function (step, note, recipients) {
       activeStepId = null;
       chatBubble(step.chair, note.message, "note", { evidence: note.evidence, recipients: recipients });
+      try {
+        var r0 = (recipients || [])[0];
+        if (r0 && r0.chair && r0.chair !== step.chair && note.message && note.message !== "No quote-backed handoff.") {
+          var rq = "You just received this note from " + agentOf(step.chair) + " (" + chairNameOf(step.chair) + "): \"" + note.message + "\" Reply in one or two sentences, in character: what it means for your work, or what you still need. Use only facts from the file.";
+          MB.askAgent(r0.chair, rq, book, null).then(function (ans) {
+            if (window.__mbAbort) return;
+            if (ans && ans.reply) chatBubble(r0.chair, ans.reply, "note", { evidence: ans.evidence || [] });
+          }).catch(function () {});
+        }
+      } catch (e) {}
     },
     step: function (b) { book = b; renderAll();
       if (b.dropped > 0) { var dc = el("dropChip"); dc.textContent = "Quote check dropped: " + b.dropped; dc.classList.remove("hidden"); } },
