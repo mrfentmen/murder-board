@@ -18,3 +18,4 @@ training data; its scores carry that caveat, as in EVAL.md.
 
 > Retired November 21: the Duck rows were removed by the builders. That case is solved and its verdict sat inside its own file, so its runs tested reading, not detection. The Starlite File replaces it in the rotation.
 | 23:19:31 | delgado-2019 | 10/11 | 4 | 4/4 | none |
+| 23:39:28 | delgado-2019 | 9/11 | 0 | 0/4 | HIGH present, Webb CONTRADICTED, Whitfield UNCORROBORATED, top lead 80 |
