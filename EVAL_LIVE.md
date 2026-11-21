@@ -15,3 +15,4 @@ training data; its scores carry that caveat, as in EVAL.md.
 | 19:25:04 | screens-2025 | 11/11 | 1 | 3/3 | none |
 | 19:44:19 | harborlight-2016 | 11/11 | 1 | 3/4 | top lead names Herrera |
 | 19:58:54 | duck-2020 | 11/11 | 3 | 3/3 | none |
+| 20:14:52 | delgado-2019 | 11/11 | 0 | 3/4 | top lead 80 |
