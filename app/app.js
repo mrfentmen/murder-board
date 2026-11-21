@@ -833,7 +833,7 @@ function chatBubble(chairId, text, kind) {
     d.innerHTML = '<div class="chat-head"><span class="chat-name">You</span><span class="ft">' + t + '</span></div><div class="chat-text">' + esc(text) + "</div>";
   } else {
     d.className = "chat-line agent" + (kind === "fail" ? " fail" : "");
-    d.innerHTML = '<div class="chat-head"><span class="chat-name">' + esc(agentOf(chairId)) + '</span><span class="chat-role">' + esc(chairNameOf(chairId)) + " \u00b7 " + esc(modelOfChair(chairId)) + '</span><span class="ft">' + t + "</span></div>" +
+    d.innerHTML = '<div class="chat-head"><span class="chat-name">' + esc(agentOf(chairId)) + '</span><span class="chat-role">' + esc(chairNameOf(chairId)) + '</span><span class="ft">' + t + "</span></div>" +
       '<div class="chat-text">' + esc(text) + "</div>";
   }
   box.appendChild(d);
@@ -946,7 +946,7 @@ async function work() {
     step: function (b) { book = b; renderAll(); flushLog(b);
       if (b.dropped > 0) { var dc = el("dropChip"); dc.textContent = "Quote check dropped: " + b.dropped; dc.classList.remove("hidden"); }
       if (pendingReport) { composeReport(pendingReport.stepId, b, pendingReport.count); var hf = HANDOFFS[pendingReport.stepId]; if (hf) feedLine("Runner", "Handoff \u2192 " + hf[0] + ": " + hf[1] + "."); pendingReport = null; } },
-    delay: function () { return new Promise(function (r) { setTimeout(r, 650); }); }
+    delay: function () { return new Promise(function (r) { setTimeout(r, 2100); }); }
   };
   var door2 = null;
   var d2name = el("door2Name");
