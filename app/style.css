@@ -510,3 +510,9 @@ h1{font-weight:800}
 .stop-btn{margin-left:8px;background:#5a1f1f;color:#ffb4a2;border:1px solid var(--red);border-radius:4px;padding:7px 12px;cursor:pointer;font-family:inherit;font-weight:600}
 
 .run-clock{font-size:16px;font-variant-numeric:tabular-nums}
+
+.agent-custody{--ac:#e0a458}.agent-records{--ac:#8ecae6}.agent-coroner{--ac:#c77dff}.agent-csi{--ac:#f28482}.agent-intake{--ac:#ffd166}.agent-analyst{--ac:#9b8cff}.agent-digital{--ac:#4cc9f0}.agent-cross_examiner{--ac:#ef476f}.agent-interviewer{--ac:#06d6a0}.agent-prosecutor{--ac:#f78c6b}.agent-lead_detective{--ac:#e8e3d9}
+.chair[class*="agent-"]{box-shadow:inset 4px 0 0 var(--ac)}
+.chair[class*="agent-"] .agent{color:var(--ac)}
+.chat-line.agent[class*="agent-"]{border-left:3px solid var(--ac);padding-left:10px}
+.chat-line[class*="agent-"] .chat-name{color:var(--ac)}
