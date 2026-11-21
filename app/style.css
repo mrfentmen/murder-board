@@ -370,3 +370,13 @@ th, td { border: 0; border-bottom: 1px solid var(--line); }
 .proof-links a { color: #8a1f1f; text-decoration: none; border-bottom: 1px dotted #8a1f1f; }
 .models-line { text-align: center; font-size: 12.5px; letter-spacing: 1.5px; color: #5c4a2e; background: #e9dfc9; border-bottom: 1px solid #c9b98f; padding: 6px 10px; }
 .models-line b { color: #8a1f1f; }
+
+/* ---- The Clock as a real timeline (spine, nodes, cards) ---- */
+.clock-strip { position: relative; margin: 10px 0 6px 6px; padding-left: 34px; }
+.clock-strip::before { content: ""; position: absolute; left: 10px; top: 6px; bottom: 6px; width: 3px; background: linear-gradient(#8a6d3b, #5c4a2e); border-radius: 2px; }
+.clock-strip .death-band { margin-left: -34px; background: #8a1f1f; color: #f5efe0; font-weight: bold; letter-spacing: 1.5px; padding: 8px 14px; border-radius: 3px; box-shadow: 2px 3px 8px rgba(0,0,0,.45); }
+.clock-event { position: relative; background: #23211c; border: 1px solid #3a372e; border-left: 3px solid #8a6d3b; border-radius: 4px; padding: 9px 13px; margin: 0 0 10px; box-shadow: 1px 2px 6px rgba(0,0,0,.35); line-height: 1.45; }
+.clock-event::before { content: ""; position: absolute; left: -31px; top: 13px; width: 13px; height: 13px; border-radius: 50%; background: #c9b98f; border: 3px solid #2b2925; box-shadow: 0 0 0 2px #8a6d3b; }
+.clock-event .when { display: inline-block; font-family: ui-monospace, Menlo, monospace; font-size: 12px; font-weight: bold; color: #e8d9ae; background: #35322a; border-radius: 3px; padding: 1px 7px; margin-right: 6px; }
+.clock-event.in-window { border-left-color: #c0392b; background: #2e1f1c; }
+.clock-event.in-window::before { background: #e74c3c; box-shadow: 0 0 0 2px #c0392b, 0 0 10px rgba(231,76,60,.7); }
