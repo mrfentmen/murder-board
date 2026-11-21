@@ -466,7 +466,7 @@ function buildStrip() {
     d.className = "chair"; d.id = "chair-" + c.id;
     var st = MB.STEPS.filter(function (x) { return x.chair === c.id; })[0];
     var mn = st ? String(MB.modelFor(st)).replace("gemini-4-", "").toUpperCase() : "";
-    d.innerHTML = esc(c.name) + '<span class="model">' + esc(mn) + '</span><span class="count"></span>';
+    d.innerHTML = '<span class="agent">' + esc(agentOf(c.id).replace("Dr. ", "").split(" ").pop().toUpperCase()) + '</span>' + esc(c.name) + '<span class="model">' + esc(mn) + '</span><span class="count"></span>';
     strip.appendChild(d);
     chairEls[c.id] = d;
   });
@@ -783,20 +783,114 @@ function updateCacheAvailability() {
   el("cacheLabel").textContent = c ? "" : "no cached run saved for this case yet";
 }
 
+var AGENT_NAMES = {
+  first_officer: "Mara Voss", records: "Elias Renn", coroner: "Dr. Ines Halden",
+  csi: "Kojo Mensah", analyst: "Lucia Ibarra", digital: "Felix Quill",
+  cross_examiner: "Adrian Vane", interviewer: "June Sorrel",
+  prosecutor: "Petra Brandt", lead_detective: "Samuel Marrow"
+};
+function agentOf(chairId) { return AGENT_NAMES[chairId] || chairId; }
+function chairIdByName(name) {
+  var c = MB.CHAIRS.filter(function (x) { return x.name === name; })[0];
+  return c ? c.id : null;
+}
+function modelOfChair(chairId) {
+  var st = MB.STEPS.filter(function (x) { return x.chair === chairId; })[0];
+  return st ? String(MB.modelFor(st)).replace("gemini-4-", "").toUpperCase() : "";
+}
+var pendingReport = null;
+function trunc(t, n) { t = String(t == null ? "" : t); return t.length > n ? t.slice(0, n - 1) + "\u2026" : t; }
+
 var feedLogSeen = 0;
-function feedLine(chair, text) {
+function chatBubble(chairId, text, kind) {
   var box = el("liveFeed");
   if (!box) return;
   var idle = box.querySelector(".feed-idle");
   if (idle) idle.remove();
   var d = document.createElement("div");
-  d.className = "feed-line" + (String(text).indexOf("FAILED") !== -1 ? " fail" : "");
   var t = new Date().toLocaleTimeString([], { hour12: false });
-  d.innerHTML = '<span class="ft">' + t + '</span> <span class="fc">' + esc(chair) + "</span> " + esc(text);
+  if (kind === "system" || kind === "runner") {
+    d.className = "chat-line " + kind;
+    d.innerHTML = '<span class="ft">' + t + '</span> ' + esc(text);
+  } else if (kind === "you") {
+    d.className = "chat-line you";
+    d.innerHTML = '<div class="chat-head"><span class="chat-name">You</span><span class="ft">' + t + '</span></div><div class="chat-text">' + esc(text) + "</div>";
+  } else {
+    d.className = "chat-line agent" + (kind === "fail" ? " fail" : "");
+    d.innerHTML = '<div class="chat-head"><span class="chat-name">' + esc(agentOf(chairId)) + '</span><span class="chat-role">' + esc(chairNameOf(chairId)) + " \u00b7 " + esc(modelOfChair(chairId)) + '</span><span class="ft">' + t + "</span></div>" +
+      '<div class="chat-text">' + esc(text) + "</div>";
+  }
   box.appendChild(d);
-  while (box.children.length > 60) box.removeChild(box.firstChild);
+  while (box.children.length > 120) box.removeChild(box.firstChild);
   box.scrollTop = box.scrollHeight;
 }
+function chairNameOf(chairId) {
+  var c = MB.CHAIRS.filter(function (x) { return x.id === chairId; })[0];
+  return c ? c.name : chairId;
+}
+function feedLine(chair, text) {
+  var cid = chairIdByName(chair);
+  if (!cid) { chatBubble(null, text, chair === "Runner" ? "runner" : "system"); return; }
+  var m;
+  if ((m = String(text).match(/^(\S+): (gemini-\S+) took the file$/))) {
+    chatBubble(cid, "Taking the file. Reading now.");
+  } else if (/: replaying the cached run$/.test(text)) {
+    chatBubble(cid, "Working from the saved run.");
+  } else if ((m = String(text).match(/^(\S+): posted (\d+) finding/))) {
+    pendingReport = { stepId: m[1], chairId: cid, count: parseInt(m[2], 10) };
+  } else if ((m = String(text).match(/^(\S+): FAILED, (.*)$/))) {
+    chatBubble(cid, "I hit a wall: " + m[2], "fail");
+  } else if ((m = String(text).match(/^\S+: (census answered.*)$/))) {
+    chatBubble(cid, m[1]);
+  } else {
+    chatBubble(cid, text);
+  }
+}
+function composeReport(stepId, b, count) {
+  var o = b.outputs[stepId];
+  if (!o) return;
+  var st = MB.STEPS.filter(function (x) { return x.id === stepId; })[0];
+  var cid = st ? st.chair : stepId;
+  var say = function (t) { chatBubble(cid, t); };
+  if (stepId === "custody") {
+    say("File received and logged: " + (o.documents || []).length + " documents, custody noted on each. The room can work.");
+  } else if (stepId === "records") {
+    say("Census for " + (o.subject || "the name given") + ": " + (o.starter_items || []).length + " items pulled, every one labeled SOURCED or UNVERIFIED. Collisions stay on the Intake screen, shown, never merged.");
+  } else if (stepId === "coroner") {
+    var w = o.death_window || {};
+    say("Cause: " + (o.cause || "?") + ". Manner: " + (o.manner || "?") + ". Death window: " + (w.start || "?") + " to " + (w.end || "?") + ". Everything else hangs off that window.");
+  } else if (stepId === "csi") {
+    var g = (o.gaps || [])[0];
+    say("Evidence ledger checked: " + (o.ledger || []).length + " items." + (g ? " First gap: " + g.item + " \u2014 " + trunc(g.problem, 120) : " No gaps in the ledger."));
+  } else if (stepId === "intake") {
+    var names = (b.persons || []).map(function (p) { return p.name; });
+    say("Board is up: " + (o.persons || []).length + " persons, " + (o.claims || []).length + " claims pinned. " + trunc(names.slice(0, 5).join(", "), 90) + (names.length > 5 ? ", and " + (names.length - 5) + " more." : "."));
+  } else if (stepId === "analyst") {
+    var col = (o.collisions || [])[0];
+    say("One clock: " + (o.events || []).length + " events placed." + ((o.collisions || []).length ? " " + o.collisions.length + " collision(s) \u2014 " + trunc(col ? col.who_or_what : "", 80) + ": " + trunc(col ? col.explanation : "", 110) : " No collisions."));
+  } else if (stepId === "digital") {
+    var me = (o.machine_events || [])[0];
+    say("Machines checked: " + (o.record_checks || []).length + " records." + (me ? " " + me.what + " (" + me.when_text + ") \u2014 " + trunc(me.proves, 110) : ""));
+  } else if (stepId === "cross_examiner") {
+    var top = (o.contradictions || []).slice().sort(function (a, z) { return ({ high: 0, medium: 1, low: 2 })[a.severity] - ({ high: 0, medium: 1, low: 2 })[z.severity]; })[0];
+    if (top) say("\u201c" + trunc(top.a_quote, 120) + "\u201d \u2014 against \u2014 \u201c" + trunc(top.b_quote, 120) + "\u201d (" + top.a_doc + " / " + top.b_doc + "). That is a " + String(top.severity).toUpperCase() + ".");
+    var contra = (o.alibis || []).filter(function (a) { return a.rating === "contradicted"; });
+    if (contra.length) contra.forEach(function (a) { say(a.person + ": alibi CONTRADICTED."); });
+    else if ((o.alibis || []).length) say("Alibis rated: " + o.alibis.map(function (a) { return a.person + " " + String(a.rating).toUpperCase(); }).join(", ") + ".");
+  } else if (stepId === "interviewer") {
+    var h = (o.histories || [])[0];
+    say(((h ? h.person + " moved between statements" : "Statements compared")) + ": " + (o.next_questions || []).length + " questions queued for the next interviews." + (h && h.changes && h.changes[0] ? " First drift: " + trunc(h.changes[0].topic, 100) + "." : ""));
+  } else if (stepId === "prosecutor") {
+    say("Court test run on " + (o.sufficiency || []).length + " subjects. " + (o.vetoes || []).length + " phrases flagged in the brief; toggle the Prosecutor's cuts on the Brief screen to see them struck.");
+  } else if (stepId === "lead_detective") {
+    var lead = (o.leads || [])[0];
+    if (lead) say("Top lead, " + lead.score + ": " + trunc(lead.action, 130));
+    say("The book is built. Board, clock, judgments and brief are on the screens. It judges the file; the detective does the detecting.");
+  } else {
+    say("Posted " + count + " finding(s).");
+  }
+}
+
 function flushLog(b) {
   if (!b || !b.log) return;
   while (feedLogSeen < b.log.length) {
@@ -811,14 +905,12 @@ async function work() {
   el("workBtn").disabled = true;
   MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
   feedLogSeen = 0;
-  var feedBox = el("liveFeed");
-  if (feedBox) feedBox.innerHTML = "";
-  feedLine("Squad room", "case opened: " + caseShortTitle(MB.currentCase()) + ". Ten chairs, four models. Watch them post.");
+  chatBubble(null, "Run opened: " + caseShortTitle(MB.currentCase()) + ". Ten chairs, four models.", "system");
   var hooks = {
     chair: setChair,
     status: function (s) { el("runStatus").textContent = s; },
     event: feedLine,
-    step: function (b) { book = b; renderAll(); flushLog(b); },
+    step: function (b) { book = b; renderAll(); flushLog(b); if (pendingReport) { composeReport(pendingReport.stepId, b, pendingReport.count); pendingReport = null; } },
     delay: function () { return new Promise(function (r) { setTimeout(r, 650); }); }
   };
   var door2 = null;
@@ -845,8 +937,45 @@ async function work() {
   el("workBtn").disabled = false;
 }
 
+function sendChat() {
+  var inp = el("chatText");
+  var text = (inp.value || "").trim();
+  if (!text) return;
+  inp.value = "";
+  chatBubble(null, text, "you");
+  var low = text.toLowerCase();
+  var caseHit = null;
+  if (/delgado/.test(low)) caseHit = "delgado-2019";
+  else if (/screens|trey/.test(low)) caseHit = "screens-2025";
+  else if (/harborlight|marsh/.test(low)) caseHit = "harborlight-2016";
+  else if (/duck|fbg|weekly/.test(low)) caseHit = "duck-2020";
+  var sel = el("caseSelect");
+  if (caseHit && sel.value !== caseHit) {
+    sel.value = caseHit;
+    sel.dispatchEvent(new Event("change"));
+    if (!/work|run|start|go\b/.test(low)) return;
+    if (cacheForCurrentCase()) return;
+    work();
+    return;
+  }
+  if (/work|run|start|go\b/.test(low)) { work(); return; }
+  var screens = { board: "board", clock: "clock", judgment: "judgments", brief: "brief", intake: "intake", file: "intake" };
+  var hit = Object.keys(screens).filter(function (k) { return low.indexOf(k) !== -1; })[0];
+  if (hit) {
+    showScreen(screens[hit]);
+    chatBubble("lead_detective", screens[hit] === "board" ? "Board's up." : screens[hit] === "brief" ? "Brief's on the screen." : "On the screen.");
+    return;
+  }
+  chatBubble("lead_detective", "Copy. Orders I take: \u201cwork the case\u201d, a case name (Delgado, Screens, Harborlight, Duck), or a screen (board, clock, judgments, brief).");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   buildStrip();
+  el("chatSend").addEventListener("click", sendChat);
+  el("chatText").addEventListener("keydown", function (e) { if (e.key === "Enter") sendChat(); });
+  Array.prototype.forEach.call(document.querySelectorAll(".chip"), function (ch) {
+    ch.addEventListener("click", function () { el("chatText").value = ch.getAttribute("data-say"); sendChat(); });
+  });
   var sel = el("caseSelect");
   MB.CASES.forEach(function (c) {
     var o = document.createElement("option");
