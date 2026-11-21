@@ -43,4 +43,21 @@ scene report counts and the evidence ledger does not.
 
 ## Status
 
-Build day. App code lands here as it is written at the event.
+Built at the event, 2026-11-21. The app lives in `app/` (static,
+no build step): open it through any static server, copy
+`config.example.js` to `config.js`, add the Gemini API key, and
+press Work the Case. Model map: `gemini-4-argon` reasons for the
+Cross-Examiner and the Lead Detective; `gemini-3.8-flash` runs the
+rest. A full live run of the fictional case is saved as the replay
+cache (`app/cache-data.js`), so the demo survives a network failure:
+check "Replay cached run" and press the button.
+
+First live run, scored against `EXPECTED_FINDINGS.md`: the Webb car
+contradiction at HIGH with the tow record quote, the Whitfield
+Sunday visit flagged, the missing second casing at the top of the
+gap list, Webb's alibi rated CONTRADICTED, Whitfield's
+UNCORROBORATED, top lead 80. Validation dropped 4 findings whose
+quotes were not in the file. SPEC6.md holds the working doctrine:
+asking is contact, checking is desk work; the squad works paper and
+public internet records, and hands the human detective the exact
+question when a lead needs a person.
