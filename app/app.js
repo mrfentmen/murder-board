@@ -1205,24 +1205,29 @@ var STEP_ACTIVITY = {
   prosecutor: "stress testing the board for court",
   lead_detective: "ranking the next investigative steps"
 };
-var feedTimer = null, feedBase = "", feedStart = 0;
+var feedTimer = null, feedBase = "", feedStart = 0, runStart = 0;
+function fmtClock(ms) { var s = Math.floor(ms / 1000); return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
 function setFeedActivity(text) {
   var status = el("feedActivity");
   if (!status) return;
   feedBase = text;
   status.setAttribute("data-active", runInProgress ? "true" : "false");
   if (runInProgress) {
+    if (!runStart) runStart = Date.now();
     feedStart = Date.now();
     status.textContent = text;
     if (!feedTimer) feedTimer = setInterval(function () {
-      var s = Math.floor((Date.now() - feedStart) / 1000);
-      var label = Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2);
       var st = el("feedActivity");
-      if (st) st.textContent = feedBase + " \u00b7 " + label;
+      if (st) st.textContent = feedBase + " \u00b7 " + fmtClock(Date.now() - feedStart);
+      var rc = el("runClock");
+      if (rc && runStart) rc.textContent = "RUN " + fmtClock(Date.now() - runStart);
     }, 1000);
   } else {
     feedStart = 0;
+    runStart = 0;
     if (feedTimer) { clearInterval(feedTimer); feedTimer = null; }
+    var rc2 = el("runClock");
+    if (rc2) rc2.textContent = "";
     status.textContent = text;
   }
 }
