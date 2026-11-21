@@ -395,3 +395,12 @@ th, td { border: 0; border-bottom: 1px solid var(--line); }
   .clock-event:nth-of-type(even) { margin-left: auto; }
   .clock-event:nth-of-type(even)::before { left: -41px; }
 }
+
+.eval-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin: 10px 0 16px; }
+.eval-card { background: #f5efe0; color: #26221a; border-radius: 4px; padding: 12px 15px; box-shadow: 2px 3px 8px rgba(0,0,0,.4); }
+.eval-card h4 { margin: 0 0 6px; color: #8a1f1f; }
+.eval-card p { margin: 0 0 6px; line-height: 1.5; font-size: 14px; }
+.eval-miss { color: #7a4a12; font-style: italic; }
+.eval-table { border-collapse: collapse; width: 100%; margin: 8px 0 16px; font-size: 13.5px; }
+.eval-table th, .eval-table td { border: 1px solid #3a372e; padding: 6px 9px; text-align: left; }
+.eval-table th { background: #35322a; color: #e8d9ae; }
