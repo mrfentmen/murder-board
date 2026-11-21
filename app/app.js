@@ -1270,6 +1270,22 @@ function updateProgress() {
   var pct = Math.round((done / total) * 100);
   bar.style.width = pct + "%";
   if (label) label.textContent = "SQUAD PROGRESS \u00b7 " + done + " of " + total + " chairs posted" + (failed ? " \u00b7 " + failed + " failed" : "") + " \u00b7 " + pct + "%";
+  var q = el("runQueue");
+  if (q) {
+    var seen = {}, order = [];
+    (MB.STEPS || []).forEach(function (st) { if (!seen[st.chair]) { seen[st.chair] = 1; order.push(st.chair); } });
+    q.innerHTML = order.map(function (cid) {
+      var ce = chairEls[cid];
+      var st2 = ce ? (ce.classList.contains("done") ? "done" : ce.classList.contains("failed") ? "failed" : ce.classList.contains("running") ? "running" : "idle") : "idle";
+      var label2 = agentOf(cid).replace("Dr. ", "").split(" ").pop();
+      if (st2 === "done") return '<span class="q-done">\u2713 ' + esc(label2) + '</span>';
+      if (st2 === "failed") return '<span class="q-failed">\u2717 ' + esc(label2) + '</span>';
+      if (st2 === "running") return '<span class="q-running">\u25b8 ' + esc(label2) + ' \u00b7 ' + fmtClock(Date.now() - feedStart) + '</span>';
+      return '<span class="q-idle">' + esc(label2) + '</span>';
+    }).join(" \u00b7 ");
+  }
+  var rcEl = document.querySelector("#squadStrip .chair.running .count");
+  if (rcEl) rcEl.textContent = "working " + fmtClock(Date.now() - feedStart);
 }
 var feedTimer = null, feedBase = "", feedStart = 0, runStart = 0;
 function fmtClock(ms) { var s = Math.floor(ms / 1000); return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
