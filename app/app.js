@@ -1205,6 +1205,19 @@ var STEP_ACTIVITY = {
   prosecutor: "stress testing the board for court",
   lead_detective: "ranking the next investigative steps"
 };
+function updateProgress() {
+  var bar = el("runProgress"), label = el("runProgressLabel");
+  if (!bar) return;
+  var chairs = document.querySelectorAll("#squadStrip .chair");
+  var total = chairs.length || 10, done = 0, failed = 0;
+  for (var i = 0; i < chairs.length; i++) {
+    if (chairs[i].classList.contains("done")) done++;
+    if (chairs[i].classList.contains("failed")) failed++;
+  }
+  var pct = Math.round((done / total) * 100);
+  bar.style.width = pct + "%";
+  if (label) label.textContent = "SQUAD PROGRESS \u00b7 " + done + " of " + total + " chairs posted" + (failed ? " \u00b7 " + failed + " failed" : "") + " \u00b7 " + pct + "%";
+}
 var feedTimer = null, feedBase = "", feedStart = 0, runStart = 0;
 function fmtClock(ms) { var s = Math.floor(ms / 1000); return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
 function setFeedActivity(text) {
@@ -1221,8 +1234,10 @@ function setFeedActivity(text) {
       if (st) st.textContent = feedBase + " \u00b7 " + fmtClock(Date.now() - feedStart);
       var rc = el("runClock");
       if (rc && runStart) rc.textContent = "RUN " + fmtClock(Date.now() - runStart);
+      updateProgress();
     }, 1000);
   } else {
+    updateProgress();
     feedStart = 0;
     runStart = 0;
     if (feedTimer) { clearInterval(feedTimer); feedTimer = null; }
