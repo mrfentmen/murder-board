@@ -22,6 +22,14 @@
 
 <section id="squadStrip" class="squad-strip" aria-label="Squad room"></section>
 
+<section class="case-folder" aria-label="Case file">
+  <div class="folder-tab" id="folderTab">CASE FILE</div>
+  <div class="folder-body">
+    <div class="folder-fields" id="folderFields"></div>
+    <div class="folder-stamp" id="folderStamp"></div>
+  </div>
+</section>
+
 <nav class="tabs">
   <button data-screen="intake" class="tab active">1 Intake</button>
   <button data-screen="board" class="tab">2 The Board</button>
@@ -99,6 +107,7 @@
       <button id="printBtn">Print the brief</button>
       <label><input type="checkbox" id="vetoToggle"> Show the Prosecutor's cuts</label>
     </div>
+    <div id="briefHead" class="brief-head"></div>
     <article id="briefPage" class="brief-page"></article>
   </section>
 </main>
