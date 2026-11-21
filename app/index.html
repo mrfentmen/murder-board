@@ -13,6 +13,8 @@
     <p class="tagline">It sorts the file. It judges the file. The detective does the detecting.</p>
   </div>
   <div class="runbox">
+    <input id="liveKey" type="password" placeholder="Live key: paste to run live" size="18" autocomplete="off" title="Runs the squad live against the Gemini API. The key stays in this tab only. It is never saved and never sent anywhere but Google.">
+    <span id="liveDot" class="live-dot hidden">● LIVE</span>
     <label class="cache-toggle"><input type="checkbox" id="cacheToggle"> Replay cached run</label>
     <span id="cacheLabel" class="cache-label"></span>
     <button id="workBtn">Work the Case</button>
