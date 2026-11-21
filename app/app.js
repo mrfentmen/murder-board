@@ -906,11 +906,19 @@ async function work() {
   MB.CHAIRS.forEach(function (c) { setChair(c.id, "idle", null); });
   feedLogSeen = 0;
   chatBubble(null, "Run opened: " + caseShortTitle(MB.currentCase()) + ". Ten chairs, four models.", "system");
+  var runT0 = Date.now();
+  var runTimer = setInterval(function () {
+    var sec = Math.floor((Date.now() - runT0) / 1000);
+    el("runClock").textContent = Math.floor(sec / 60) + ":" + ("0" + (sec % 60)).slice(-2);
+  }, 250);
+  el("dropChip").classList.add("hidden");
   var hooks = {
     chair: setChair,
     status: function (s) { el("runStatus").textContent = s; },
     event: feedLine,
-    step: function (b) { book = b; renderAll(); flushLog(b); if (pendingReport) { composeReport(pendingReport.stepId, b, pendingReport.count); pendingReport = null; } },
+    step: function (b) { book = b; renderAll(); flushLog(b);
+      if (b.dropped > 0) { var dc = el("dropChip"); dc.textContent = "Quote check dropped: " + b.dropped; dc.classList.remove("hidden"); }
+      if (pendingReport) { composeReport(pendingReport.stepId, b, pendingReport.count); pendingReport = null; } },
     delay: function () { return new Promise(function (r) { setTimeout(r, 650); }); }
   };
   var door2 = null;
@@ -919,8 +927,9 @@ async function work() {
     door2 = { name: d2name.value.trim(), dob: el("door2Dob").value.trim(), state: el("door2State").value.trim() };
   }
   if (useCache) {
-    var when = cached.created_at ? new Date(cached.created_at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "this morning";
-    el("cacheLabel").textContent = "cached run from " + when;
+    var cd = cached.created_at ? new Date(cached.created_at) : null;
+    var when = cd ? (cd.toDateString() === new Date().toDateString() ? "today, " + cd.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : cd.toLocaleDateString() + ", " + cd.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })) : "this morning";
+    el("cacheLabel").textContent = "Ran " + when + " (saved run)";
     book = await MB.runAll(hooks, cached.outputs, { door2: door2 });
     if (cached.dropped) book.dropped = cached.dropped;
     if (book.dropped) {
@@ -935,7 +944,9 @@ async function work() {
       return;
     }
     book = await MB.runAll(hooks, null, { door2: door2 });
+    el("cacheLabel").textContent = "Ran today, " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + " (live)";
   }
+  clearInterval(runTimer);
   renderAll();
   el("workBtn").disabled = false;
 }
