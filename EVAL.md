@@ -137,6 +137,14 @@ the section after this one.
 
 ## The real case: the Duck File
 
+**RETIRED BY THE BUILDERS, November 21, 2026.** This section stays in the
+record, and it no longer counts as evidence. The case is solved, and its
+verdict sat inside its own file as doc12: a run on it tests whether the
+squad can read, not whether it can detect. The replacement is the Starlite
+File (`CASE5_BIBLE.md`), a fictional cold case written today, present in no
+training data, scored the same way. What follows is the retired run, kept
+for honesty.
+
 The owed test, run. Carlton "FBG Duck" Weekly was murdered on
 East Oak Street, Chicago, on August 4, 2020; six men were
 convicted in federal court in January 2024. We rebuilt the
