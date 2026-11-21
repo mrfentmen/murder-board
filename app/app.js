@@ -981,7 +981,7 @@ function sendChat() {
     return;
   }
   if (/work|run|start|go\b/.test(low)) { work(); return; }
-  var screens = { board: "board", clock: "clock", judgment: "judgments", brief: "brief", intake: "intake", file: "intake" };
+  var screens = { board: "board", clock: "clock", judgment: "judgments", brief: "brief", intake: "intake", file: "intake", eval: "eval" };
   var hit = Object.keys(screens).filter(function (k) { return low.indexOf(k) !== -1; })[0];
   if (hit) {
     showScreen(screens[hit]);
