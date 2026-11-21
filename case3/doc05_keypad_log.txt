@@ -1,0 +1,13 @@
+Keypad entry log, manager's office door, Harborlight
+Restaurant. Exported October 10, 2016. The keypad logs entries
+only; it does not log exits.
+
+Sunday, October 9, 2016:
+18:04 — code 3305
+19:31 — code 3305
+21:15 — code 2210
+22:52 — code 4417
+23:58 — code 3305
+00:07 — code 9001
+
+No other entries that night.
