@@ -16,7 +16,7 @@ const chosen = (global.CASES || []).filter((c) => c.case_id === CASE_ID)[0];
 if (!chosen) { console.error("unknown case", CASE_ID); process.exit(1); }
 global.CASES = [chosen];
 global.CASE_DOCS = chosen.documents;
-global.MB_CONFIG = { apiKey: "", reasoningModel: "gemini-4-argon", fastModel: "gemini-4-carbon" };
+global.MB_CONFIG = { apiKey: "", reasoningModel: "gemini-4-argon", fastModel: "gemini-4-carbon", worldModel: "gemini-4-hydrogen", fieldModel: "gemini-4-neon" };
 
 const HELPER = path.join(process.env.HOME, "workspace/custom-connectors/custom.gemini-api/bin/gemini_api.py");
 global.__MB_TRANSPORT = function (model, systemText, userText) {
