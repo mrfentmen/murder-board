@@ -1289,6 +1289,7 @@ function updateProgress() {
 }
 var feedTimer = null, feedBase = "", feedStart = 0, runStart = 0;
 var runTypingEl = null, lastTypingChair = null;
+var typingPhraseTimer = null;
 function fmtClock(ms) { var s = Math.floor(ms / 1000); return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
 function setFeedActivity(text) {
   var status = el("feedActivity");
@@ -1307,13 +1308,25 @@ function setFeedActivity(text) {
       var runChairId = runChair ? runChair.id.replace("chair-", "") : null;
       if (runChairId !== lastTypingChair) {
         if (runTypingEl) { runTypingEl.remove(); runTypingEl = null; }
-        if (runChairId) runTypingEl = chatTyping(runChairId, STEP_ACTIVITY[activeStepId] || "reviewing the file");
+        if (typingPhraseTimer) { clearInterval(typingPhraseTimer); typingPhraseTimer = null; }
+        if (runChairId) {
+          runTypingEl = chatTyping(runChairId, STEP_ACTIVITY[activeStepId] || "reviewing the file");
+          var phrases = [STEP_ACTIVITY[activeStepId] || "reviewing the file", "Gathering info", "Finding evidence", "Sifting through words", "Checking quotes against the file", "Cross-checking the statements"];
+          var pi = 0;
+          typingPhraseTimer = setInterval(function () {
+            if (!runTypingEl) return;
+            pi = (pi + 1) % phrases.length;
+            var sp = runTypingEl.querySelector(".chat-text span");
+            if (sp) sp.textContent = phrases[pi];
+          }, 2200);
+        }
         lastTypingChair = runChairId;
       }
     }, 1000);
   } else {
     updateProgress();
     if (runTypingEl) { runTypingEl.remove(); runTypingEl = null; }
+    if (typingPhraseTimer) { clearInterval(typingPhraseTimer); typingPhraseTimer = null; }
     lastTypingChair = null;
     feedStart = 0;
     runStart = 0;
