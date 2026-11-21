@@ -711,7 +711,7 @@ var CASE_META = {
   "delgado-2019": { no: "MB-2019-1014", victim: "Raymond Delgado, 58", window: "Sun Oct 13, 2019, 9:00 PM to midnight", place: "Delgado Auto Body, Fifth Avenue", stamp: "COLD CASE", stampCls: "stamp-cold" },
   "screens-2025": { no: "MB-2025-1012", victim: "Treyvon Ellis, 19", window: "Sun Oct 12, 2025, 11:00 PM to midnight", place: "Brooklyn, New York", stamp: "OPEN", stampCls: "stamp-open" },
   "harborlight-2016": { no: "MB-2016-1010", victim: "Elena Marsh, 41", window: "Mon Oct 10, 2016, 10:30 PM to 12:30 AM", place: "Harborlight Restaurant and Marina", stamp: "COLD CASE", stampCls: "stamp-cold" },
-  "duck-2020": { no: "MB-2020-0804", victim: "Carlton Weekly, 26", window: "Tue Aug 4, 2020, about 4:26 PM", place: "East Oak Street, Gold Coast, Chicago", stamp: "SOLVED 2024", stampCls: "stamp-solved" }
+  "starlite-2017": { no: "MB-2017-1104", victim: "Carla Ibanez, 47", window: "Sat Nov 4, 2017, 11:30 PM to 1:30 AM", place: "Starlite Lanes, Meridian Avenue", stamp: "COLD CASE", stampCls: "stamp-cold" }
 };
 function caseShortTitle(id) {
   var c = MB.CASES.filter(function (x) { return x.case_id === id; })[0];
@@ -849,9 +849,9 @@ function feedLine(chair, text) {
   if (!cid) { chatBubble(null, text, chair === "Runner" ? "runner" : "system"); return; }
   var m;
   if ((m = String(text).match(/^(\S+): (gemini-\S+) took the file$/))) {
-    chatBubble(cid, "Taking the file. Reading now.");
+    /* filler line dropped: the report below says it */
   } else if (/: replaying the cached run$/.test(text)) {
-    chatBubble(cid, "Working from the saved run.");
+    /* filler line dropped: the cache label in the header says it */
   } else if ((m = String(text).match(/^(\S+): posted (\d+) finding/))) {
     pendingReport = { stepId: m[1], chairId: cid, count: parseInt(m[2], 10) };
   } else if ((m = String(text).match(/^(\S+): FAILED, (.*)$/))) {
@@ -909,11 +909,22 @@ function composeReport(stepId, b, count) {
 
 function flushLog(b) {
   if (!b || !b.log) return;
-  while (feedLogSeen < b.log.length) {
-    feedLine("Runner", b.log[feedLogSeen]);
-    feedLogSeen++;
-  }
+  var fresh = [];
+  while (feedLogSeen < b.log.length) { fresh.push(b.log[feedLogSeen]); feedLogSeen++; }
+  if (fresh.length) feedLine("Runner", fresh.join(" \u00b7 "));
 }
+var HANDOFFS = {
+  custody: ["Records", "the document registry and the custody note"],
+  records: ["the Coroner", "the census, every item labeled"],
+  coroner: ["CSI", "the medical findings and the death window"],
+  csi: ["Intake", "the evidence ledger and its gaps"],
+  intake: ["the Analyst", "quote-checked claims and the event inventory"],
+  analyst: ["Digital", "one clock, collisions marked"],
+  digital: ["the Cross-Examiner", "the machine records, checked against the clock"],
+  cross_examiner: ["the Interviewer", "the contradictions, both quotes attached"],
+  interviewer: ["the Prosecutor", "statement histories and the drift"],
+  prosecutor: ["the Lead Detective", "the court test and its vetoes"]
+};
 
 async function work() {
   var cached = cacheForCurrentCase();
@@ -934,7 +945,7 @@ async function work() {
     event: feedLine,
     step: function (b) { book = b; renderAll(); flushLog(b);
       if (b.dropped > 0) { var dc = el("dropChip"); dc.textContent = "Quote check dropped: " + b.dropped; dc.classList.remove("hidden"); }
-      if (pendingReport) { composeReport(pendingReport.stepId, b, pendingReport.count); pendingReport = null; } },
+      if (pendingReport) { composeReport(pendingReport.stepId, b, pendingReport.count); var hf = HANDOFFS[pendingReport.stepId]; if (hf) feedLine("Runner", "Handoff \u2192 " + hf[0] + ": " + hf[1] + "."); pendingReport = null; } },
     delay: function () { return new Promise(function (r) { setTimeout(r, 650); }); }
   };
   var door2 = null;
@@ -978,7 +989,7 @@ function sendChat() {
   if (/delgado/.test(low)) caseHit = "delgado-2019";
   else if (/screens|trey/.test(low)) caseHit = "screens-2025";
   else if (/harborlight|marsh/.test(low)) caseHit = "harborlight-2016";
-  else if (/duck|fbg|weekly/.test(low)) caseHit = "duck-2020";
+  else if (/starlite|ibanez|bowling|lanes/.test(low)) caseHit = "starlite-2017";
   var sel = el("caseSelect");
   if (caseHit && sel.value !== caseHit) {
     sel.value = caseHit;
@@ -986,6 +997,18 @@ function sendChat() {
     if (!/work|run|start|go\b/.test(low)) return;
     if (cacheForCurrentCase()) return;
     work();
+    return;
+  }
+  if (/going on|status|update/.test(low)) {
+    if (!book || !book.outputs || !Object.keys(book.outputs).length) { chatBubble("lead_detective", "Nothing on the board yet. Order a case and the room works."); return; }
+    var doneCt = Object.keys(book.outputs).length;
+    var msg = doneCt + " of 11 steps in on " + caseShortTitle(MB.currentCase()) + ".";
+    var ce = book.outputs.cross_examiner;
+    if (ce && (ce.contradictions || []).length) { var tc = ce.contradictions.slice().sort(function (a, z) { return ({ high: 0, medium: 1, low: 2 })[a.severity] - ({ high: 0, medium: 1, low: 2 })[z.severity]; })[0]; msg += " Strongest contradiction: " + tc.a_doc + " against " + tc.b_doc + ", " + String(tc.severity).toUpperCase() + "."; }
+    var ld = book.outputs.lead_detective;
+    if (ld && (ld.leads || []).length) msg += " Top lead, " + ld.leads[0].score + ": " + trunc(ld.leads[0].action, 110);
+    if (book.dropped) msg += " Quote check has dropped " + book.dropped + " finding(s).";
+    chatBubble("lead_detective", msg);
     return;
   }
   if (/work|run|start|go\b/.test(low)) { work(); return; }
@@ -996,7 +1019,7 @@ function sendChat() {
     chatBubble("lead_detective", screens[hit] === "board" ? "Board's up." : screens[hit] === "brief" ? "Brief's on the screen." : "On the screen.");
     return;
   }
-  chatBubble("lead_detective", "Copy. Orders I take: \u201cwork the case\u201d, a case name (Delgado, Screens, Harborlight, Duck), or a screen (board, clock, judgments, brief).");
+  chatBubble("lead_detective", "Copy. Orders I take: \u201cwork the case\u201d, a case name (Delgado, Screens, Harborlight, Starlite), or a screen (board, clock, judgments, brief).");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -1023,7 +1046,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var sel = el("caseSelect");
   MB.CASES.forEach(function (c) {
     var o = document.createElement("option");
-    var labels = { "delgado-2019": "The Delgado File (police file)", "screens-2025": "The Screens File (internet case)", "harborlight-2016": "The Harborlight File (the sim)", "duck-2020": "The Duck File (real case, public record)" };
+    var labels = { "delgado-2019": "The Delgado File (police file)", "screens-2025": "The Screens File (internet case)", "harborlight-2016": "The Harborlight File (the sim)", "starlite-2017": "The Starlite File (cold case)" };
     o.value = c.case_id; o.textContent = labels[c.case_id] || c.case_id;
     sel.appendChild(o);
   });
