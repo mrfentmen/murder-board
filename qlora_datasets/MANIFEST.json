@@ -1,0 +1,306 @@
+{
+  "schema": "murder-board.qlora_datasets.manifest.v1",
+  "generated_at_utc": "2026-11-22T16:19:54.739203+00:00",
+  "salt": "mb-spec7-v1",
+  "workers_used": 9,
+  "elapsed_seconds": 11.93,
+  "rows_per_second": 4327.8,
+  "strict_qlora_chatml_schema": {
+    "messages": [
+      {
+        "role": "system|user|assistant",
+        "content": "<string>"
+      }
+    ]
+  },
+  "all_lines_passed_verify_strict_qlora_folder": true,
+  "zero_extra_columns_confirmed": true,
+  "under_1gb_verified": true,
+  "under_10gb_verified": true,
+  "total_rows": 51631,
+  "simulated_rows": 50990,
+  "real_archive_rows": 641,
+  "total_bytes": 641872383,
+  "total_mb": 612.14,
+  "total_gb": 0.5978,
+  "generator_breakdown": {
+    "murder_board_11chair": {
+      "train": 9020,
+      "val": 495,
+      "test": 495,
+      "total": 10010
+    },
+    "vault_retrieval": {
+      "train": 4500,
+      "val": 250,
+      "test": 250,
+      "total": 5000
+    },
+    "forensic_micro_skills": {
+      "train": 8000,
+      "val": 480,
+      "test": 480,
+      "total": 8960
+    },
+    "dispatch_911": {
+      "train": 8100,
+      "val": 450,
+      "test": 450,
+      "total": 9000
+    },
+    "aml_hunter": {
+      "train": 8100,
+      "val": 460,
+      "test": 460,
+      "total": 9020
+    },
+    "track2_room_copilot": {
+      "train": 8000,
+      "val": 500,
+      "test": 500,
+      "total": 9000
+    }
+  },
+  "folders": {
+    "01_cold_case_detective": {
+      "title": "Cold-Case Homicide Detective (11-Chair Murder Board + 80–120 Doc Noisy Vault + 8 Forensic Micro-Skills + Real Archives)",
+      "generators": [
+        "murder_board_11chair",
+        "vault_retrieval",
+        "forensic_micro_skills"
+      ],
+      "real_domains": [
+        "cold_case_murder_board",
+        "cold_case_vault_retrieval",
+        "forensic_micro_skills"
+      ],
+      "strict_qlora_verified": true,
+      "verify_strict_qlora_folder_stats": {
+        "train": {
+          "rows": 21708,
+          "mb": 352.32
+        },
+        "val": {
+          "rows": 1237,
+          "mb": 19.64
+        },
+        "test": {
+          "rows": 1239,
+          "mb": 19.68
+        },
+        "total_mb": 391.65
+      },
+      "total_rows": 24184,
+      "simulated_rows": 23970,
+      "real_archive_rows": 214,
+      "total_bytes": 410669839,
+      "total_mb": 391.65,
+      "splits": {
+        "train": {
+          "file": "01_cold_case_detective/train.jsonl",
+          "rows": 21708,
+          "simulated_rows": 21520,
+          "real_archive_rows": 188,
+          "bytes": 369431454,
+          "mb": 352.32,
+          "sha256": "a37a8a15d2a11e38e4336510e23638fb6cfdca7bc723ef531dae9903f649c676"
+        },
+        "val": {
+          "file": "01_cold_case_detective/val.jsonl",
+          "rows": 1237,
+          "simulated_rows": 1225,
+          "real_archive_rows": 12,
+          "bytes": 20598667,
+          "mb": 19.64,
+          "sha256": "2b50f2d4192d5cb919efd0b1e6aae8e9839a6bdc09f4eada53dd2cec144215a6"
+        },
+        "test": {
+          "file": "01_cold_case_detective/test.jsonl",
+          "rows": 1239,
+          "simulated_rows": 1225,
+          "real_archive_rows": 14,
+          "bytes": 20639718,
+          "mb": 19.68,
+          "sha256": "6b5d7df2590f5d93a1192aeca09d8a768c3061d1162504f3fc778c8f9734e909"
+        }
+      }
+    },
+    "02_911_triage_dispatch": {
+      "title": "911 Panicked & Coerced-Caller Emergency Triage Co-Pilot (21 Archetypes + Real 2005–2026 FDNY/NYC, SFPD & Seattle CAD)",
+      "generators": [
+        "dispatch_911"
+      ],
+      "real_domains": [
+        "dispatch_911_triage"
+      ],
+      "strict_qlora_verified": true,
+      "verify_strict_qlora_folder_stats": {
+        "train": {
+          "rows": 8296,
+          "mb": 39.52
+        },
+        "val": {
+          "rows": 475,
+          "mb": 2.24
+        },
+        "test": {
+          "rows": 469,
+          "mb": 2.21
+        },
+        "total_mb": 43.97
+      },
+      "total_rows": 9240,
+      "simulated_rows": 9000,
+      "real_archive_rows": 240,
+      "total_bytes": 46109341,
+      "total_mb": 43.97,
+      "splits": {
+        "train": {
+          "file": "02_911_triage_dispatch/train.jsonl",
+          "rows": 8296,
+          "simulated_rows": 8100,
+          "real_archive_rows": 196,
+          "bytes": 41441680,
+          "mb": 39.52,
+          "sha256": "3952a8c4c26c6b6139164c6f95e0a1a9e3497173ffa0ef34a5e9e84589d9f292"
+        },
+        "val": {
+          "file": "02_911_triage_dispatch/val.jsonl",
+          "rows": 475,
+          "simulated_rows": 450,
+          "real_archive_rows": 25,
+          "bytes": 2346025,
+          "mb": 2.24,
+          "sha256": "46d8a9405bf513cbcacfd3e234be679853ef2116b7acf05e42fc1ab9dd8cc528"
+        },
+        "test": {
+          "file": "02_911_triage_dispatch/test.jsonl",
+          "rows": 469,
+          "simulated_rows": 450,
+          "real_archive_rows": 19,
+          "bytes": 2321636,
+          "mb": 2.21,
+          "sha256": "1fa750eace0dca6c6f06a475da416c9f3bfeee31b78afe760a6babbcdc02b7b5"
+        }
+      }
+    },
+    "03_aml_laundering_hunter": {
+      "title": "Cartel, TBML & Shell-Company AML Hunter (6 Laundering Typologies + 20% Clean False Positives + Real DOJ AML & OFAC SDN)",
+      "generators": [
+        "aml_hunter"
+      ],
+      "real_domains": [
+        "aml_laundering_hunter"
+      ],
+      "strict_qlora_verified": true,
+      "verify_strict_qlora_folder_stats": {
+        "train": {
+          "rows": 8261,
+          "mb": 59.94
+        },
+        "val": {
+          "rows": 473,
+          "mb": 3.45
+        },
+        "test": {
+          "rows": 473,
+          "mb": 3.44
+        },
+        "total_mb": 66.83
+      },
+      "total_rows": 9207,
+      "simulated_rows": 9020,
+      "real_archive_rows": 187,
+      "total_bytes": 70076637,
+      "total_mb": 66.83,
+      "splits": {
+        "train": {
+          "file": "03_aml_laundering_hunter/train.jsonl",
+          "rows": 8261,
+          "simulated_rows": 8100,
+          "real_archive_rows": 161,
+          "bytes": 62851482,
+          "mb": 59.94,
+          "sha256": "4af7a710d5a1a4f4a6c79a7f96ad474ccf294ab6a8e843bd01c68ffea38effdf"
+        },
+        "val": {
+          "file": "03_aml_laundering_hunter/val.jsonl",
+          "rows": 473,
+          "simulated_rows": 460,
+          "real_archive_rows": 13,
+          "bytes": 3620859,
+          "mb": 3.45,
+          "sha256": "61915d8ba5d23f29036373372b10eb3a500a8145ca53a2b9badf526120fb1541"
+        },
+        "test": {
+          "file": "03_aml_laundering_hunter/test.jsonl",
+          "rows": 473,
+          "simulated_rows": 460,
+          "real_archive_rows": 13,
+          "bytes": 3604296,
+          "mb": 3.44,
+          "sha256": "1170c4d1bf6b6a352a80ddc3819b5548570709727f323470445ce460881c9062"
+        }
+      }
+    },
+    "04_future_biometric_room": {
+      "title": "Chair 12 Future Interrogation-Room Biometric & Cognitive-Load Co-Pilot (Othello-Error Hardened)",
+      "generators": [
+        "track2_room_copilot"
+      ],
+      "real_domains": [
+        "future_room_biometric_copilot"
+      ],
+      "strict_qlora_verified": true,
+      "verify_strict_qlora_folder_stats": {
+        "train": {
+          "rows": 8000,
+          "mb": 97.5
+        },
+        "val": {
+          "rows": 500,
+          "mb": 6.1
+        },
+        "test": {
+          "rows": 500,
+          "mb": 6.09
+        },
+        "total_mb": 109.69
+      },
+      "total_rows": 9000,
+      "simulated_rows": 9000,
+      "real_archive_rows": 0,
+      "total_bytes": 115016566,
+      "total_mb": 109.69,
+      "splits": {
+        "train": {
+          "file": "04_future_biometric_room/train.jsonl",
+          "rows": 8000,
+          "simulated_rows": 8000,
+          "real_archive_rows": 0,
+          "bytes": 102239373,
+          "mb": 97.5,
+          "sha256": "262ddd42f58e2510531510decf63f1618023d7d7e0f15ea7b0dbbde0696d8ac0"
+        },
+        "val": {
+          "file": "04_future_biometric_room/val.jsonl",
+          "rows": 500,
+          "simulated_rows": 500,
+          "real_archive_rows": 0,
+          "bytes": 6391314,
+          "mb": 6.1,
+          "sha256": "9f467974cb380b07714bb811f1c704c2c25c74a84567ef2ee07df3bc2bba8245"
+        },
+        "test": {
+          "file": "04_future_biometric_room/test.jsonl",
+          "rows": 500,
+          "simulated_rows": 500,
+          "real_archive_rows": 0,
+          "bytes": 6385879,
+          "mb": 6.09,
+          "sha256": "b3d8a8791631fed0c1ff85bb11c6380d4bb23935bf4b230541daa344d79eadfd"
+        }
+      }
+    }
+  }
+}

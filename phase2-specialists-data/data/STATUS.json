@@ -1,0 +1,70 @@
+{
+  "updated_at": "2026-11-22T20:07:06.149085+00:00",
+  "total_rows": 453,
+  "train_rows": 453,
+  "val_rows": 0,
+  "tracks": {
+    "crash_arson": {
+      "rows": 120,
+      "split": "train",
+      "families": {
+        "arc-mapping-origin": 20,
+        "fdr-cvr-cascade": 20,
+        "flashover-vs-accelerant": 20,
+        "maintenance-normalization-deviance": 20,
+        "rail-derailment-metallurgy": 20,
+        "structural-collapse-creep": 20
+      }
+    },
+    "outbreak_epi": {
+      "rows": 90,
+      "split": "train",
+      "families": {
+        "cold-chain-vaccine-spoilage": 10,
+        "food-lot-odds-ratio": 20,
+        "multi-er-syndromic-cluster": 20,
+        "occupational-toxin-exposure": 20,
+        "water-plume-backflow": 20
+      }
+    },
+    "dark_fleet": {
+      "rows": 123,
+      "split": "train",
+      "families": {
+        "ais-gnss-spoofing": 21,
+        "container-density-impossibility": 22,
+        "dual-use-eccn-diversion": 20,
+        "flag-hopping-imo-identity": 20,
+        "reefer-false-bulkhead-thermal": 20,
+        "sts-draft-mass-balance": 20
+      }
+    },
+    "bid_rigging": {
+      "rows": 120,
+      "split": "train",
+      "families": {
+        "benford-bid-clustering": 20,
+        "change-order-lowball-trap": 20,
+        "complementary-cover-bidding": 20,
+        "conflict-shell-donation-loop": 20,
+        "loser-to-subcontractor-flip": 20,
+        "tailored-sole-spec-rfp": 20
+      }
+    },
+    "refusal": {
+      "rows": 0,
+      "split": "train",
+      "families": {}
+    },
+    "val": {
+      "rows": 0,
+      "split": "val",
+      "families": {}
+    }
+  },
+  "last_batch": {
+    "track": "outbreak_epi",
+    "accepted": 10,
+    "dropped": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-11-22T18:46:25.208290+00:00",
+  "seed": 42,
+  "train_rows": 3454,
+  "val_rows": 160,
+  "total_unique_rows": 3614,
+  "duplicates_skipped": 0,
+  "track_counts": {
+    "val": 160,
+    "cold_case": 605,
+    "retrieval": 609,
+    "room_biometrics": 600,
+    "dispatch_911": 600,
+    "aml_forensics": 600,
+    "code": 160,
+    "multiturn": 180,
+    "refusal": 100
+  },
+  "train_file": "/Users/test/Desktop/murder-board/detective-data/bundle/detective_train_mix.jsonl",
+  "val_file": "/Users/test/Desktop/murder-board/detective-data/bundle/detective_val.jsonl",
+  "train_sha256": "d7432e7c0ad715eb7e03808124f98cf8cb6a0d7faff744be29a5c905ff861ff1",
+  "val_sha256": "6139b55517cb4bcd2dd332b4858875dd4a899de298365d816b1e1c93a900fbc0",
+  "specialist_streams": {
+    "aml_forensics": {
+      "rows": 600,
+      "file": "/Users/test/Desktop/murder-board/detective-data/bundle/by_specialist/aml_forensics_train.jsonl",
+      "sha256": "dc3a4734633bb9a30fc93ea1a25aab1af29166e3e6d15393ba90af7a2eceb0f5"
+    },
+    "code": {
+      "rows": 160,
+      "file": "/Users/test/Desktop/murder-board/detective-data/bundle/by_specialist/code_train.jsonl",
+      "sha256": "7627dcc70f1489d4563b1cb4bfc7e978424f8990603fcfa10231b1d1930b4008"
+    },
+    "cold_case": {
+      "rows": 605,
+      "file": "/Users/test/Desktop/murder-board/detective-data/bundle/by_specialist/cold_case_train.jsonl",
+      "sha256": "ca8b5c9cbe31a8b88cfdd3b78dc5f4e6853219b134e8b79afcab86cc13f15e48"
+    },
+    "dispatch_911": {
+      "rows": 600,
+      "file": "/Users/test/Desktop/murder-board/detective-data/bundle/by_specialist/dispatch_911_train.jsonl",
+      "sha256": "615289185a9d602e9f6b0e235b8d426839ba0c75226bed1f285579d109cd7ac6"
+    },
+    "multiturn": {
+      "rows": 180,
+      "file": "/Users/test/Desktop/murder-board/detective-data/bundle/by_specialist/multiturn_train.jsonl",
+      "sha256": "0c4b0220d6c4b5726562676da8fb054b487be78cb9669b1fa80affbe53607f82"
+    },
+    "refusal": {
+      "rows": 100,
+      "file": "/Users/test/Desktop/murder-board/detective-data/bundle/by_specialist/refusal_train.jsonl",
+      "sha256": "b626ab519c4c6e7763b6c9c7c21e532b91862c0da7c36aa15ee830fd588575e7"
+    },
+    "retrieval": {
+      "rows": 609,
+      "file": "/Users/test/Desktop/murder-board/detective-data/bundle/by_specialist/retrieval_train.jsonl",
+      "sha256": "c2cfa1a2cf393bff5d55e279d7685a42b95b7321f5c0fcb252629084e6862dea"
+    },
+    "room_biometrics": {
+      "rows": 600,
+      "file": "/Users/test/Desktop/murder-board/detective-data/bundle/by_specialist/room_biometrics_train.jsonl",
+      "sha256": "523654343ea336930e0cfd474aa5f6f4bb5c1d1a96eef7085648ed8f8d452d05"
+    }
+  }
+}

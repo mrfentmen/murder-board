@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-11-22T18:46:41.290703+00:00",
+  "seed": 42,
+  "expansion_factor": 12,
+  "expandable_tracks": [
+    "cold_case",
+    "retrieval",
+    "room_biometrics",
+    "dispatch_911",
+    "aml_forensics"
+  ],
+  "unexpanded_tracks": [
+    "code",
+    "multiturn",
+    "refusal",
+    "val"
+  ],
+  "train_rows": 36608,
+  "val_rows": 160,
+  "total_unique_rows": 36768,
+  "duplicates_skipped": 0,
+  "base_track_counts": {
+    "val": 160,
+    "cold_case": 605,
+    "retrieval": 609,
+    "room_biometrics": 600,
+    "dispatch_911": 600,
+    "aml_forensics": 600,
+    "code": 160,
+    "multiturn": 180,
+    "refusal": 100
+  },
+  "expanded_track_counts": {
+    "val": 160,
+    "cold_case": 7260,
+    "retrieval": 7308,
+    "room_biometrics": 7200,
+    "dispatch_911": 7200,
+    "aml_forensics": 7200,
+    "code": 160,
+    "multiturn": 180,
+    "refusal": 100
+  },
+  "train_file": "/Users/test/Desktop/murder-board/detective-data/expanded_bundle/detective_expanded_train_mix.jsonl",
+  "val_file": "/Users/test/Desktop/murder-board/detective-data/expanded_bundle/detective_val.jsonl",
+  "train_bytes": 185984418,
+  "val_bytes": 451886,
+  "total_bundle_bytes": 186436304,
+  "under_10gb_cap": true,
+  "train_sha256": "3a55caf28029684f5c73c65b8459b5ab44a11061ddf2cee30e013dace052692c",
+  "val_sha256": "6139b55517cb4bcd2dd332b4858875dd4a899de298365d816b1e1c93a900fbc0"
+}

@@ -1,0 +1,50 @@
+{
+  "status": "PASSED",
+  "shards": 3,
+  "total_rows": 641,
+  "total_megabytes": 4.49,
+  "total_gigabytes": 0.0044,
+  "under_10gb_cap": true,
+  "estimated_total_tokens": 993708,
+  "estimated_avg_tokens_per_row": 1550,
+  "by_split": {
+    "test": 46,
+    "train": 545,
+    "val": 50
+  },
+  "by_track": {
+    "track1_now": 641
+  },
+  "by_domain": {
+    "cold_case_murder_board": 214,
+    "aml_laundering_hunter": 187,
+    "dispatch_911_triage": 240
+  },
+  "subtasks_per_domain": {
+    "cold_case_murder_board": {
+      "custody": 38,
+      "intake": 118,
+      "coroner": 34,
+      "records": 3,
+      "csi": 3,
+      "analyst": 3,
+      "digital": 3,
+      "cross_examiner": 3,
+      "interviewer": 3,
+      "prosecutor": 3,
+      "lead_detective": 3
+    },
+    "aml_laundering_hunter": {
+      "REAL_DOJ_STRUCTURING_WIRE_LAUNDERING": 95,
+      "REAL_DOJ_CARTEL_FUNNEL_TBML": 19,
+      "REAL_DOJ_SHELL_COMPANY_LAYERING": 33,
+      "REAL_OFAC_SDN_SANCTIONS_BLOCK": 40
+    },
+    "dispatch_911_triage": {
+      "MEDICAL_CRITICAL": 61,
+      "REAL_CAD_MEDICAL_TRIAGE": 33,
+      "REAL_PD_CAD_RECLASSIFICATION": 80,
+      "MULTI_HAZARD_CHAOS": 66
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "case4_and_gold_turns": 35,
+  "old_bailey_homicide_turns": 99,
+  "doj_homicide_turns": 80,
+  "doj_aml_turns": 147,
+  "ofac_sdn_turns": 40,
+  "real_911_cad_turns": 240,
+  "total_turns": 641,
+  "by_split": {
+    "train": 545,
+    "val": 50,
+    "test": 46
+  },
+  "raw_cache_megabytes": 6.03,
+  "elapsed_seconds": 0.3
+}

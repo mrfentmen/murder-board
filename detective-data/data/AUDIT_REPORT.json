@@ -1,0 +1,138 @@
+{
+  "total_unique_prompts": 3614,
+  "tracks": {
+    "cold_case": {
+      "rows": 605,
+      "split": "train",
+      "families": {
+        "alibi-contradiction": 60,
+        "cross-county-mo": 61,
+        "csi-ledger-gap": 60,
+        "fake-insider-knowledge": 61,
+        "insufficient-evidence-hold": 60,
+        "modern-dna-retest": 60,
+        "pathology-lividity": 61,
+        "red-herring-clearance": 60,
+        "statement-drift": 62,
+        "survival-window-narrowing": 60
+      }
+    },
+    "retrieval": {
+      "rows": 609,
+      "split": "train",
+      "families": {
+        "almanac-weather-moon": 60,
+        "alpr-toll-chain": 61,
+        "camera-canvass-gap": 61,
+        "cell-sector-radius": 61,
+        "entity-alias-resolution": 62,
+        "graphrag-bridge-node": 61,
+        "keypad-smart-meter": 60,
+        "proxy-columbo-funnel": 60,
+        "public-record-census": 62,
+        "same-name-collision": 61
+      }
+    },
+    "room_biometrics": {
+      "rows": 600,
+      "split": "train",
+      "families": {
+        "baseline-calibration": 60,
+        "bodycam-coerced-voice": 60,
+        "cit-concealed-stimulus": 60,
+        "customs-entity-recognition": 60,
+        "eda-thermal-incongruence": 60,
+        "embarrassed-secret-clearance": 60,
+        "othello-innocent-panic": 60,
+        "reverse-order-cognitive-load": 60,
+        "rppg-hrv-vagal-shift": 60,
+        "trauma-witness-peace": 60
+      }
+    },
+    "dispatch_911": {
+      "rows": 600,
+      "split": "train",
+      "families": {
+        "agonal-breathing-cpr": 60,
+        "carbon-monoxide-cluster": 60,
+        "coerced-pizza-ruse": 60,
+        "downed-wire-step-potential": 60,
+        "milepost-triangulation": 60,
+        "opioid-narcan-triage": 60,
+        "silent-dtmf-duress": 60,
+        "stroke-lkw-window": 60,
+        "submerging-vehicle-physics": 60,
+        "voip-swatting-mismatch": 60
+      }
+    },
+    "aml_forensics": {
+      "rows": 600,
+      "split": "train",
+      "families": {
+        "cash-front-utility-cap": 60,
+        "container-weight-physics": 60,
+        "crypto-peel-otc": 60,
+        "false-positive-clearance": 60,
+        "ghost-vendor-kickback": 60,
+        "nominee-real-estate": 60,
+        "offshore-round-trip": 60,
+        "smurfing-funnel-shell": 60,
+        "tbml-unit-price-fraud": 60,
+        "ubo-registry-trace": 60
+      }
+    },
+    "code": {
+      "rows": 160,
+      "split": "train",
+      "families": {
+        "aml-smurfing-detector": 16,
+        "cad-priority-scorer": 16,
+        "clock-skew-normalizer": 16,
+        "exif-hash-custody": 16,
+        "graph-entity-linker": 16,
+        "python-cdr-timeline": 16,
+        "quote-verifier-engine": 16,
+        "rppg-hrv-rmssd-calc": 16,
+        "sql-alpr-crossjoin": 16,
+        "tbml-zscore-auditor": 16
+      }
+    },
+    "multiturn": {
+      "rows": 180,
+      "split": "train",
+      "families": {
+        "mt-911-escalation": 30,
+        "mt-alibi-reinterview": 30,
+        "mt-aml-subpoena-chain": 30,
+        "mt-forensic-code-debug": 30,
+        "mt-room-cit-sequence": 30,
+        "mt-vault-search-drill": 30
+      }
+    },
+    "refusal": {
+      "rows": 100,
+      "split": "train",
+      "families": {
+        "roe-coercive-interrogation": 20,
+        "roe-doxxing-vigilante": 20,
+        "roe-evidence-tampering": 20,
+        "roe-polygraph-conviction": 20,
+        "roe-warrantless-intrusion": 20
+      }
+    },
+    "val": {
+      "rows": 160,
+      "split": "val",
+      "families": {
+        "val-aml-forensics": 20,
+        "val-code": 20,
+        "val-cold-case": 20,
+        "val-dispatch-911": 20,
+        "val-multiturn": 20,
+        "val-refusal": 20,
+        "val-retrieval": 20,
+        "val-room-biometrics": 20
+      }
+    }
+  }
+}
